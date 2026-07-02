@@ -285,7 +285,13 @@
                                 class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none font-bold">
                             <div id="newNameSuggestions" class="hidden absolute z-20 left-0 right-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg max-h-48 overflow-y-auto text-xs"></div>
                         </div>
-                        <input type="text" id="newJob" placeholder="직종 (예: 보통인부)" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none">
+                        <div class="flex items-center gap-1">
+                            <input type="text" id="newJob" placeholder="직종 (예: 보통인부)" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none">
+                            <button type="button" id="newIsServiceBtn" onclick="toggleNewIsService()"
+                                class="shrink-0 px-1.5 py-1.5 rounded border text-[10px] font-bold transition-all bg-slate-50 border-slate-200 text-slate-400"
+                                title="용역업체 소속으로 등록 (계좌정보 필수 아님)">용역</button>
+                            <input type="hidden" id="newIsServiceWorker" value="0">
+                        </div>
                     </div>
                     <div>
                         <input type="text" id="newSsn" placeholder="주민등록번호 (숫자 13자리)" required class="w-full border border-slate-200 rounded p-1.5 font-mono focus:ring-1 focus:ring-blue-500 outline-none" maxlength="14">
@@ -1108,6 +1114,19 @@
                     <div>
                         <label class="block font-bold text-slate-500 mb-1 text-[10px]">일괄 적용 은행명</label>
                         <input type="text" id="bulkBank" placeholder="예: 농협은행" class="w-full bg-white border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-purple-500 outline-none text-xs">
+                    </div>
+                </div>
+
+                <!-- 근로 형태 구분: 일용직 / 용역 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 flex items-center justify-between">
+                    <div>
+                        <span class="font-bold text-slate-700 block text-[11px]">근로 형태</span>
+                        <span class="text-[10px] text-slate-400">용역업체 소속으로 등록 시 계좌정보가 없어도 "제출 전 점검"에서 경고되지 않습니다.</span>
+                    </div>
+                    <div class="flex items-center bg-white border border-slate-200 rounded-lg p-0.5 shrink-0">
+                        <button type="button" id="bulkTypeDailyBtn" onclick="setBulkWorkerType('daily')" class="px-3 py-1 rounded-md text-[11px] font-bold transition-all bg-blue-600 text-white">일용직</button>
+                        <button type="button" id="bulkTypeServiceBtn" onclick="setBulkWorkerType('service')" class="px-3 py-1 rounded-md text-[11px] font-bold transition-all text-slate-500 hover:text-slate-700">용역</button>
+                        <input type="hidden" id="bulkWorkerType" value="daily">
                     </div>
                 </div>
 
@@ -2142,7 +2161,7 @@
         function getPaddingClass() {
             if (currentDensity === 'narrow') return 'p-0.5';
             if (currentDensity === 'wide') return 'p-2.5';
-            return 'p-1.5';
+            return 'p-1';
         }
 
         // 상단 드롭다운 채우기
@@ -2768,7 +2787,7 @@
                                     data-labor-id="${labor.id}"
                                     data-day-index="${d}"
                                     title="${labor.name} - ${d}일 출역"
-                                    class="attendance-cell-input w-full h-full text-center font-bold bg-transparent border-0 focus:ring-1 focus:ring-blue-500 py-1 cursor-pointer select-none"
+                                    class="attendance-cell-input w-full h-full text-center font-bold bg-transparent border-0 focus:ring-1 focus:ring-blue-500 py-0.5 cursor-pointer select-none"
                                     placeholder="."
                                 >
                             </td>
@@ -2779,9 +2798,9 @@
                 });
 
                 // 법적 면제 안내 배지 처리
-                const pensionBadge = isPensionExempt ? `<span class="block text-[11px] text-white bg-rose-500 font-bold rounded px-1 mt-0.5 leading-tight">연금면제</span>` : '';
-                const employBadge = isEmploymentExempt ? `<span class="block text-[11px] text-white bg-orange-500 font-bold rounded px-1 mt-0.5 leading-tight">고용면제</span>` : '';
-                const incomeTaxBadge = (calc.incomeTax === 0 && labor.price > taxRates.taxFreeAmount) ? `<span class="block text-[10px] text-white bg-blue-400 font-bold rounded px-1 mt-0.5 leading-tight">소액부징수</span>` : '';
+                const pensionBadge = isPensionExempt ? `<span class="block text-[8px] text-white bg-rose-500 font-bold rounded px-0.5 mt-px leading-tight">연금면제</span>` : '';
+                const employBadge = isEmploymentExempt ? `<span class="block text-[8px] text-white bg-orange-500 font-bold rounded px-0.5 mt-px leading-tight">고용면제</span>` : '';
+                const incomeTaxBadge = (calc.incomeTax === 0 && labor.price > taxRates.taxFreeAmount) ? `<span class="block text-[8px] text-white bg-blue-400 font-bold rounded px-0.5 mt-px leading-tight">소액부징수</span>` : '';
 
                 // 오류방지: 수동으로 일수를 덮어썼는데 실제 출역 체크 합계와 다르면 경고
                 const daysMismatch = hasManualDays && Number(labor.manualDays) !== autoDays;
@@ -4963,6 +4982,7 @@
             const bank = document.getElementById('newBank').value.trim();
             const account = document.getElementById('newAccount').value.trim();
             const address = document.getElementById('newAddress').value.trim();
+            const isServiceWorker = document.getElementById('newIsServiceWorker').value === '1';
 
             if (!name || ssn.replace(/[^0-9]/g, '').length !== 13 || isNaN(price)) {
                 showCustomAlert("근로자 정보가 정확하지 않습니다. 성명 확인 및 13자리 주민번호를 정상 완성해 주세요.");
@@ -4978,6 +4998,7 @@
                 bank,
                 account,
                 safetyEdu: false,
+                isServiceWorker,
                 address,
                 price,
                 visa: "대한민국",
@@ -5001,8 +5022,23 @@
             document.getElementById('newBank').value = "";
             document.getElementById('newAccount').value = "";
             document.getElementById('newAddress').value = "";
+            _setNewIsService(false); // 다음 등록을 위해 용역 토글 초기화
 
-            showToast(`${name} 신규 근로자가 대장에 추가되었습니다.`);
+            showToast(`${name}${isServiceWorker ? ' (용역)' : ''} 신규 근로자가 대장에 추가되었습니다.`);
+        }
+
+        // 근로자 등록 폼의 "용역" 토글 버튼
+        function toggleNewIsService() {
+            const current = document.getElementById('newIsServiceWorker').value === '1';
+            _setNewIsService(!current);
+        }
+
+        function _setNewIsService(on) {
+            document.getElementById('newIsServiceWorker').value = on ? '1' : '0';
+            const btn = document.getElementById('newIsServiceBtn');
+            btn.className = on
+                ? 'shrink-0 px-1.5 py-1.5 rounded border text-[10px] font-bold transition-all bg-teal-600 border-teal-600 text-white'
+                : 'shrink-0 px-1.5 py-1.5 rounded border text-[10px] font-bold transition-all bg-slate-50 border-slate-200 text-slate-400';
         }
 
         // 근로자 배제/삭제
@@ -5416,11 +5452,26 @@
         // 근로자 복수 일괄 등록 모달 열기/닫기
         function openBulkUserModal() {
             document.getElementById('bulkUserModal').classList.remove('hidden');
+            setBulkWorkerType('daily'); // 모달을 열 때마다 기본값(일용직)으로 초기화
             updateBulkPlaceholder();
         }
 
         function closeBulkUserModal() {
             document.getElementById('bulkUserModal').classList.add('hidden');
+        }
+
+        // 일괄등록 근로 형태(일용직/용역) 토글
+        function setBulkWorkerType(type) {
+            document.getElementById('bulkWorkerType').value = type;
+            const dailyBtn = document.getElementById('bulkTypeDailyBtn');
+            const serviceBtn = document.getElementById('bulkTypeServiceBtn');
+            if (type === 'service') {
+                dailyBtn.className = 'px-3 py-1 rounded-md text-[11px] font-bold transition-all text-slate-500 hover:text-slate-700';
+                serviceBtn.className = 'px-3 py-1 rounded-md text-[11px] font-bold transition-all bg-teal-600 text-white';
+            } else {
+                dailyBtn.className = 'px-3 py-1 rounded-md text-[11px] font-bold transition-all bg-blue-600 text-white';
+                serviceBtn.className = 'px-3 py-1 rounded-md text-[11px] font-bold transition-all text-slate-500 hover:text-slate-700';
+            }
         }
 
         // 입력 모드별 컬럼 헤더 및 placeholder 갱신
@@ -5494,6 +5545,7 @@
             const job   = document.getElementById('bulkJob').value.trim() || '보통인부';
             const price = parseInt(document.getElementById('bulkPrice').value.replace(/[^0-9]/g, ''));
             const bank  = document.getElementById('bulkBank').value.trim();
+            const isServiceWorker = document.getElementById('bulkWorkerType').value === 'service';
 
             if (isNaN(price) || price < 0) {
                 showCustomAlert("올바른 단가 수치를 기입해 주세요.");
@@ -5532,6 +5584,7 @@
                     bank:    bank || '',
                     account: r.account || '',
                     safetyEdu: false,
+                    isServiceWorker,
                     address: r.address || '',
                     price,
                     visa: '대한민국',
@@ -5550,6 +5603,7 @@
 
             const hasDummy = rows.some(r => r.ssn.replace(/[^0-9]/g,'').length !== 13);
             let msg = `${added}명 등록 완료`;
+            if (isServiceWorker) msg += ' (용역업체 소속으로 등록됨)';
             if (skipped > 0) msg += ` (${skipped}명 중복 제외)`;
             if (hasDummy) msg += ' — ⚠️ 주민번호 미입력 항목은 임시 번호가 생성되었습니다. 이름 클릭 후 수정해 주세요.';
             showToast(msg);
