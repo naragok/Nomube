@@ -2735,6 +2735,15 @@
                     ? `<span class="block text-[8px] bg-teal-600 text-white font-bold px-1 rounded mt-0.5">용역</span>`
                     : '';
 
+                // 필수정보(연락처/주소/계좌) 미기재 경고 — 주민번호 칸 아래 표시 (인쇄 시에는 숨김)
+                const missingParts = [];
+                if (!labor.phone || !labor.phone.trim()) missingParts.push('연락처');
+                if (!labor.address || !labor.address.trim()) missingParts.push('주소');
+                if (!_isServiceWorker(labor) && (!labor.bank || !labor.bank.trim() || !labor.account || !labor.account.trim())) missingParts.push('계좌');
+                const missingInfoBadge = missingParts.length > 0
+                    ? `<span class="block text-[8px] text-amber-600 font-bold mt-0.5 print:hidden" title="${missingParts.join(', ')} 미기재">⚠ ${missingParts.join('·')}없음</span>`
+                    : '';
+
                 let html = `
                     <td class="${pad} border-r border-slate-200 bg-slate-100 font-bold sticky left-0 z-10 print:bg-white print:border-black">${idx + 1}</td>
                     <td class="${pad} border-r border-slate-200 font-black text-blue-600 cursor-pointer sticky left-[40px] bg-slate-50 hover:underline z-10 print:bg-white print:text-black print:border-black group relative" onclick="openDetailModal('${labor.id}')">
@@ -2757,7 +2766,10 @@
                             </div>
                         </div>
                     </td>
-                    <td class="${pad} border-r border-slate-200 font-mono text-[10px] tracking-wider print:border-black">${labor.ssn}</td>
+                    <td class="${pad} border-r border-slate-200 font-mono text-[10px] tracking-wider print:border-black">
+                        <div>${labor.ssn}</div>
+                        ${missingInfoBadge}
+                    </td>
                     <td class="${pad} border-r border-slate-200 text-slate-600 print:border-black">${labor.job || '보통인부'}</td>
                 `;
 
