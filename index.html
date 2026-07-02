@@ -743,6 +743,17 @@
                     </div>
                 </div>
 
+                <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded border border-slate-100">
+                    <div>
+                        <span class="font-bold text-slate-700 block text-[11px]">용역업체 소속 (계좌정보 필수 아님)</span>
+                        <span class="text-[9px] text-slate-400">체크 시 "제출 전 점검"에서 계좌번호 누락 경고가 표시되지 않습니다</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                        <input type="checkbox" id="detailIsServiceWorker" class="sr-only peer">
+                        <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-teal-600"></div>
+                    </label>
+                </div>
+
                 <div>
                     <label class="block font-bold text-slate-500 mb-1 text-[10px]">주소</label>
                     <input type="text" id="detailAddress" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
@@ -2700,6 +2711,11 @@
                     }
                 }
 
+                // 용역업체 소속 배지
+                const serviceBadge = _isServiceWorker(labor)
+                    ? `<span class="block text-[8px] bg-teal-600 text-white font-bold px-1 rounded mt-0.5">용역</span>`
+                    : '';
+
                 let html = `
                     <td class="${pad} border-r border-slate-200 bg-slate-100 font-bold sticky left-0 z-10 print:bg-white print:border-black">${idx + 1}</td>
                     <td class="${pad} border-r border-slate-200 font-black text-blue-600 cursor-pointer sticky left-[40px] bg-slate-50 hover:underline z-10 print:bg-white print:text-black print:border-black group relative" onclick="openDetailModal('${labor.id}')">
@@ -2710,6 +2726,7 @@
                         <span class="block text-[8px] text-slate-400 font-normal">만 ${age}세</span>
                         ${visaBadge}
                         ${safetyExpiryBadge}
+                        ${serviceBadge}
                         <div class="hidden group-hover:flex flex-col gap-1 absolute left-0 top-full mt-1 w-[150px] bg-slate-800 text-white text-[10px] font-normal rounded-lg shadow-xl p-2 z-50 normal-case cursor-default" onclick="event.stopPropagation()">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="text-slate-300">국민연금</span>
@@ -2871,6 +2888,7 @@
             document.getElementById('detailBank').value = labor.bank || "";
             document.getElementById('detailAccount').value = labor.account || "";
             document.getElementById('detailAddress').value = labor.address || "";
+            document.getElementById('detailIsServiceWorker').checked = !!labor.isServiceWorker;
             document.getElementById('detailSafetyEdu').checked = !!labor.safetyEdu;
             document.getElementById('detailSafetyDate').value = labor.safetyDate || '';
             document.getElementById('detailSafetyExpiry').value = labor.safetyExpiry || '';
@@ -3077,6 +3095,7 @@
             labor.bank = document.getElementById('detailBank').value.trim();
             labor.account = document.getElementById('detailAccount').value.trim();
             labor.address = document.getElementById('detailAddress').value.trim();
+            labor.isServiceWorker = document.getElementById('detailIsServiceWorker').checked;
             labor.safetyEdu = document.getElementById('detailSafetyEdu').checked;
             labor.safetyDate = document.getElementById('detailSafetyDate').value;
             labor.safetyExpiry = document.getElementById('detailSafetyExpiry').value;
@@ -3740,7 +3759,7 @@
                 if (!labor.name || !labor.name.trim()) hasMissing = true;
                 if (cleanSsn.length !== 13) hasMissing = true;
                 if (!labor.phone || !labor.phone.trim()) hasMissing = true;
-                if (!labor.bank || !labor.bank.trim() || !labor.account || !labor.account.trim()) hasMissing = true;
+                if ((!labor.bank || !labor.bank.trim() || !labor.account || !labor.account.trim()) && !_isServiceWorker(labor)) hasMissing = true;
                 if (hasMissing) counters.missingInfo++;
 
                 if (cleanSsn.length === 13 && ssnMap[cleanSsn] && ssnMap[cleanSsn].length > 1) counters.ssnDup++;
@@ -4411,6 +4430,12 @@
         }
 
         // ── 오류방지: 제출/인쇄 전 필수정보 누락·불일치 일괄 점검 ──────────
+        // 상세정보의 "용역업체 소속" 체크박스가 켜져 있으면 용역으로 간주.
+        // 체크박스를 아직 설정하지 않은 기존 데이터를 위해 직종명에 "용역"이 포함된 경우도 보조적으로 인정.
+        function _isServiceWorker(labor) {
+            return !!labor.isServiceWorker || !!(labor.job && labor.job.includes('용역'));
+        }
+
         function runPreSubmitCheck() {
             const proj = appState.projects[appState.currentProjectId];
             if (!proj || proj.labors.length === 0) {
@@ -4450,7 +4475,9 @@
                     problems.push('연락처 미기재');
                 }
                 if (!labor.bank || !labor.bank.trim() || !labor.account || !labor.account.trim()) {
-                    problems.push('계좌정보(은행/계좌번호) 미기재');
+                    if (!_isServiceWorker(labor)) {
+                        problems.push('계좌정보(은행/계좌번호) 미기재');
+                    }
                 }
 
                 // 수동 일수 입력값과 실제 출역 체크 합계 불일치
