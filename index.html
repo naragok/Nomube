@@ -101,6 +101,10 @@
                 word-break: keep-all;
                 overflow: hidden;
             }
+            /* 근로자 1명당 2개 행(1~16일 / 17~31일)이 rowspan=2 고정칸(성명·세금 등)과 함께
+               쓰이는데, 브라우저가 rowspan 높이를 두 행에 불균등하게 배분하는 경우가 있어
+               모든 행 높이를 고정값으로 통일해 두 칸이 항상 동일한 높이로 인쇄되도록 함 */
+            #printTable tr { height: 3.4mm; }
             #printTable .pt-name  { width: 14mm; font-weight: 900; }
             #printTable .pt-ssn   { width: 20mm; font-family: monospace; font-size: 6.5px; }
             #printTable .pt-job   { width: 10mm; }
@@ -143,6 +147,9 @@
             </button>
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
                 <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> 제출 전 점검
+            </button>
+            <button onclick="openShortcutsModal()" class="bg-slate-700 hover:bg-slate-600 text-white w-7 h-7 rounded flex items-center justify-center transition-all shrink-0" title="키보드 단축키 안내 (? 키)">
+                <i data-lucide="keyboard" class="w-3.5 h-3.5"></i>
             </button>
 
             <div class="w-px h-5 bg-white/20 mx-0.5"></div>
@@ -1045,6 +1052,36 @@
         </div>
     </div>
 
+    <!-- 단축키 안내 모달 (no-print) -->
+    <div id="shortcutsModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-md overflow-hidden flex flex-col max-h-[85vh]">
+            <div class="bg-slate-900 text-white p-4 flex justify-between items-center shrink-0">
+                <h3 class="font-bold flex items-center gap-1.5 text-xs uppercase tracking-wider">
+                    <i data-lucide="keyboard" class="w-4 h-4 text-indigo-400"></i> 키보드 단축키
+                </h3>
+                <button onclick="closeShortcutsModal()" class="text-slate-400 hover:text-white transition-all">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="overflow-y-auto divide-y divide-slate-100 text-xs">
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">근로자 검색창 포커스</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">/</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">신규 근로자 등록칸 포커스</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">N</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">대장 표 ↔ 대시보드 전환</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">T</kbd> / <kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">D</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">일자 전체 접기/펼치기</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">W</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">제출 전 점검 실행</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">C</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">백업 파일 다운로드</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">Ctrl</kbd> + <kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">S</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">대장 인쇄</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">Ctrl</kbd> + <kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">P</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">좌측 메뉴 접기/펼치기</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">[</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">출역 입력칸 이동</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">↑↓←→</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">열려있는 창 닫기</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">Esc</kbd></div>
+                <div class="flex items-center justify-between px-4 py-2.5"><span class="text-slate-600">이 단축키 안내 열기</span><kbd class="px-2 py-0.5 bg-slate-100 border border-slate-300 rounded font-mono text-[11px]">?</kbd></div>
+            </div>
+            <div class="p-3 bg-slate-50 border-t border-slate-100 text-[10px] text-slate-400 shrink-0">
+                입력창(텍스트 필드)에 포커스가 있을 때는 단축키가 동작하지 않습니다.
+            </div>
+        </div>
+    </div>
+
     <!-- 자동백업 이력 모달 (no-print) -->
     <div id="autoBackupModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
         <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-md overflow-hidden flex flex-col max-h-[80vh]">
@@ -1910,7 +1947,19 @@
             renderTaxRateInputs();
             initSidebarState();
             initAllSidebarSections();
+            _restoreLastLaborFormDefaults();
             lucide.createIcons();
+        }
+
+        // 등록 편의: 이전에 마지막으로 등록했던 직종/단가/은행명을 기본값으로 미리 채워둠
+        // (같은 현장은 대부분 같은 직종·단가로 여러 명을 등록하는 경우가 많음)
+        function _restoreLastLaborFormDefaults() {
+            const lastJob = localStorage.getItem('labor_payment_last_job');
+            const lastPrice = localStorage.getItem('labor_payment_last_price');
+            const lastBank = localStorage.getItem('labor_payment_last_bank');
+            if (lastJob) document.getElementById('newJob').value = lastJob;
+            if (lastPrice) document.getElementById('newPrice').value = Number(lastPrice).toLocaleString();
+            if (lastBank) document.getElementById('newBank').value = lastBank;
         }
 
         // ── 사이드바 개별 섹션 접기/펴기 (스크롤 최소화용) ─────────────────
@@ -2682,6 +2731,7 @@
 
             const computedRowsData = [];
             const pad = getPaddingClass();
+            window._lastVisibleLaborOrder = targetLabors.map(l => l.id); // 순서 이동 버튼용 캐시
 
             targetLabors.forEach((labor, idx) => {
                 let autoDays = 0;
@@ -2745,7 +2795,17 @@
                     : '';
 
                 let html = `
-                    <td class="${pad} border-r border-slate-200 bg-slate-100 font-bold sticky left-0 z-10 print:bg-white print:border-black">${idx + 1}</td>
+                    <td class="${pad} border-r border-slate-200 bg-slate-100 font-bold sticky left-0 z-10 print:bg-white print:border-black group relative">
+                        <span class="print:inline group-hover:hidden">${idx + 1}</span>
+                        <span class="hidden group-hover:flex no-print items-center justify-center gap-0.5">
+                            <button onclick="moveLaborRow('${labor.id}', -1)" ${idx === 0 ? 'disabled' : ''} class="w-3.5 h-3.5 flex items-center justify-center rounded hover:bg-blue-200 disabled:opacity-20 disabled:hover:bg-transparent" title="위로 이동">
+                                <i data-lucide="chevron-up" class="w-3 h-3"></i>
+                            </button>
+                            <button onclick="moveLaborRow('${labor.id}', 1)" ${idx === targetLabors.length - 1 ? 'disabled' : ''} class="w-3.5 h-3.5 flex items-center justify-center rounded hover:bg-blue-200 disabled:opacity-20 disabled:hover:bg-transparent" title="아래로 이동">
+                                <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                            </button>
+                        </span>
+                    </td>
                     <td class="${pad} border-r border-slate-200 font-black text-blue-600 cursor-pointer sticky left-[40px] bg-slate-50 hover:underline z-10 print:bg-white print:text-black print:border-black group relative" onclick="openDetailModal('${labor.id}')">
                         <div class="flex items-center gap-1">
                             ${labor.profilePhoto ? `<img src="${labor.profilePhoto}" class="w-4 h-4 rounded-full object-cover shrink-0 print:hidden">` : ''}
@@ -3153,6 +3213,29 @@
         }
 
         // [실무 기능] 근로자 데이터 간편 복사(복제)
+        // 근로자 표 순서(행 위치) 이동 — 현재 화면에 보이는(필터 반영) 순서 기준으로
+        // 바로 위/아래 근로자와 실제 대장 배열상 순서를 맞바꾼다.
+        function moveLaborRow(laborId, direction) {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return;
+
+            const visibleOrder = window._lastVisibleLaborOrder || proj.labors.map(l => l.id);
+            const visIdx = visibleOrder.indexOf(laborId);
+            if (visIdx === -1) return;
+
+            const swapWithId = visibleOrder[visIdx + direction];
+            if (!swapWithId) return; // 맨 위/아래라 더 이상 이동 불가
+
+            const arr = proj.labors;
+            const i1 = arr.findIndex(l => l.id === laborId);
+            const i2 = arr.findIndex(l => l.id === swapWithId);
+            if (i1 === -1 || i2 === -1) return;
+
+            [arr[i1], arr[i2]] = [arr[i2], arr[i1]];
+            saveToLocalStorage();
+            updateHeaderAndTable();
+        }
+
         function duplicateLabor(laborId) {
             const proj = appState.projects[appState.currentProjectId];
             if (!proj) return;
@@ -3498,6 +3581,114 @@
             renderTotalRow(computedRowsData, daysInMonth);
             calculateAndDisplaySummary(computedRowsData);
         }
+
+        // ── ESC 키로 열려있는 모달 닫기 ──────────────────────────────────
+        // customAlertModal(안내/확인창)이 가장 위에 뜨는 경우가 많아 우선 확인,
+        // 그 외 모달들은 아래 순서대로 열려있는 것을 찾아 하나만 닫는다.
+        const ESC_MODAL_CLOSE_MAP = [
+            ['customAlertModal', () => document.getElementById('customAlertModal').classList.add('hidden')],
+            ['shortcutsModal', closeShortcutsModal],
+            ['laborDetailModal', closeDetailModal],
+            ['bulkPrintModal', closeBulkPrintModal],
+            ['autoBackupModal', closeAutoBackupModal],
+            ['preSubmitCheckModal', closePreSubmitCheckModal],
+            ['bulkUserModal', closeBulkUserModal],
+            ['specificDateModal', closeSpecificDateModal],
+            ['editProjectModal', closeEditProjectModal],
+            ['projectModal', closeNewProjectModal],
+            ['insuranceReportModal', closeInsuranceReportModal],
+            ['carryOverModal', closeCarryOverModal],
+            ['moveLaborModal', closeMoveLaborModal],
+            ['workerDbModal', closeWorkerDbModal],
+            ['aiScanModal', closeAiScanModal]
+        ];
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key !== 'Escape') return;
+            for (const [id, closeFn] of ESC_MODAL_CLOSE_MAP) {
+                const el = document.getElementById(id);
+                if (el && !el.classList.contains('hidden')) {
+                    closeFn();
+                    return; // 한 번에 하나만 닫음 (겹쳐있는 경우 위쪽부터)
+                }
+            }
+        });
+        // ─────────────────────────────────────────────────────────────────
+
+        // ── 키보드 단축키 ────────────────────────────────────────────────
+        function openShortcutsModal() {
+            document.getElementById('shortcutsModal').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+        }
+        function closeShortcutsModal() {
+            document.getElementById('shortcutsModal').classList.add('hidden');
+        }
+
+        function _isTypingContext(target) {
+            if (!target) return false;
+            const tag = target.tagName;
+            return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || target.isContentEditable;
+        }
+
+        // 어떤 모달이든 하나라도 열려있으면 단일글자 단축키는 동작하지 않도록 방지
+        function _isAnyModalOpen() {
+            return ESC_MODAL_CLOSE_MAP.some(([id]) => {
+                const el = document.getElementById(id);
+                return el && !el.classList.contains('hidden');
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            // Ctrl/Cmd+S: 백업 파일 다운로드 (브라우저 기본 저장 동작 대신)
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+                e.preventDefault();
+                triggerBackup();
+                return;
+            }
+
+            const typing = _isTypingContext(e.target);
+
+            // "/" : 검색창 포커스 (입력 중이 아닐 때만)
+            if (e.key === '/' && !typing) {
+                e.preventDefault();
+                const el = document.getElementById('searchFilter');
+                if (el) el.focus();
+                return;
+            }
+
+            // "?" : 단축키 안내 열기
+            if (e.key === '?' && !typing) {
+                e.preventDefault();
+                openShortcutsModal();
+                return;
+            }
+
+            // 입력 중이거나 모달이 열려있으면 아래 단일 글자 단축키는 무시
+            if (typing || _isAnyModalOpen()) return;
+
+            switch (e.key.toLowerCase()) {
+                case 'n': // 신규 근로자 등록칸 포커스
+                    e.preventDefault();
+                    { const el = document.getElementById('newName'); if (el) el.focus(); }
+                    break;
+                case 't': // 대장 표 화면
+                    switchMainView('table');
+                    break;
+                case 'd': // 대시보드 화면
+                    switchMainView('dashboard');
+                    break;
+                case 'w': // 일자 전체 접기/펼치기
+                    toggleAllWeeks();
+                    break;
+                case 'c': // 제출 전 점검
+                    runPreSubmitCheck();
+                    break;
+                case '[': // 좌측 메뉴 접기/펼치기
+                    toggleSidebar();
+                    break;
+            }
+        });
+        // ─────────────────────────────────────────────────────────────────
 
         // 스프레드시트 방식의 방향키 및 엔터 네비게이션 제어
         function setupKeyboardNavigation() {
@@ -5026,17 +5217,26 @@
             saveToLocalStorage();
             updateHeaderAndTable();
 
+            // 같은 직종·단가·은행으로 여러 명을 연달아 등록하는 경우가 많아
+            // 개인 식별 정보(성명/주민번호/연락처/계좌/주소)만 비우고
+            // 직종·단가·은행명·용역 여부는 그대로 유지해 다음 등록을 빠르게 함
             document.getElementById('newName').value = "";
             document.getElementById('newSsn').value = "";
-            document.getElementById('newJob').value = "";
-            document.getElementById('newPrice').value = "";
             document.getElementById('newPhone').value = "";
-            document.getElementById('newBank').value = "";
             document.getElementById('newAccount').value = "";
             document.getElementById('newAddress').value = "";
-            _setNewIsService(false); // 다음 등록을 위해 용역 토글 초기화
+            document.getElementById('ssnDupWarning') && document.getElementById('ssnDupWarning').classList.add('hidden');
 
-            showToast(`${name}${isServiceWorker ? ' (용역)' : ''} 신규 근로자가 대장에 추가되었습니다.`);
+            // 직종·단가·은행명은 다음 접속 시에도 이어서 쓸 수 있도록 저장
+            localStorage.setItem('labor_payment_last_job', job);
+            localStorage.setItem('labor_payment_last_price', String(price));
+            if (bank) localStorage.setItem('labor_payment_last_bank', bank);
+
+            showToast(`${name}${isServiceWorker ? ' (용역)' : ''} 신규 근로자가 대장에 추가되었습니다. 이어서 다음 근로자를 등록해 주세요.`);
+
+            // 다음 근로자를 바로 입력할 수 있도록 성명칸에 자동 포커스
+            const nameInput = document.getElementById('newName');
+            if (nameInput) nameInput.focus();
         }
 
         // 근로자 등록 폼의 "용역" 토글 버튼
@@ -5513,15 +5713,37 @@
             const mode = getBulkMode();
             const raw = document.getElementById('bulkNames').value;
             const lines = raw.split('\n').map(l => l.trim()).filter(l => l !== '');
+            const workerDb = _buildWorkerDb();
+
             return lines.map(line => {
                 // Tab 우선, 없으면 콤마로 분리
                 const sep = line.includes('\t') ? '\t' : ',';
                 const parts = line.split(sep).map(p => p.trim());
-                const r = { name: parts[0] || '', ssn: '', phone: '', address: '', account: '' };
+                const r = { name: parts[0] || '', ssn: '', phone: '', address: '', account: '', bank: '', dbMatched: false };
                 if (mode === 'name_ssn' || mode === 'name_ssn_phone' || mode === 'name_ssn_phone_addr' || mode === 'full') r.ssn = parts[1] || '';
                 if (mode === 'name_ssn_phone' || mode === 'name_ssn_phone_addr' || mode === 'full') r.phone = parts[2] || '';
                 if (mode === 'name_ssn_phone_addr' || mode === 'full') r.address = parts[3] || '';
                 if (mode === 'full') r.account = parts[4] || '';
+
+                // 근로자DB(다른 현장 등록 이력)에서 이름이 일치하면, 입력하지 않은 항목만 자동으로 채움
+                // (주민번호가 함께 입력된 경우 그 값과도 일치하는 기록을 우선 사용해 동명이인 오매칭 방지)
+                const nameMatches = workerDb.filter(w => w.name === r.name);
+                let match = null;
+                if (nameMatches.length === 1) {
+                    match = nameMatches[0];
+                } else if (nameMatches.length > 1 && r.ssn) {
+                    const ssnClean = r.ssn.replace(/[^0-9]/g, '');
+                    match = nameMatches.find(w => (w.ssn || '').replace(/[^0-9]/g, '') === ssnClean) || null;
+                }
+                if (match) {
+                    r.dbMatched = true;
+                    if (!r.ssn && match.ssn) r.ssn = match.ssn;
+                    if (!r.phone && match.phone) r.phone = match.phone;
+                    if (!r.address && match.address) r.address = match.address;
+                    if (!r.account && match.account) r.account = match.account;
+                    if (match.bank) r.bank = match.bank;
+                }
+
                 return r;
             }).filter(r => r.name);
         }
@@ -5531,21 +5753,38 @@
             const area = document.getElementById('bulkPreviewArea');
             if (rows.length === 0) { area.classList.add('hidden'); return; }
             area.classList.remove('hidden');
-            document.getElementById('bulkPreviewCount').textContent = `${rows.length}명`;
+            const matchedCount = rows.filter(r => r.dbMatched).length;
+            document.getElementById('bulkPreviewCount').textContent = matchedCount > 0
+                ? `${rows.length}명 (근로자DB 자동매칭 ${matchedCount}명)`
+                : `${rows.length}명`;
 
-            const mode = getBulkMode();
-            const cols = BULK_MODES[mode].cols;
+            // 선택된 모드뿐 아니라, DB 자동매칭으로 채워진 값이 있으면 그 열도 함께 표시
+            const showSsn     = rows.some(r => r.ssn);
+            const showPhone   = rows.some(r => r.phone);
+            const showAddress = rows.some(r => r.address);
+            const showAccount = rows.some(r => r.account);
+
+            const cols = ['이름'];
+            if (showSsn) cols.push('주민번호');
+            if (showPhone) cols.push('연락처');
+            if (showAddress) cols.push('주소');
+            if (showAccount) cols.push('계좌번호');
+
             const head = document.getElementById('bulkPreviewHead');
             head.innerHTML = cols.map(c => `<th class="p-1.5 border-r border-slate-300 px-2 font-bold">${c}</th>`).join('');
 
             const body = document.getElementById('bulkPreviewBody');
             body.innerHTML = rows.map((r, i) => {
-                const cells = [r.name];
-                if (cols.includes('주민번호')) cells.push(r.ssn || '<span class="text-amber-500">임시생성</span>');
-                if (cols.includes('연락처'))  cells.push(r.phone || '-');
-                if (cols.includes('주소'))    cells.push(r.address || '-');
-                if (cols.includes('계좌번호')) cells.push(r.account || '-');
-                return `<tr class="${i%2?'bg-slate-50':'bg-white'}">` + cells.map(c=>`<td class="p-1.5 border-r border-slate-200 px-2">${c}</td>`).join('') + '</tr>';
+                const nameCell = r.dbMatched
+                    ? `${r.name} <span class="text-[9px] bg-emerald-100 text-emerald-700 font-bold px-1 py-0.5 rounded ml-0.5" title="근로자DB에서 정보를 자동으로 채웠습니다">DB매칭</span>`
+                    : r.name;
+                const cells = [nameCell];
+                if (showSsn) cells.push(r.ssn || '<span class="text-amber-500">임시생성</span>');
+                if (showPhone) cells.push(r.phone || '-');
+                if (showAddress) cells.push(r.address || '-');
+                if (showAccount) cells.push(r.account || '-');
+                const rowBg = r.dbMatched ? 'bg-emerald-50/50' : (i % 2 ? 'bg-slate-50' : 'bg-white');
+                return `<tr class="${rowBg}">` + cells.map(c=>`<td class="p-1.5 border-r border-slate-200 px-2">${c}</td>`).join('') + '</tr>';
             }).join('');
         }
 
@@ -5593,7 +5832,7 @@
                     id: 'l_bulk_' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '_' + i + '_' + Math.random().toString(36).substr(2, 9)),
                     name, job, ssn,
                     phone:   phoneHyphenFilter(r.phone.replace(/[^0-9]/g,'')),
-                    bank:    bank || '',
+                    bank:    bank || r.bank || '',
                     account: r.account || '',
                     safetyEdu: false,
                     isServiceWorker,
@@ -5614,7 +5853,9 @@
             document.getElementById('bulkNames').value = '';
 
             const hasDummy = rows.some(r => r.ssn.replace(/[^0-9]/g,'').length !== 13);
+            const matchedCount = rows.filter(r => r.dbMatched).length;
             let msg = `${added}명 등록 완료`;
+            if (matchedCount > 0) msg += ` (근로자DB에서 ${matchedCount}명 정보 자동입력됨)`;
             if (isServiceWorker) msg += ' (용역업체 소속으로 등록됨)';
             if (skipped > 0) msg += ` (${skipped}명 중복 제외)`;
             if (hasDummy) msg += ' — ⚠️ 주민번호 미입력 항목은 임시 번호가 생성되었습니다. 이름 클릭 후 수정해 주세요.';
