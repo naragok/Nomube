@@ -915,6 +915,10 @@
                     <label class="block font-bold text-slate-500 mb-1">대표자명</label>
                     <input type="text" id="modalRepresentative" placeholder="예: 김민지" class="w-full bg-slate-50 border border-slate-200 rounded p-2.5 focus:ring-1 focus:ring-blue-500 outline-none">
                 </div>
+                <div>
+                    <label class="block font-bold text-slate-500 mb-1">사무실 주소 <span class="text-[10px] font-normal text-slate-400">(근로계약서 사업주 소재지, 선택)</span></label>
+                    <input type="text" id="modalOfficeAddress" placeholder="예: 강원도 원주시 OO로 123" class="w-full bg-slate-50 border border-slate-200 rounded p-2.5 focus:ring-1 focus:ring-blue-500 outline-none">
+                </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block font-bold text-slate-500 mb-1">연도 (4자리)</label>
@@ -982,6 +986,10 @@
                 <div>
                     <label class="block font-bold text-slate-500 mb-1">현장 주소/지역 <span class="text-[10px] font-normal text-slate-400">(우천 자동표시용, 선택)</span></label>
                     <input type="text" id="editModalWeatherLocation" placeholder="예: 강원도 원주시 지정면" class="w-full bg-slate-50 border border-slate-200 rounded p-2.5 focus:ring-1 focus:ring-amber-500 outline-none">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-500 mb-1">사무실 주소 <span class="text-[10px] font-normal text-slate-400">(근로계약서 사업주 소재지, 선택)</span></label>
+                    <input type="text" id="editModalOfficeAddress" placeholder="예: 강원도 원주시 OO로 123" class="w-full bg-slate-50 border border-slate-200 rounded p-2.5 focus:ring-1 focus:ring-amber-500 outline-none">
                 </div>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end gap-2 text-xs">
@@ -4811,6 +4819,7 @@
                             <div class="space-y-1">
                                 <h3 class="font-extrabold text-blue-800 mb-1">■ 사업주 ("갑")</h3>
                                 <div><span class="text-slate-400">상호 / 회사명:</span> ${proj.company}</div>
+                                ${proj.officeAddress ? `<div><span class="text-slate-400">사업장 소재지:</span> ${proj.officeAddress}</div>` : ''}
                                 <div><span class="text-slate-400">배치 현장명:</span> ${proj.projectName}</div>
                                 <div><span class="text-slate-400">담당 공종명:</span> ${proj.workType}</div>
                             </div>
@@ -4850,7 +4859,7 @@
                             <div class="space-y-1">
                                 <p class="font-bold text-slate-900 mb-1.5 text-sm">사업주 ("갑")</p>
                                 <p>상 호: ${proj.company}</p>
-                                <p>주 소: 현장 사무소 내</p>
+                                <p>주 소: ${proj.officeAddress || '현장 사무소 내'}</p>
                                 <p class="pt-6 font-bold font-sans">대표자: <span class="underline">${proj.representative || '김민지'}</span> (서명/인)</p>
                             </div>
                             <div class="space-y-1">
@@ -6287,6 +6296,7 @@
             document.getElementById('editModalProjectName').value = proj.projectName || "";
             document.getElementById('editModalWorkType').value = proj.workType || "";
             document.getElementById('editModalWeatherLocation').value = proj.weatherLocation || "";
+            document.getElementById('editModalOfficeAddress').value = proj.officeAddress || "";
             document.getElementById('editProjectModal').classList.remove('hidden');
         }
 
@@ -6305,6 +6315,7 @@
             const projectName = document.getElementById('editModalProjectName').value.trim();
             const workType = document.getElementById('editModalWorkType').value.trim();
             const weatherLocation = document.getElementById('editModalWeatherLocation').value.trim();
+            const officeAddress = document.getElementById('editModalOfficeAddress').value.trim();
 
             if (!company || isNaN(year) || isNaN(month) || !projectName || !workType) {
                 showCustomAlert("비어 있는 입력 항목이 있는지 상세 확인 후 기록하여 주십시오.");
@@ -6319,6 +6330,7 @@
             proj.projectName = projectName;
             proj.workType = workType;
             proj.weatherLocation = weatherLocation;
+            proj.officeAddress = officeAddress;
             if (weatherLocationChanged) proj.weatherCache = null; // 지역이 바뀌면 캐시된 날씨 무효화
 
             saveToLocalStorage();
@@ -6692,6 +6704,7 @@
             const month = parseInt(document.getElementById('modalMonth').value);
             const projectName = document.getElementById('modalProjectName').value.trim();
             const workType = document.getElementById('modalWorkType').value.trim();
+            const officeAddress = document.getElementById('modalOfficeAddress').value.trim();
 
             if (!company || isNaN(year) || isNaN(month) || !projectName || !workType) {
                 showCustomAlert("비어 있는 입력 항목이 있는지 상세 확인 후 기록하여 주십시오.");
@@ -6706,6 +6719,7 @@
                 month,
                 projectName,
                 workType,
+                officeAddress,
                 labors: []
             };
 
@@ -6718,6 +6732,7 @@
 
             document.getElementById('modalCompany').value = "";
             document.getElementById('modalRepresentative').value = "";
+            document.getElementById('modalOfficeAddress').value = "";
             document.getElementById('modalProjectName').value = "";
             document.getElementById('modalWorkType').value = "";
         }
