@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.9 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V2.0 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -127,11 +127,7 @@
                모든 행 높이를 고정값으로 통일해 두 칸이 항상 동일한 높이로 인쇄되도록 함 */
             #printTable tr { height: 3.4mm; }
         }
-        /* 근로자 순서 드래그 이동 시 삽입 위치 표시선 */
-        .drag-indicator-top { box-shadow: inset 0 2px 0 0 #3b82f6; }
-        .drag-indicator-bottom { box-shadow: inset 0 -2px 0 0 #3b82f6; }
         @media print {
-            .drag-indicator-top, .drag-indicator-bottom { box-shadow: none; }
             #printTable .pt-name  { width: 14mm; font-weight: 900; }
             #printTable .pt-ssn   { width: 20mm; font-family: monospace; font-size: 6.5px; }
             #printTable .pt-addr  { width: 16mm; font-size: 6px; white-space: nowrap; text-overflow: ellipsis; }
@@ -167,7 +163,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.9</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V2.0</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="toggleAllWeeksBtn" onclick="toggleAllWeeks()" class="bg-amber-700 hover:bg-amber-800 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="출근일자(1일~말일) 전체를 한 번에 접거나 펼칩니다">
@@ -1674,13 +1670,7 @@
     <!-- 노무비 NO 다중선택 이동 — 화면 하단 중앙 플로팅 바 -->
     <div id="laborMoveBar" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-40 no-print bg-slate-900 text-white rounded-xl shadow-2xl px-3 py-2 flex items-center gap-2 text-xs font-bold">
         <span id="laborMoveCount"></span>
-        <button onclick="moveSelectedLaborRows(-1)" class="bg-slate-700 hover:bg-slate-600 rounded px-2 py-1.5 flex items-center gap-1" title="선택한 근로자들을 함께 위로 이동">
-            <i data-lucide="chevron-up" class="w-3.5 h-3.5"></i> 위로
-        </button>
-        <button onclick="moveSelectedLaborRows(1)" class="bg-slate-700 hover:bg-slate-600 rounded px-2 py-1.5 flex items-center gap-1" title="선택한 근로자들을 함께 아래로 이동">
-            <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i> 아래로
-        </button>
-        <span class="text-slate-400 font-normal hidden sm:inline">| 특정 위치로 옮기려면 행에 마우스를 올려 <i data-lucide="corner-left-down" class="w-3 h-3 inline text-emerald-400"></i> 버튼 클릭</span>
+        <span class="text-slate-400 font-normal">옮길 위치의 행에 마우스를 올려 <i data-lucide="corner-left-down" class="w-3 h-3 inline text-emerald-400"></i> 버튼 클릭</span>
         <button onclick="clearLaborMoveSelection()" class="bg-slate-600 hover:bg-slate-500 rounded px-2 py-1.5" title="선택 해제">선택 해제</button>
     </div>
     <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-lg flex items-center gap-2 transform translate-y-10 opacity-0 transition-all duration-300 z-50 text-xs font-semibold">
@@ -2896,12 +2886,6 @@
                 const tr = document.createElement('tr');
                 tr.className = "hover:bg-slate-50 border-b border-slate-200 text-center text-slate-700 print:text-black print:border-black";
                 tr.dataset.laborId = labor.id;
-                tr.draggable = false; // 그립 핸들을 mousedown할 때만 true로 전환 (다른 입력칸 클릭과 충돌 방지)
-                tr.addEventListener('dragstart', handleLaborRowDragStart);
-                tr.addEventListener('dragover', handleLaborRowDragOver);
-                tr.addEventListener('dragleave', handleLaborRowDragLeave);
-                tr.addEventListener('drop', handleLaborRowDrop);
-                tr.addEventListener('dragend', handleLaborRowDragEnd);
 
                 const hasManualDays = (labor.manualDays !== null && labor.manualDays !== undefined);
                 const { age, isPensionExempt, isEmploymentExempt } = getExactInsuranceAge(labor.ssn, proj.year, proj.month);
@@ -2956,16 +2940,6 @@
                             <input type="checkbox" class="labor-move-check w-3 h-3 shrink-0 cursor-pointer no-print" data-labor-id="${labor.id}" onclick="toggleLaborMoveSelect('${labor.id}', this.checked)" ${laborMoveSelection.has(labor.id) ? 'checked' : ''} title="선택하여 여러 명 동시 이동" aria-label="선택하여 여러 명 동시 이동">
                             <span class="print:inline group-hover:hidden">${idx + 1}</span>
                             <span class="hidden group-hover:flex no-print items-center justify-center gap-0.5">
-                                <span class="drag-handle w-3.5 h-3.5 flex items-center justify-center rounded cursor-grab active:cursor-grabbing hover:bg-slate-300" title="드래그하여 순서 이동"
-                                    onmousedown="this.closest('tr').draggable = true">
-                                    <i data-lucide="grip-vertical" class="w-3 h-3 text-slate-500"></i>
-                                </span>
-                                <button onclick="moveLaborRow('${labor.id}', -1)" ${idx === 0 ? 'disabled' : ''} class="w-3.5 h-3.5 flex items-center justify-center rounded hover:bg-blue-200 disabled:opacity-20 disabled:hover:bg-transparent" title="위로 이동" aria-label="위로 이동">
-                                    <i data-lucide="chevron-up" class="w-3 h-3"></i>
-                                </button>
-                                <button onclick="moveLaborRow('${labor.id}', 1)" ${idx === targetLabors.length - 1 ? 'disabled' : ''} class="w-3.5 h-3.5 flex items-center justify-center rounded hover:bg-blue-200 disabled:opacity-20 disabled:hover:bg-transparent" title="아래로 이동" aria-label="아래로 이동">
-                                    <i data-lucide="chevron-down" class="w-3 h-3"></i>
-                                </button>
                                 <button onclick="moveSelectedLaborRowsToTarget('${labor.id}')" class="w-3.5 h-3.5 flex items-center justify-center rounded hover:bg-emerald-200" title="체크된 근로자들을 이 사람 위치로 한 번에 이동" aria-label="체크된 근로자들을 이 사람 위치로 한 번에 이동">
                                     <i data-lucide="corner-left-down" class="w-3 h-3 text-emerald-600"></i>
                                 </button>
@@ -3379,93 +3353,6 @@
         }
 
         // [실무 기능] 근로자 데이터 간편 복사(복제)
-        // ── 드래그해서 근로자 순서 이동 ──────────────────────────────────
-        let _dragLaborId = null;
-
-        function handleLaborRowDragStart(e) {
-            _dragLaborId = this.dataset.laborId;
-            e.dataTransfer.effectAllowed = 'move';
-            try { e.dataTransfer.setData('text/plain', _dragLaborId); } catch (err) {}
-            this.classList.add('opacity-40');
-        }
-
-        function handleLaborRowDragOver(e) {
-            e.preventDefault();
-            if (!_dragLaborId || this.dataset.laborId === _dragLaborId) return;
-            const rect = this.getBoundingClientRect();
-            const isBottomHalf = (e.clientY - rect.top) > rect.height / 2;
-            this.classList.remove('drag-indicator-top', 'drag-indicator-bottom');
-            this.classList.add(isBottomHalf ? 'drag-indicator-bottom' : 'drag-indicator-top');
-        }
-
-        function handleLaborRowDragLeave(e) {
-            this.classList.remove('drag-indicator-top', 'drag-indicator-bottom');
-        }
-
-        function handleLaborRowDrop(e) {
-            e.preventDefault();
-            const targetId = this.dataset.laborId;
-            const rect = this.getBoundingClientRect();
-            const isBottomHalf = (e.clientY - rect.top) > rect.height / 2;
-            this.classList.remove('drag-indicator-top', 'drag-indicator-bottom');
-            if (_dragLaborId && targetId && _dragLaborId !== targetId) {
-                _reorderLaborsByDrag(_dragLaborId, targetId, isBottomHalf);
-            }
-            _dragLaborId = null;
-        }
-
-        function handleLaborRowDragEnd(e) {
-            this.draggable = false;
-            this.classList.remove('opacity-40');
-            document.querySelectorAll('#laborList tr').forEach(tr => tr.classList.remove('drag-indicator-top', 'drag-indicator-bottom'));
-            _dragLaborId = null;
-        }
-
-        // 드래그된 근로자를 목표 근로자의 바로 앞/뒤로 실제 배열상 재배치
-        function _reorderLaborsByDrag(draggedId, targetId, insertAfter) {
-            const proj = appState.projects[appState.currentProjectId];
-            if (!proj || draggedId === targetId) return;
-
-            const arr = proj.labors;
-            const draggedRealIdx = arr.findIndex(l => l.id === draggedId);
-            if (draggedRealIdx === -1) return;
-            const [draggedItem] = arr.splice(draggedRealIdx, 1);
-
-            const targetIdx = arr.findIndex(l => l.id === targetId);
-            if (targetIdx === -1) {
-                arr.splice(draggedRealIdx, 0, draggedItem); // 안전장치: 원위치 복구
-                return;
-            }
-            const insertIdx = insertAfter ? targetIdx + 1 : targetIdx;
-            arr.splice(insertIdx, 0, draggedItem);
-
-            saveToLocalStorage();
-            updateHeaderAndTable();
-        }
-        // ─────────────────────────────────────────────────────────────────
-
-        // 근로자 표 순서(행 위치) 이동 — 현재 화면에 보이는(필터 반영) 순서 기준으로
-        // 바로 위/아래 근로자와 실제 대장 배열상 순서를 맞바꾼다.
-        function moveLaborRow(laborId, direction) {
-            const proj = appState.projects[appState.currentProjectId];
-            if (!proj) return;
-
-            const visibleOrder = window._lastVisibleLaborOrder || proj.labors.map(l => l.id);
-            const visIdx = visibleOrder.indexOf(laborId);
-            if (visIdx === -1) return;
-
-            const swapWithId = visibleOrder[visIdx + direction];
-            if (!swapWithId) return; // 맨 위/아래라 더 이상 이동 불가
-
-            const arr = proj.labors;
-            const i1 = arr.findIndex(l => l.id === laborId);
-            const i2 = arr.findIndex(l => l.id === swapWithId);
-            if (i1 === -1 || i2 === -1) return;
-
-            [arr[i1], arr[i2]] = [arr[i2], arr[i1]];
-            saveToLocalStorage();
-            updateHeaderAndTable();
-        }
 
         // ── 노무비 NO 체크 후 여러 명 동시 순서 이동 ─────────────────────
         let laborMoveSelection = new Set();
@@ -3491,52 +3378,6 @@
             } else {
                 bar.classList.add('hidden');
             }
-        }
-
-        function _swapLaborsById(proj, idA, idB) {
-            const arr = proj.labors;
-            const i1 = arr.findIndex(l => l.id === idA);
-            const i2 = arr.findIndex(l => l.id === idB);
-            if (i1 === -1 || i2 === -1) return;
-            [arr[i1], arr[i2]] = [arr[i2], arr[i1]];
-        }
-
-        // 체크된 근로자들을 화면 표시 순서(필터 반영) 기준으로 한 칸씩 함께 위/아래로 이동
-        // (서로 떨어져 있어도 상대 순서를 유지하며 이동 — 탐색기 다중선택 이동과 동일한 방식)
-        function moveSelectedLaborRows(direction) {
-            const proj = appState.projects[appState.currentProjectId];
-            if (!proj || laborMoveSelection.size === 0) return;
-
-            const visibleOrder = (window._lastVisibleLaborOrder || proj.labors.map(l => l.id)).slice();
-            const selectedIds = [...laborMoveSelection].filter(id => visibleOrder.includes(id));
-            if (selectedIds.length === 0) return;
-
-            let indices = selectedIds.map(id => visibleOrder.indexOf(id));
-
-            if (direction === -1) {
-                indices.sort((a, b) => a - b);
-                if (indices[0] === 0) return; // 이미 맨 위
-                for (const idx of indices) {
-                    const idA = visibleOrder[idx], idB = visibleOrder[idx - 1];
-                    if (laborMoveSelection.has(idB)) continue; // 함께 이동 중인 항목은 건너뜀
-                    _swapLaborsById(proj, idA, idB);
-                    [visibleOrder[idx], visibleOrder[idx - 1]] = [visibleOrder[idx - 1], visibleOrder[idx]];
-                }
-            } else {
-                indices.sort((a, b) => b - a);
-                if (indices[0] === visibleOrder.length - 1) return; // 이미 맨 아래
-                for (const idx of indices) {
-                    const idA = visibleOrder[idx], idB = visibleOrder[idx + 1];
-                    if (laborMoveSelection.has(idB)) continue;
-                    _swapLaborsById(proj, idA, idB);
-                    [visibleOrder[idx], visibleOrder[idx + 1]] = [visibleOrder[idx + 1], visibleOrder[idx]];
-                }
-            }
-
-            window._lastVisibleLaborOrder = visibleOrder;
-            saveToLocalStorage();
-            updateHeaderAndTable();
-            updateLaborMoveBar();
         }
 
         // 체크된 근로자들을 특정 근로자(targetId)의 바로 위 위치로 한 번에 이동
