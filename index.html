@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V2.1 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V2.6 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -163,7 +163,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V2.1</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V2.6</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="toggleAllWeeksBtn" onclick="toggleAllWeeks()" class="bg-amber-700 hover:bg-amber-800 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="출근일자(1일~말일) 전체를 한 번에 접거나 펼칩니다">
@@ -513,6 +513,11 @@
                             <span id="zoomVal" class="text-blue-600 font-bold">95%</span>
                         </div>
                         <input type="range" id="zoomSlider" min="70" max="120" value="95" oninput="applyZoom(this.value)" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                    </div>
+                    <div>
+                        <button id="fitScreenBtn" onclick="toggleFitTableToScreen()" class="w-full py-1.5 rounded text-center border font-bold transition-all bg-slate-50 border-slate-200 text-slate-600 hover:bg-blue-50 hover:border-blue-300 flex items-center justify-center gap-1">
+                            <i data-lucide="scan" class="w-3.5 h-3.5"></i> 대장 한 화면에 맞추기
+                        </button>
                     </div>
                     <div>
                         <span class="text-slate-500 font-bold block mb-1">셀 여백 밀도</span>
@@ -2086,6 +2091,9 @@
             initAllSidebarSections();
             _restoreLastLaborFormDefaults();
             lucide.createIcons();
+
+            // "대장 한 화면에 맞추기"를 기본값으로 항상 켠 상태로 시작
+            setTimeout(() => { toggleFitTableToScreen(); }, 50);
         }
 
         // 등록 편의: 이전에 마지막으로 등록했던 직종/단가/은행명을 기본값으로 미리 채워둠
@@ -2190,6 +2198,10 @@
                 if (expandTab) expandTab.style.display = 'none';
             }
             if (window.lucide) lucide.createIcons();
+
+            // 사이드바 접기/펴기로 표 영역 너비가 바뀌므로, 전환 애니메이션이
+            // 끝난 뒤 "한 화면에 맞추기"가 켜져 있으면 자동으로 다시 계산
+            setTimeout(() => { if (typeof _reapplyFitTableIfActive === 'function') _reapplyFitTableIfActive(); }, 220);
         }
         // ─────────────────────────────────────────────────────────────────
 
@@ -2315,6 +2327,65 @@
                 `;
             }
         }
+
+        // 지급대장(31일 + 각종 항목 열) 표가 가로 스크롤 없이 화면 한 화면에
+        // 전부 보이도록, 표를 실제 필요한 폭에 맞춰 축소한다(다시 누르면 원래대로).
+        // 창 크기 변경/전체화면 전환 시에도 자동으로 다시 계산해 맞춘다.
+        let _fitTableActive = false;
+
+        function _applyFitTableToScreen(silent) {
+            const table = document.getElementById('paymentTable');
+            if (!table) return;
+            const container = table.parentElement; // .table-container (overflow-auto)
+
+            // 실제(자연) 너비를 측정하기 위해 배율을 임시로 초기화
+            table.style.transform = '';
+            table.style.marginBottom = '';
+            const naturalWidth = table.scrollWidth;
+            const availableWidth = container.clientWidth;
+
+            if (naturalWidth <= availableWidth) {
+                if (!silent) showToast('이미 표 전체가 한 화면에 표시되고 있습니다.');
+                return;
+            }
+
+            const scale = availableWidth / naturalWidth;
+            table.style.transformOrigin = 'top left';
+            table.style.transform = `scale(${scale})`;
+            // 축소된 만큼 표 아래에 빈 여백이 남지 않도록 높이를 보정
+            table.style.marginBottom = `-${table.offsetHeight * (1 - scale)}px`;
+            if (!silent) showToast(`한 화면에 맞춰 ${Math.round(scale * 100)}%로 축소했습니다.`);
+        }
+
+        function toggleFitTableToScreen() {
+            const table = document.getElementById('paymentTable');
+            const btn = document.getElementById('fitScreenBtn');
+
+            if (_fitTableActive) {
+                table.style.transform = '';
+                table.style.transformOrigin = '';
+                table.style.marginBottom = '';
+                _fitTableActive = false;
+                btn.classList.remove('bg-blue-50', 'border-blue-300', 'text-blue-700');
+                btn.classList.add('bg-slate-50', 'border-slate-200', 'text-slate-600');
+                return;
+            }
+
+            _applyFitTableToScreen(false);
+            _fitTableActive = true;
+            btn.classList.remove('bg-slate-50', 'border-slate-200', 'text-slate-600');
+            btn.classList.add('bg-blue-50', 'border-blue-300', 'text-blue-700');
+        }
+
+        // 창 크기 변경이나 전체화면 전환 시, 맞춤이 켜져 있으면 자동으로 재계산
+        let _fitTableResizeTimer = null;
+        function _reapplyFitTableIfActive() {
+            if (!_fitTableActive) return;
+            clearTimeout(_fitTableResizeTimer);
+            _fitTableResizeTimer = setTimeout(() => _applyFitTableToScreen(true), 150);
+        }
+        window.addEventListener('resize', _reapplyFitTableIfActive);
+        document.addEventListener('fullscreenchange', _reapplyFitTableIfActive);
 
         // 테이블 셀 밀도 제어
         function applyDensity(density) {
@@ -2483,6 +2554,7 @@
             _insuranceAgeCache.clear(); // 프로젝트 변경 시 나이 캐시 초기화
             laborMoveSelection.clear();
             updateHeaderAndTable();
+            setTimeout(_reapplyFitTableIfActive, 50);
         }
 
         // ===== 출근일자 주차별 그룹화(접기/펼치기) 기능 =====
@@ -4799,7 +4871,6 @@
                             <div class="space-y-1">
                                 <h3 class="font-extrabold text-blue-800 mb-1">■ 사업주 ("갑")</h3>
                                 <div><span class="text-slate-400">상호 / 회사명:</span> ${proj.company}</div>
-                                ${proj.officeAddress ? `<div><span class="text-slate-400">사업장 소재지:</span> ${proj.officeAddress}</div>` : ''}
                                 <div><span class="text-slate-400">배치 현장명:</span> ${proj.projectName}</div>
                                 <div><span class="text-slate-400">담당 공종명:</span> ${proj.workType}</div>
                             </div>
