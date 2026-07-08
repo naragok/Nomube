@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V3.0 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V3.2 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAKKUlEQVR4nO3dT2wcZxnH8d/sev2/XaK0MdA0bZ3YLVZIceLwL0hpJSiqqFCIRFWQWgQcuBHUAz2AkEAVJ4QULoBEEVKlnipSBJUQF9KqKgLsGNxgQZzYTRS3cUnjODZZ27ve4WCNvd59Z3Z2d2beZ579faQc4l2PJ/F3331mdtZ2IEB+YMS1vQ/UuqWFacf2PljZAQbcHmwEntgXZMTtLam4Y/0ijJhM4ow7lg0zZAojjrAzUW+QMVNYcbQS2SOEIVMrolqtI1mhGTO1KqqGWnpUMGSKQyurddMrNGOmuLTSVlNBM2aKW7ONNRw0Y6akNNNaQ0EzZkpao82FDpoxky2NtBcqaMZMtoVtsG7QjJmkCNNi5C99E9kUGDRXZ5KmXpO+r8i0e8xf+uk/bO9CoDPPfsz2Lljl92oigzaQHnOldg3bL2jjyMGY0yNt+xsVv0ZrgmbM6ZPW/W6VqVWe5SBVdgTdzqszpVN1sx22dqRZV2YnY9v2qVdi23Ts4vx/2Tc4Gtu2o5aaoOP8hlEw7/8+DWFvBS113GDIckgNOz8w4nqn8UQfFCYd8+kTIh/TdSW935IXGbFBS/5PI7nfnwwgd9ywIW2rdNr2Ny5ew07lX6SQ8Og/9Yr1H6QZSErIkubppYVpJzVnOZImJRhqjLgZWsLqTOFJ+35lpI0bRM3KD4y44lZoolYwaFKFQZMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUUfXjdF/87Z9t70IqPX3yUdu7EBmu0KQKgyZVVI0cmp46qTlcoUkVBk2qMGhShUGTKgyaVGHQpAqDJlUYNKnCoEkVBk2qMGhShUGTKgyaVGHQpAqDJlUYNKnCoEkVVe9Y4Ztkm6PpnT5coUkVBk2qqBo5ND11UnO4QpMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUYdCkCoMmVRg0qaLqajvaaezbt0Lfd/xnd8a4J8lh0Eo0Em/Yz09j5Aw6xVqNuJHtpyVuBp1CcYcc9DWlh60qaO1vkj199ojtXRAftqqgtZIQcjWpYfO0nXASY65kY/wJ4uQHRlzbO1Hpyuyk7V0QQ1osQd77w3HbuwCAI4dIaQrZs+eJ1wDYD5sjhzBpjLmSF7YtDFqQtMfssRk1gxZCS8weW1EzaAG0xeyxETWDtkxrzJ6ko2bQpAqDtkj76uxJcpVm0Ja0S8yepKJm0Ba0W8yeJKJm0KQKg05Yu67OnrhXaQZNqvDipAQ1ujo//0w/jn+003jbX/5dxHdfWK67jeG9HXjhlP81y6d/dxsvv7Fadztf/1wPvvFYj/G2uYUNPPOTpbrb8Ox54rXYLmJi0IK9/d4GntxlfhJ99FAnHAdw61z8+4kHcxjw2QYAHBvJhQr6Mwf9t/P6+fW6n58UjhwJaWZ2Hr9Q9L0t3+fgwIey9b/uUPCadWQoV3cbGQcYHfS/3/iM/376iWuWZtCCnb9cwuq6/xI8Nlw/xrE6wX5wVwb33BX8wHjo3g709zi+t0/MlOruR1I4cgh1354shu7J4tpiGfcPmIN77HAX/rtU9t3GB/oyuDtff8366iPdmLzkv8oeGzHP8QBQWHcxvDeLO3od/Ouy/bD5FqwENDNufPPzPXjuy30x7E08zry5hud+Xf8gtVrUB4ccOUgVjhxCzcxv4MybawCAL36yC1mfpWdqroRL724Yb3t8rBPdnTtn3+u3yrjrztqN/encOv63WvtkvavfwSOH/EcO7/OaOTCMA4MW6vXz61unw4Y+nMXB+83fqukrJfzgxZWaj+f7HJz41O6aj//i1QK+/5XaUeblN1Zxdqr29NvJY92+QRfWXXznl7dQMj+erODIIZTjANnM5p+Ji/6r39Hh3Nb9Kv8cHc7BqToxUXaB3/91zXggOTZk3s6RA/5r3tRcCa67eb+M/0mQRPGgMGbNXrvRLgeFQLQHhlyhSRXO0EIV1lxcv7U9GuR7M8j5fLfWii6WC9tPtNkMsKu/dq1auu2iWHLhOMDuO2pvXy64WCtub6en00Fft3mWKLvAjeXt/Vsu+J8PTxKDFuqls6t46ez2NRY/erofTx3vNt53Zn4DJ5+/ufX3T4/k8Jtn8zX3O/HDRcy/X4bjAH87vRv53p2x/uqPBfz81dtbf//eU3342mfNFyRNzZXw5I9vGm+ziSNHSgSdFvvIvg70dm3HeeRA7cvd1xbLmH9/cxV1XeCc4UBzbHjn+hb0svmEkNN01Rh0SgRdqJTNAKP7t2M0hVj9gDBtb3Qwt3W+u6/bwUP3+j+BM2hqyTs3ynjnhv+c6l2olM0ADw/WhlgdsGnF7+9x8ODezc89vD/n+2KO6wITF+1ft2HCoFMkaFX0VuXq8cMzXhXgW2+XUDBcyeddTlo9flSavbaBxRUZB4HVGHSKBM3RDz/QgVwHcNQwbizddjEzvzPo0gbwz9naVda7fjqN8zPAoFMlaI7u7nRw8L4O4wX7kxeLxne2mB4gY0M55DqAQw/4r9BSrtswYdApcvHdDdxcCbjgfyiHw4aXqv0CNH387nwGX/h4F7py/q9ljwu6oL8ag45ZlL9UZ/NgzH91PHms23gl3fgFc4CTl0rYMIzC33q81/drLCyWcfV6dFcj8XroNhf0dL/f8B7DtaKLty6bP6ew5mL6Sm3spu14gh5QEjDolGn0gGxqroRiwIQQNJcb7y94fgYYdOqcv2w+3ean3gPg7w0GKnl+Bhh06vidbvNTL8CJmVLdn+3hWS64uHBVeNBLC9NCLs3WK+rfthr2ab/sAucC3s0NAIsrZcxeC3eQN3mpiHKEV89HfUC4tDDtcIVOobBB/+dqCSuF+gWG3Z70cQMQOHLsGxy1vQvi+Z1uqxb2gC/s/SS/QugRF7RWUY4dfqfbqoW9gCjMCl0sbZ4xiUpcP6xxa37mewvj1+4/G7pSHPMzwBU6UVEfHKZVnL8PXGzQnKWpGVtBSzx9pzHqdl+l41idK9sVu0J79g2Oqgyb4iE+aI+msNt1lY5zdvbUjBnSznZoZuOXu9sSV8zVo3JqVmiNklixJEjy31kTtMSDQyITU6vGFZpRJ0f7Kp3UqOHhyCGA1qht/Lt8g+YqnSxtUcf57wlqM3CFZtTJ0hK1rZgBjhzipD1q2/sfagXmuWk70nSeOomQw0wMoVZojh522F7twpISM9DAyMGo7ZAetaSYgZAjRyWOH/ZIGkGSeqA1upA2teoyartshp3kM0YzU0HTYwSjti/JsJMefZodcVuaixm1HHHEbWt+b+V4LZIDPYYtUyORSzj4jOLEQ2RnLhg1tSKqs2iRn4pj2NSIqE8HR/7SN89XU1hxtBJrfFytySTORS+x1ZRxt7eknrmtjAeMuz3YGD9FzLsMXAcJx0//ByNZdeHFWJwrAAAAAElFTkSuQmCC">
@@ -163,7 +163,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V3.0</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V3.2</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="toggleAllWeeksBtn" onclick="toggleAllWeeks()" class="bg-amber-700 hover:bg-amber-800 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="출근일자(1일~말일) 전체를 한 번에 접거나 펼칩니다">
@@ -688,12 +688,13 @@
 
             <!-- 대시보드 화면 (탭 전환 시 표시) -->
             <div id="dashboardView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
-                <div class="p-5 space-y-5 max-w-5xl mx-auto">
+                <div class="p-5 max-w-[1600px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
 
                     <!-- KPI 카드 그리드 -->
-                    <div>
+                    <div class="lg:col-span-3">
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">핵심 지표</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
                             <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
                                 <div class="flex items-center gap-1.5 text-slate-400 text-[11px] font-bold mb-1"><i data-lucide="users" class="w-3.5 h-3.5"></i> 등록 인원</div>
                                 <div id="dashTotalCount" class="text-xl font-black text-slate-900">0명</div>
@@ -722,18 +723,56 @@
                     </div>
 
                     <!-- 전월 대비 비교 -->
-                    <div id="dashMonthCompareWrap" class="hidden">
+                    <div id="dashMonthCompareWrap" class="hidden lg:col-span-3">
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">전월 대비</h3>
                         <div id="dashMonthCompare" class="grid grid-cols-3 gap-3">
                             <!-- JS로 동적 생성 -->
                         </div>
                     </div>
 
-                    <!-- 일별 출역인원 추이 -->
+                    <!-- 4대보험 가입 현황 -->
                     <div>
-                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">일별 출역인원 추이</h3>
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">4대보험 가입 현황</h3>
+                        <div id="dashInsuranceStatus" class="grid grid-cols-3 gap-3">
+                            <!-- JS로 동적 생성 -->
+                        </div>
+                    </div>
+
+                    <!-- 대장 입력 완성도 -->
+                    <div>
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">대장 입력 완성도</h3>
                         <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                            <canvas id="dashDailyChart" height="90"></canvas>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span id="dashCompletenessLabel" class="text-[11px] font-bold text-slate-500">필수 항목(주민번호·주소·계좌·직종) 입력 완료율</span>
+                                <span id="dashCompletenessPct" class="text-sm font-black text-slate-900">0%</span>
+                            </div>
+                            <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div id="dashCompletenessBar" class="h-full bg-blue-500 rounded-full transition-all" style="width:0%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 안전교육 만료 임박자 -->
+                    <div id="dashSafetyExpiryWrap" class="hidden">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">안전교육 만료 임박/만료자</h3>
+                        <div id="dashSafetyExpiryList" class="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 shadow-sm overflow-hidden">
+                            <!-- JS로 동적 생성 -->
+                        </div>
+                    </div>
+
+                    <!-- 단가 이상치 -->
+                    <div id="dashPriceOutlierWrap" class="hidden">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">단가 이상치 (같은 직종 평균 대비)</h3>
+                        <div id="dashPriceOutlierList" class="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 shadow-sm overflow-hidden">
+                            <!-- JS로 동적 생성 -->
+                        </div>
+                    </div>
+
+                    <!-- 신규 투입 인원 -->
+                    <div id="dashNewWorkersWrap" class="hidden">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">이번 달 신규 투입 인원</h3>
+                        <div id="dashNewWorkersList" class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                            <!-- JS로 동적 생성 -->
                         </div>
                     </div>
 
@@ -745,12 +784,20 @@
                         </div>
                     </div>
 
+                    <!-- 월별 인건비 추이 -->
+                    <div id="dashMonthlyTrendWrap" class="hidden lg:col-span-2">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">월별 인건비 추이</h3>
+                        <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                            <canvas id="dashMonthlyTrendChart" height="90"></canvas>
+                        </div>
+                    </div>
+
                     <!-- 경고 요약 -->
                     <div>
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider">경고 요약</h3>
                             <button onclick="runPreSubmitCheck()" class="text-[11px] text-rose-600 hover:underline font-bold flex items-center gap-1">
-                                <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> 제출 전 점검 상세보기
+                                <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> 상세보기
                             </button>
                         </div>
                         <div id="dashWarningList" class="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 shadow-sm overflow-hidden">
@@ -758,6 +805,15 @@
                         </div>
                     </div>
 
+                    <!-- 일별 출역인원 추이 -->
+                    <div class="lg:col-span-3">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">일별 출역인원 추이</h3>
+                        <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                            <canvas id="dashDailyChart" height="90"></canvas>
+                        </div>
+                    </div>
+
+                </div>
                 </div>
             </div>
             </main>
@@ -4198,6 +4254,12 @@
                 renderDashboardDailyChart();
                 renderDashboardJobBreakdown();
                 renderDashboardMonthCompare();
+                renderDashboardInsuranceStatus();
+                renderDashboardCompleteness();
+                renderDashboardSafetyExpiry();
+                renderDashboardPriceOutliers();
+                renderDashboardMonthlyTrend();
+                renderDashboardNewWorkers();
             } else {
                 dashWrap.classList.add('hidden');
                 dashWrap.style.display = 'none';
@@ -4364,6 +4426,232 @@
                     <div class="text-[10px] text-slate-400 mt-0.5">전월(${prevYear}.${String(prevMonth).padStart(2,'0')}) 대비</div>
                 </div>
             `).join('');
+        }
+
+        // 대시보드: 4대보험(국민연금/건강보험/고용보험) 가입 vs 면제 인원 현황
+        function renderDashboardInsuranceStatus() {
+            const container = document.getElementById('dashInsuranceStatus');
+            if (!container) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors) { container.innerHTML = ''; return; }
+
+            let pensionOn = 0, pensionOff = 0, employmentOn = 0, employmentOff = 0, healthOn = 0, healthOff = 0;
+            proj.labors.forEach(l => {
+                const isService = _isServiceWorker(l);
+                const ageInfo = getExactInsuranceAge(l.ssn, proj.year, proj.month);
+                const isPensionExempt = ageInfo.isPensionExempt;
+                const isEmploymentExempt = ageInfo.isEmploymentExempt;
+
+                if (isService) { healthOff++; pensionOff++; employmentOff++; return; }
+                isPensionExempt ? pensionOff++ : pensionOn++;
+                isEmploymentExempt ? employmentOff++ : employmentOn++;
+                healthOn++; // 건강보험은 이 시스템 내 별도 면제 연령 기준이 없어 서비스직 제외 전원 가입으로 집계
+            });
+
+            const items = [
+                { label: '국민연금', on: pensionOn, off: pensionOff, icon: 'shield' },
+                { label: '건강보험', on: healthOn, off: healthOff, icon: 'heart-pulse' },
+                { label: '고용보험', on: employmentOn, off: employmentOff, icon: 'briefcase' }
+            ];
+            container.innerHTML = items.map(it => `
+                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="flex items-center gap-1.5 text-slate-400 text-[11px] font-bold mb-1"><i data-lucide="${it.icon}" class="w-3.5 h-3.5"></i> ${it.label}</div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-lg font-black text-slate-900">${it.on}명</span>
+                        <span class="text-[11px] text-slate-400">가입</span>
+                    </div>
+                    <div class="text-[10px] text-slate-400 mt-0.5">면제 ${it.off}명</div>
+                </div>
+            `).join('');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // 대시보드: 필수 항목(주민번호·주소·계좌·직종) 입력 완료율 게이지
+        function renderDashboardCompleteness() {
+            const bar = document.getElementById('dashCompletenessBar');
+            const pctEl = document.getElementById('dashCompletenessPct');
+            if (!bar || !pctEl) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors || proj.labors.length === 0) {
+                bar.style.width = '0%';
+                pctEl.textContent = '0%';
+                return;
+            }
+
+            let filled = 0, totalFields = 0;
+            proj.labors.forEach(l => {
+                const isService = _isServiceWorker(l);
+                const checks = [
+                    !!(l.ssn && l.ssn.trim()),
+                    !!(l.address && l.address.trim()),
+                    !!(l.job && l.job.trim()),
+                    isService ? true : !!(l.bank && l.bank.trim() && l.account && l.account.trim())
+                ];
+                totalFields += checks.length;
+                filled += checks.filter(Boolean).length;
+            });
+
+            const pct = totalFields > 0 ? Math.round((filled / totalFields) * 100) : 0;
+            bar.style.width = `${pct}%`;
+            bar.classList.remove('bg-blue-500', 'bg-amber-500', 'bg-rose-500');
+            bar.classList.add(pct >= 90 ? 'bg-blue-500' : pct >= 70 ? 'bg-amber-500' : 'bg-rose-500');
+            pctEl.textContent = `${pct}%`;
+        }
+
+        // 대시보드: 안전교육 만료(임박) 근로자 명단
+        function renderDashboardSafetyExpiry() {
+            const wrap = document.getElementById('dashSafetyExpiryWrap');
+            const listEl = document.getElementById('dashSafetyExpiryList');
+            if (!wrap || !listEl) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors) { wrap.classList.add('hidden'); return; }
+
+            const today = new Date(); today.setHours(0, 0, 0, 0);
+            const items = [];
+            proj.labors.forEach(l => {
+                if (!l.safetyEdu || !l.safetyExpiry) return;
+                const diff = Math.ceil((new Date(l.safetyExpiry) - today) / 86400000);
+                if (diff <= 30) items.push({ name: l.name, diff });
+            });
+
+            if (items.length === 0) { wrap.classList.add('hidden'); return; }
+            wrap.classList.remove('hidden');
+            items.sort((a, b) => a.diff - b.diff);
+
+            listEl.innerHTML = items.map(it => `
+                <div class="flex items-center justify-between px-4 py-2 text-xs">
+                    <span class="font-bold text-slate-700">${it.name}</span>
+                    ${it.diff < 0
+                        ? `<span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">만료됨</span>`
+                        : `<span class="bg-amber-500 text-white font-bold px-2 py-0.5 rounded text-[10px]">D-${it.diff}</span>`}
+                </div>
+            `).join('');
+        }
+
+        // 대시보드: 같은 직종 평균 단가 대비 크게 벗어난(±30%) 근로자 단가 이상치 경고
+        function renderDashboardPriceOutliers() {
+            const wrap = document.getElementById('dashPriceOutlierWrap');
+            const listEl = document.getElementById('dashPriceOutlierList');
+            if (!wrap || !listEl) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors || proj.labors.length === 0) { wrap.classList.add('hidden'); return; }
+
+            const jobGroups = {};
+            proj.labors.forEach(l => {
+                const job = l.job || '미지정';
+                const price = Number(l.price) || 0;
+                if (price <= 0) return;
+                (jobGroups[job] = jobGroups[job] || []).push({ name: l.name, price });
+            });
+
+            const outliers = [];
+            Object.entries(jobGroups).forEach(([job, list]) => {
+                if (list.length < 2) return; // 비교 대상이 1명뿐이면 이상치 판단 불가
+                const avg = list.reduce((s, x) => s + x.price, 0) / list.length;
+                list.forEach(x => {
+                    const diffPct = ((x.price - avg) / avg) * 100;
+                    if (Math.abs(diffPct) >= 30) {
+                        outliers.push({ name: x.name, job, price: x.price, avg, diffPct });
+                    }
+                });
+            });
+
+            if (outliers.length === 0) { wrap.classList.add('hidden'); return; }
+            wrap.classList.remove('hidden');
+            outliers.sort((a, b) => Math.abs(b.diffPct) - Math.abs(a.diffPct));
+
+            listEl.innerHTML = outliers.map(o => `
+                <div class="flex items-center justify-between px-4 py-2 text-xs">
+                    <span class="font-bold text-slate-700">${o.name} <span class="text-slate-400 font-normal">(${o.job})</span></span>
+                    <span class="text-right">
+                        <span class="font-bold ${o.diffPct > 0 ? 'text-rose-600' : 'text-blue-600'}">${commaFormatter(o.price)}원</span>
+                        <span class="text-[10px] text-slate-400 ml-1">(직종평균 ${commaFormatter(Math.round(o.avg))}원 대비 ${o.diffPct > 0 ? '+' : ''}${o.diffPct.toFixed(0)}%)</span>
+                    </span>
+                </div>
+            `).join('');
+        }
+
+        // 대시보드: 같은 회사(상호)의 최근 6개월 인건비 추이 막대그래프
+        function renderDashboardMonthlyTrend() {
+            const wrap = document.getElementById('dashMonthlyTrendWrap');
+            const canvas = document.getElementById('dashMonthlyTrendChart');
+            if (!wrap || !canvas) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) { wrap.classList.add('hidden'); return; }
+
+            // 같은 회사의 프로젝트를 연월 오름차순으로 정렬 후, 현재 달 기준 최근 6개월만 사용
+            const sameCompany = Object.values(appState.projects)
+                .filter(p => p.company === proj.company)
+                .sort((a, b) => (a.year * 12 + a.month) - (b.year * 12 + b.month));
+
+            const curKey = proj.year * 12 + proj.month;
+            const recent = sameCompany.filter(p => (p.year * 12 + p.month) <= curKey).slice(-6);
+
+            if (recent.length < 2) { wrap.classList.add('hidden'); return; }
+            wrap.classList.remove('hidden');
+
+            const values = recent.map(p => {
+                const daysInMonth = new Date(p.year, p.month, 0).getDate();
+                let wages = 0;
+                (p.labors || []).forEach(l => {
+                    let autoDays = 0;
+                    for (let d = 1; d <= daysInMonth; d++) { if (l.attendance && l.attendance[d]) autoDays += Number(l.attendance[d]); }
+                    wages += calculateDeductions(l, autoDays).totalWages;
+                });
+                return wages;
+            });
+            const labels = recent.map(p => `${p.year}.${String(p.month).padStart(2, '0')}`);
+
+            const ctx = canvas.getContext('2d');
+            const w = canvas.clientWidth || canvas.width;
+            const h = canvas.height;
+            canvas.width = w;
+            ctx.clearRect(0, 0, w, h);
+
+            const maxVal = Math.max(...values, 1);
+            const barGap = 12;
+            const barW = (w - barGap * (values.length + 1)) / values.length;
+
+            values.forEach((v, i) => {
+                const barH = (v / maxVal) * (h - 30);
+                const x = barGap + i * (barW + barGap);
+                const y = h - barH - 18;
+                ctx.fillStyle = (i === values.length - 1) ? '#2563eb' : '#93c5fd';
+                ctx.fillRect(x, y, barW, barH);
+                ctx.fillStyle = '#475569';
+                ctx.font = '10px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(labels[i], x + barW / 2, h - 4);
+            });
+        }
+
+        // 대시보드: 전월 대비 이번 달 새로 투입된 근로자(주민번호 기준) 명단
+        function renderDashboardNewWorkers() {
+            const wrap = document.getElementById('dashNewWorkersWrap');
+            const listEl = document.getElementById('dashNewWorkersList');
+            if (!wrap || !listEl) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors) { wrap.classList.add('hidden'); return; }
+
+            let prevYear = proj.year, prevMonth = proj.month - 1;
+            if (prevMonth === 0) { prevMonth = 12; prevYear -= 1; }
+            const prevProj = Object.values(appState.projects).find(p =>
+                p.company === proj.company && p.year === prevYear && p.month === prevMonth
+            );
+            if (!prevProj || !prevProj.labors) { wrap.classList.add('hidden'); return; }
+
+            const prevKeys = new Set(prevProj.labors.map(l => l.ssn || l.name));
+            const newWorkers = proj.labors.filter(l => !prevKeys.has(l.ssn || l.name));
+
+            if (newWorkers.length === 0) { wrap.classList.add('hidden'); return; }
+            wrap.classList.remove('hidden');
+
+            listEl.innerHTML = `
+                <div class="text-lg font-black text-slate-900 mb-2">${newWorkers.length}명</div>
+                <div class="flex flex-wrap gap-1.5">
+                    ${newWorkers.map(l => `<span class="bg-blue-50 text-blue-700 font-bold px-2 py-1 rounded text-[11px]">${l.name}</span>`).join('')}
+                </div>
+            `;
         }
 
         // 대시보드 경고 요약: runPreSubmitCheck과 동일 판정 로직을 사용해 유형별 건수만 집계
