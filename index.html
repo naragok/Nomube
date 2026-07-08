@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V3.2 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V3.6 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -163,7 +163,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V3.2</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V3.6</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="toggleAllWeeksBtn" onclick="toggleAllWeeks()" class="bg-amber-700 hover:bg-amber-800 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="출근일자(1일~말일) 전체를 한 번에 접거나 펼칩니다">
@@ -597,6 +597,12 @@
                         <button onclick="toggleDragRangeMode()" id="dragRangeBtn" class="text-[10px] text-orange-600 hover:bg-orange-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all border border-transparent" title="드래그로 여러 날짜를 한 번에 선택하여 출역값을 일괄 기입합니다.">
                             <i data-lucide="hand" class="w-3 h-3"></i> 드래그 범위 기입
                         </button>
+                        <button onclick="openQuickAddLaborModal()" class="text-[10px] text-blue-600 hover:bg-blue-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all" title="좌측 메뉴로 이동하지 않고 팝업으로 바로 근로자를 등록합니다.">
+                            <i data-lucide="user-plus" class="w-3 h-3"></i> 근로자 등록
+                        </button>
+                        <button onclick="openBulkUserModal()" class="text-[10px] text-purple-600 hover:bg-purple-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all" title="여러 명의 근로자 정보를 한 번에 붙여넣기/입력하여 일괄 등록합니다.">
+                            <i data-lucide="users" class="w-3 h-3"></i> 복수 일괄 추가
+                        </button>
                         <span class="h-3 border-r border-slate-200"></span>
                     </div>
                 </div>
@@ -817,6 +823,57 @@
                 </div>
             </div>
             </main>
+    </div>
+
+    <!-- 팝업 모달: 전체 화면에서 바로 근로자 등록 (사이드바 이동 없이) -->
+    <div id="quickAddLaborModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-md overflow-hidden animate-in fade-in zoom-in duration-150">
+            <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold flex items-center gap-2 text-sm">
+                    <i data-lucide="user-plus" class="w-4 h-4 text-blue-400"></i> 근로자 등록
+                </h3>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="closeQuickAddLaborModal(); openBulkUserModal();" class="text-[10px] bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 font-bold px-2 py-1 rounded transition-all flex items-center gap-1" title="여러 명의 근로자를 한 번에 붙여넣기/입력하여 일괄 등록합니다.">
+                        <i data-lucide="users" class="w-3 h-3"></i> 복수 일괄 추가
+                    </button>
+                    <button onclick="closeQuickAddLaborModal()" class="text-slate-400 hover:text-white transition-all" aria-label="닫기">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+            <form id="quickAddLaborForm" onsubmit="addLaborFromModal(event)" class="p-5 space-y-2 text-xs">
+                <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="quickNewName" placeholder="성명" required autocomplete="off" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none font-bold">
+                    <div class="flex items-center gap-1">
+                        <input type="text" id="quickNewJob" placeholder="직종 (예: 보통인부)" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none">
+                        <button type="button" id="quickNewIsServiceBtn" onclick="_toggleQuickNewIsService()"
+                            class="shrink-0 px-1.5 py-1.5 rounded border text-[10px] font-bold transition-all bg-slate-50 border-slate-200 text-slate-400"
+                            title="용역업체 소속으로 등록 (계좌정보 필수 아님)">용역</button>
+                        <input type="hidden" id="quickNewIsServiceWorker" value="0">
+                    </div>
+                </div>
+                <div>
+                    <input type="text" id="quickNewSsn" placeholder="주민등록번호 (숫자 13자리)" required class="w-full border border-slate-200 rounded p-1.5 font-mono focus:ring-1 focus:ring-blue-500 outline-none" maxlength="14">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="quickNewPhone" placeholder="연락처" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none" maxlength="13">
+                    <input type="text" id="quickNewPrice" placeholder="단가 (원)" required class="w-full border border-slate-200 rounded p-1.5 font-mono focus:ring-1 focus:ring-blue-500 outline-none">
+                </div>
+                <div class="grid grid-cols-3 gap-2">
+                    <input type="text" id="quickNewBank" placeholder="은행명" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none col-span-1">
+                    <input type="text" id="quickNewAccount" placeholder="계좌번호" class="w-full border border-slate-200 rounded p-1.5 font-mono focus:ring-1 focus:ring-blue-500 outline-none col-span-2">
+                </div>
+                <div>
+                    <input type="text" id="quickNewAddress" placeholder="주소" class="w-full border border-slate-200 rounded p-1.5 focus:ring-1 focus:ring-blue-500 outline-none">
+                </div>
+                <div class="flex gap-2 pt-1">
+                    <button type="button" onclick="closeQuickAddLaborModal()" class="px-4 py-2 font-medium text-slate-500 hover:text-slate-800 text-xs">닫기</button>
+                    <button type="submit" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold p-1.5 rounded transition-all flex items-center justify-center gap-1">
+                        <i data-lucide="user-plus-2" class="w-3.5 h-3.5"></i> 대장에 등록
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- 팝업 모달 1: 근로자 상세 정보 조회 및 수정 (no-print) -->
@@ -2127,7 +2184,29 @@
             applyDensity('normal'); 
             setupKeyboardNavigation();
             setupDragRangeListeners(); // 드래그 범위 기입 이벤트 등록
+            _initAutoFullscreen();
         };
+
+        // 프로그램 시작 시 전체 화면 모드로 시작
+        // (브라우저 보안 정책상 사용자 동작(클릭/키입력) 없이는 전체화면 진입이 불가하므로,
+        //  로드 시 1차 시도하고, 차단되면 화면과의 첫 상호작용 시점에 자동으로 진입시킨다)
+        function _requestAppFullscreen() {
+            const el = document.documentElement;
+            if (document.fullscreenElement) return;
+            const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+            if (req) req.call(el).catch(() => {});
+        }
+
+        function _initAutoFullscreen() {
+            _requestAppFullscreen();
+            const enterOnFirstInteraction = () => {
+                _requestAppFullscreen();
+                document.removeEventListener('click', enterOnFirstInteraction);
+                document.removeEventListener('keydown', enterOnFirstInteraction);
+            };
+            document.addEventListener('click', enterOnFirstInteraction, { once: true });
+            document.addEventListener('keydown', enterOnFirstInteraction, { once: true });
+        }
 
         function initApp() {
             // [수정] 구버전 localStorage 키 정리 — v1~v3 잔여 데이터 자동 삭제하여 스토리지 낭비 방지
@@ -3903,6 +3982,7 @@
             ['customAlertModal', () => document.getElementById('customAlertModal').classList.add('hidden')],
             ['shortcutsModal', closeShortcutsModal],
             ['githubBackupModal', closeGithubBackupModal],
+            ['quickAddLaborModal', closeQuickAddLaborModal],
             ['laborDetailModal', closeDetailModal],
             ['bulkPrintModal', closeBulkPrintModal],
             ['autoBackupModal', closeAutoBackupModal],
@@ -5879,27 +5959,19 @@
         }
 
         // 신규 일용직 근로자 추가
-        function addLabor(e) {
-            e.preventDefault();
+        // 근로자 생성 공통 로직 (사이드바 등록 폼 / 팝업 등록 모달이 공유)
+        // 유효성 검사 실패 시 null 반환(안내창은 이 함수 내에서 띄움), 성공 시 생성된 labor 객체 반환
+        function _createLaborFromFields(fields) {
             const proj = appState.projects[appState.currentProjectId];
-            if (!proj) return;
+            if (!proj) return null;
 
-            const name = document.getElementById('newName').value.trim();
-            const ssn = document.getElementById('newSsn').value.trim();
-            const job = document.getElementById('newJob').value.trim() || '보통인부';
-            
-            const priceRaw = document.getElementById('newPrice').value;
+            const { name, ssn, job: jobRaw, priceRaw, phone, bank, account, address, isServiceWorker } = fields;
+            const job = jobRaw || '보통인부';
             const price = parseInt(priceRaw.replace(/[^0-9]/g, ''));
-
-            const phone = document.getElementById('newPhone').value.trim();
-            const bank = document.getElementById('newBank').value.trim();
-            const account = document.getElementById('newAccount').value.trim();
-            const address = document.getElementById('newAddress').value.trim();
-            const isServiceWorker = document.getElementById('newIsServiceWorker').value === '1';
 
             if (!name || ssn.replace(/[^0-9]/g, '').length !== 13 || isNaN(price)) {
                 showCustomAlert("근로자 정보가 정확하지 않습니다. 성명 확인 및 13자리 주민번호를 정상 완성해 주세요.");
-                return;
+                return null;
             }
 
             const newLabor = {
@@ -5918,7 +5990,6 @@
                 manualDays: null,
                 attendance: {}
             };
-
             for (let d = 1; d <= 31; d++) {
                 newLabor.attendance[d] = 0;
             }
@@ -5926,6 +5997,29 @@
             proj.labors.push(newLabor);
             saveToLocalStorage();
             updateHeaderAndTable();
+
+            localStorage.setItem('labor_payment_last_job', job);
+            localStorage.setItem('labor_payment_last_price', String(price));
+            if (bank) localStorage.setItem('labor_payment_last_bank', bank);
+
+            return newLabor;
+        }
+
+        function addLabor(e) {
+            e.preventDefault();
+
+            const labor = _createLaborFromFields({
+                name: document.getElementById('newName').value.trim(),
+                ssn: document.getElementById('newSsn').value.trim(),
+                job: document.getElementById('newJob').value.trim(),
+                priceRaw: document.getElementById('newPrice').value,
+                phone: document.getElementById('newPhone').value.trim(),
+                bank: document.getElementById('newBank').value.trim(),
+                account: document.getElementById('newAccount').value.trim(),
+                address: document.getElementById('newAddress').value.trim(),
+                isServiceWorker: document.getElementById('newIsServiceWorker').value === '1'
+            });
+            if (!labor) return;
 
             // 같은 직종·단가·은행으로 여러 명을 연달아 등록하는 경우가 많아
             // 개인 식별 정보(성명/주민번호/연락처/계좌/주소)만 비우고
@@ -5937,16 +6031,69 @@
             document.getElementById('newAddress').value = "";
             document.getElementById('ssnDupWarning') && document.getElementById('ssnDupWarning').classList.add('hidden');
 
-            // 직종·단가·은행명은 다음 접속 시에도 이어서 쓸 수 있도록 저장
-            localStorage.setItem('labor_payment_last_job', job);
-            localStorage.setItem('labor_payment_last_price', String(price));
-            if (bank) localStorage.setItem('labor_payment_last_bank', bank);
-
-            showToast(`${name}${isServiceWorker ? ' (용역)' : ''} 신규 근로자가 대장에 추가되었습니다. 이어서 다음 근로자를 등록해 주세요.`);
+            showToast(`${labor.name}${labor.isServiceWorker ? ' (용역)' : ''} 신규 근로자가 대장에 추가되었습니다. 이어서 다음 근로자를 등록해 주세요.`);
 
             // 다음 근로자를 바로 입력할 수 있도록 성명칸에 자동 포커스
             const nameInput = document.getElementById('newName');
             if (nameInput) nameInput.focus();
+        }
+
+        // 전체 화면 팝업 모달에서의 근로자 등록 (사이드바 이동 없이 바로 등록)
+        function openQuickAddLaborModal() {
+            const lastJob = localStorage.getItem('labor_payment_last_job') || '';
+            const lastPrice = localStorage.getItem('labor_payment_last_price') || '';
+            const lastBank = localStorage.getItem('labor_payment_last_bank') || '';
+            document.getElementById('quickNewJob').value = lastJob;
+            document.getElementById('quickNewPrice').value = lastPrice;
+            document.getElementById('quickNewBank').value = lastBank;
+            document.getElementById('quickNewName').value = '';
+            document.getElementById('quickNewSsn').value = '';
+            document.getElementById('quickNewPhone').value = '';
+            document.getElementById('quickNewAccount').value = '';
+            document.getElementById('quickNewAddress').value = '';
+            document.getElementById('quickAddLaborModal').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+            document.getElementById('quickNewName').focus();
+        }
+
+        function closeQuickAddLaborModal() {
+            document.getElementById('quickAddLaborModal').classList.add('hidden');
+        }
+
+        function _toggleQuickNewIsService() {
+            const el = document.getElementById('quickNewIsServiceWorker');
+            const on = el.value !== '1';
+            el.value = on ? '1' : '0';
+            document.getElementById('quickNewIsServiceBtn').className = on
+                ? 'shrink-0 px-1.5 py-1.5 rounded border text-[10px] font-bold transition-all bg-teal-700 border-teal-700 text-white'
+                : 'shrink-0 px-1.5 py-1.5 rounded border text-[10px] font-bold transition-all bg-slate-50 border-slate-200 text-slate-400';
+        }
+
+        function addLaborFromModal(e) {
+            e.preventDefault();
+
+            const labor = _createLaborFromFields({
+                name: document.getElementById('quickNewName').value.trim(),
+                ssn: document.getElementById('quickNewSsn').value.trim(),
+                job: document.getElementById('quickNewJob').value.trim(),
+                priceRaw: document.getElementById('quickNewPrice').value,
+                phone: document.getElementById('quickNewPhone').value.trim(),
+                bank: document.getElementById('quickNewBank').value.trim(),
+                account: document.getElementById('quickNewAccount').value.trim(),
+                address: document.getElementById('quickNewAddress').value.trim(),
+                isServiceWorker: document.getElementById('quickNewIsServiceWorker').value === '1'
+            });
+            if (!labor) return;
+
+            showToast(`${labor.name}${labor.isServiceWorker ? ' (용역)' : ''} 신규 근로자가 대장에 추가되었습니다.`);
+
+            // 개인 식별 정보만 비우고 이어서 다음 근로자를 등록할 수 있도록 모달은 유지
+            document.getElementById('quickNewName').value = "";
+            document.getElementById('quickNewSsn').value = "";
+            document.getElementById('quickNewPhone').value = "";
+            document.getElementById('quickNewAccount').value = "";
+            document.getElementById('quickNewAddress').value = "";
+            document.getElementById('quickNewName').focus();
         }
 
         // 근로자 등록 폼의 "용역" 토글 버튼
