@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V2.8 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V3.0 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -163,7 +163,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V2.8</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V3.0</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="toggleAllWeeksBtn" onclick="toggleAllWeeks()" class="bg-amber-700 hover:bg-amber-800 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="출근일자(1일~말일) 전체를 한 번에 접거나 펼칩니다">
@@ -1161,7 +1161,7 @@
                 </div>
                 <div>
                     <label class="block font-bold text-slate-500 mb-1 text-[10px]">저장소 (owner/repo)</label>
-                    <input type="text" id="ghRepo" placeholder="예: naragok/backup-storage" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
+                    <input type="text" id="ghRepo" value="naragok/pmang-data" placeholder="예: naragok/backup-storage" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                     <div>
@@ -1170,11 +1170,26 @@
                     </div>
                     <div>
                         <label class="block font-bold text-slate-500 mb-1 text-[10px]">저장 폴더 경로</label>
-                        <input type="text" id="ghPath" value="backups" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
+                        <input type="text" id="ghPath" value="nomube" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
                     </div>
                 </div>
 
                 <div id="ghStatus" class="text-[11px] text-slate-400"></div>
+
+                <div class="border-t border-slate-100 pt-4">
+                    <label class="block font-bold text-slate-500 mb-1 text-[10px]">저장소에서 백업 불러오기</label>
+                    <div class="flex gap-2">
+                        <select id="ghFileSelect" class="flex-1 bg-slate-50 border border-slate-200 rounded p-2 text-[11px] outline-none">
+                            <option value="">먼저 "목록 조회"를 눌러 주세요</option>
+                        </select>
+                        <button onclick="listGithubBackups()" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold px-2.5 rounded text-[11px]" title="저장소의 백업 파일 목록 조회" aria-label="목록 조회">
+                            <i data-lucide="list" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                    <button onclick="runGithubRestore()" class="mt-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded shadow-sm flex items-center justify-center gap-1 text-xs">
+                        <i data-lucide="download-cloud" class="w-3.5 h-3.5"></i> 선택한 파일 불러오기(현재 데이터 덮어씀)
+                    </button>
+                </div>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center shrink-0">
                 <button onclick="clearGithubConfig()" class="text-[11px] text-rose-500 hover:underline font-bold">연결 정보 삭제</button>
@@ -7062,12 +7077,13 @@ ${xlsRows}
         function openGithubBackupModal() {
             const cfg = _loadGithubConfig();
             document.getElementById('ghToken').value = cfg.token || '';
-            document.getElementById('ghRepo').value = cfg.repo || '';
+            document.getElementById('ghRepo').value = cfg.repo || 'naragok/pmang-data';
             document.getElementById('ghBranch').value = cfg.branch || 'main';
-            document.getElementById('ghPath').value = cfg.path || 'backups';
+            document.getElementById('ghPath').value = cfg.path || 'nomube';
             document.getElementById('ghStatus').textContent = cfg.lastBackupAt
                 ? `마지막 GitHub 백업: ${new Date(cfg.lastBackupAt).toLocaleString('ko-KR')}`
                 : '';
+            document.getElementById('ghFileSelect').innerHTML = '<option value="">먼저 "목록 조회"를 눌러 주세요</option>';
             document.getElementById('githubBackupModal').classList.remove('hidden');
             if (window.lucide) lucide.createIcons();
         }
@@ -7158,6 +7174,112 @@ ${xlsRows}
                 statusEl.textContent = '';
                 showCustomAlert(`GitHub 백업 중 오류가 발생했습니다: ${err.message}\n\n토큰 권한(Contents: Read/Write)과 저장소 이름을 확인해 주세요.`);
             }
+        }
+        // UTF-8(한글 포함) base64 문자열을 원래 문자열로 안전하게 복원
+        function _base64ToUtf8(b64) {
+            const binary = atob(b64.replace(/\n/g, ''));
+            const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+            return new TextDecoder('utf-8').decode(bytes);
+        }
+
+        // 저장소의 백업 폴더 안 파일 목록을 조회해 선택 목록에 채워 넣음
+        async function listGithubBackups() {
+            const token = document.getElementById('ghToken').value.trim();
+            const repo = document.getElementById('ghRepo').value.trim();
+            const branch = document.getElementById('ghBranch').value.trim() || 'main';
+            const folder = document.getElementById('ghPath').value.trim().replace(/^\/|\/$/g, '') || 'backups';
+            const select = document.getElementById('ghFileSelect');
+
+            if (!token || !repo || !repo.includes('/')) {
+                showCustomAlert('토큰과 저장소(owner/repo 형식)를 정확히 입력해 주세요.');
+                return;
+            }
+
+            select.innerHTML = '<option value="">조회 중...</option>';
+            const apiUrl = `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(folder)}?ref=${encodeURIComponent(branch)}`;
+
+            try {
+                const res = await fetch(apiUrl, {
+                    headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
+                });
+                if (!res.ok) {
+                    const errData = await res.json().catch(() => ({}));
+                    throw new Error(errData.message || `조회 실패 (${res.status})`);
+                }
+                const data = await res.json();
+                const files = (Array.isArray(data) ? data : [])
+                    .filter(f => f.type === 'file' && f.name.endsWith('.json'))
+                    .sort((a, b) => b.name.localeCompare(a.name)); // 최신 날짜(파일명) 먼저
+
+                if (files.length === 0) {
+                    select.innerHTML = '<option value="">백업 파일이 없습니다</option>';
+                    return;
+                }
+                select.innerHTML = files.map(f => `<option value="${f.path}">${f.name}</option>`).join('');
+            } catch (err) {
+                select.innerHTML = '<option value="">목록 조회 실패</option>';
+                showCustomAlert(`GitHub 목록 조회 중 오류가 발생했습니다: ${err.message}`);
+            }
+        }
+
+        // 선택한 백업 파일을 저장소에서 가져와 현재 데이터에 덮어씀
+        async function runGithubRestore() {
+            const token = document.getElementById('ghToken').value.trim();
+            const repo = document.getElementById('ghRepo').value.trim();
+            const branch = document.getElementById('ghBranch').value.trim() || 'main';
+            const filePath = document.getElementById('ghFileSelect').value;
+
+            if (!token || !repo || !repo.includes('/')) {
+                showCustomAlert('토큰과 저장소(owner/repo 형식)를 정확히 입력해 주세요.');
+                return;
+            }
+            if (!filePath) {
+                showCustomAlert('먼저 "목록 조회"로 불러올 백업 파일을 선택해 주세요.');
+                return;
+            }
+
+            showCustomConfirm(
+                `"${filePath}" 파일을 불러오면 현재 화면의 모든 데이터를 덮어씁니다.<br>계속하시겠습니까?`,
+                async () => {
+                    const statusEl = document.getElementById('ghStatus');
+                    statusEl.textContent = 'GitHub에서 불러오는 중...';
+                    const apiUrl = `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(filePath).replace(/%2F/g, '/')}?ref=${encodeURIComponent(branch)}`;
+
+                    try {
+                        const res = await fetch(apiUrl, {
+                            headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
+                        });
+                        if (!res.ok) {
+                            const errData = await res.json().catch(() => ({}));
+                            throw new Error(errData.message || `불러오기 실패 (${res.status})`);
+                        }
+                        const data = await res.json();
+                        const jsonText = _base64ToUtf8(data.content);
+                        const parsed = JSON.parse(jsonText);
+
+                        // 구조 유효성 검사 (로컬 파일 복구와 동일한 기준)
+                        if (!parsed || typeof parsed !== 'object') throw new Error('객체 형식 오류');
+                        if (typeof parsed.projects !== 'object' || parsed.projects === null) throw new Error('projects 필드 오류');
+                        if (typeof parsed.currentProjectId !== 'string') throw new Error('currentProjectId 필드 오류');
+                        for (const [pid, proj] of Object.entries(parsed.projects)) {
+                            if (typeof proj !== 'object' || proj === null) throw new Error(`프로젝트 [${pid}] 형식 오류`);
+                            if (typeof proj.company !== 'string') throw new Error(`프로젝트 [${pid}] company 필드 오류`);
+                            if (!Array.isArray(proj.labors)) throw new Error(`프로젝트 [${pid}] labors 필드 오류`);
+                        }
+
+                        appState = parsed;
+                        saveToLocalStorage();
+                        populateDropdowns();
+                        onProjectChange();
+                        statusEl.textContent = `✅ 불러오기 완료 (${new Date().toLocaleString('ko-KR')})`;
+                        showToast('GitHub 백업을 불러와 전체 복구했습니다.');
+                        closeGithubBackupModal();
+                    } catch (err) {
+                        statusEl.textContent = '';
+                        showCustomAlert(`GitHub 불러오기 중 오류가 발생했습니다: ${err.message}`);
+                    }
+                }
+            );
         }
         // ─────────────────────────────────────────────────────────────────
 
