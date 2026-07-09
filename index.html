@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V4.2 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V4.7 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -178,7 +178,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V4.2</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V4.7</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
@@ -839,6 +839,30 @@
             </main>
     </div>
 
+    <!-- 팝업 모달: 노임수령 위임장 위임 날짜 지정 -->
+    <div id="poaDateModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-xs overflow-hidden">
+            <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold flex items-center gap-2 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4 text-indigo-400"></i> 위임 날짜 지정
+                </h3>
+                <button onclick="closePoaDateModal()" class="text-slate-400 hover:text-white transition-all" aria-label="닫기">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-5 space-y-3 text-xs">
+                <label class="block font-bold text-slate-500 mb-1">위임장에 표시될 날짜</label>
+                <input type="date" id="poaDateInput" class="w-full border border-slate-200 rounded p-2 focus:ring-1 focus:ring-indigo-500 outline-none">
+                <div class="flex gap-2 pt-1">
+                    <button type="button" onclick="closePoaDateModal()" class="px-4 py-2 font-medium text-slate-500 hover:text-slate-800 text-xs">취소</button>
+                    <button type="button" onclick="confirmPoaDateAndPrint()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold p-2 rounded transition-all flex items-center justify-center gap-1">
+                        <i data-lucide="printer" class="w-3.5 h-3.5"></i> 위임장 출력
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 팝업 모달: 전체 화면에서 바로 근로자 등록 (사이드바 이동 없이) -->
     <div id="quickAddLaborModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
         <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-md overflow-hidden animate-in fade-in zoom-in duration-150">
@@ -984,13 +1008,20 @@
                     <div class="p-3 pt-1 space-y-2">
                         <p class="text-[9px] text-slate-400">본인이 아닌 대리인이 노임을 수령하는 경우에만 입력하세요. 비워두면 위임장에 공란으로 출력됩니다.</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <input type="text" id="detailProxyName" placeholder="대리인 성명" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                            <div class="relative">
+                                <input type="text" id="detailProxyName" placeholder="대리인 성명" autocomplete="off" oninput="handleProxyNameInput()" onfocus="handleProxyNameInput()" onblur="setTimeout(hideProxyNameSuggestions, 150)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                                <div id="proxyNameSuggestions" class="hidden absolute z-30 left-0 right-0 mt-0.5 bg-white border border-slate-200 rounded shadow-lg max-h-40 overflow-y-auto text-xs"></div>
+                            </div>
                             <input type="text" id="detailProxyBirth" placeholder="생년월일 (예: 1970년 09월 30일)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
                         </div>
                         <input type="text" id="detailProxyAddress" placeholder="대리인 주소" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
                         <div class="grid grid-cols-2 gap-2">
                             <input type="text" id="detailProxyPhone" placeholder="대리인 연락처" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
                             <input type="text" id="detailProxyAccount" placeholder="입금계좌 (예: 우체국 202226-02-214929)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-400 mb-1 text-[10px]">위임 날짜 <span class="font-normal">(위임장 출력 시 기본값으로 사용, 비워두면 출력 당일로 지정)</span></label>
+                            <input type="date" id="detailProxyDate" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
                         </div>
                     </div>
                 </details>
@@ -3360,6 +3391,7 @@
             document.getElementById('detailProxyAddress').value = labor.proxyAddress || "";
             document.getElementById('detailProxyPhone').value = labor.proxyPhone || "";
             document.getElementById('detailProxyAccount').value = labor.proxyAccount || "";
+            document.getElementById('detailProxyDate').value = labor.proxyDate || "";
             document.getElementById('detailIsServiceWorker').checked = !!labor.isServiceWorker;
             document.getElementById('detailSafetyEdu').checked = !!labor.safetyEdu;
             document.getElementById('detailSafetyDate').value = labor.safetyDate || '';
@@ -3577,6 +3609,7 @@
             labor.proxyAddress = document.getElementById('detailProxyAddress').value.trim();
             labor.proxyPhone = document.getElementById('detailProxyPhone').value.trim();
             labor.proxyAccount = document.getElementById('detailProxyAccount').value.trim();
+            labor.proxyDate = document.getElementById('detailProxyDate').value;
             labor.isServiceWorker = document.getElementById('detailIsServiceWorker').checked;
             labor.safetyEdu = document.getElementById('detailSafetyEdu').checked;
             labor.safetyDate = document.getElementById('detailSafetyDate').value;
@@ -4012,6 +4045,7 @@
             ['shortcutsModal', closeShortcutsModal],
             ['githubBackupModal', closeGithubBackupModal],
             ['quickAddLaborModal', closeQuickAddLaborModal],
+            ['poaDateModal', closePoaDateModal],
             ['laborDetailModal', closeDetailModal],
             ['bulkPrintModal', closeBulkPrintModal],
             ['autoBackupModal', closeAutoBackupModal],
@@ -5806,7 +5840,36 @@
         }
 
         // 노임수령 위임장 출력 (근로자 본인이 아닌 대리인이 노임을 수령하는 경우)
+        // 위임 날짜를 지정할 수 있도록, 먼저 날짜 선택 모달을 띄운 뒤 실제 출력 진행
+        let _poaPendingLaborId = null;
+
         function printPowerOfAttorneyInNewTab(laborId) {
+            _poaPendingLaborId = laborId;
+            const proj = appState.projects[appState.currentProjectId];
+            const labor = proj && proj.labors.find(l => l.id === laborId);
+            const today = new Date();
+            const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+            document.getElementById('poaDateInput').value = (labor && labor.proxyDate) || todayIso;
+            document.getElementById('poaDateModal').classList.remove('hidden');
+        }
+
+        function closePoaDateModal() {
+            document.getElementById('poaDateModal').classList.add('hidden');
+            _poaPendingLaborId = null;
+        }
+
+        function confirmPoaDateAndPrint() {
+            const iso = document.getElementById('poaDateInput').value;
+            if (!iso) { showCustomAlert('위임 날짜를 선택해 주세요.'); return; }
+            const [y, m, d] = iso.split('-');
+            const dateStr = `${y}년 ${m}월 ${d}일`;
+            const laborId = _poaPendingLaborId;
+            document.getElementById('poaDateModal').classList.add('hidden');
+            _poaPendingLaborId = null;
+            _generatePowerOfAttorney(laborId, dateStr);
+        }
+
+        function _generatePowerOfAttorney(laborId, todayStr) {
             const proj = appState.projects[appState.currentProjectId];
             const labor = proj.labors.find(l => l.id === laborId);
             if (!labor) return;
@@ -5831,9 +5894,6 @@
                 else if (g === 0 || g === 9) century = 1800;
                 selfBirth = `${century + yy}년 ${mm}월 ${dd}일`;
             }
-
-            const today = new Date();
-            const todayStr = `${today.getFullYear()}년 ${String(today.getMonth() + 1).padStart(2, '0')}월 ${String(today.getDate()).padStart(2, '0')}일`;
 
             const printHtml = `
                 <!DOCTYPE html>
@@ -5868,6 +5928,14 @@
 
                         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght=300;400;500;700;900&display=swap');
                         body { font-family: 'Noto Sans KR', sans-serif; }
+                        .a4-sheet {
+                            min-height: 267mm; /* A4(297mm) - 위아래 여백 15mm씩 */
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+                        .a4-sheet table td, .a4-sheet table th { padding: 12px 14px; font-size: 13px; }
+                        .a4-sheet .lbl { width: 130px; }
                         @media print {
                             html, body { background: white !important; margin: 0 !important; padding: 0 !important; }
                             .no-print { display: none !important; }
@@ -5881,20 +5949,23 @@
                         <button onclick="window.print()" style="background:#4f46e5;color:#fff;">인쇄하기</button>
                     </div>
 
-                    <div class="max-w-\[18cm\] mx-auto p-8 bg-white border border-slate-300 text-xs text-slate-800 leading-relaxed" style="box-shadow:0 4px 6px -1px rgba(0,0,0,.1);">
+                    <div class="a4-sheet max-w-\[18cm\] mx-auto p-8 bg-white border border-slate-300 text-xs text-slate-800 leading-relaxed" style="box-shadow:0 4px 6px -1px rgba(0,0,0,.1);">
+                        <div>
                         <div class="text-center mb-8">
                             <h1 class="text-2xl font-black tracking-widest">노임수령 위임장</h1>
                         </div>
 
-                        <p class="font-bold mb-2" style="color:#1e40af;">1. 수임인 (대리인) 인적사항</p>
+                        <p class="font-bold mb-2" style="color:#1e40af;font-size:14px;">1. 수임인 (대리인) 인적사항</p>
                         <table class="mb-6">
                             <tr><td class="lbl">성명</td><td>${labor.proxyName || ''}</td><td class="lbl">생년월일</td><td>${labor.proxyBirth || ''}</td></tr>
                             <tr><td class="lbl">주소</td><td colspan="3">${labor.proxyAddress || ''}</td></tr>
                             <tr><td class="lbl">연락처</td><td colspan="3">${labor.proxyPhone || ''}</td></tr>
                             <tr><td class="lbl">입금계좌</td><td colspan="3">${labor.proxyAccount || ''}</td></tr>
                         </table>
+                        </div>
 
-                        <p class="font-bold mb-2" style="color:#1e40af;">2. 위임 권한 및 대상 노임 내역</p>
+                        <p class="font-bold mb-2" style="color:#1e40af;font-size:14px;">2. 위임 권한 및 대상 노임 내역</p>
+                        <div>
                         <table class="mb-6">
                             <tr><td class="lbl">공사(작업)명</td><td colspan="3">${proj.projectName}${proj.workType ? ' ' + proj.workType : ''}</td></tr>
                             <tr>
@@ -5905,19 +5976,23 @@
                             </tr>
                             <tr><td class="lbl">위임 사항</td><td colspan="3">상기 공사에서 발생한 위임인의 노임(임금) 수령에 관한 일체의 권한을 수임인에게 위임함.</td></tr>
                         </table>
+                        </div>
 
-                        <p class="text-justify mb-6">
+                        <div>
+                        <p class="text-justify mb-6" style="font-size:13px;">
                             본인은 개인적인 사정으로 인하여 상기 공사대금(노임)을 직접 수령할 수 없기에, 상기 수임인에게 노임 수령에 관한 모든 권한을 위임합니다. 수임인이 노임을 수령함에 있어 발생하는 제반 문제에 대하여는 위임인이 전적으로 책임을 질 것을 서약하며 본 위임장을 제출합니다.
                         </p>
+                        <p class="text-center mb-8" style="font-size:14px;">${todayStr}</p>
+                        </div>
 
-                        <p class="text-center mb-8">${todayStr}</p>
-
-                        <p class="font-bold mb-2" style="color:#1e40af;">3. 위임인 (본인) 서명</p>
+                        <div>
+                        <p class="font-bold mb-2" style="color:#1e40af;font-size:14px;">3. 위임인 (본인) 서명</p>
                         <table>
                             <tr><td class="lbl">성명</td><td>${labor.name} <span style="color:#94a3b8;">(서명 / 인)</span></td><td class="lbl">생년월일</td><td>${selfBirth}</td></tr>
                             <tr><td class="lbl">주소</td><td colspan="3">${labor.address || ''}</td></tr>
                             <tr><td class="lbl">연락처</td><td colspan="3">${labor.phone || ''}</td></tr>
                         </table>
+                        </div>
                     </div>
                 </body>
                 </html>
@@ -7319,11 +7394,25 @@
             if (!file) return;
             const reader = new FileReader();
             reader.onload = function(e) {
-                const dataUrl = e.target.result;
-                applyPhoto(slotId, imgId, dataUrl);
-                // 키 추출: slot-id-front → id-front
-                const key = slotId.replace('slot-', '');
-                savePhotoToStore(key, dataUrl);
+                const img = new Image();
+                img.onload = function() {
+                    // 원본을 그대로 저장하면 localStorage 용량(보통 5~10MB)을 금방 초과해
+                    // 저장이 실패하고 사진이 사라지므로, 최대 1200px + JPEG 압축으로 리사이즈
+                    const maxSize = 1200;
+                    const scale = Math.min(1, maxSize / Math.max(img.width, img.height));
+                    const canvas = document.createElement('canvas');
+                    canvas.width = Math.round(img.width * scale);
+                    canvas.height = Math.round(img.height * scale);
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+
+                    applyPhoto(slotId, imgId, dataUrl);
+                    // 키 추출: slot-id-front → id-front
+                    const key = slotId.replace('slot-', '');
+                    savePhotoToStore(key, dataUrl);
+                };
+                img.src = e.target.result;
             };
             reader.readAsDataURL(file);
         }
@@ -8490,6 +8579,73 @@ ${xlsRows}
         function hideNewNameSuggestions() {
             const box = document.getElementById('newNameSuggestions');
             if (box) { box.classList.add('hidden'); box.innerHTML = ''; }
+        }
+
+        // 모든 현장/근로자에 등록된 노임수령 위임장 대리인 정보를 이름별로 모아 DB 구성
+        function _buildProxyDb() {
+            const map = new Map();
+            Object.values(appState.projects).forEach(proj => {
+                (proj.labors || []).forEach(l => {
+                    if (!l.proxyName) return;
+                    map.set(l.proxyName, {
+                        name: l.proxyName,
+                        birth: l.proxyBirth || '',
+                        address: l.proxyAddress || '',
+                        phone: l.proxyPhone || '',
+                        account: l.proxyAccount || ''
+                    });
+                });
+            });
+            return [...map.values()];
+        }
+
+        // 대리인 성명 입력 시 기존 DB에 등록된 대리인과 일치/유사하면 목록으로 제안
+        function handleProxyNameInput() {
+            const input = document.getElementById('detailProxyName');
+            const query = input.value.trim();
+            const box = document.getElementById('proxyNameSuggestions');
+            const list = _buildProxyDb();
+
+            const matches = query
+                ? list.filter(p => p.name.includes(query))
+                : list; // 포커스만 해도 전체 목록에서 고를 수 있도록 제공
+
+            // 정확히 일치하는 이름이면 클릭 없이 바로 나머지 정보 자동 기입
+            const exact = list.find(p => p.name === query);
+            if (exact) {
+                document.getElementById('detailProxyBirth').value = exact.birth;
+                document.getElementById('detailProxyAddress').value = exact.address;
+                document.getElementById('detailProxyPhone').value = exact.phone;
+                document.getElementById('detailProxyAccount').value = exact.account;
+            }
+
+            if (matches.length === 0) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+
+            box.innerHTML = matches.map(p => `
+                <div class="px-3 py-2 hover:bg-indigo-50 cursor-pointer border-b border-slate-100 last:border-0"
+                    onmousedown="_applyProxySuggestion('${p.name.replace(/'/g, "\\'")}')">
+                    <div class="font-bold text-slate-700">${p.name}</div>
+                    <div class="text-[10px] text-slate-400">${p.phone || '연락처 없음'}${p.address ? ' · ' + p.address : ''}</div>
+                </div>
+            `).join('');
+            box.classList.remove('hidden');
+        }
+
+        function hideProxyNameSuggestions() {
+            const box = document.getElementById('proxyNameSuggestions');
+            if (box) { box.classList.add('hidden'); box.innerHTML = ''; }
+        }
+
+        // 목록에서 대리인을 선택하면 나머지 정보(생년월일/주소/연락처/계좌)를 자동으로 채움
+        function _applyProxySuggestion(name) {
+            const match = _buildProxyDb().find(p => p.name === name);
+            if (!match) return;
+            document.getElementById('detailProxyName').value = match.name;
+            document.getElementById('detailProxyBirth').value = match.birth;
+            document.getElementById('detailProxyAddress').value = match.address;
+            document.getElementById('detailProxyPhone').value = match.phone;
+            document.getElementById('detailProxyAccount').value = match.account;
+            hideProxyNameSuggestions();
         }
 
         // 신규 등록 폼 — 주민번호 13자리 완성 시 근로자DB 매칭 자동완성
