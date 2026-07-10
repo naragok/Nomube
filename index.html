@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V4.7 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V5.0 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -178,7 +178,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V4.7</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V5.0</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
@@ -219,6 +219,9 @@
                     </button>
                     <button onclick="closeHeaderMenus(); openBulkPrintModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-cyan-50 flex items-center gap-2" title="선택한 근로자 전원의 표준일용근로계약서를 한 번에 인쇄">
                         <i data-lucide="files" class="w-3.5 h-3.5 text-cyan-600"></i> 계약서 일괄인쇄
+                    </button>
+                    <button onclick="closeHeaderMenus(); openBulkRosterModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-rose-50 flex items-center gap-2" title="선택한 근로자 전원의 필수서류 명단(등록된 사진 포함)을 한 번에 인쇄">
+                        <i data-lucide="images" class="w-3.5 h-3.5 text-rose-600"></i> 명단 일괄출력
                     </button>
                     <button onclick="closeHeaderMenus(); openInsuranceReportModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-teal-50 flex items-center gap-2" title="8일 이상 근무자 4대보험 취득신고서 출력">
                         <i data-lucide="file-text" class="w-3.5 h-3.5 text-teal-600"></i> 4대보험 취득신고서
@@ -592,6 +595,9 @@
                         <button id="tabBtnDashboard" onclick="switchMainView('dashboard')" class="px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700">
                             <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i> 대시보드
                         </button>
+                        <button id="tabBtnDocs" onclick="switchMainView('docs')" class="px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700">
+                            <i data-lucide="file-check-2" class="w-3.5 h-3.5"></i> 필수서류
+                        </button>
                     </div>
                     
                     <!-- 대장 편집 도구 패널 (기능 대폭 추가) -->
@@ -836,6 +842,29 @@
                 </div>
                 </div>
             </div>
+
+            <!-- 필수서류 발급/제어 전용 화면 -->
+            <div id="docsView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
+                <div class="p-5">
+                    <table class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-xs">
+                        <thead class="bg-slate-800 text-white">
+                            <tr>
+                                <th class="p-2 border-r border-slate-600 w-10 text-center">번호</th>
+                                <th class="p-2 border-r border-slate-600">성명</th>
+                                <th class="p-2 border-r border-slate-600">주민등록번호</th>
+                                <th class="p-2 border-r border-slate-600">직종</th>
+                                <th class="p-2 border-r border-slate-600 text-right">총일수</th>
+                                <th class="p-2 border-r border-slate-600 text-right">단가</th>
+                                <th class="p-2 border-r border-slate-600 text-right">총액</th>
+                                <th class="p-2 border-r border-slate-600 text-right">공제금액합계</th>
+                                <th class="p-2 border-r border-slate-600 text-right">지급액</th>
+                                <th class="p-2 w-64">필수서류 발급 / 제어</th>
+                            </tr>
+                        </thead>
+                        <tbody id="docsViewBody" class="divide-y divide-slate-100"></tbody>
+                    </table>
+                </div>
+            </div>
             </main>
     </div>
 
@@ -916,7 +945,7 @@
 
     <!-- 팝업 모달 1: 근로자 상세 정보 조회 및 수정 (no-print) -->
     <div id="laborDetailModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
-        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in duration-150">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-4xl overflow-hidden animate-in fade-in zoom-in duration-150">
             <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
                 <h3 class="font-bold flex items-center gap-2">
                     <i data-lucide="user-check" class="w-4 h-4 text-blue-400"></i>
@@ -927,157 +956,188 @@
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
-            <div class="p-5 space-y-4 overflow-y-auto max-h-[75vh]">
+            <div class="p-5 overflow-y-auto max-h-[75vh]">
                 <input type="hidden" id="detailLaborId">
 
-                <!-- 근로자 얼굴 사진 (명단 식별용) -->
-                <div class="flex items-center gap-3 bg-slate-50 p-3 rounded border border-slate-100">
-                    <div class="relative shrink-0">
-                        <div id="detailPhotoPreview" class="w-16 h-16 rounded-full bg-slate-200 border-2 border-white shadow flex items-center justify-center overflow-hidden cursor-pointer" onclick="document.getElementById('detailPhotoInput').click()">
-                            <i data-lucide="user" class="w-7 h-7 text-slate-400"></i>
-                        </div>
-                        <button id="detailPhotoRemoveBtn" onclick="removeProfilePhoto()" class="hidden absolute -top-1 -right-1 w-5 h-5 rounded-full bg-rose-600 text-white text-[10px] font-bold flex items-center justify-center shadow hover:bg-rose-700" title="사진 삭제">✕</button>
-                        <input type="file" id="detailPhotoInput" accept="image/*" class="hidden" onchange="uploadProfilePhoto(this)">
-                    </div>
-                    <div class="text-[11px] text-slate-500">
-                        <span class="font-bold text-slate-700 block mb-0.5">근로자 얼굴 사진</span>
-                        사진을 클릭하여 등록/변경할 수 있습니다.<br>명단·근로자DB에서 함께 표시됩니다.
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-3 gap-3">
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">성명</label>
-                        <div class="relative">
-                            <input type="text" id="detailName" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none font-bold pr-8"
-                                oninput="_detailNameAutofill(this.value)">
-                            <span id="detailDbMatchBadge" class="hidden absolute right-1.5 top-1/2 -translate-y-1/2 text-[10px] bg-emerald-500 text-white px-1 py-0.5 rounded font-bold cursor-pointer"
-                                onclick="_applyDbAutofill()" title="근로자DB 일치 — 클릭하여 정보 자동입력">DB↓</span>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">직종</label>
-                        <input type="text" id="detailJob" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">주민등록번호</label>
-                        <input type="text" id="detailSsn" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-blue-500 outline-none" maxlength="14"
-                            oninput="_autoHyphenSsn(this)"
-                            onblur="_checkSsnDuplication(this.value)">
-                    </div>
-                </div>
-                <div id="ssnDupWarning" class="hidden text-[11px] text-red-600 bg-red-50 border border-red-200 rounded px-3 py-1.5 font-bold -mt-2">
-                    ⚠️ 이 주민번호는 현재 대장의 다른 근로자와 중복됩니다. 확인 후 수정해주세요.
-                </div>
-
-                <div class="grid grid-cols-3 gap-3">
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">연락처</label>
-                        <input type="text" id="detailPhone" placeholder="010-1234-5678" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-blue-500 outline-none" maxlength="13">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">지급 은행명</label>
-                        <input type="text" id="detailBank" placeholder="예: 국민은행" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">계좌번호</label>
-                        <input type="text" id="detailAccount" placeholder="숫자와 하이픈만 입력" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-blue-500 outline-none">
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded border border-slate-100">
-                    <div>
-                        <span class="font-bold text-slate-700 block text-[11px]">용역업체 소속 (계좌정보 필수 아님)</span>
-                        <span class="text-[9px] text-slate-400">체크 시 "제출 전 점검"에서 계좌번호 누락 경고가 표시되지 않습니다</span>
-                    </div>
-                    <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                        <input type="checkbox" id="detailIsServiceWorker" class="sr-only peer">
-                        <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-teal-700"></div>
-                    </label>
-                </div>
-
-                <div>
-                    <label class="block font-bold text-slate-500 mb-1 text-[10px]">주소</label>
-                    <input type="text" id="detailAddress" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
-                </div>
-
-                <details class="bg-slate-50 rounded border border-slate-100">
-                    <summary class="p-2.5 cursor-pointer font-bold text-slate-700 text-[11px] flex items-center gap-1">
-                        <i data-lucide="user-check" class="w-3.5 h-3.5 text-indigo-500"></i> 노임수령 위임장 — 대리인(수임인) 정보 (선택)
-                    </summary>
-                    <div class="p-3 pt-1 space-y-2">
-                        <p class="text-[9px] text-slate-400">본인이 아닌 대리인이 노임을 수령하는 경우에만 입력하세요. 비워두면 위임장에 공란으로 출력됩니다.</p>
-                        <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-4 items-start">
+                <!-- 좌측: 주요 입력 정보 -->
+                <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-3">
+                        <div>
+                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">성명</label>
                             <div class="relative">
-                                <input type="text" id="detailProxyName" placeholder="대리인 성명" autocomplete="off" oninput="handleProxyNameInput()" onfocus="handleProxyNameInput()" onblur="setTimeout(hideProxyNameSuggestions, 150)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
-                                <div id="proxyNameSuggestions" class="hidden absolute z-30 left-0 right-0 mt-0.5 bg-white border border-slate-200 rounded shadow-lg max-h-40 overflow-y-auto text-xs"></div>
+                                <input type="text" id="detailName" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none font-bold pr-8"
+                                    oninput="_detailNameAutofill(this.value)">
+                                <span id="detailDbMatchBadge" class="hidden absolute right-1.5 top-1/2 -translate-y-1/2 text-[10px] bg-emerald-500 text-white px-1 py-0.5 rounded font-bold cursor-pointer"
+                                    onclick="_applyDbAutofill()" title="근로자DB 일치 — 클릭하여 정보 자동입력">DB↓</span>
                             </div>
-                            <input type="text" id="detailProxyBirth" placeholder="생년월일 (예: 1970년 09월 30일)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
-                        </div>
-                        <input type="text" id="detailProxyAddress" placeholder="대리인 주소" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
-                        <div class="grid grid-cols-2 gap-2">
-                            <input type="text" id="detailProxyPhone" placeholder="대리인 연락처" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
-                            <input type="text" id="detailProxyAccount" placeholder="입금계좌 (예: 우체국 202226-02-214929)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
                         </div>
                         <div>
-                            <label class="block font-bold text-slate-400 mb-1 text-[10px]">위임 날짜 <span class="font-normal">(위임장 출력 시 기본값으로 사용, 비워두면 출력 당일로 지정)</span></label>
-                            <input type="date" id="detailProxyDate" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">직종</label>
+                            <input type="text" id="detailJob" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">주민등록번호</label>
+                            <input type="text" id="detailSsn" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-blue-500 outline-none" maxlength="14"
+                                oninput="_autoHyphenSsn(this)"
+                                onblur="_checkSsnDuplication(this.value)">
                         </div>
                     </div>
-                </details>
+                    <div id="ssnDupWarning" class="hidden text-[11px] text-red-600 bg-red-50 border border-red-200 rounded px-3 py-1.5 font-bold">
+                        ⚠️ 이 주민번호는 현재 대장의 다른 근로자와 중복됩니다. 확인 후 수정해주세요.
+                    </div>
 
-                <div class="bg-slate-50 p-3 rounded border border-slate-100 space-y-2">
-                    <div class="flex items-center justify-between">
+                    <div class="grid grid-cols-3 gap-3">
                         <div>
-                            <span class="font-bold text-slate-700">신규 채용 안전보건교육 이수 여부</span>
-                            <p class="text-[10px] text-slate-400">교육 일지(이수증) 출력 시 이수 정보가 적용됩니다.</p>
+                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">연락처</label>
+                            <input type="text" id="detailPhone" placeholder="010-1234-5678" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-blue-500 outline-none" maxlength="13">
                         </div>
-                        <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" id="detailSafetyEdu" class="sr-only peer" onchange="_toggleSafetyDateRow()">
-                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        <div>
+                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">지급 은행명</label>
+                            <input type="text" id="detailBank" placeholder="예: 국민은행" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">계좌번호</label>
+                            <input type="text" id="detailAccount" placeholder="숫자와 하이픈만 입력" class="w-full bg-slate-50 border border-slate-200 rounded p-2 font-mono focus:ring-1 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">주소</label>
+                        <input type="text" id="detailAddress" class="w-full bg-slate-50 border border-slate-200 rounded p-2 focus:ring-1 focus:ring-blue-500 outline-none">
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded border border-slate-100">
+                        <div>
+                            <span class="font-bold text-slate-700 block text-[11px]">용역업체 소속 (계좌정보 필수 아님)</span>
+                            <span class="text-[9px] text-slate-400">체크 시 "제출 전 점검"에서 계좌번호 누락 경고가 표시되지 않습니다</span>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                            <input type="checkbox" id="detailIsServiceWorker" class="sr-only peer">
+                            <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-teal-700"></div>
                         </label>
                     </div>
-                    <div id="safetyDateRow" class="hidden grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">교육 이수일</label>
-                            <input type="date" id="detailSafetyDate" class="w-full bg-white border border-slate-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-blue-400 outline-none">
+
+                    <details class="bg-slate-50 rounded border border-slate-100">
+                        <summary class="p-2.5 cursor-pointer font-bold text-slate-700 text-[11px] flex items-center gap-1">
+                            <i data-lucide="user-check" class="w-3.5 h-3.5 text-indigo-500"></i> 노임수령 위임장 — 대리인(수임인) 정보 (선택)
+                        </summary>
+                        <div class="p-3 pt-1 space-y-2">
+                            <p class="text-[9px] text-slate-400">본인이 아닌 대리인이 노임을 수령하는 경우에만 입력하세요. 비워두면 위임장에 공란으로 출력됩니다.</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="relative">
+                                    <input type="text" id="detailProxyName" placeholder="대리인 성명" autocomplete="off" oninput="handleProxyNameInput()" onfocus="handleProxyNameInput()" onblur="setTimeout(hideProxyNameSuggestions, 150)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                                    <div id="proxyNameSuggestions" class="hidden absolute z-30 left-0 right-0 mt-0.5 bg-white border border-slate-200 rounded shadow-lg max-h-40 overflow-y-auto text-xs"></div>
+                                </div>
+                                <input type="text" id="detailProxyBirth" placeholder="생년월일 (예: 1970년 09월 30일)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                            </div>
+                            <input type="text" id="detailProxyAddress" placeholder="대리인 주소" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="text" id="detailProxyPhone" placeholder="대리인 연락처" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
+                                <input type="text" id="detailProxyAccount" placeholder="입금계좌 (예: 우체국 202226-02-214929)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-400 mb-1 text-[10px]">위임 날짜 <span class="font-normal">(위임장 출력 시 기본값으로 사용, 비워두면 출력 당일로 지정)</span></label>
+                                <input type="date" id="detailProxyDate" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
+                            </div>
                         </div>
-                        <div>
-                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">교육 유효 만료일 <span id="safetyExpiryStatus" class="ml-1"></span></label>
-                            <input type="date" id="detailSafetyExpiry" class="w-full bg-white border border-slate-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-blue-400 outline-none" oninput="_checkSafetyExpiry()">
+                    </details>
+
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-slate-700">신규 채용 안전보건교육 이수 여부</span>
+                                <p class="text-[10px] text-slate-400">교육 일지(이수증) 출력 시 이수 정보가 적용됩니다.</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="detailSafetyEdu" class="sr-only peer" onchange="_toggleSafetyDateRow()">
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                            </label>
+                        </div>
+                        <div id="safetyDateRow" class="hidden grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block font-bold text-slate-500 mb-1 text-[10px]">교육 이수일</label>
+                                <input type="date" id="detailSafetyDate" class="w-full bg-white border border-slate-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-blue-400 outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-500 mb-1 text-[10px]">교육 유효 만료일 <span id="safetyExpiryStatus" class="ml-1"></span></label>
+                                <input type="date" id="detailSafetyExpiry" class="w-full bg-white border border-slate-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-blue-400 outline-none" oninput="_checkSafetyExpiry()">
+                            </div>
                         </div>
                     </div>
+
+                    <details class="bg-orange-50 border border-orange-200 rounded-lg">
+                        <summary class="p-2.5 cursor-pointer font-bold text-orange-800 text-[11px] flex items-center gap-1">
+                            🌏 외국인 근로자 관리 <span class="text-[10px] font-normal text-orange-500">(내국인은 비워두세요, 클릭하여 펼치기)</span>
+                        </summary>
+                        <div class="p-3 pt-1 space-y-2">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <label class="block font-bold text-slate-500 mb-1 text-[10px]">비자 종류</label>
+                                    <select id="detailVisaType" class="w-full bg-white border border-orange-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-orange-400 outline-none">
+                                        <option value="">내국인 / 해당없음</option>
+                                        <option value="E-9">E-9 (비전문취업)</option>
+                                        <option value="E-7">E-7 (특정활동)</option>
+                                        <option value="H-2">H-2 (방문취업)</option>
+                                        <option value="F-4">F-4 (재외동포)</option>
+                                        <option value="F-5">F-5 (영주)</option>
+                                        <option value="F-6">F-6 (결혼이민)</option>
+                                        <option value="D-8">D-8 (기업투자)</option>
+                                        <option value="기타">기타</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-slate-500 mb-1 text-[10px]">체류 만료일</label>
+                                    <input type="date" id="detailVisaExpiry" class="w-full bg-white border border-orange-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-orange-400 outline-none">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-500 mb-1 text-[10px]">국적</label>
+                                <input type="text" id="detailNationality" placeholder="예: 베트남, 중국, 캄보디아" class="w-full bg-white border border-orange-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-orange-400 outline-none">
+                            </div>
+                        </div>
+                    </details>
                 </div>
 
-                <!-- 외국인 근로자 관리 섹션 -->
-                <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 space-y-2">
-                    <div class="flex items-center justify-between">
-                        <span class="font-bold text-orange-800 text-[11px] flex items-center gap-1">🌏 외국인 근로자 관리 <span class="text-[10px] font-normal text-orange-500">(내국인은 비워두세요)</span></span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <div>
-                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">비자 종류</label>
-                            <select id="detailVisaType" class="w-full bg-white border border-orange-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-orange-400 outline-none">
-                                <option value="">내국인 / 해당없음</option>
-                                <option value="E-9">E-9 (비전문취업)</option>
-                                <option value="E-7">E-7 (특정활동)</option>
-                                <option value="H-2">H-2 (방문취업)</option>
-                                <option value="F-4">F-4 (재외동포)</option>
-                                <option value="F-5">F-5 (영주)</option>
-                                <option value="F-6">F-6 (결혼이민)</option>
-                                <option value="D-8">D-8 (기업투자)</option>
-                                <option value="기타">기타</option>
-                            </select>
+                <!-- 우측: 사진 · 서류발급 · 출역일 달력 -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded border border-slate-100">
+                        <div class="relative shrink-0">
+                            <div id="detailPhotoPreview" class="w-12 h-12 rounded-full bg-slate-200 border-2 border-white shadow flex items-center justify-center overflow-hidden cursor-pointer" onclick="document.getElementById('detailPhotoInput').click()">
+                                <i data-lucide="user" class="w-6 h-6 text-slate-400"></i>
+                            </div>
+                            <button id="detailPhotoRemoveBtn" onclick="removeProfilePhoto()" class="hidden absolute -top-1 -right-1 w-4 h-4 rounded-full bg-rose-600 text-white text-[9px] font-bold flex items-center justify-center shadow hover:bg-rose-700" title="사진 삭제">✕</button>
+                            <input type="file" id="detailPhotoInput" accept="image/*" class="hidden" onchange="uploadProfilePhoto(this)">
                         </div>
-                        <div>
-                            <label class="block font-bold text-slate-500 mb-1 text-[10px]">체류 만료일</label>
-                            <input type="date" id="detailVisaExpiry" class="w-full bg-white border border-orange-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-orange-400 outline-none">
+                        <div class="text-[10px] text-slate-500">
+                            <span class="font-bold text-slate-700 block mb-0.5">얼굴 사진</span>
+                            클릭하여 등록/변경
                         </div>
                     </div>
-                    <div>
-                        <label class="block font-bold text-slate-500 mb-1 text-[10px]">국적</label>
-                        <input type="text" id="detailNationality" placeholder="예: 베트남, 중국, 캄보디아" class="w-full bg-white border border-orange-200 rounded p-1.5 text-xs focus:ring-1 focus:ring-orange-400 outline-none">
+
+                    <div class="bg-slate-50 p-2.5 rounded border border-slate-100">
+                        <span class="font-bold text-slate-700 text-[11px] block mb-1.5">서류 발급</span>
+                        <div class="grid grid-cols-3 gap-1.5">
+                            <button onclick="printContractInNewTab(document.getElementById('detailLaborId').value)" class="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-500 rounded py-1.5 font-bold text-[10px] transition-all flex flex-col items-center gap-0.5">
+                                <i data-lucide="file-signature" class="w-3.5 h-3.5"></i> 계약서
+                            </button>
+                            <button onclick="printRosterInNewTab(document.getElementById('detailLaborId').value)" class="text-rose-600 hover:text-white hover:bg-rose-600 border border-rose-500 rounded py-1.5 font-bold text-[10px] transition-all flex flex-col items-center gap-0.5">
+                                <i data-lucide="images" class="w-3.5 h-3.5"></i> 명단
+                            </button>
+                            <button onclick="printPowerOfAttorneyInNewTab(document.getElementById('detailLaborId').value)" class="text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-500 rounded py-1.5 font-bold text-[10px] transition-all flex flex-col items-center gap-0.5">
+                                <i data-lucide="user-check" class="w-3.5 h-3.5"></i> 위임장
+                            </button>
+                        </div>
                     </div>
+
+                    <div class="bg-slate-50 p-2.5 rounded border border-slate-100">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-700 text-[11px]">출역일 달력</span>
+                        </div>
+                        <div id="detailAttendanceCalendar" class="grid grid-cols-7 gap-1 text-[10px]"></div>
+                        <p class="text-[9px] text-slate-400 mt-1.5">색칠 = 출역일 (숫자는 공수)</p>
+                    </div>
+                </div>
                 </div>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center gap-2 text-xs">
@@ -1308,6 +1368,48 @@
             <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end gap-2 text-xs shrink-0">
                 <button onclick="closeBulkPrintModal()" class="px-4 py-2 font-medium text-slate-500 hover:text-slate-800">닫기</button>
                 <button onclick="printContractsBulk()" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold px-4 py-2 rounded shadow-sm flex items-center gap-1">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i> 일괄 인쇄 실행
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 필수서류 명단 일괄 인쇄 모달 -->
+    <div id="bulkRosterModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-lg overflow-hidden flex flex-col max-h-[92vh]">
+            <div class="bg-slate-900 text-white p-4 flex justify-between items-center shrink-0">
+                <h3 class="font-bold flex items-center gap-1.5 text-xs uppercase tracking-wider">
+                    <i data-lucide="images" class="w-4 h-4 text-rose-400"></i> 필수서류 명단 일괄 인쇄
+                </h3>
+                <button onclick="closeBulkRosterModal()" class="text-slate-400 hover:text-white transition-all" aria-label="닫기">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-5 space-y-4 overflow-y-auto">
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="block font-bold text-slate-500 text-xs">인쇄할 근로자 <span id="bulkRosterCount" class="text-rose-600"></span></label>
+                        <div class="flex gap-2 text-[10px]">
+                            <button onclick="selectAllBulkRoster()" class="text-indigo-600 hover:underline font-bold">전체선택</button>
+                            <span class="text-slate-300">|</span>
+                            <button onclick="deselectAllBulkRoster()" class="text-slate-400 hover:underline font-bold">전체해제</button>
+                        </div>
+                    </div>
+                    <div class="relative mb-2">
+                        <input type="text" id="bulkRosterSearch" placeholder="이름 또는 직종으로 검색..."
+                            oninput="filterBulkRosterList()"
+                            class="w-full bg-slate-50 border border-slate-200 rounded p-2 pr-8 text-xs font-bold focus:ring-1 focus:ring-rose-400 outline-none placeholder:font-normal placeholder:text-slate-400">
+                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-[11px]">🔍</span>
+                    </div>
+                    <div id="bulkRosterLaborList" class="border border-slate-200 rounded overflow-y-auto max-h-64 divide-y divide-slate-100 text-xs">
+                        <!-- JS로 동적 생성 -->
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-400">이미 등록된 사진(신분증·통장·안전교육이수증)은 그대로 인쇄되고, 등록 안 된 항목은 빈 칸으로 출력됩니다. 사진 추가는 이 화면에서 할 수 없으니, 개별 "명단" 버튼에서 먼저 등록해 주세요.</p>
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end gap-2 text-xs shrink-0">
+                <button onclick="closeBulkRosterModal()" class="px-4 py-2 font-medium text-slate-500 hover:text-slate-800">닫기</button>
+                <button onclick="printRosterBulk()" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-4 py-2 rounded shadow-sm flex items-center gap-1">
                     <i data-lucide="printer" class="w-3.5 h-3.5"></i> 일괄 인쇄 실행
                 </button>
             </div>
@@ -3361,6 +3463,31 @@
         }
 
         // 근로자 상세 정보 조회 및 수정 트리거 모달 핸들러
+        // 근로자 상세정보 — 출역일 달력 렌더링 (요일 맞춰 그리드 배치, 출역일 색칠)
+        function _renderDetailAttendanceCalendar(labor, proj, daysInMonth) {
+            const box = document.getElementById('detailAttendanceCalendar');
+            if (!box) return;
+            const weekNames = ['일', '월', '화', '수', '목', '금', '토'];
+            const firstDow = new Date(proj.year, proj.month - 1, 1).getDay(); // 1일의 요일(0=일)
+
+            let html = weekNames.map(w => `<div class="text-center font-bold text-slate-400 pb-0.5">${w}</div>`).join('');
+            for (let i = 0; i < firstDow; i++) html += `<div></div>`;
+
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dow = new Date(proj.year, proj.month - 1, d).getDay();
+                const val = labor.attendance && labor.attendance[d] ? Number(labor.attendance[d]) : 0;
+                const worked = val > 0;
+                const dowColor = dow === 0 ? 'text-red-500' : dow === 6 ? 'text-blue-500' : 'text-slate-600';
+                html += `
+                    <div class="aspect-square flex flex-col items-center justify-center rounded ${worked ? 'bg-blue-600 text-white font-bold' : 'bg-white border border-slate-200 ' + dowColor}">
+                        <span style="font-size:9px;">${d}</span>
+                        ${worked ? `<span style="font-size:8px;">${val}</span>` : ''}
+                    </div>
+                `;
+            }
+            box.innerHTML = html;
+        }
+
         function openDetailModal(laborId) {
             const proj = appState.projects[appState.currentProjectId];
             if (!proj) return;
@@ -3377,6 +3504,8 @@
                 ? labor.manualDays : autoDays;
             const titleEl = document.getElementById('detailModalTitle');
             if (titleEl) titleEl.textContent = `${labor.name}  —  ${effectiveDays}일 출역`;
+
+            _renderDetailAttendanceCalendar(labor, proj, daysInMonth);
 
             document.getElementById('detailLaborId').value = labor.id;
             document.getElementById('detailName').value = labor.name || "";
@@ -4048,6 +4177,7 @@
             ['poaDateModal', closePoaDateModal],
             ['laborDetailModal', closeDetailModal],
             ['bulkPrintModal', closeBulkPrintModal],
+            ['bulkRosterModal', closeBulkRosterModal],
             ['autoBackupModal', closeAutoBackupModal],
             ['preSubmitCheckModal', closePreSubmitCheckModal],
             ['bulkUserModal', closeBulkUserModal],
@@ -4381,15 +4511,24 @@
         function switchMainView(view) {
             const tableWrap = document.getElementById('tableViewWrapper');
             const dashWrap = document.getElementById('dashboardView');
+            const docsWrap = document.getElementById('docsView');
             const btnTable = document.getElementById('tabBtnTable');
             const btnDash = document.getElementById('tabBtnDashboard');
+            const btnDocs = document.getElementById('tabBtnDocs');
+            const activeCls = 'px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all bg-white text-blue-700 shadow-sm';
+            const inactiveCls = 'px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700';
+
+            tableWrap.style.display = 'none';
+            dashWrap.classList.add('hidden'); dashWrap.style.display = 'none';
+            docsWrap.classList.add('hidden'); docsWrap.style.display = 'none';
+            btnTable.className = inactiveCls;
+            btnDash.className = inactiveCls;
+            btnDocs.className = inactiveCls;
 
             if (view === 'dashboard') {
-                tableWrap.style.display = 'none';
                 dashWrap.classList.remove('hidden');
                 dashWrap.style.display = 'flex';
-                btnTable.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700';
-                btnDash.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all bg-white text-blue-700 shadow-sm';
+                btnDash.className = activeCls;
                 renderDashboardWarnings();
                 renderDashboardDailyChart();
                 renderDashboardJobBreakdown();
@@ -4400,15 +4539,59 @@
                 renderDashboardPriceOutliers();
                 renderDashboardMonthlyTrend();
                 renderDashboardNewWorkers();
+            } else if (view === 'docs') {
+                docsWrap.classList.remove('hidden');
+                docsWrap.style.display = 'flex';
+                btnDocs.className = activeCls;
+                renderDocsView();
             } else {
-                dashWrap.classList.add('hidden');
-                dashWrap.style.display = 'none';
                 tableWrap.style.display = 'flex';
-                btnDash.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700';
-                btnTable.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all bg-white text-blue-700 shadow-sm';
+                btnTable.className = activeCls;
             }
             if (window.lucide) lucide.createIcons();
         }
+
+        // 필수서류 전용 화면: 대장 표의 필수서류 발급/제어 열만 간단한 요약 표로 분리
+        function renderDocsView() {
+            const tbody = document.getElementById('docsViewBody');
+            if (!tbody) return;
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || proj.labors.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="10" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
+                return;
+            }
+
+            const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
+            tbody.innerHTML = proj.labors.map((labor, idx) => {
+                let autoDays = 0;
+                for (let d = 1; d <= daysInMonth; d++) {
+                    if (labor.attendance[d]) autoDays += Number(labor.attendance[d]);
+                }
+                const calc = calculateDeductions(labor, autoDays);
+                return `
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-2 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
+                        <td class="p-2 border-r border-slate-100 font-bold cursor-pointer text-blue-700 hover:underline" onclick="openDetailModal('${labor.id}')">${labor.name}</td>
+                        <td class="p-2 border-r border-slate-100 font-mono text-slate-500">${labor.ssn || ''}</td>
+                        <td class="p-2 border-r border-slate-100">${labor.job || '보통인부'}</td>
+                        <td class="p-2 border-r border-slate-100 text-right font-mono">${commaFormatter(calc.effectiveDays)}</td>
+                        <td class="p-2 border-r border-slate-100 text-right font-mono">${commaFormatter(labor.price)}</td>
+                        <td class="p-2 border-r border-slate-100 text-right font-mono">${commaFormatter(calc.totalWages)}</td>
+                        <td class="p-2 border-r border-slate-100 text-right font-mono text-red-600">${commaFormatter(calc.totalDeduction)}</td>
+                        <td class="p-2 border-r border-slate-100 text-right font-mono font-bold text-emerald-700">${commaFormatter(calc.netPay)}</td>
+                        <td class="p-2">
+                            <div class="flex gap-1 flex-wrap">
+                                <button onclick="printContractInNewTab('${labor.id}')" class="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">계약</button>
+                                <button onclick="printReceiptInNewTab('${labor.id}')" class="text-emerald-600 hover:text-white hover:bg-emerald-600 border border-emerald-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">명세</button>
+                                <button onclick="printRosterInNewTab('${labor.id}')" class="text-rose-600 hover:text-white hover:bg-rose-600 border border-rose-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">명단</button>
+                                <button onclick="printPowerOfAttorneyInNewTab('${labor.id}')" class="text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">위임장</button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
 
         // 대시보드: 일별 출역인원 추이를 캔버스 막대그래프로 표시
         function renderDashboardDailyChart() {
@@ -5499,6 +5682,192 @@
         function deselectAllBulkPrint() {
             document.querySelectorAll('#bulkPrintLaborList .bulk-print-check').forEach(cb => { cb.checked = false; });
             _updateBulkPrintCount();
+        }
+
+        // ── 필수서류 명단 일괄 인쇄 모달 — 열기/닫기/렌더링 ──────────────────
+        function openBulkRosterModal() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || proj.labors.length === 0) {
+                showCustomAlert("등록된 근로자가 없습니다.");
+                return;
+            }
+            _renderBulkRosterLaborList(proj.labors, '');
+            document.getElementById('bulkRosterSearch').value = '';
+            document.getElementById('bulkRosterModal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeBulkRosterModal() {
+            document.getElementById('bulkRosterModal').classList.add('hidden');
+        }
+
+        function _renderBulkRosterLaborList(labors, keyword) {
+            const list = document.getElementById('bulkRosterLaborList');
+            list.innerHTML = '';
+            const kw = keyword.trim().toLowerCase();
+            const filtered = kw
+                ? labors.filter(l => l.name.toLowerCase().includes(kw) || (l.job || '').toLowerCase().includes(kw))
+                : labors;
+
+            if (filtered.length === 0) {
+                list.innerHTML = '<div class="p-3 text-slate-400 text-center text-xs">검색 결과 없음</div>';
+                _updateBulkRosterCount();
+                return;
+            }
+
+            filtered.forEach(l => {
+                const photoCount = l.rosterPhotos ? Object.keys(l.rosterPhotos).length : 0;
+                const row = document.createElement('label');
+                row.className = 'flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-rose-50 transition-colors';
+                row.innerHTML = `
+                    <input type="checkbox" data-labor-id="${l.id}" class="bulk-roster-check accent-rose-600 w-3.5 h-3.5 shrink-0" checked
+                        onchange="_updateBulkRosterCount()">
+                    <span class="font-bold text-slate-700 truncate">${l.name}</span>
+                    <span class="text-slate-400 shrink-0">${l.job || '보통인부'}</span>
+                    <span class="text-[10px] ${photoCount === 3 ? 'text-emerald-600' : 'text-amber-500'} shrink-0 ml-auto font-bold">사진 ${photoCount}/3</span>
+                `;
+                list.appendChild(row);
+            });
+            _updateBulkRosterCount();
+        }
+
+        function filterBulkRosterList() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return;
+            const kw = document.getElementById('bulkRosterSearch').value;
+            _renderBulkRosterLaborList(proj.labors, kw);
+        }
+
+        function _updateBulkRosterCount() {
+            const total   = document.querySelectorAll('#bulkRosterLaborList .bulk-roster-check').length;
+            const checked = document.querySelectorAll('#bulkRosterLaborList .bulk-roster-check:checked').length;
+            const el = document.getElementById('bulkRosterCount');
+            if (el) el.textContent = total > 0 ? `(${checked}/${total}명 선택)` : '';
+        }
+
+        function selectAllBulkRoster() {
+            document.querySelectorAll('#bulkRosterLaborList .bulk-roster-check').forEach(cb => { cb.checked = true; });
+            _updateBulkRosterCount();
+        }
+
+        function deselectAllBulkRoster() {
+            document.querySelectorAll('#bulkRosterLaborList .bulk-roster-check').forEach(cb => { cb.checked = false; });
+            _updateBulkRosterCount();
+        }
+
+        // 필수서류 명단 1인분 문서 본문 (일괄 인쇄용 — 이미 저장된 사진만 정적으로 표시, 업로드 불가)
+        function _buildRosterDocBody(labor, proj) {
+            const photos = labor.rosterPhotos || {};
+            const section = (key, title, icon, label) => `
+                <div class="doc-section">
+                    <div class="doc-section-title">${title}</div>
+                    <div class="doc-section-body">
+                        <div class="photo-slot ${photos[key] ? 'has-image' : ''}">
+                            ${photos[key]
+                                ? `<img src="${photos[key]}" style="display:block">`
+                                : `<span class="slot-icon">${icon}</span><span class="slot-label">${label}<br><small style="font-weight:400;color:#9ca3af">미등록</small></span>`}
+                        </div>
+                    </div>
+                </div>
+            `;
+            return `
+            <div class="doc-card">
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th style="width:68px">직 종</th>
+                            <th style="width:64px">성 명</th>
+                            <th style="width:128px">주민번호</th>
+                            <th style="width:116px">전화번호</th>
+                            <th>주 소</th>
+                            <th style="width:56px">비 고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${labor.job || '보통인부'}</td>
+                            <td style="font-weight:700">${labor.name}</td>
+                            <td style="font-family:monospace;font-size:11px">${labor.ssn || ''}</td>
+                            <td style="font-family:monospace">${labor.phone || ''}</td>
+                            <td class="addr">${labor.address || ''}</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                ${section('id-front', '주 민 등 록 증', '🪪', '앞면 사진 없음')}
+                ${section('bank', '통 장 사 본', '🏦', '통장 사본 없음')}
+                ${section('safety', '기초안전보건교육 이수증', '🦺', '이수증 사진 없음')}
+            </div>
+            `;
+        }
+
+        function printRosterBulk() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return;
+
+            const selectedIds = [...document.querySelectorAll('#bulkRosterLaborList .bulk-roster-check:checked')]
+                .map(cb => cb.dataset.laborId);
+
+            if (selectedIds.length === 0) {
+                showCustomAlert("인쇄할 근로자를 한 명 이상 선택해 주세요.");
+                return;
+            }
+
+            const targetLabors = proj.labors.filter(l => selectedIds.includes(l.id));
+
+            const pages = targetLabors.map((labor, idx) => {
+                const breakStyle = idx < targetLabors.length - 1 ? 'page-break-after: always;' : '';
+                return `<div class="screen-wrap" style="${breakStyle}">${_buildRosterDocBody(labor, proj)}</div>`;
+            }).join('\n');
+
+            const printHtml = `
+                <!DOCTYPE html>
+                <html lang="ko">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>필수서류 명단 일괄인쇄 - ${proj.projectName || proj.company}</title>
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght=300;400;500;700;900&display=swap');
+                        * { box-sizing: border-box; margin: 0; padding: 0; }
+                        body { font-family: 'Noto Sans KR', sans-serif; background: #f1f5f9; color: #1e293b; font-size: 12px; }
+                        .top-bar { background: #1e293b; color: white; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+                        .top-bar span { font-size: 11px; }
+                        .btn-print { background: #dc2626; color: white; border: none; padding: 6px 16px; border-radius: 4px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 12px; }
+                        .btn-print:hover { background: #b91c1c; }
+                        .screen-wrap { padding: 24px; display: flex; justify-content: center; }
+                        .doc-card { width: 210mm; background: white; box-shadow: 0 4px 24px rgba(0,0,0,0.12); border-radius: 4px; padding: 14mm 12mm 14mm 12mm; }
+                        .info-table { width: 100%; border-collapse: collapse; }
+                        .info-table th, .info-table td { border: 1px solid #374151; padding: 6px 8px; text-align: center; font-size: 11px; }
+                        .info-table th { background: #f3f4f6; font-weight: 700; letter-spacing: 0.08em; }
+                        .info-table td.addr { text-align: left; font-size: 10px; }
+                        .doc-section { border: 1px solid #374151; border-top: none; }
+                        .doc-section-title { background: #f3f4f6; padding: 7px 0; text-align: center; font-weight: 700; letter-spacing: 0.35em; font-size: 12px; border-bottom: 1px solid #374151; }
+                        .doc-section-body { padding: 10px; display: flex; align-items: stretch; justify-content: center; gap: 10px; }
+                        .photo-slot { flex: 1; min-height: 190px; border: 2px dashed #9ca3af; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 6px; position: relative; overflow: hidden; }
+                        .photo-slot.has-image { border-style: solid; border-color: #cbd5e1; }
+                        .photo-slot img { width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; }
+                        .slot-icon { font-size: 30px; }
+                        .slot-label { font-size: 11px; font-weight: 700; color: #6b7280; }
+                        @media print {
+                            html, body { background: white !important; }
+                            .no-print, .top-bar { display: none !important; }
+                            .screen-wrap { padding: 0; }
+                            .doc-card { box-shadow: none; width: auto; }
+                            @page { size: A4 portrait; margin: 10mm; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="top-bar no-print">
+                        <span>📋 필수서류 명단 일괄인쇄 — 총 ${targetLabors.length}건, A4 1인 1페이지로 출력됩니다.</span>
+                        <button class="btn-print" onclick="window.print()">🖨️ 인쇄하기</button>
+                    </div>
+                    ${pages}
+                </body>
+                </html>
+            `;
+            printHtmlViaIframe(printHtml);
+            closeBulkRosterModal();
         }
 
         // ── 오류방지: 제출/인쇄 전 필수정보 누락·불일치 일괄 점검 ──────────
@@ -7328,35 +7697,60 @@
         const PHOTO_KEYS = ['id-front', 'bank', 'safety'];
 
         // 부모 창 appState에서 사진 불러오기
+        // 사진 저장 저장소: window.opener(부모 창 메모리 객체)에 의존하면
+        // 팝업 차단/COOP 정책/로컬 file:// 실행 환경 등에서 조용히 실패할 수 있어,
+        // localStorage를 직접 읽고 쓰는 방식을 기본으로 사용 (부모 창이 없어도 동작)
+        const APPSTATE_LS_KEY = 'labor_payment_system_data_v4';
+
+        function _loadAppStateFromLocalStorage() {
+            const raw = localStorage.getItem(APPSTATE_LS_KEY);
+            if (!raw) throw new Error('저장된 대장 데이터를 찾을 수 없습니다 (localStorage 비어 있음)');
+            return JSON.parse(raw);
+        }
+
         function getPhotoStore() {
             try {
-                const parent = window.opener;
-                if (!parent || !parent.appState) return {};
-                const proj = parent.appState.projects[parent.appState.currentProjectId];
+                const state = _loadAppStateFromLocalStorage();
+                const proj = state.projects[state.currentProjectId];
                 if (!proj) return {};
                 const labor = proj.labors.find(l => l.id === LABOR_ID);
                 return (labor && labor.rosterPhotos) ? labor.rosterPhotos : {};
-            } catch(e) { return {}; }
+            } catch(e) {
+                console.error('사진 불러오기 실패:', e);
+                return {};
+            }
         }
 
-        // 부모 창 appState에 사진 저장
+        // 부모 창의 실제 데이터(localStorage)에 사진 저장
         function savePhotoToStore(key, dataUrl) {
             try {
-                const parent = window.opener;
-                if (!parent || !parent.appState) return;
-                const proj = parent.appState.projects[parent.appState.currentProjectId];
-                if (!proj) return;
+                const state = _loadAppStateFromLocalStorage();
+                const proj = state.projects[state.currentProjectId];
+                if (!proj) throw new Error('현재 현장 데이터를 찾을 수 없습니다');
                 const labor = proj.labors.find(l => l.id === LABOR_ID);
-                if (!labor) return;
+                if (!labor) throw new Error('근로자 데이터를 찾을 수 없습니다 (ID 불일치)');
+
                 if (!labor.rosterPhotos) labor.rosterPhotos = {};
                 if (dataUrl) {
                     labor.rosterPhotos[key] = dataUrl;
                 } else {
                     delete labor.rosterPhotos[key];
                 }
-                // 부모 창 localStorage에도 반영
-                if (parent.saveToLocalStorage) parent.saveToLocalStorage();
-            } catch(e) {}
+
+                localStorage.setItem(APPSTATE_LS_KEY, JSON.stringify(state));
+
+                // 부모 창이 열려 있으면(같은 브라우징 컨텍스트) 메모리에도 즉시 반영해
+                // 새로고침 없이 화면에 바로 보이도록 함 (실패해도 위 localStorage 저장은 이미 완료된 상태)
+                try {
+                    if (window.opener && window.opener.appState) {
+                        window.opener.appState = state;
+                        if (window.opener.updateHeaderAndTable) window.opener.updateHeaderAndTable();
+                    }
+                } catch(e2) { /* 부모 창 메모리 동기화 실패는 무시 — localStorage 저장은 이미 성공 */ }
+            } catch(e) {
+                console.error('사진 저장 실패:', e);
+                alert('사진 저장에 실패했습니다: ' + e.message + '\n\n브라우저 저장 공간이 가득 찼거나, 이 창이 시스템에서 정상적으로 열리지 않았을 수 있습니다.');
+            }
         }
 
         // 슬롯에 이미지 표시
