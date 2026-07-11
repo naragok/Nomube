@@ -714,7 +714,10 @@
 
             <!-- 대시보드 화면 (탭 전환 시 표시) -->
             <div id="dashboardView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
-                <div class="p-5 max-w-[1600px] mx-auto">
+                <div class="p-5 max-w-[2000px] mx-auto">
+                <div class="grid grid-cols-1 xl:grid-cols-[1.3fr_1fr] gap-4 items-start">
+
+                <!-- 좌측: 기존 대시보드 항목 -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
 
                     <!-- KPI 카드 그리드 -->
@@ -839,8 +842,13 @@
                         </div>
                     </div>
 
-                    <!-- 근로자별 출근현황 (1일~31일) — 필수서류 화면에서 이동 -->
-                    <div class="lg:col-span-3">
+                </div>
+                <!-- 좌측 끝 -->
+
+                <!-- 우측: 근로자별 출근현황 / 급여 요약 (필수서류 화면에서 이동) -->
+                <div class="grid grid-cols-1 gap-4 items-start">
+
+                    <div>
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">근로자별 출근현황 (1일~31일)</h3>
                         <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-x-auto">
                             <table id="dashAttendanceTable" class="w-full text-left border-collapse text-[10px]">
@@ -850,8 +858,7 @@
                         </div>
                     </div>
 
-                    <!-- 근로자별 급여 요약 — 필수서류 화면에서 이동 -->
-                    <div class="lg:col-span-3">
+                    <div>
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">근로자별 급여 요약</h3>
                         <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-x-auto">
                             <table id="dashPayrollTable" class="w-full text-left border-collapse text-[11px]">
@@ -874,12 +881,31 @@
                     </div>
 
                 </div>
+                <!-- 우측 끝 -->
+
+                </div>
                 </div>
             </div>
 
             <!-- 필수서류 발급/제어 전용 화면 -->
             <div id="docsView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
                 <div class="p-5">
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <span class="text-[11px] font-bold text-slate-500 mr-1">선택 근로자 일괄 발급:</span>
+                        <button onclick="bulkIssueDocs('contract')" class="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all">계약서 일괄</button>
+                        <button onclick="bulkIssueDocs('receipt')" class="text-emerald-600 hover:text-white hover:bg-emerald-600 border border-emerald-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all">명세서 일괄</button>
+                        <button onclick="bulkIssueDocs('safety')" class="text-purple-600 hover:text-white hover:bg-purple-600 border border-purple-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all">일지 일괄</button>
+                        <button onclick="bulkIssueDocs('roster')" class="text-rose-600 hover:text-white hover:bg-rose-600 border border-rose-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all">명단 일괄</button>
+                        <button onclick="bulkIssueDocs('poa')" class="text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all">위임장 일괄</button>
+                        <span class="w-px h-5 bg-slate-300 mx-1"></span>
+                        <button onclick="openDocIssueHistoryModal()" class="text-slate-600 hover:text-white hover:bg-slate-600 border border-slate-400 rounded px-2 py-1 font-bold text-[10.5px] transition-all flex items-center gap-1">
+                            <i data-lucide="history" class="w-3 h-3"></i> 발급 이력
+                        </button>
+                        <button onclick="shareLaborDocsSummary()" class="text-teal-600 hover:text-white hover:bg-teal-600 border border-teal-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all flex items-center gap-1">
+                            <i data-lucide="share-2" class="w-3 h-3"></i> 요약 복사(카톡/문자 공유용)
+                        </button>
+                        <span class="text-[10px] text-slate-400 ml-auto">체크 안 하면 전체 근로자 대상으로 확인 후 진행됩니다</span>
+                    </div>
                     <table id="docsTable" class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-[11px]">
                         <thead id="docsTableHead" class="bg-slate-800 text-white">
                             <!-- 1행/2행이 renderDocsViewHeader()에서 동적으로 채워집니다 (1일~31일 요일 포함) -->
@@ -889,6 +915,17 @@
                 </div>
             </div>
             </main>
+    </div>
+
+    <!-- 팝업 모달: 전체 화면에서 바로 근로자 등록 (사이드바 이동 없이) -->
+    <div id="docIssueHistoryModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[80vh] flex flex-col">
+            <div class="p-4 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="font-black text-slate-800 flex items-center gap-1.5"><i data-lucide="history" class="w-4 h-4"></i> 서류 발급 이력</h3>
+                <button onclick="document.getElementById('docIssueHistoryModal').classList.add('hidden')" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div id="docIssueHistoryList" class="p-4 overflow-y-auto divide-y divide-slate-100 text-[12px]"></div>
+        </div>
     </div>
 
     <!-- 팝업 모달: 전체 화면에서 바로 근로자 등록 (사이드바 이동 없이) -->
@@ -4160,6 +4197,7 @@
             ['shortcutsModal', closeShortcutsModal],
             ['githubBackupModal', closeGithubBackupModal],
             ['quickAddLaborModal', closeQuickAddLaborModal],
+            ['docIssueHistoryModal', () => document.getElementById('docIssueHistoryModal').classList.add('hidden')],
             ['laborDetailModal', closeDetailModal],
             ['bulkPrintModal', closeBulkPrintModal],
             ['bulkRosterModal', closeBulkRosterModal],
@@ -4642,10 +4680,11 @@
             if (!thead) return;
             thead.innerHTML = `
                 <tr>
+                    <th class="p-1 border-r border-slate-600 w-8 text-center"><input type="checkbox" id="docsSelectAll" onchange="toggleSelectAllDocsLabors(this)"></th>
                     <th class="p-1 border-r border-slate-600 w-10 text-center">번호</th>
                     <th class="p-1 border-r border-slate-600">성명</th>
                     <th class="p-1 border-r border-slate-600 w-28">직종</th>
-                    <th class="p-1 w-80">필수서류 발급 / 제어</th>
+                    <th class="p-1 w-96">필수서류 발급 / 제어</th>
                 </tr>
             `;
         }
@@ -4657,28 +4696,131 @@
             renderDocsViewHeader();
             const proj = appState.projects[appState.currentProjectId];
             if (!proj || proj.labors.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="4" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="5" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
                 return;
             }
 
+            const docBtnDef = [
+                { type: 'contract', label: '계약', fn: 'printContractInNewTab', color: 'blue' },
+                { type: 'receipt', label: '명세', fn: 'printReceiptInNewTab', color: 'emerald' },
+                { type: 'safety', label: '일지', fn: 'printSafetyInNewTab', color: 'purple' },
+                { type: 'roster', label: '명단', fn: 'printRosterInNewTab', color: 'rose' },
+                { type: 'poa', label: '위임장', fn: 'printPowerOfAttorneyInNewTab', color: 'indigo' },
+            ];
+
             tbody.innerHTML = proj.labors.map((labor, idx) => {
+                const missing = getMissingDocFieldsWarning(labor);
+                const missingBadge = missing.length
+                    ? `<span class="text-[9px] bg-amber-100 text-amber-700 font-bold px-1 rounded" title="누락: ${missing.join(', ')}">⚠️${missing.length}건 누락</span>`
+                    : '';
+                const safetyBadge = getSafetyExpiryBadge(labor);
+
+                const btnsHtml = docBtnDef.map(d => {
+                    const log = labor.docLog && labor.docLog[d.type];
+                    const issued = !!(log && log.count > 0);
+                    const dateShort = issued ? new Date(log.lastAt).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' }) : '';
+                    return `
+                        <div class="flex flex-col items-center">
+                            <button onclick="${d.fn}('${labor.id}')" class="text-${d.color}-600 hover:text-white hover:bg-${d.color}-600 border border-${d.color}-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all w-full">${d.label}</button>
+                            <span class="text-[8px] ${issued ? 'text-emerald-600' : 'text-slate-300'} font-bold leading-tight">${issued ? '✓' + dateShort : '미발급'}</span>
+                        </div>
+                    `;
+                }).join('');
+
                 return `
                     <tr class="hover:bg-slate-50">
+                        <td class="p-1 border-r border-slate-100 text-center"><input type="checkbox" class="docsRowCheck" data-labor-id="${labor.id}"></td>
                         <td class="p-1 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
-                        <td class="p-1 border-r border-slate-100 font-bold cursor-pointer text-blue-700 hover:underline" onclick="openDetailModal('${labor.id}')">${labor.name}${labor.proxyName ? ` <span class="text-[9px] bg-indigo-100 text-indigo-700 font-bold px-1 rounded" title="위임자: ${labor.proxyName}">👤위임</span>` : ''}</td>
+                        <td class="p-1 border-r border-slate-100 font-bold cursor-pointer text-blue-700 hover:underline" onclick="openDetailModal('${labor.id}')">
+                            ${labor.name}${labor.proxyName ? ` <span class="text-[9px] bg-indigo-100 text-indigo-700 font-bold px-1 rounded" title="위임자: ${labor.proxyName}">👤위임</span>` : ''}
+                            <div class="flex gap-1 mt-0.5">${missingBadge}${safetyBadge}</div>
+                        </td>
                         <td class="p-1 border-r border-slate-100">${labor.job || '보통인부'}</td>
                         <td class="p-1">
-                            <div class="flex gap-1 flex-wrap">
-                                <button onclick="printContractInNewTab('${labor.id}')" class="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">계약</button>
-                                <button onclick="printReceiptInNewTab('${labor.id}')" class="text-emerald-600 hover:text-white hover:bg-emerald-600 border border-emerald-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">명세</button>
-                                <button onclick="printSafetyInNewTab('${labor.id}')" class="text-purple-600 hover:text-white hover:bg-purple-600 border border-purple-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">일지</button>
-                                <button onclick="printRosterInNewTab('${labor.id}')" class="text-rose-600 hover:text-white hover:bg-rose-600 border border-rose-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">명단</button>
-                                <button onclick="printPowerOfAttorneyInNewTab('${labor.id}')" class="text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">위임장</button>
-                            </div>
+                            <div class="grid grid-cols-5 gap-1">${btnsHtml}</div>
                         </td>
                     </tr>
                 `;
             }).join('');
+        }
+
+        function openDocIssueHistoryModal() {
+            const proj = appState.projects[appState.currentProjectId];
+            const list = document.getElementById('docIssueHistoryList');
+            const history = (proj && proj.docIssueHistory) || [];
+            if (history.length === 0) {
+                list.innerHTML = '<div class="p-6 text-center text-slate-400">발급 이력이 없습니다.</div>';
+            } else {
+                list.innerHTML = history.map(h => `
+                    <div class="py-2 flex items-center justify-between">
+                        <div>
+                            <span class="font-bold text-slate-800">${h.laborName}</span>
+                            <span class="text-slate-400 mx-1">·</span>
+                            <span class="text-slate-600">${h.docLabel}</span>
+                        </div>
+                        <span class="text-slate-400 text-[10.5px]">${new Date(h.at).toLocaleString('ko-KR')}</span>
+                    </div>
+                `).join('');
+            }
+            document.getElementById('docIssueHistoryModal').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // 선택된(또는 전체) 근로자의 서류 발급 현황을 텍스트로 만들어 클립보드에 복사
+        // (카카오톡/문자 앱에 직접 붙여넣어 전달하는 용도 — 실제 전송 연동은 아님)
+        function shareLaborDocsSummary() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return;
+            let ids = getSelectedDocsLaborIds();
+            let labors = ids.length ? proj.labors.filter(l => ids.includes(l.id)) : proj.labors;
+            if (labors.length === 0) { showCustomAlert('대상 근로자가 없습니다.'); return; }
+
+            const lines = [`[${proj.company}] ${proj.year}년 ${proj.month}월 필수서류 발급 현황`, ''];
+            labors.forEach(labor => {
+                const types = [['contract', '계약'], ['receipt', '명세'], ['safety', '일지'], ['roster', '명단'], ['poa', '위임장']];
+                const statusStr = types.map(([type, label]) => {
+                    const log = labor.docLog && labor.docLog[type];
+                    return `${label}${(log && log.count > 0) ? '✓' : '✗'}`;
+                }).join(' ');
+                lines.push(`- ${labor.name}: ${statusStr}`);
+            });
+            const text = lines.join('\n');
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                    .then(() => showCustomAlert('요약 내용이 클립보드에 복사되었습니다. 카카오톡/문자 앱에 붙여넣어 전달하세요.'))
+                    .catch(() => alert(text));
+            } else {
+                alert(text);
+            }
+        }
+
+
+        function toggleSelectAllDocsLabors(cb) {
+            document.querySelectorAll('.docsRowCheck').forEach(el => el.checked = cb.checked);
+        }
+
+        function getSelectedDocsLaborIds() {
+            return Array.from(document.querySelectorAll('.docsRowCheck:checked')).map(el => el.dataset.laborId);
+        }
+
+        // 선택된(또는 전체) 근로자에 대해 특정 서류 종류를 순차적으로 일괄 발급
+        function bulkIssueDocs(docType) {
+            const fnMap = {
+                contract: 'printContractInNewTab', receipt: 'printReceiptInNewTab',
+                safety: 'printSafetyInNewTab', roster: 'printRosterInNewTab', poa: 'printPowerOfAttorneyInNewTab'
+            };
+            const fn = window[fnMap[docType]];
+            if (!fn) return;
+            let ids = getSelectedDocsLaborIds();
+            if (ids.length === 0) {
+                const proj = appState.projects[appState.currentProjectId];
+                if (!proj || proj.labors.length === 0) return;
+                if (!confirm(`선택된 근로자가 없습니다. 전체 ${proj.labors.length}명의 "${DOC_TYPE_LABELS[docType]}"를 일괄 발급할까요?`)) return;
+                ids = proj.labors.map(l => l.id);
+            }
+            // 팝업 차단을 피하기 위해 약간의 간격을 두고 순차 실행
+            ids.forEach((id, i) => setTimeout(() => fn(id), i * 400));
         }
 
 
@@ -5638,10 +5780,62 @@
                     </div>`;
         }
 
+        // ===== 서류 발급 이력 기록 =====
+        const DOC_TYPE_LABELS = {
+            contract: '계약서', receipt: '임금명세서', safety: '안전교육일지',
+            roster: '필수서류 명단', poa: '위임장'
+        };
+        function recordDocIssue(labor, docType) {
+            if (!labor) return;
+            if (!labor.docLog) labor.docLog = {};
+            if (!labor.docLog[docType]) labor.docLog[docType] = { count: 0, lastAt: null };
+            labor.docLog[docType].count += 1;
+            labor.docLog[docType].lastAt = new Date().toISOString();
+
+            // 전체 발급 이력(최근 200건)에도 별도로 남겨 이력 조회 화면에서 사용
+            const proj = appState.projects[appState.currentProjectId];
+            if (proj) {
+                if (!proj.docIssueHistory) proj.docIssueHistory = [];
+                proj.docIssueHistory.unshift({
+                    laborId: labor.id, laborName: labor.name,
+                    docType, docLabel: DOC_TYPE_LABELS[docType] || docType,
+                    at: new Date().toISOString()
+                });
+                if (proj.docIssueHistory.length > 200) proj.docIssueHistory.length = 200;
+            }
+            saveToLocalStorage();
+            if (document.getElementById('docsView') && !document.getElementById('docsView').classList.contains('hidden')) {
+                renderDocsView();
+            }
+        }
+
+        // 근로자의 필수서류 발급용 필수 정보(주민번호/주소/계좌) 누락 여부
+        function getMissingDocFieldsWarning(labor) {
+            const missing = [];
+            if (!labor.ssn || labor.ssn.replace(/[^0-9]/g, '').length < 13) missing.push('주민번호');
+            if (!labor.address) missing.push('주소');
+            if (!labor.bank || !labor.bank.trim() || !labor.account || !labor.account.trim()) missing.push('계좌');
+            return missing;
+        }
+
+        // 안전교육 이수증 만료 임박/만료 여부 (7일 이내 임박, 만료 시 별도 표시)
+        function getSafetyExpiryBadge(labor) {
+            if (!labor.safetyEduDate) return '';
+            const expiry = new Date(labor.safetyEduDate);
+            expiry.setFullYear(expiry.getFullYear() + 2); // 안전보건교육 유효기간 2년 가정
+            const today = new Date();
+            const diffDays = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+            if (diffDays < 0) return `<span class="text-[9px] bg-red-100 text-red-700 font-bold px-1 rounded" title="안전교육 이수증 만료됨">⛔만료</span>`;
+            if (diffDays <= 7) return `<span class="text-[9px] bg-amber-100 text-amber-700 font-bold px-1 rounded" title="안전교육 이수증 ${diffDays}일 후 만료">⚠️임박</span>`;
+            return '';
+        }
+
+
         function printContractInNewTab(laborId) {
             const proj = appState.projects[appState.currentProjectId];
             const labor = proj.labors.find(l => l.id === laborId);
             if (!labor) return;
+            recordDocIssue(labor, 'contract');
 
             const printHtml = `
                 <!DOCTYPE html>
@@ -6129,6 +6323,7 @@
             const proj = appState.projects[appState.currentProjectId];
             const labor = proj.labors.find(l => l.id === laborId);
             if (!labor) return;
+            recordDocIssue(labor, 'receipt');
 
             let autoDays = 0;
             for (let d = 1; d <= 31; d++) {
@@ -6303,6 +6498,7 @@
             const proj = appState.projects[appState.currentProjectId];
             const labor = proj && proj.labors.find(l => l.id === laborId);
             if (!labor) return;
+            recordDocIssue(labor, 'poa');
 
             let dateStr;
             if (labor.proxyDate) {
@@ -6451,6 +6647,7 @@
             const proj = appState.projects[appState.currentProjectId];
             const labor = proj.labors.find(l => l.id === laborId);
             if (!labor) return;
+            recordDocIssue(labor, 'safety');
 
             const { firstDay } = getFirstAndLastAttendance(labor);
             const eduDate = `${proj.year}년 ${proj.month}월 ${firstDay}일`;
@@ -7523,6 +7720,7 @@
             const proj = appState.projects[appState.currentProjectId];
             const labor = proj.labors.find(l => l.id === laborId);
             if (!labor) return;
+            recordDocIssue(labor, 'roster');
 
             const printWindow = window.open("", "_blank");
             if (!printWindow) {
@@ -7765,6 +7963,20 @@
             </div>
         </div>
 
+        <!-- 외국인등록증 (외국인 근로자인 경우에만 등록, 내국인은 빈칸으로 출력) -->
+        <div class="doc-section">
+            <div class="doc-section-title">외국인등록증 (해당자만)</div>
+            <div class="doc-section-body">
+                <div class="photo-slot" id="slot-foreignId" onclick="triggerUpload('slot-foreignId')">
+                    <span class="slot-icon">🛂</span>
+                    <span class="slot-label">외국인등록증 사진 추가<br><small style="font-weight:400;color:#9ca3af">내국인은 등록하지 않아도 됩니다</small></span>
+                    <input type="file" accept="image/*" onchange="loadPhoto(this,'slot-foreignId','img-foreignId')" onclick="event.stopPropagation()">
+                    <img id="img-foreignId" style="display:none">
+                    <button class="remove-btn" onclick="removePhoto(event,'slot-foreignId','img-foreignId')">✕</button>
+                </div>
+            </div>
+        </div>
+
     </div><!-- /doc-card -->
     </div><!-- /screen-wrap -->
 
@@ -7887,6 +8099,7 @@
             if (store['id-front']) applyPhoto('slot-id-front', 'img-id-front', store['id-front']);
             if (store['bank'])     applyPhoto('slot-bank',     'img-bank',     store['bank']);
             if (store['safety'])  applyPhoto('slot-safety',   'img-safety',   store['safety']);
+            if (store['foreignId']) applyPhoto('slot-foreignId', 'img-foreignId', store['foreignId']);
         });
 
         function triggerUpload(slotId) {
