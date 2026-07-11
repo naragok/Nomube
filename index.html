@@ -525,9 +525,9 @@
                     <div>
                         <div class="flex justify-between items-center mb-1">
                             <span class="text-slate-500 font-bold">테이블 크기 배율</span>
-                            <span id="zoomVal" class="text-blue-600 font-bold">95%</span>
+                            <span id="zoomVal" class="text-blue-600 font-bold">115%</span>
                         </div>
-                        <input type="range" id="zoomSlider" min="70" max="120" value="95" oninput="applyZoom(this.value)" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                        <input type="range" id="zoomSlider" min="70" max="120" value="115" oninput="applyZoom(this.value)" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
                     </div>
                     <div>
                         <button id="fitScreenBtn" onclick="toggleFitTableToScreen()" class="w-full py-1.5 rounded text-center border font-bold transition-all bg-slate-50 border-slate-200 text-slate-600 hover:bg-blue-50 hover:border-blue-300 flex items-center justify-center gap-1">
@@ -692,7 +692,7 @@
                                 공제 금액 내역 (2026년 나이/세법 요율 기준) <i data-lucide="eye-off" class="w-2.5 h-2.5 inline no-print"></i>
                             </th>
                             <th rowspan="2" class="p-1 border-r border-slate-300 whitespace-nowrap print:border-black w-28">지급액<br><span class="text-[9px] font-normal">(실수령액)</span></th>
-                            <th rowspan="2" class="p-1 w-52 no-print">필수 서류 발급 / 제어</th>
+                            <th rowspan="2" class="p-1 w-20 no-print">관리</th>
                         </tr>
                         <tr id="daysOfWeekHeader" class="bg-slate-100 text-[9.5px] text-slate-600 border-b border-slate-300 text-center sticky top-[28px] z-40 print:bg-slate-100 print:text-black print:border-black">
                             <!-- 요일정보 및 1~31 숫자가 동적 요일색상(토/일)과 함께 렌더링됩니다. -->
@@ -839,6 +839,40 @@
                         </div>
                     </div>
 
+                    <!-- 근로자별 출근현황 (1일~31일) — 필수서류 화면에서 이동 -->
+                    <div class="lg:col-span-3">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">근로자별 출근현황 (1일~31일)</h3>
+                        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-x-auto">
+                            <table id="dashAttendanceTable" class="w-full text-left border-collapse text-[10px]">
+                                <thead id="dashAttendanceTableHead" class="bg-slate-800 text-white"></thead>
+                                <tbody id="dashAttendanceTableBody" class="divide-y divide-slate-100"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 근로자별 급여 요약 — 필수서류 화면에서 이동 -->
+                    <div class="lg:col-span-3">
+                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">근로자별 급여 요약</h3>
+                        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-x-auto">
+                            <table id="dashPayrollTable" class="w-full text-left border-collapse text-[11px]">
+                                <thead class="bg-slate-800 text-white">
+                                    <tr>
+                                        <th class="p-1 border-r border-slate-600 w-10 text-center">번호</th>
+                                        <th class="p-1 border-r border-slate-600">성명</th>
+                                        <th class="p-1 border-r border-slate-600">주민등록번호</th>
+                                        <th class="p-1 border-r border-slate-600">직종</th>
+                                        <th class="p-1 border-r border-slate-600 text-right">총일수</th>
+                                        <th class="p-1 border-r border-slate-600 text-right">단가</th>
+                                        <th class="p-1 border-r border-slate-600 text-right">총액</th>
+                                        <th class="p-1 border-r border-slate-600 text-right">공제금액합계</th>
+                                        <th class="p-1 text-right">지급액</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashPayrollTableBody" class="divide-y divide-slate-100"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
                 </div>
             </div>
@@ -846,20 +880,9 @@
             <!-- 필수서류 발급/제어 전용 화면 -->
             <div id="docsView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
                 <div class="p-5">
-                    <table id="docsTable" class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-xs">
-                        <thead class="bg-slate-800 text-white">
-                            <tr>
-                                <th class="p-2 border-r border-slate-600 w-10 text-center">번호</th>
-                                <th class="p-2 border-r border-slate-600">성명</th>
-                                <th class="p-2 border-r border-slate-600">주민등록번호</th>
-                                <th class="p-2 border-r border-slate-600">직종</th>
-                                <th class="p-2 border-r border-slate-600 text-right">총일수</th>
-                                <th class="p-2 border-r border-slate-600 text-right">단가</th>
-                                <th class="p-2 border-r border-slate-600 text-right">총액</th>
-                                <th class="p-2 border-r border-slate-600 text-right">공제금액합계</th>
-                                <th class="p-2 border-r border-slate-600 text-right">지급액</th>
-                                <th class="p-2 w-64">필수서류 발급 / 제어</th>
-                            </tr>
+                    <table id="docsTable" class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-[11px]">
+                        <thead id="docsTableHead" class="bg-slate-800 text-white">
+                            <!-- 1행/2행이 renderDocsViewHeader()에서 동적으로 채워집니다 (1일~31일 요일 포함) -->
                         </thead>
                         <tbody id="docsViewBody" class="divide-y divide-slate-100"></tbody>
                     </table>
@@ -2314,16 +2337,33 @@
                 let clean = e.target.value.replace(/[^0-9]/g, '');
                 e.target.value = clean ? parseInt(clean).toLocaleString() : '';
             });
+
+            // 실무도구 "근로자 등록" 팝업 — 주민번호/연락처/단가 자동 포맷
+            const quickNewSsn = document.getElementById('quickNewSsn');
+            const quickNewPhone = document.getElementById('quickNewPhone');
+            const quickNewPrice = document.getElementById('quickNewPrice');
+            if (quickNewSsn) quickNewSsn.addEventListener('input', function(e) {
+                e.target.value = ssnHyphenFilter(e.target.value);
+            });
+            if (quickNewPhone) quickNewPhone.addEventListener('input', function(e) {
+                e.target.value = phoneHyphenFilter(e.target.value);
+            });
+            if (quickNewPrice) quickNewPrice.addEventListener('input', function(e) {
+                let clean = e.target.value.replace(/[^0-9]/g, '');
+                e.target.value = clean ? parseInt(clean).toLocaleString() : '';
+            });
         }
 
         // 초기기동
         window.onload = function() {
             initApp();
             bindFormatters();
-            applyZoom(95); 
+            applyZoom(115); 
             applyDensity('normal'); 
             setupKeyboardNavigation();
             setupDragRangeListeners(); // 드래그 범위 기입 이벤트 등록
+            // 대장 표는 기본적으로 한 화면에 맞추기를 켜둔 상태로 시작
+            setTimeout(() => { if (!_fitTableActive) toggleFitTableToScreen(); }, 150);
         };
 
         function initApp() {
@@ -2616,7 +2656,9 @@
                 zoomStyles.innerHTML = `
                     #paymentTable th, 
                     #paymentTable td, 
-                    #paymentTable input {
+                    #paymentTable input,
+                    #docsTable th,
+                    #docsTable td {
                         font-size: ${(zoomVal / 100) * 11}px !important;
                     }
                 `;
@@ -2905,14 +2947,11 @@
             setTimeout(_reapplyFitTableIfActive, 50);
         }
 
-        // ===== 출근일자 주차별 그룹화(접기/펼치기) 기능 =====
-        const WEEK_GROUP_SIZE = 7;
-        let collapsedWeeks = new Set(); // 접힌 주차 인덱스(1~5) 저장
-
+        // ===== 출근일자: 항상 1일~31일 전체 표시 (주차 접기 기능 제거됨) =====
         function getWeeksMeta() {
             const weeks = [];
-            for (let start = 1; start <= 31; start += WEEK_GROUP_SIZE) {
-                const end = Math.min(start + WEEK_GROUP_SIZE - 1, 31);
+            for (let start = 1; start <= 31; start += 7) {
+                const end = Math.min(start + 6, 31);
                 const days = [];
                 for (let d = start; d <= end; d++) days.push(d);
                 weeks.push({ index: weeks.length + 1, start, end, days });
@@ -2920,58 +2959,20 @@
             return weeks;
         }
 
-        // 화면에 표시할 "슬롯" 목록 생성: 펼쳐진 주는 일자별로, 연속으로 접힌 주들은 하나로 병합 (항상 31일 기준 정렬)
+        // 화면에 표시할 "슬롯" 목록: 항상 1~31일 전부를 개별 일자로 반환
         function getDaySlots() {
-            const weeks = getWeeksMeta();
             const slots = [];
-            let i = 0;
-            while (i < weeks.length) {
-                if (collapsedWeeks.has(weeks[i].index)) {
-                    const merged = [];
-                    let j = i;
-                    while (j < weeks.length && collapsedWeeks.has(weeks[j].index)) { merged.push(weeks[j]); j++; }
-                    const start = merged[0].start;
-                    const end = merged[merged.length - 1].end;
-                    const days = merged.flatMap(w => w.days);
-                    const weekIndexes = merged.map(w => w.index);
-                    slots.push({ type: 'group', start, end, days, weekIndexes });
-                    i = j;
-                } else {
-                    weeks[i].days.forEach(d => slots.push({ type: 'day', day: d, week: weeks[i].index }));
-                    i++;
-                }
-            }
+            for (let d = 1; d <= 31; d++) slots.push({ type: 'day', day: d });
             return slots;
         }
 
-        function toggleWeekGroup(weekIndex) {
-            if (collapsedWeeks.has(weekIndex)) collapsedWeeks.delete(weekIndex);
-            else collapsedWeeks.add(weekIndex);
-            updateHeaderAndTable();
-        }
-
         // 출근일자 접힘 상태에 맞춰 테이블 전체 최소 너비를 동적으로 재계산
-        // (전체접기 시 불필요한 여백을 없애 한 화면에 필수서류까지 보이도록 함)
         function applyTableMinWidth() {
             const table = document.getElementById('paymentTable');
             if (!table) return;
             const FIXED_COLUMNS_WIDTH = 1180; // NO~필수서류까지 일자 제외 고정 칼럼들의 대략적 합계 너비(px)
-            const DAY_COL_WIDTH = 24;   // 펼쳐진 일자 칼럼 1개당 너비(px, w-6)
-            const GROUP_COL_WIDTH = 56; // 접힌 주차 그룹 칼럼 1개당 너비(px)
-
-            const slots = getDaySlots();
-            let dayAreaWidth = 0;
-            slots.forEach(slot => {
-                dayAreaWidth += (slot.type === 'group') ? GROUP_COL_WIDTH : DAY_COL_WIDTH;
-            });
-
-            table.style.minWidth = (FIXED_COLUMNS_WIDTH + dayAreaWidth) + 'px';
-        }
-
-        // 병합된 그룹(연속 접힘 구간)을 한 번에 펼침
-        function expandWeekRange(weekIndexes) {
-            weekIndexes.forEach(idx => collapsedWeeks.delete(idx));
-            updateHeaderAndTable();
+            const DAY_COL_WIDTH = 24;   // 일자 칼럼 1개당 너비(px, w-6)
+            table.style.minWidth = (FIXED_COLUMNS_WIDTH + 31 * DAY_COL_WIDTH) + 'px';
         }
 
         function getRangeAttendanceSum(labor, days, daysInMonth) {
@@ -2980,44 +2981,13 @@
             return sum;
         }
 
-        // 1행: 출근일자 상단 그룹 헤더 (펼쳐진 주는 주별 colspan, 연속 접힘 구간은 하나로 병합되어 "1일~말일"까지 표시 가능)
+        // 1행: 출근일자 상단 그룹 헤더 (주차 접기/펼치기 기능 제거 — 항상 1일~31일 전체를 표시)
         function renderAttendanceGroupHeader() {
-            const weeks = getWeeksMeta();
-            let html = '';
-            let i = 0;
-            while (i < weeks.length) {
-                const w = weeks[i];
-
-                if (collapsedWeeks.has(w.index)) {
-                    const merged = [];
-                    let j = i;
-                    while (j < weeks.length && collapsedWeeks.has(weeks[j].index)) { merged.push(weeks[j]); j++; }
-                    const start = merged[0].start;
-                    const end = merged[merged.length - 1].end;
-                    const weekIndexes = merged.map(w2 => w2.index);
-                    const label = (start === 1 && merged[merged.length - 1].index === weeks.length)
-                        ? '1일 ~ 말일 (전체 접음)'
-                        : `${start}~${end}일`;
-                    html += `
-                        <th colspan="1" onclick="expandWeekRange([${weekIndexes.join(',')}])"
-                            class="attn-group-th p-0.5 border-r border-slate-300 tracking-wider print:border-black cursor-pointer select-none hover:bg-slate-300/70 transition-colors bg-slate-300/60"
-                            title="클릭하여 펼치기">
-                            ${label} <span class="text-[9px]">▶</span>
-                        </th>
-                    `;
-                    i = j;
-                } else {
-                    html += `
-                        <th colspan="${w.days.length}" onclick="toggleWeekGroup(${w.index})"
-                            class="attn-group-th p-0.5 border-r border-slate-300 tracking-wider print:border-black cursor-pointer select-none hover:bg-slate-300/70 transition-colors"
-                            title="클릭하여 접기">
-                            ${w.index}주(${w.start}~${w.end}일) <span class="text-[9px]">▼</span>
-                        </th>
-                    `;
-                    i++;
-                }
-            }
-            return html;
+            return `
+                <th colspan="31" class="attn-group-th p-0.5 border-r border-slate-300 tracking-wider print:border-black">
+                    출 근 일 자 (1일 ~ 31일)
+                </th>
+            `;
         }
 
         // 출근일자 상단 그룹 헤더 전체를 안전하게 교체 (이전에 남아있던 모든 주차 셀을 제거 후 새로 삽입)
@@ -3457,23 +3427,8 @@
                     <td class="${pad} border-r border-slate-200 text-right font-black text-blue-700 bg-blue-50/20 font-mono print:border-black print:text-black whitespace-nowrap" data-result-labor="${labor.id}" data-result-field="netPay">${commaFormatter(calc.netPay)}</td>
                     
                     <td class="p-1 no-print flex items-center justify-center gap-1">
-                        <button onclick="printContractInNewTab('${labor.id}')" class="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all" title="표준 일용 근로 계약서">
-                            계약
-                        </button>
-                        <button onclick="printReceiptInNewTab('${labor.id}')" class="text-emerald-600 hover:text-white hover:bg-emerald-600 border border-emerald-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all" title="임금지급명세서 및 영수확인서">
-                            명세
-                        </button>
-                        <button onclick="printSafetyInNewTab('${labor.id}')" class="text-purple-600 hover:text-white hover:bg-purple-600 border border-purple-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all" title="안전보건교육 일지">
-                            일지
-                        </button>
-                        <button onclick="printRosterInNewTab('${labor.id}')" class="text-rose-600 hover:text-white hover:bg-rose-600 border border-rose-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all" title="필수서류 명단 양식 발급">
-                            명단
-                        </button>
-                        <button onclick="printPowerOfAttorneyInNewTab('${labor.id}')" class="text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all" title="노임수령 위임장 (대리인 수령 시)">
-                            위임장
-                        </button>
-                        <button onclick="duplicateLabor('${labor.id}')" class="text-amber-700 hover:text-white hover:bg-amber-700 border border-amber-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all" title="이 근로자 정보 복제하기">
-                            복사
+                        <button onclick="duplicateLabor('${labor.id}')" class="text-amber-700 hover:text-white hover:bg-amber-700 p-1 hover:bg-amber-50 rounded" title="이 근로자 정보 복제하기" aria-label="복사">
+                            <i data-lucide="copy" class="w-3 h-3"></i>
                         </button>
                         <button onclick="deleteLabor('${labor.id}')" class="text-red-500 hover:text-red-700 p-1 hover:bg-red-50 rounded" title="삭제" aria-label="삭제">
                             <i data-lucide="trash-2" class="w-3 h-3"></i>
@@ -4569,6 +4524,8 @@
                 renderDashboardPriceOutliers();
                 renderDashboardMonthlyTrend();
                 renderDashboardNewWorkers();
+                renderDashboardAttendanceTable();
+                renderDashboardPayrollTable();
             } else if (view === 'docs') {
                 docsWrap.classList.remove('hidden');
                 docsWrap.style.display = 'flex';
@@ -4580,18 +4537,83 @@
             }
             if (window.lucide) lucide.createIcons();
             _resetFitTableOnViewSwitch();
+            if (view === 'docs' || view === 'table' || !view) {
+                // 대장/필수서류 화면은 기본적으로 한 화면 맞추기를 켠 상태로 유지
+                setTimeout(() => { if (!_fitTableActive) toggleFitTableToScreen(); }, 50);
+            }
         }
 
         // 필수서류 전용 화면: 대장 표의 필수서류 발급/제어 열만 간단한 요약 표로 분리
-        function renderDocsView() {
-            const tbody = document.getElementById('docsViewBody');
+        // 필수서류 화면 표 헤더: 1일~31일 + 요일을 총일수 앞에 동적으로 채워 넣는다
+        // 대시보드: 근로자별 출근현황 표 (1일~31일, 필수서류 화면에서 이동)
+        function renderDashboardAttendanceTable() {
+            const thead = document.getElementById('dashAttendanceTableHead');
+            const tbody = document.getElementById('dashAttendanceTableBody');
+            if (!thead || !tbody) return;
+            const proj = appState.projects[appState.currentProjectId];
+            const weekDays = ["일", "월", "화", "수", "목", "금", "토"];
+            const daysInMonth = proj ? new Date(proj.year, proj.month, 0).getDate() : 31;
+
+            let dayThs = '';
+            for (let d = 1; d <= 31; d++) {
+                if (proj && d > daysInMonth) {
+                    dayThs += `<th class="w-4 border-r border-slate-600 p-0 bg-slate-700/50"></th>`;
+                } else {
+                    const dayName = proj ? weekDays[new Date(proj.year, proj.month - 1, d).getDay()] : '';
+                    const dow = proj ? new Date(proj.year, proj.month - 1, d).getDay() : -1;
+                    const wknd = dow === 0 ? 'text-rose-300' : (dow === 6 ? 'text-sky-300' : '');
+                    dayThs += `<th class="w-4 border-r border-slate-600 p-0 text-center ${wknd}"><div class="text-[8px] opacity-75">${dayName}</div><div>${d}</div></th>`;
+                }
+            }
+            thead.innerHTML = `
+                <tr>
+                    <th rowspan="2" class="p-1 border-r border-slate-600 w-10 text-center align-middle">번호</th>
+                    <th rowspan="2" class="p-1 border-r border-slate-600 align-middle">성명</th>
+                    <th colspan="31" class="p-0.5 border-r border-slate-600 text-center tracking-wider">출 근 일 자 (1일 ~ 31일)</th>
+                    <th rowspan="2" class="p-1 text-right align-middle">총일수</th>
+                </tr>
+                <tr>${dayThs}</tr>
+            `;
+
+            if (!proj || proj.labors.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="34" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
+                return;
+            }
+            tbody.innerHTML = proj.labors.map((labor, idx) => {
+                let autoDays = 0;
+                let dayTds = '';
+                for (let d = 1; d <= 31; d++) {
+                    if (d > daysInMonth) {
+                        dayTds += `<td class="p-0.5 border-r border-slate-100 bg-slate-50"></td>`;
+                        continue;
+                    }
+                    if (labor.attendance[d]) autoDays += Number(labor.attendance[d]);
+                    const dow = new Date(proj.year, proj.month - 1, d).getDay();
+                    const wknd = dow === 0 ? 'text-rose-500' : (dow === 6 ? 'text-sky-600' : '');
+                    const val = labor.attendance[d] ? commaFormatter(labor.attendance[d]) : '';
+                    dayTds += `<td class="p-0 border-r border-slate-100 text-center font-mono text-[9.5px] ${wknd}">${val}</td>`;
+                }
+                const calc = calculateDeductions(labor, autoDays);
+                return `
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-1 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
+                        <td class="p-1 border-r border-slate-100 font-bold text-blue-700">${labor.name}</td>
+                        ${dayTds}
+                        <td class="p-1 text-right font-mono font-bold">${commaFormatter(calc.effectiveDays)}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // 대시보드: 근로자별 급여 요약 표 (필수서류 화면에서 이동)
+        function renderDashboardPayrollTable() {
+            const tbody = document.getElementById('dashPayrollTableBody');
             if (!tbody) return;
             const proj = appState.projects[appState.currentProjectId];
             if (!proj || proj.labors.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="10" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="9" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
                 return;
             }
-
             const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
             tbody.innerHTML = proj.labors.map((labor, idx) => {
                 let autoDays = 0;
@@ -4601,19 +4623,55 @@
                 const calc = calculateDeductions(labor, autoDays);
                 return `
                     <tr class="hover:bg-slate-50">
-                        <td class="p-2 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
-                        <td class="p-2 border-r border-slate-100 font-bold cursor-pointer text-blue-700 hover:underline" onclick="openDetailModal('${labor.id}')">${labor.name}${labor.proxyName ? ` <span class="text-[9px] bg-indigo-100 text-indigo-700 font-bold px-1 rounded" title="위임자: ${labor.proxyName}">👤위임</span>` : ''}</td>
-                        <td class="p-2 border-r border-slate-100 font-mono text-slate-500">${labor.ssn || ''}</td>
-                        <td class="p-2 border-r border-slate-100">${labor.job || '보통인부'}</td>
-                        <td class="p-2 border-r border-slate-100 text-right font-mono">${commaFormatter(calc.effectiveDays)}</td>
-                        <td class="p-2 border-r border-slate-100 text-right font-mono">${commaFormatter(labor.price)}</td>
-                        <td class="p-2 border-r border-slate-100 text-right font-mono">${commaFormatter(calc.totalWages)}</td>
-                        <td class="p-2 border-r border-slate-100 text-right font-mono text-red-600">${commaFormatter(calc.totalDeduction)}</td>
-                        <td class="p-2 border-r border-slate-100 text-right font-mono font-bold text-emerald-700">${commaFormatter(calc.netPay)}</td>
-                        <td class="p-2">
+                        <td class="p-1 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
+                        <td class="p-1 border-r border-slate-100 font-bold text-blue-700">${labor.name}</td>
+                        <td class="p-1 border-r border-slate-100 font-mono text-slate-500">${labor.ssn || ''}</td>
+                        <td class="p-1 border-r border-slate-100">${labor.job || '보통인부'}</td>
+                        <td class="p-1 border-r border-slate-100 text-right font-mono">${commaFormatter(calc.effectiveDays)}</td>
+                        <td class="p-1 border-r border-slate-100 text-right font-mono">${commaFormatter(labor.price)}</td>
+                        <td class="p-1 border-r border-slate-100 text-right font-mono">${commaFormatter(calc.totalWages)}</td>
+                        <td class="p-1 border-r border-slate-100 text-right font-mono text-red-600">${commaFormatter(calc.totalDeduction)}</td>
+                        <td class="p-1 text-right font-mono font-bold text-emerald-700">${commaFormatter(calc.netPay)}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderDocsViewHeader() {
+            const thead = document.getElementById('docsTableHead');
+            if (!thead) return;
+            thead.innerHTML = `
+                <tr>
+                    <th class="p-1 border-r border-slate-600 w-10 text-center">번호</th>
+                    <th class="p-1 border-r border-slate-600">성명</th>
+                    <th class="p-1 border-r border-slate-600 w-28">직종</th>
+                    <th class="p-1 w-80">필수서류 발급 / 제어</th>
+                </tr>
+            `;
+        }
+
+
+        function renderDocsView() {
+            const tbody = document.getElementById('docsViewBody');
+            if (!tbody) return;
+            renderDocsViewHeader();
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || proj.labors.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = proj.labors.map((labor, idx) => {
+                return `
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-1 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
+                        <td class="p-1 border-r border-slate-100 font-bold cursor-pointer text-blue-700 hover:underline" onclick="openDetailModal('${labor.id}')">${labor.name}${labor.proxyName ? ` <span class="text-[9px] bg-indigo-100 text-indigo-700 font-bold px-1 rounded" title="위임자: ${labor.proxyName}">👤위임</span>` : ''}</td>
+                        <td class="p-1 border-r border-slate-100">${labor.job || '보통인부'}</td>
+                        <td class="p-1">
                             <div class="flex gap-1 flex-wrap">
                                 <button onclick="printContractInNewTab('${labor.id}')" class="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">계약</button>
                                 <button onclick="printReceiptInNewTab('${labor.id}')" class="text-emerald-600 hover:text-white hover:bg-emerald-600 border border-emerald-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">명세</button>
+                                <button onclick="printSafetyInNewTab('${labor.id}')" class="text-purple-600 hover:text-white hover:bg-purple-600 border border-purple-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">일지</button>
                                 <button onclick="printRosterInNewTab('${labor.id}')" class="text-rose-600 hover:text-white hover:bg-rose-600 border border-rose-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">명단</button>
                                 <button onclick="printPowerOfAttorneyInNewTab('${labor.id}')" class="text-indigo-600 hover:text-white hover:bg-indigo-600 border border-indigo-500 rounded px-1 py-0.5 font-bold text-[9.5px] transition-all">위임장</button>
                             </div>
