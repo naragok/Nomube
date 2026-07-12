@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V5.2 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V5.3 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -14,6 +14,9 @@
     <meta name="apple-mobile-web-app-title" content="일용노무비">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PDF 병합(여러 서류를 한 파일로) 기능용 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         /* 디자인 토큰 정리: 기존 색상/톤은 그대로 유지하고 border-radius 스케일만
            rounded(기본 4px) → 6px 로 살짝 키워 rounded-lg(8px)/rounded-xl(12px)과
@@ -178,7 +181,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V5.2</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V5.3</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
@@ -196,13 +199,13 @@
                     <i data-lucide="users" class="w-3.5 h-3.5"></i> 인원 관리 <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </button>
                 <div id="menuPeople" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-slate-200 w-44 py-1 z-50 text-slate-700">
-                    <button onclick="closeHeaderMenus(); openCarryOverModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-violet-50 flex items-center gap-2" title="현재 근로자를 다음달 대장으로 이월">
+                    <button onclick="closeHeaderMenus(); openCarryOverModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="현재 근로자를 다음달 대장으로 이월">
                         <i data-lucide="calendar-arrow-right" class="w-3.5 h-3.5 text-violet-500"></i> 다음달로 이월
                     </button>
-                    <button onclick="closeHeaderMenus(); openMoveLaborModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-fuchsia-50 flex items-center gap-2" title="선택한 근로자를 같은 달 다른 대장(현장)으로 이동">
+                    <button onclick="closeHeaderMenus(); openMoveLaborModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="선택한 근로자를 같은 달 다른 대장(현장)으로 이동">
                         <i data-lucide="move" class="w-3.5 h-3.5 text-fuchsia-500"></i> 타현장 인원이동
                     </button>
-                    <button onclick="closeHeaderMenus(); openWorkerDbModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-indigo-50 flex items-center gap-2" title="모든 대장에 등록된 근로자 인적사항을 모아본 공통 DB(주소록)">
+                    <button onclick="closeHeaderMenus(); openWorkerDbModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="모든 대장에 등록된 근로자 인적사항을 모아본 공통 DB(주소록)">
                         <i data-lucide="book-user" class="w-3.5 h-3.5 text-indigo-500"></i> 근로자DB(주소록)
                     </button>
                 </div>
@@ -214,26 +217,26 @@
                     <i data-lucide="printer" class="w-3.5 h-3.5"></i> 출력·내보내기 <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </button>
                 <div id="menuExport" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-slate-200 w-52 py-1 z-50 text-slate-700">
-                    <button onclick="closeHeaderMenus(); window.print()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-50 flex items-center gap-2">
+                    <button onclick="closeHeaderMenus(); window.print()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2">
                         <i data-lucide="printer" class="w-3.5 h-3.5 text-slate-500"></i> 대장 인쇄
                     </button>
-                    <button onclick="closeHeaderMenus(); openBulkPrintModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-cyan-50 flex items-center gap-2" title="선택한 근로자 전원의 표준일용근로계약서를 한 번에 인쇄">
+                    <button onclick="closeHeaderMenus(); openBulkPrintModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="선택한 근로자 전원의 표준일용근로계약서를 한 번에 인쇄">
                         <i data-lucide="files" class="w-3.5 h-3.5 text-cyan-600"></i> 계약서 일괄인쇄
                     </button>
-                    <button onclick="closeHeaderMenus(); openBulkRosterModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-rose-50 flex items-center gap-2" title="선택한 근로자 전원의 필수서류 명단(등록된 사진 포함)을 한 번에 인쇄">
+                    <button onclick="closeHeaderMenus(); openBulkRosterModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="선택한 근로자 전원의 필수서류 명단(등록된 사진 포함)을 한 번에 인쇄">
                         <i data-lucide="images" class="w-3.5 h-3.5 text-rose-600"></i> 명단 일괄출력
                     </button>
-                    <button onclick="closeHeaderMenus(); openInsuranceReportModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-teal-50 flex items-center gap-2" title="8일 이상 근무자 4대보험 취득신고서 출력">
+                    <button onclick="closeHeaderMenus(); openInsuranceReportModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="8일 이상 근무자 4대보험 취득신고서 출력">
                         <i data-lucide="file-text" class="w-3.5 h-3.5 text-teal-600"></i> 4대보험 취득신고서
                     </button>
                     <div class="h-px bg-slate-100 my-1"></div>
-                    <button onclick="closeHeaderMenus(); copyToClipboardForExcel()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-50 flex items-center gap-2" title="엑셀에 바로 붙여넣기 가능한 규격으로 복사합니다.">
+                    <button onclick="closeHeaderMenus(); copyToClipboardForExcel()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="엑셀에 바로 붙여넣기 가능한 규격으로 복사합니다.">
                         <i data-lucide="clipboard-copy" class="w-3.5 h-3.5 text-slate-500"></i> 엑셀용 복사
                     </button>
-                    <button onclick="closeHeaderMenus(); exportToCSV()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-teal-50 flex items-center gap-2">
+                    <button onclick="closeHeaderMenus(); exportToCSV()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2">
                         <i data-lucide="file-down" class="w-3.5 h-3.5 text-teal-600"></i> CSV 내보내기
                     </button>
-                    <button onclick="closeHeaderMenus(); exportToXLS()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-emerald-50 flex items-center gap-2">
+                    <button onclick="closeHeaderMenus(); exportToXLS()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2">
                         <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-emerald-600"></i> XLS 저장
                     </button>
                 </div>
@@ -245,25 +248,25 @@
                     <i data-lucide="database-backup" class="w-3.5 h-3.5"></i> 데이터 관리 <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </button>
                 <div id="menuData" class="hidden absolute right-0 mt-1 bg-white rounded-lg shadow-xl border border-slate-200 w-52 py-1 z-50 text-slate-700">
-                    <button onclick="closeHeaderMenus(); fetchWeatherForProject()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-cyan-50 flex items-center gap-2" title="현장 지역 기준으로 이번 달 강수일을 자동 조회하여 출근일자에 표시합니다">
+                    <button onclick="closeHeaderMenus(); fetchWeatherForProject()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="현장 지역 기준으로 이번 달 강수일을 자동 조회하여 출근일자에 표시합니다">
                         <i data-lucide="cloud-rain" class="w-3.5 h-3.5 text-cyan-600"></i> 우천일 자동표시(날씨조회)
                     </button>
                     <div class="h-px bg-slate-100 my-1"></div>
-                    <button onclick="closeHeaderMenus(); triggerBackup()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-blue-50 flex items-center gap-2" title="백업 파일 다운로드 후 구글 드라이브 업로드 안내">
+                    <button onclick="closeHeaderMenus(); triggerBackup()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="백업 파일 다운로드 후 구글 드라이브 업로드 안내">
                         <i data-lucide="database-backup" class="w-3.5 h-3.5 text-blue-600"></i> 백업 파일 다운로드
                     </button>
-                    <button onclick="closeHeaderMenus(); openAutoBackupModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-orange-50 flex items-center gap-2" title="자동으로 저장된 최근 백업 이력에서 복구">
+                    <button onclick="closeHeaderMenus(); openAutoBackupModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="자동으로 저장된 최근 백업 이력에서 복구">
                         <i data-lucide="history" class="w-3.5 h-3.5 text-orange-500"></i> 자동백업 이력
                     </button>
-                    <label class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-indigo-50 flex items-center gap-2 cursor-pointer">
+                    <label class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2 cursor-pointer">
                         <i data-lucide="folder-open" class="w-3.5 h-3.5 text-indigo-500"></i> 백업파일로 복구
                         <input type="file" id="backupFile" accept=".json" onchange="closeHeaderMenus(); restoreBackup(event)" class="hidden">
                     </label>
-                    <button onclick="closeHeaderMenus(); openGoogleDriveForRestore()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-sky-50 flex items-center gap-2" title="구글 드라이브에서 백업 파일을 다운로드한 뒤 복구 버튼으로 불러오세요">
+                    <button onclick="closeHeaderMenus(); openGoogleDriveForRestore()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="구글 드라이브에서 백업 파일을 다운로드한 뒤 복구 버튼으로 불러오세요">
                         <i data-lucide="cloud" class="w-3.5 h-3.5 text-sky-500"></i> 구글드라이브에서
                     </button>
                     <div class="h-px bg-slate-100 my-1"></div>
-                    <button onclick="closeHeaderMenus(); openGithubBackupModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-indigo-50 flex items-center gap-2" title="GitHub 저장소에 백업 파일을 자동으로 업로드합니다">
+                    <button onclick="closeHeaderMenus(); openGithubBackupModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="GitHub 저장소에 백업 파일을 자동으로 업로드합니다">
                         <i data-lucide="github" class="w-3.5 h-3.5 text-indigo-600"></i> GitHub 백업
                     </button>
                 </div>
@@ -592,11 +595,11 @@
                         <button id="tabBtnTable" onclick="switchMainView('table')" class="px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all bg-white text-blue-700 shadow-sm">
                             <i data-lucide="table" class="w-3.5 h-3.5"></i> 대장 표
                         </button>
-                        <button id="tabBtnDashboard" onclick="switchMainView('dashboard')" class="px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700">
-                            <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i> 대시보드
-                        </button>
                         <button id="tabBtnDocs" onclick="switchMainView('docs')" class="px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700">
                             <i data-lucide="file-check-2" class="w-3.5 h-3.5"></i> 필수서류
+                        </button>
+                        <button id="tabBtnDashboard" onclick="switchMainView('dashboard')" class="px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1 transition-all text-slate-500 hover:text-slate-700">
+                            <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i> 대시보드
                         </button>
                     </div>
                     
@@ -715,7 +718,7 @@
             <!-- 대시보드 화면 (탭 전환 시 표시) -->
             <div id="dashboardView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
                 <div class="p-5 max-w-[2000px] mx-auto">
-                <div class="grid grid-cols-1 xl:grid-cols-[1.3fr_1fr] gap-4 items-start">
+                <div class="grid grid-cols-1 xl:grid-cols-[1fr_1.4fr] gap-4 items-start">
 
                 <!-- 좌측: 기존 대시보드 항목 -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
@@ -723,31 +726,51 @@
                     <!-- KPI 카드 그리드 -->
                     <div class="lg:col-span-3">
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">핵심 지표</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
-                            <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                                <div class="flex items-center gap-1.5 text-slate-400 text-[11px] font-bold mb-1"><i data-lucide="users" class="w-3.5 h-3.5"></i> 등록 인원</div>
-                                <div id="dashTotalCount" class="text-xl font-black text-slate-900">0명</div>
-                            </div>
-                            <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                                <div class="flex items-center gap-1.5 text-slate-400 text-[11px] font-bold mb-1"><i data-lucide="calendar-check" class="w-3.5 h-3.5"></i> 평균 출역일수</div>
-                                <div id="dashAvgDays" class="text-xl font-black text-slate-900">0일</div>
-                            </div>
-                            <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                                <div class="flex items-center gap-1.5 text-slate-400 text-[11px] font-bold mb-1"><i data-lucide="banknote" class="w-3.5 h-3.5"></i> 평균 단가</div>
-                                <div id="dashAvgPrice" class="text-xl font-black text-slate-900">0원</div>
-                            </div>
+                        <!-- 핵심 3지표(노무비/공제/실수령)는 크게 강조 -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
                             <div class="bg-white rounded-xl border border-blue-200 p-4 shadow-sm bg-blue-50/40">
-                                <div class="flex items-center gap-1.5 text-blue-500 text-[11px] font-bold mb-1"><i data-lucide="wallet" class="w-3.5 h-3.5"></i> 지급 노무비액</div>
-                                <div id="dashTotalWages" class="text-xl font-black text-blue-700">0원</div>
+                                <div class="flex items-center gap-1.5 text-blue-500 text-xs font-bold mb-1"><i data-lucide="wallet" class="w-4 h-4"></i> 지급 노무비액</div>
+                                <div id="dashTotalWages" class="text-2xl font-black text-blue-700">0원</div>
                             </div>
                             <div class="bg-white rounded-xl border border-rose-200 p-4 shadow-sm bg-rose-50/40">
-                                <div class="flex items-center gap-1.5 text-rose-500 text-[11px] font-bold mb-1"><i data-lucide="minus-circle" class="w-3.5 h-3.5"></i> 공제 세금/보험액</div>
-                                <div id="dashTotalDeduction" class="text-xl font-black text-rose-700">0원</div>
+                                <div class="flex items-center gap-1.5 text-rose-500 text-xs font-bold mb-1"><i data-lucide="minus-circle" class="w-4 h-4"></i> 공제 세금/보험액</div>
+                                <div id="dashTotalDeduction" class="text-2xl font-black text-rose-700">0원</div>
                             </div>
                             <div class="bg-white rounded-xl border border-emerald-200 p-4 shadow-sm bg-emerald-50/40">
-                                <div class="flex items-center gap-1.5 text-emerald-600 text-[11px] font-bold mb-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> 실 수령 총액</div>
-                                <div id="dashNetPay" class="text-xl font-black text-emerald-700">0원</div>
+                                <div class="flex items-center gap-1.5 text-emerald-600 text-xs font-bold mb-1"><i data-lucide="check-circle-2" class="w-4 h-4"></i> 실 수령 총액</div>
+                                <div id="dashNetPay" class="text-2xl font-black text-emerald-700">0원</div>
                             </div>
+                        </div>
+                        <!-- 보조 지표 -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="bg-white rounded-xl border border-slate-200 p-3 shadow-sm">
+                                <div class="flex items-center gap-1.5 text-slate-400 text-[10.5px] font-bold mb-1"><i data-lucide="users" class="w-3.5 h-3.5"></i> 등록 인원</div>
+                                <div id="dashTotalCount" class="text-base font-black text-slate-900">0명</div>
+                            </div>
+                            <div class="bg-white rounded-xl border border-slate-200 p-3 shadow-sm">
+                                <div class="flex items-center gap-1.5 text-slate-400 text-[10.5px] font-bold mb-1"><i data-lucide="calendar-check" class="w-3.5 h-3.5"></i> 평균 출역일수</div>
+                                <div id="dashAvgDays" class="text-base font-black text-slate-900">0일</div>
+                            </div>
+                            <div class="bg-white rounded-xl border border-slate-200 p-3 shadow-sm">
+                                <div class="flex items-center gap-1.5 text-slate-400 text-[10.5px] font-bold mb-1"><i data-lucide="banknote" class="w-3.5 h-3.5"></i> 평균 단가</div>
+                                <div id="dashAvgPrice" class="text-base font-black text-slate-900">0원</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 경고 요약 (액션 필요 정보이므로 핵심 지표 바로 아래로 이동) -->
+                    <div class="lg:col-span-3">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+                                경고 요약
+                                <span id="dashWarningCountBadge" class="hidden bg-rose-500 text-white text-[10px] font-black rounded-full px-1.5 py-0.5 leading-none"></span>
+                            </h3>
+                            <button onclick="runPreSubmitCheck()" class="text-[11px] text-rose-600 hover:underline font-bold flex items-center gap-1">
+                                <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> 상세보기
+                            </button>
+                        </div>
+                        <div id="dashWarningList" class="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 shadow-sm overflow-hidden">
+                            <!-- JS로 동적 생성 -->
                         </div>
                     </div>
 
@@ -821,19 +844,6 @@
                         </div>
                     </div>
 
-                    <!-- 경고 요약 -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider">경고 요약</h3>
-                            <button onclick="runPreSubmitCheck()" class="text-[11px] text-rose-600 hover:underline font-bold flex items-center gap-1">
-                                <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> 상세보기
-                            </button>
-                        </div>
-                        <div id="dashWarningList" class="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 shadow-sm overflow-hidden">
-                            <!-- JS로 동적 생성 -->
-                        </div>
-                    </div>
-
                     <!-- 일별 출역인원 추이 -->
                     <div class="lg:col-span-3">
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">일별 출역인원 추이</h3>
@@ -904,6 +914,9 @@
                         <button onclick="shareLaborDocsSummary()" class="text-teal-600 hover:text-white hover:bg-teal-600 border border-teal-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all flex items-center gap-1">
                             <i data-lucide="share-2" class="w-3 h-3"></i> 요약 복사(카톡/문자 공유용)
                         </button>
+                        <button onclick="openPdfMergeModal()" class="text-orange-600 hover:text-white hover:bg-orange-600 border border-orange-500 rounded px-2 py-1 font-bold text-[10.5px] transition-all flex items-center gap-1">
+                            <i data-lucide="file-stack" class="w-3 h-3"></i> PDF 병합
+                        </button>
                         <span class="text-[10px] text-slate-400 ml-auto">체크 안 하면 전체 근로자 대상으로 확인 후 진행됩니다</span>
                     </div>
                     <table id="docsTable" class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-[11px]">
@@ -915,6 +928,46 @@
                 </div>
             </div>
             </main>
+    </div>
+
+    <!-- 팝업 모달: PDF 병합할 서류 종류 선택 -->
+    <div id="pdfMergeModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-sm">
+            <div class="p-4 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="font-black text-slate-800 flex items-center gap-1.5"><i data-lucide="file-stack" class="w-4 h-4"></i> PDF 한 파일로 병합</h3>
+                <button onclick="closePdfMergeModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div class="p-4 space-y-2">
+                <p class="text-[11px] text-slate-500 mb-2">체크된 서류가 표에서 선택한(또는 전체) 근로자별로 순서대로 한 PDF에 담깁니다. ※ 명단(사진 등록용)은 별도 창 방식이라 병합 대상에서 제외됩니다.</p>
+                <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="pdfMergeTypeCheck" value="contract" checked> <span class="text-sm font-bold text-blue-700">표준근로계약서</span>
+                </label>
+                <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="pdfMergeTypeCheck" value="receipt" checked> <span class="text-sm font-bold text-emerald-700">임금지급명세서</span>
+                </label>
+                <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="pdfMergeTypeCheck" value="safety"> <span class="text-sm font-bold text-purple-700">안전보건교육일지</span>
+                </label>
+                <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="pdfMergeTypeCheck" value="poa"> <span class="text-sm font-bold text-indigo-700">위임장</span>
+                </label>
+
+                <div class="pt-2 mt-2 border-t border-slate-100">
+                    <div class="text-[11px] font-bold text-slate-500 mb-1.5">즐겨찾는 서류 조합</div>
+                    <div class="flex gap-1.5">
+                        <select id="docPresetSelect" onchange="applyDocPreset(this.value)" class="flex-1 text-[11px] border border-slate-200 rounded px-1.5 py-1">
+                            <option value="">-- 저장된 조합 선택 --</option>
+                        </select>
+                        <button onclick="saveDocPreset()" class="text-[11px] font-bold text-blue-600 border border-blue-300 rounded px-2 py-1 hover:bg-blue-50">현재 조합 저장</button>
+                        <button onclick="deleteDocPreset()" class="text-[11px] font-bold text-red-500 border border-red-200 rounded px-2 py-1 hover:bg-red-50">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t border-slate-100 flex justify-end gap-2">
+                <button onclick="closePdfMergeModal()" class="px-3 py-1.5 rounded text-sm font-bold text-slate-500 hover:bg-slate-100">취소</button>
+                <button onclick="mergeDocsToPdf()" class="px-3 py-1.5 rounded text-sm font-bold bg-blue-600 text-white hover:bg-blue-700">PDF 생성</button>
+            </div>
+        </div>
     </div>
 
     <!-- 팝업 모달: 전체 화면에서 바로 근로자 등록 (사이드바 이동 없이) -->
@@ -4198,6 +4251,7 @@
             ['githubBackupModal', closeGithubBackupModal],
             ['quickAddLaborModal', closeQuickAddLaborModal],
             ['docIssueHistoryModal', () => document.getElementById('docIssueHistoryModal').classList.add('hidden')],
+            ['pdfMergeModal', closePdfMergeModal],
             ['laborDetailModal', closeDetailModal],
             ['bulkPrintModal', closeBulkPrintModal],
             ['bulkRosterModal', closeBulkRosterModal],
@@ -4744,6 +4798,135 @@
             }).join('');
         }
 
+        // ===== 즐겨찾는 서류 조합(프리셋) - localStorage에 전역 저장 =====
+        const DOC_PRESET_LS_KEY = 'labor_payment_doc_presets_v1';
+
+        function loadDocPresets() {
+            try {
+                return JSON.parse(localStorage.getItem(DOC_PRESET_LS_KEY) || '{}');
+            } catch (e) { return {}; }
+        }
+
+        function renderDocPresetOptions() {
+            const sel = document.getElementById('docPresetSelect');
+            if (!sel) return;
+            const presets = loadDocPresets();
+            const names = Object.keys(presets);
+            sel.innerHTML = '<option value="">-- 저장된 조합 선택 --</option>' +
+                names.map(n => `<option value="${n}">${n} (${presets[n].length}종)</option>`).join('');
+        }
+
+        function saveDocPreset() {
+            const checkedTypes = Array.from(document.querySelectorAll('.pdfMergeTypeCheck:checked')).map(el => el.value);
+            if (checkedTypes.length === 0) {
+                showCustomAlert('저장할 서류 조합을 먼저 체크해 주세요.');
+                return;
+            }
+            const name = prompt('이 서류 조합을 어떤 이름으로 저장할까요? (예: 신규 투입자 세트)');
+            if (!name || !name.trim()) return;
+            const presets = loadDocPresets();
+            presets[name.trim()] = checkedTypes;
+            localStorage.setItem(DOC_PRESET_LS_KEY, JSON.stringify(presets));
+            renderDocPresetOptions();
+            document.getElementById('docPresetSelect').value = name.trim();
+            showCustomAlert(`"${name.trim()}" 조합이 저장되었습니다.`);
+        }
+
+        function applyDocPreset(name) {
+            if (!name) return;
+            const presets = loadDocPresets();
+            const types = presets[name];
+            if (!types) return;
+            document.querySelectorAll('.pdfMergeTypeCheck').forEach(el => {
+                el.checked = types.includes(el.value);
+            });
+        }
+
+        function deleteDocPreset() {
+            const sel = document.getElementById('docPresetSelect');
+            const name = sel.value;
+            if (!name) { showCustomAlert('삭제할 조합을 먼저 선택해 주세요.'); return; }
+            if (!confirm(`"${name}" 조합을 삭제할까요?`)) return;
+            const presets = loadDocPresets();
+            delete presets[name];
+            localStorage.setItem(DOC_PRESET_LS_KEY, JSON.stringify(presets));
+            renderDocPresetOptions();
+        }
+
+
+        function openPdfMergeModal() {
+            document.getElementById('pdfMergeModal').classList.remove('hidden');
+            renderDocPresetOptions();
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function closePdfMergeModal() {
+            document.getElementById('pdfMergeModal').classList.add('hidden');
+        }
+
+        // 선택된(또는 전체) 근로자 × 선택된 서류 종류를 하나의 PDF로 병합
+        // (※ "명단"은 사진 등록용 별도 창 방식이라 이 기능에서는 제외됩니다)
+        async function mergeDocsToPdf() {
+            if (!window.jspdf || !window.html2canvas) {
+                showCustomAlert('PDF 생성 라이브러리를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.');
+                return;
+            }
+            const checkedTypes = Array.from(document.querySelectorAll('.pdfMergeTypeCheck:checked')).map(el => el.value);
+            if (checkedTypes.length === 0) {
+                showCustomAlert('병합할 서류 종류를 1개 이상 선택해 주세요.');
+                return;
+            }
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return;
+            let ids = getSelectedDocsLaborIds();
+            if (ids.length === 0) {
+                if (!confirm(`선택된 근로자가 없습니다. 전체 ${proj.labors.length}명을 대상으로 PDF를 생성할까요?`)) return;
+                ids = proj.labors.map(l => l.id);
+            }
+
+            const fnMap = {
+                contract: 'printContractInNewTab', receipt: 'printReceiptInNewTab',
+                safety: 'printSafetyInNewTab', poa: 'printPowerOfAttorneyInNewTab'
+            };
+
+            closePdfMergeModal();
+            showCustomAlert(`PDF 생성 중입니다... (${ids.length}명 × ${checkedTypes.length}종, 잠시만 기다려 주세요)`);
+
+            _pdfCaptureMode = true;
+            _pdfCaptureCanvases = [];
+            try {
+                for (const id of ids) {
+                    for (const type of checkedTypes) {
+                        const fn = window[fnMap[type]];
+                        if (fn) await fn(id);
+                    }
+                }
+                const oldFrame = document.getElementById('hiddenPrintFrame');
+                if (oldFrame) oldFrame.remove();
+
+                if (_pdfCaptureCanvases.length === 0) {
+                    showCustomAlert('생성할 내용이 없습니다.');
+                    return;
+                }
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+                _pdfCaptureCanvases.forEach((canvas, i) => {
+                    if (i > 0) pdf.addPage();
+                    const imgData = canvas.toDataURL('image/jpeg', 0.92);
+                    pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+                });
+                pdf.save(`필수서류_병합_${proj.year}${String(proj.month).padStart(2, '0')}_${Date.now()}.pdf`);
+                showCustomAlert(`PDF 생성이 완료되었습니다. (총 ${_pdfCaptureCanvases.length}페이지)`);
+            } catch (e) {
+                console.error(e);
+                showCustomAlert('PDF 생성 중 오류가 발생했습니다: ' + e.message);
+            } finally {
+                _pdfCaptureMode = false;
+                _pdfCaptureCanvases = [];
+            }
+        }
+
+
         function openDocIssueHistoryModal() {
             const proj = appState.projects[appState.currentProjectId];
             const list = document.getElementById('docIssueHistoryList');
@@ -5213,8 +5396,10 @@
             const container = document.getElementById('dashWarningList');
             if (!container) return;
             const proj = appState.projects[appState.currentProjectId];
+            const badge = document.getElementById('dashWarningCountBadge');
             if (!proj || proj.labors.length === 0) {
                 container.innerHTML = `<div class="p-6 text-center text-slate-400 text-xs">등록된 근로자가 없습니다.</div>`;
+                if (badge) badge.classList.add('hidden');
                 return;
             }
 
@@ -5287,6 +5472,15 @@
             ];
 
             const totalIssues = Object.values(counters).reduce((a, b) => a + b, 0);
+
+            if (badge) {
+                if (totalIssues > 0) {
+                    badge.textContent = totalIssues;
+                    badge.classList.remove('hidden');
+                } else {
+                    badge.classList.add('hidden');
+                }
+            }
 
             if (totalIssues === 0) {
                 container.innerHTML = `<div class="p-6 text-center text-emerald-600 font-bold text-xs flex items-center justify-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i> 발견된 문제가 없습니다.</div>`;
@@ -5600,6 +5794,10 @@
         // 1. 표준일용근로계약서 출력 페이지 생성
         // 별도의 새 창/탭을 띄우지 않고, 화면에 보이지 않는 iframe에 문서를 렌더링한 뒤
         // 그 iframe에서 바로 인쇄 대화상자를 띄우는 공용 헬퍼 함수
+        // PDF 병합(여러 서류를 한 파일로) 기능용 캡처 모드 상태
+        let _pdfCaptureMode = false;
+        let _pdfCaptureCanvases = [];
+
         function printHtmlViaIframe(htmlContent) {
             const old = document.getElementById('hiddenPrintFrame');
             if (old) old.remove();
@@ -5609,27 +5807,42 @@
             iframe.style.position = 'fixed';
             iframe.style.right = '0';
             iframe.style.bottom = '0';
-            iframe.style.width = '0';
-            iframe.style.height = '0';
+            // 캡처 모드에서는 A4 비율의 실제 크기로 렌더링해야 html2canvas가 정상 캡처함
+            iframe.style.width = _pdfCaptureMode ? '794px' : '0';
+            iframe.style.height = _pdfCaptureMode ? '1123px' : '0';
             iframe.style.border = '0';
             iframe.style.visibility = 'hidden';
             document.body.appendChild(iframe);
 
-            iframe.onload = function () {
-                setTimeout(() => {
-                    try {
-                        iframe.contentWindow.focus();
-                        iframe.contentWindow.print();
-                    } catch (e) {
-                        showCustomAlert('인쇄 중 오류가 발생했습니다.');
-                    }
-                }, 200);
-            };
+            return new Promise((resolve) => {
+                iframe.onload = function () {
+                    setTimeout(async () => {
+                        if (_pdfCaptureMode) {
+                            try {
+                                if (!window.html2canvas) throw new Error('html2canvas 라이브러리를 불러오지 못했습니다.');
+                                const canvas = await html2canvas(iframe.contentWindow.document.body, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+                                _pdfCaptureCanvases.push(canvas);
+                            } catch (e) {
+                                console.error('PDF 캡처 실패:', e);
+                            }
+                            resolve();
+                            return;
+                        }
+                        try {
+                            iframe.contentWindow.focus();
+                            iframe.contentWindow.print();
+                        } catch (e) {
+                            showCustomAlert('인쇄 중 오류가 발생했습니다.');
+                        }
+                        resolve();
+                    }, 200);
+                };
 
-            const doc = iframe.contentWindow.document;
-            doc.open();
-            doc.write(htmlContent);
-            doc.close();
+                const doc = iframe.contentWindow.document;
+                doc.open();
+                doc.write(htmlContent);
+                doc.close();
+            });
         }
 
         // === 계약서 인쇄 공용 자산 (단건/일괄 공통 사용) ===
@@ -5820,9 +6033,8 @@
 
         // 안전교육 이수증 만료 임박/만료 여부 (7일 이내 임박, 만료 시 별도 표시)
         function getSafetyExpiryBadge(labor) {
-            if (!labor.safetyEduDate) return '';
-            const expiry = new Date(labor.safetyEduDate);
-            expiry.setFullYear(expiry.getFullYear() + 2); // 안전보건교육 유효기간 2년 가정
+            if (!labor.safetyEdu || !labor.safetyExpiry) return '';
+            const expiry = new Date(labor.safetyExpiry);
             const today = new Date();
             const diffDays = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
             if (diffDays < 0) return `<span class="text-[9px] bg-red-100 text-red-700 font-bold px-1 rounded" title="안전교육 이수증 만료됨">⛔만료</span>`;
@@ -5854,7 +6066,7 @@
                 </body>
                 </html>
             `;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
         }
 
         // [신규] 계약서 일괄 인쇄 — 선택된 근로자 전원의 계약서를 한 번의 인쇄 작업으로 묶어 출력
@@ -5894,7 +6106,7 @@
                 </body>
                 </html>
             `;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
             closeBulkPrintModal();
         }
 
@@ -6149,7 +6361,7 @@
                 </body>
                 </html>
             `;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
             closeBulkRosterModal();
         }
 
@@ -6489,7 +6701,7 @@
                 </body>
                 </html>
             `;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
         }
 
         // 노임수령 위임장 출력 (근로자 본인이 아닌 대리인이 노임을 수령하는 경우)
@@ -6508,7 +6720,7 @@
                 const today = new Date();
                 dateStr = `${today.getFullYear()}년 ${String(today.getMonth() + 1).padStart(2, '0')}월 ${String(today.getDate()).padStart(2, '0')}일`;
             }
-            _generatePowerOfAttorney(laborId, dateStr);
+            return _generatePowerOfAttorney(laborId, dateStr);
         }
 
         function _generatePowerOfAttorney(laborId, todayStr) {
@@ -6639,7 +6851,7 @@
                 </body>
                 </html>
             `;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
         }
 
         // 3. 신규채용자 안전보건 교육일지 출력
@@ -6819,7 +7031,7 @@
                 </body>
                 </html>
             `;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
         }
 
         // 신규 일용직 근로자 추가
@@ -8932,7 +9144,7 @@ ${xlsRows}
                 <h2 class="text-lg font-black text-center mb-4 tracking-widest">4대사회보험 취득 신고서</h2>
                 ${content}
                 </body></html>`;
-            printHtmlViaIframe(printHtml);
+            return printHtmlViaIframe(printHtml);
         }
 
         // ============================================================
@@ -9300,9 +9512,27 @@ ${xlsRows}
             if (box) { box.classList.add('hidden'); box.innerHTML = ''; }
         }
 
-        // 모든 현장/근로자에 등록된 노임수령 위임장 대리인 정보를 이름별로 모아 DB 구성
+        // 노임수령 위임장 대리인 후보 DB 구성
+        // 1) 근로자DB(주소록)에 등록된 모든 근로자 — 실제 인물이므로 후보로 제공(주민번호로 생년월일 자동 계산)
+        // 2) 기존에 실제로 대리인으로 입력됐던 이력 — 근로자DB에 없는 제3자 대리인도 포함, 더 구체적인 정보이므로 우선 적용
         function _buildProxyDb() {
             const map = new Map();
+
+            _buildWorkerDb().forEach(w => {
+                let birth = '';
+                const cleanSsn = (w.ssn || '').replace(/[^0-9]/g, '');
+                if (cleanSsn.length === 13) {
+                    const yy = cleanSsn.slice(0, 2), mm = cleanSsn.slice(2, 4), dd = cleanSsn.slice(4, 6);
+                    const g = cleanSsn[6];
+                    const century = (g === '1' || g === '2') ? '19' : (g === '5' || g === '6') ? '19' : '20';
+                    birth = `${century}${yy}-${mm}-${dd}`;
+                }
+                map.set(w.name, {
+                    name: w.name, birth, address: w.address || '', phone: w.phone || '', account: w.account || '',
+                    source: '근로자DB'
+                });
+            });
+
             Object.values(appState.projects).forEach(proj => {
                 (proj.labors || []).forEach(l => {
                     if (!l.proxyName) return;
@@ -9311,10 +9541,12 @@ ${xlsRows}
                         birth: l.proxyBirth || '',
                         address: l.proxyAddress || '',
                         phone: l.proxyPhone || '',
-                        account: l.proxyAccount || ''
+                        account: l.proxyAccount || '',
+                        source: '이전 위임이력'
                     });
                 });
             });
+
             return [...map.values()];
         }
 
@@ -9343,7 +9575,10 @@ ${xlsRows}
             box.innerHTML = matches.map(p => `
                 <div class="px-3 py-2 hover:bg-indigo-50 cursor-pointer border-b border-slate-100 last:border-0"
                     onmousedown="_applyProxySuggestion('${p.name.replace(/'/g, "\\'")}')">
-                    <div class="font-bold text-slate-700">${p.name}</div>
+                    <div class="font-bold text-slate-700 flex items-center gap-1.5">
+                        ${p.name}
+                        <span class="text-[9px] font-bold px-1 rounded ${p.source === '근로자DB' ? 'bg-blue-50 text-blue-600' : 'bg-slate-100 text-slate-500'}">${p.source}</span>
+                    </div>
                     <div class="text-[10px] text-slate-400">${p.phone || '연락처 없음'}${p.address ? ' · ' + p.address : ''}</div>
                 </div>
             `).join('');
