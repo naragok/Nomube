@@ -855,18 +855,8 @@
                 </div>
                 <!-- 좌측 끝 -->
 
-                <!-- 우측: 근로자별 출근현황 / 급여 요약 (필수서류 화면에서 이동) -->
+                <!-- 우측: 근로자별 급여 요약 (필수서류 화면에서 이동) -->
                 <div class="grid grid-cols-1 gap-4 items-start">
-
-                    <div>
-                        <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">근로자별 출근현황 (1일~31일)</h3>
-                        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-x-auto">
-                            <table id="dashAttendanceTable" class="w-full text-left border-collapse text-[10px]">
-                                <thead id="dashAttendanceTableHead" class="bg-slate-800 text-white"></thead>
-                                <tbody id="dashAttendanceTableBody" class="divide-y divide-slate-100"></tbody>
-                            </table>
-                        </div>
-                    </div>
 
                     <div>
                         <h3 class="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">근로자별 급여 요약</h3>
@@ -4616,7 +4606,6 @@
                 renderDashboardPriceOutliers();
                 renderDashboardMonthlyTrend();
                 renderDashboardNewWorkers();
-                renderDashboardAttendanceTable();
                 renderDashboardPayrollTable();
             } else if (view === 'docs') {
                 docsWrap.classList.remove('hidden');
@@ -4637,65 +4626,6 @@
 
         // 필수서류 전용 화면: 대장 표의 필수서류 발급/제어 열만 간단한 요약 표로 분리
         // 필수서류 화면 표 헤더: 1일~31일 + 요일을 총일수 앞에 동적으로 채워 넣는다
-        // 대시보드: 근로자별 출근현황 표 (1일~31일, 필수서류 화면에서 이동)
-        function renderDashboardAttendanceTable() {
-            const thead = document.getElementById('dashAttendanceTableHead');
-            const tbody = document.getElementById('dashAttendanceTableBody');
-            if (!thead || !tbody) return;
-            const proj = appState.projects[appState.currentProjectId];
-            const weekDays = ["일", "월", "화", "수", "목", "금", "토"];
-            const daysInMonth = proj ? new Date(proj.year, proj.month, 0).getDate() : 31;
-
-            let dayThs = '';
-            for (let d = 1; d <= 31; d++) {
-                if (proj && d > daysInMonth) {
-                    dayThs += `<th class="w-4 border-r border-slate-600 p-0 bg-slate-700/50"></th>`;
-                } else {
-                    const dayName = proj ? weekDays[new Date(proj.year, proj.month - 1, d).getDay()] : '';
-                    const dow = proj ? new Date(proj.year, proj.month - 1, d).getDay() : -1;
-                    const wknd = dow === 0 ? 'text-rose-300' : (dow === 6 ? 'text-sky-300' : '');
-                    dayThs += `<th class="w-4 border-r border-slate-600 p-0 text-center ${wknd}"><div class="text-[8px] opacity-75">${dayName}</div><div>${d}</div></th>`;
-                }
-            }
-            thead.innerHTML = `
-                <tr>
-                    <th rowspan="2" class="p-1 border-r border-slate-600 w-10 text-center align-middle">번호</th>
-                    <th rowspan="2" class="p-1 border-r border-slate-600 align-middle">성명</th>
-                    <th colspan="31" class="p-0.5 border-r border-slate-600 text-center tracking-wider">출 근 일 자 (1일 ~ 31일)</th>
-                    <th rowspan="2" class="p-1 text-right align-middle">총일수</th>
-                </tr>
-                <tr>${dayThs}</tr>
-            `;
-
-            if (!proj || proj.labors.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="34" class="p-6 text-center text-slate-400">등록된 근로자가 없습니다.</td></tr>';
-                return;
-            }
-            tbody.innerHTML = proj.labors.map((labor, idx) => {
-                let autoDays = 0;
-                let dayTds = '';
-                for (let d = 1; d <= 31; d++) {
-                    if (d > daysInMonth) {
-                        dayTds += `<td class="p-0.5 border-r border-slate-100 bg-slate-50"></td>`;
-                        continue;
-                    }
-                    if (labor.attendance[d]) autoDays += Number(labor.attendance[d]);
-                    const dow = new Date(proj.year, proj.month - 1, d).getDay();
-                    const wknd = dow === 0 ? 'text-rose-500' : (dow === 6 ? 'text-sky-600' : '');
-                    const val = labor.attendance[d] ? commaFormatter(labor.attendance[d]) : '';
-                    dayTds += `<td class="p-0 border-r border-slate-100 text-center font-mono text-[9.5px] ${wknd}">${val}</td>`;
-                }
-                const calc = calculateDeductions(labor, autoDays);
-                return `
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-1 border-r border-slate-100 text-center text-slate-400">${idx + 1}</td>
-                        <td class="p-1 border-r border-slate-100 font-bold text-blue-700">${labor.name}</td>
-                        ${dayTds}
-                        <td class="p-1 text-right font-mono font-bold">${commaFormatter(calc.effectiveDays)}</td>
-                    </tr>
-                `;
-            }).join('');
-        }
 
         // 대시보드: 근로자별 급여 요약 표 (필수서류 화면에서 이동)
         function renderDashboardPayrollTable() {
