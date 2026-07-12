@@ -7963,20 +7963,6 @@
             </div>
         </div>
 
-        <!-- 외국인등록증 (외국인 근로자인 경우에만 등록, 내국인은 빈칸으로 출력) -->
-        <div class="doc-section">
-            <div class="doc-section-title">외국인등록증 (해당자만)</div>
-            <div class="doc-section-body">
-                <div class="photo-slot" id="slot-foreignId" onclick="triggerUpload('slot-foreignId')">
-                    <span class="slot-icon">🛂</span>
-                    <span class="slot-label">외국인등록증 사진 추가<br><small style="font-weight:400;color:#9ca3af">내국인은 등록하지 않아도 됩니다</small></span>
-                    <input type="file" accept="image/*" onchange="loadPhoto(this,'slot-foreignId','img-foreignId')" onclick="event.stopPropagation()">
-                    <img id="img-foreignId" style="display:none">
-                    <button class="remove-btn" onclick="removePhoto(event,'slot-foreignId','img-foreignId')">✕</button>
-                </div>
-            </div>
-        </div>
-
     </div><!-- /doc-card -->
     </div><!-- /screen-wrap -->
 
@@ -8099,7 +8085,6 @@
             if (store['id-front']) applyPhoto('slot-id-front', 'img-id-front', store['id-front']);
             if (store['bank'])     applyPhoto('slot-bank',     'img-bank',     store['bank']);
             if (store['safety'])  applyPhoto('slot-safety',   'img-safety',   store['safety']);
-            if (store['foreignId']) applyPhoto('slot-foreignId', 'img-foreignId', store['foreignId']);
         });
 
         function triggerUpload(slotId) {
