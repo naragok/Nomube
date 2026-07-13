@@ -470,6 +470,14 @@
                             <span class="text-slate-500 text-[9px]">원</span>
                         </span>
                     </div>
+                    <label class="flex items-center justify-between gap-1 cursor-pointer">
+                        <span class="text-slate-400 shrink-0">소액부징수 적용</span>
+                        <input type="checkbox" id="rateInputMinTaxEnabled" onchange="updateTaxRateBool('minTaxEnabled', this.checked)" class="accent-amber-500 w-3.5 h-3.5">
+                    </label>
+                    <label class="flex items-center justify-between gap-1 cursor-pointer">
+                        <span class="text-slate-400 shrink-0">공제액 10원단위 절사<span class="text-[8px]">(소득세·보험료)</span></span>
+                        <input type="checkbox" id="rateInputTruncateToTen" onchange="updateTaxRateBool('truncateToTen', this.checked)" class="accent-amber-500 w-3.5 h-3.5">
+                    </label>
                     <div class="flex items-center justify-between gap-1">
                         <span class="text-slate-400 shrink-0">4대보험 취득<span class="text-[8px]">(최소일수)</span></span>
                         <span class="flex items-center gap-0.5">
@@ -932,7 +940,7 @@
                 <button onclick="closePdfMergeModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
             <div class="p-4 space-y-2">
-                <p class="text-[11px] text-slate-500 mb-2">체크된 서류가 표에서 선택한(또는 전체) 근로자별로 순서대로 한 PDF에 담깁니다. ※ 명단(사진 등록용)은 별도 창 방식이라 병합 대상에서 제외됩니다.</p>
+                <p class="text-[11px] text-slate-500 mb-2">체크된 서류가 표에서 선택한(또는 전체) 근로자별로 순서대로 한 PDF에 담깁니다.</p>
                 <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
                     <input type="checkbox" class="pdfMergeTypeCheck" value="contract" checked> <span class="text-sm font-bold text-blue-700">표준근로계약서</span>
                 </label>
@@ -941,6 +949,9 @@
                 </label>
                 <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
                     <input type="checkbox" class="pdfMergeTypeCheck" value="safety"> <span class="text-sm font-bold text-purple-700">안전보건교육일지</span>
+                </label>
+                <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="pdfMergeTypeCheck" value="roster"> <span class="text-sm font-bold text-rose-700">필수서류 명단</span>
                 </label>
                 <label class="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
                     <input type="checkbox" class="pdfMergeTypeCheck" value="poa"> <span class="text-sm font-bold text-indigo-700">위임장</span>
@@ -2146,7 +2157,9 @@
             minTaxThreshold: 1000,    // 소액부징수 기준 (일별 세액)
             insuranceMinDays: 8,      // 국민/건강/요양보험 취득 최소 근로일수
             pensionExemptAge: 60,     // 국민연금 면제 연령
-            employmentExemptAge: 65   // 고용보험 면제 연령
+            employmentExemptAge: 65,  // 고용보험 면제 연령
+            minTaxEnabled: true,      // 소액부징수 적용 여부 (끄면 금액 상관없이 항상 징수)
+            truncateToTen: false      // 공제액(소득세/지방세/4대보험) 10원 단위 절사 여부
         };
         let taxRates = JSON.parse(JSON.stringify(DEFAULT_TAX_RATES));
 
@@ -2176,6 +2189,15 @@
             _insuranceAgeCache.clear();
             updateHeaderAndTable();
             showToast('공제 요율이 적용되었습니다.');
+        }
+
+        // 체크박스형 옵션(소액부징수 적용 여부, 10원단위 절사 여부) 저장
+        function updateTaxRateBool(field, checked) {
+            taxRates[field] = !!checked;
+            saveTaxRates();
+            _insuranceAgeCache.clear();
+            updateHeaderAndTable();
+            showToast('공제 옵션이 적용되었습니다.');
         }
 
         function resetTaxRates() {
@@ -2210,6 +2232,10 @@
                     el.value = Number.isInteger(v) ? v : parseFloat(v.toFixed(4));
                 }
             });
+            const chkMinTax = document.getElementById('rateInputMinTaxEnabled');
+            if (chkMinTax) chkMinTax.checked = taxRates.minTaxEnabled !== false;
+            const chkTruncate = document.getElementById('rateInputTruncateToTen');
+            if (chkTruncate) chkTruncate.checked = !!taxRates.truncateToTen;
         }
 
 
@@ -4926,7 +4952,7 @@
 
             const fnMap = {
                 contract: 'printContractInNewTab', receipt: 'printReceiptInNewTab',
-                safety: 'printSafetyInNewTab', poa: 'printPowerOfAttorneyInNewTab'
+                safety: 'printSafetyInNewTab', poa: 'printPowerOfAttorneyInNewTab', roster: 'printRosterInNewTab'
             };
 
             closePdfMergeModal();
@@ -5860,7 +5886,16 @@
                         if (_pdfCaptureMode) {
                             try {
                                 if (!window.html2canvas) throw new Error('html2canvas 라이브러리를 불러오지 못했습니다.');
-                                const canvas = await html2canvas(iframe.contentWindow.document.body, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+                                const canvas = await html2canvas(iframe.contentWindow.document.body, {
+                                    scale: 2, useCORS: true, backgroundColor: '#ffffff',
+                                    onclone: (clonedDoc) => {
+                                        // 명단 등 일부 문서는 화면 전용 상단 조작바(top-bar)가 있어 PDF에는 보이면 안 됨
+                                        const bar = clonedDoc.querySelector('.top-bar');
+                                        if (bar) bar.style.display = 'none';
+                                        const wrap = clonedDoc.querySelector('.screen-wrap');
+                                        if (wrap) wrap.style.padding = '0';
+                                    }
+                                });
                                 _pdfCaptureCanvases.push(canvas);
                             } catch (e) {
                                 console.error('PDF 캡처 실패:', e);
@@ -7882,14 +7917,27 @@
 
                 // 일용직 소득세 일별 소액부징수 법령 정밀 준수
                 // (일당 - 비과세 공제 후 원천세율 적용 시, 일별 소득세액이 소액부징수 기준 미만이면 전액 0원 징수 제외)
+                // ※ "소액부징수 적용" 옵션을 끄면 기준 미만이어도 항상 징수함
                 if (labor.price > taxRates.taxFreeAmount) {
                     const dailyCalculatedTax = Math.floor((labor.price - taxRates.taxFreeAmount) * taxRates.incomeTaxRate);
-                    
-                    if (dailyCalculatedTax >= taxRates.minTaxThreshold) {
+                    const minTaxEnabled = taxRates.minTaxEnabled !== false;
+
+                    if (!minTaxEnabled || dailyCalculatedTax >= taxRates.minTaxThreshold) {
                         const dailyLocalTax = Math.floor(dailyCalculatedTax * taxRates.localTaxRate);
                         incomeTax = dailyCalculatedTax * effectiveDays;
                         localTax = dailyLocalTax * effectiveDays;
                     }
+                }
+
+                // 옵션: 소득세/지방세/4대보험료 10원 단위 절사 (끝자리 0으로 내림)
+                if (taxRates.truncateToTen) {
+                    const truncTen = (v) => Math.floor(v / 10) * 10;
+                    pension = truncTen(pension);
+                    health = truncTen(health);
+                    care = truncTen(care);
+                    employment = truncTen(employment);
+                    incomeTax = truncTen(incomeTax);
+                    localTax = truncTen(localTax);
                 }
             }
 
@@ -7975,13 +8023,7 @@
             if (!labor) return;
             recordDocIssue(labor, 'roster');
 
-            const printWindow = window.open("", "_blank");
-            if (!printWindow) {
-                showCustomAlert("팝업 차단이 설정되어 있습니다. 팝업 허용 후 다시 시도해 주세요.");
-                return;
-            }
-
-            printWindow.document.write(`<!DOCTYPE html>
+            const printHtml = `<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -8402,7 +8444,18 @@
         }
     <\/script>
 </body>
-</html>`);
+</html>`;
+
+            if (_pdfCaptureMode) {
+                return printHtmlViaIframe(printHtml);
+            }
+
+            const printWindow = window.open("", "_blank");
+            if (!printWindow) {
+                showCustomAlert("팝업 차단이 설정되어 있습니다. 팝업 허용 후 다시 시도해 주세요.");
+                return;
+            }
+            printWindow.document.write(printHtml);
             printWindow.document.close();
         }
 
