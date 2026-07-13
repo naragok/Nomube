@@ -1890,6 +1890,54 @@
         </div>
     </div>
 
+    <!-- 팝업 모달: 근로자DB 기본정보 수정 -->
+    <div id="workerDbEditModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-[60] no-print">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-sm overflow-hidden">
+            <div class="bg-gradient-to-r from-indigo-700 to-blue-700 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold flex items-center gap-2">
+                    <i data-lucide="user-cog" class="w-4 h-4"></i> 기본정보 수정 — <span id="wdbEditName"></span>
+                </h3>
+                <button onclick="closeWorkerDbEditModal()" class="text-indigo-200 hover:text-white" aria-label="닫기">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-4 space-y-2.5">
+                <p id="wdbEditProjectCount" class="text-[10.5px] text-amber-600 bg-amber-50 border border-amber-200 rounded px-2 py-1.5"></p>
+                <p class="text-[10px] text-slate-400">※ 성명·주민번호는 근로자 식별키라 여기서 바꿀 수 없습니다. 이름 변경이 필요하면 각 대장에서 개별 수정해 주세요.</p>
+                <div>
+                    <label class="text-[10.5px] font-bold text-slate-500 block mb-0.5">직종</label>
+                    <input type="text" id="wdbEditJob" class="w-full border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="text-[10.5px] font-bold text-slate-500 block mb-0.5">연락처</label>
+                    <input type="text" id="wdbEditPhone" class="w-full border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500" oninput="this.value = phoneHyphenFilter(this.value)">
+                </div>
+                <div>
+                    <label class="text-[10.5px] font-bold text-slate-500 block mb-0.5">주소</label>
+                    <input type="text" id="wdbEditAddress" class="w-full border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="text-[10.5px] font-bold text-slate-500 block mb-0.5">은행</label>
+                        <input type="text" id="wdbEditBank" class="w-full border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label class="text-[10.5px] font-bold text-slate-500 block mb-0.5">계좌번호</label>
+                        <input type="text" id="wdbEditAccount" class="w-full border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500" oninput="this.value = accountHyphenFilter(this.value)">
+                    </div>
+                </div>
+                <div>
+                    <label class="text-[10.5px] font-bold text-slate-500 block mb-0.5">최근 단가</label>
+                    <input type="text" id="wdbEditPrice" class="w-full border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500" oninput="let c=this.value.replace(/[^0-9]/g,''); this.value = c ? parseInt(c).toLocaleString() : '';">
+                </div>
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end gap-2">
+                <button onclick="closeWorkerDbEditModal()" class="px-3 py-1.5 rounded text-sm font-bold text-slate-500 hover:bg-slate-100">취소</button>
+                <button onclick="saveWorkerDbEdit()" class="px-3 py-1.5 rounded text-sm font-bold bg-indigo-600 text-white hover:bg-indigo-700">저장 (전체 대장 반영)</button>
+            </div>
+        </div>
+    </div>
+
     <!-- 팝업 모달 5: AI 자동인식 근로자 등록 (no-print) -->
     <div id="aiScanModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
         <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-2xl overflow-hidden max-h-[90vh] flex flex-col">
@@ -4255,6 +4303,7 @@
             ['carryOverModal', closeCarryOverModal],
             ['moveLaborModal', closeMoveLaborModal],
             ['workerDbModal', closeWorkerDbModal],
+            ['workerDbEditModal', closeWorkerDbEditModal],
             ['aiScanModal', closeAiScanModal]
         ];
 
@@ -9588,7 +9637,8 @@ ${xlsRows}
                 tr.className = 'border-b border-slate-100 hover:bg-indigo-50/50';
 
                 const tdName = document.createElement('td');
-                tdName.className = 'p-2 font-bold text-slate-700';
+                tdName.className = 'p-2 font-bold text-slate-700 cursor-pointer hover:underline hover:text-indigo-700';
+                tdName.title = '클릭하면 기본정보를 수정할 수 있습니다 (등록된 모든 대장에 함께 반영됩니다)';
                 if (w.profilePhoto) {
                     const avatar = document.createElement('img');
                     avatar.src = w.profilePhoto;
@@ -9596,6 +9646,7 @@ ${xlsRows}
                     tdName.appendChild(avatar);
                 }
                 tdName.appendChild(document.createTextNode(w.name));
+                tdName.addEventListener('click', () => openWorkerDbEditModal(w));
                 if (w.suspect) {
                     const badge = document.createElement('span');
                     badge.className = 'ml-1 text-[9px] bg-rose-100 text-rose-600 font-bold px-1.5 py-0.5 rounded-full align-middle';
@@ -9635,7 +9686,69 @@ ${xlsRows}
             });
         }
 
-        // 근로자DB — 특정 근로자가 등록된 전체 대장 목록 보기
+        // 근로자DB — 이름 클릭 시 기본정보 수정 (동일인의 모든 대장 기록에 함께 반영)
+        function _workerDbIdentityKey(w) {
+            return (w.ssn && w.ssn.replace(/[^0-9]/g, '').length === 13) ? w.ssn : ('name_' + w.name);
+        }
+
+        function openWorkerDbEditModal(w) {
+            _workerDbEditTarget = w;
+            document.getElementById('wdbEditName').textContent = w.name;
+            document.getElementById('wdbEditProjectCount').textContent = `${w.count}개 대장에 등록됨 — 저장하면 전체에 반영됩니다`;
+            document.getElementById('wdbEditJob').value = w.job || '';
+            document.getElementById('wdbEditPhone').value = w.phone || '';
+            document.getElementById('wdbEditAddress').value = w.address || '';
+            document.getElementById('wdbEditBank').value = w.bank || '';
+            document.getElementById('wdbEditAccount').value = w.account || '';
+            document.getElementById('wdbEditPrice').value = w.price ? Number(w.price).toLocaleString() : '';
+            document.getElementById('workerDbEditModal').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function closeWorkerDbEditModal() {
+            document.getElementById('workerDbEditModal').classList.add('hidden');
+            _workerDbEditTarget = null;
+        }
+
+        function saveWorkerDbEdit() {
+            if (!_workerDbEditTarget) return;
+            const key = _workerDbIdentityKey(_workerDbEditTarget);
+
+            const newJob = document.getElementById('wdbEditJob').value.trim();
+            const newPhone = document.getElementById('wdbEditPhone').value.trim();
+            const newAddress = document.getElementById('wdbEditAddress').value.trim();
+            const newBank = document.getElementById('wdbEditBank').value.trim();
+            const newAccount = document.getElementById('wdbEditAccount').value.trim();
+            const newPriceClean = document.getElementById('wdbEditPrice').value.replace(/[^0-9]/g, '');
+            const newPrice = newPriceClean ? parseInt(newPriceClean) : 0;
+
+            let updatedCount = 0;
+            Object.values(appState.projects).forEach(p => {
+                (p.labors || []).forEach(l => {
+                    if (!l.name) return;
+                    const lKey = (l.ssn && l.ssn.replace(/[^0-9]/g, '').length === 13) ? l.ssn : ('name_' + l.name);
+                    if (lKey !== key) return;
+                    l.job = newJob;
+                    l.phone = newPhone;
+                    l.address = newAddress;
+                    l.bank = newBank;
+                    l.account = newAccount;
+                    if (newPrice) l.price = newPrice;
+                    updatedCount++;
+                });
+            });
+
+            saveToLocalStorage();
+            closeWorkerDbEditModal();
+            _workerDbCache = _buildWorkerDb();
+            renderWorkerDbList();
+            updateHeaderAndTable();
+            showCustomAlert(`저장되었습니다. (${updatedCount}개 대장 기록에 반영됨)`);
+        }
+
+        let _workerDbEditTarget = null;
+
+
         function _showWorkerProjectList(w) {
             const lines = (w.projects || []).map((p, i) => `${i + 1}. ${p}`).join('\n');
             showCustomAlert(`${w.name} 님이 등록된 대장 (${w.projects.length}개)\n\n${lines}`);
