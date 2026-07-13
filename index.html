@@ -239,6 +239,10 @@
                     <button onclick="closeHeaderMenus(); exportToXLS()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2">
                         <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-emerald-600"></i> XLS 저장
                     </button>
+                    <div class="h-px bg-slate-100 my-1"></div>
+                    <button onclick="closeHeaderMenus(); exportLaborChargeCSV()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="계약상대자/공종/은행/계좌/전화번호/비고 포함 - 노무비 청구용 별도 양식">
+                        <i data-lucide="receipt" class="w-3.5 h-3.5 text-amber-600"></i> 노무비 청구 내역서 CSV
+                    </button>
                 </div>
             </div>
 
@@ -1113,8 +1117,9 @@
                             <input type="text" id="detailProxyAddress" placeholder="대리인 주소" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
                             <div class="grid grid-cols-2 gap-2">
                                 <input type="text" id="detailProxyPhone" placeholder="대리인 연락처" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
-                                <input type="text" id="detailProxyAccount" placeholder="입금계좌 (예: 우체국 202226-02-214929)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
+                                <input type="text" id="detailProxyBank" placeholder="은행명 (예: 국민은행)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
                             </div>
+                            <input type="text" id="detailProxyAccount" placeholder="계좌번호 (예: 202226-02-214929)" class="w-full bg-white border border-slate-200 rounded p-2 text-xs font-mono focus:ring-1 focus:ring-indigo-500 outline-none">
                             <div>
                                 <label class="block font-bold text-slate-400 mb-1 text-[10px]">위임 날짜 <span class="font-normal">(위임장 출력 시 기본값으로 사용, 비워두면 출력 당일로 지정)</span></label>
                                 <input type="date" id="detailProxyDate" class="w-full bg-white border border-slate-200 rounded p-2 text-xs focus:ring-1 focus:ring-indigo-500 outline-none">
@@ -3633,6 +3638,7 @@
             document.getElementById('detailProxyBirth').value = labor.proxyBirth || "";
             document.getElementById('detailProxyAddress').value = labor.proxyAddress || "";
             document.getElementById('detailProxyPhone').value = labor.proxyPhone || "";
+            document.getElementById('detailProxyBank').value = labor.proxyBank || "";
             document.getElementById('detailProxyAccount').value = labor.proxyAccount || "";
             document.getElementById('detailProxyDate').value = labor.proxyDate || "";
             document.getElementById('detailIsServiceWorker').checked = !!labor.isServiceWorker;
@@ -3792,6 +3798,7 @@
             if (m.proxyBirth) { document.getElementById('detailProxyBirth').value = m.proxyBirth; }
             if (m.proxyAddress) { document.getElementById('detailProxyAddress').value = m.proxyAddress; }
             if (m.proxyPhone) { document.getElementById('detailProxyPhone').value = m.proxyPhone; }
+            if (m.proxyBank) { document.getElementById('detailProxyBank').value = m.proxyBank; }
             if (m.proxyAccount) { document.getElementById('detailProxyAccount').value = m.proxyAccount; }
             document.getElementById('detailDbMatchBadge').classList.add('hidden');
             showToast('근로자DB에서 정보를 자동 입력했습니다.');
@@ -3851,6 +3858,7 @@
             labor.proxyBirth = document.getElementById('detailProxyBirth').value.trim();
             labor.proxyAddress = document.getElementById('detailProxyAddress').value.trim();
             labor.proxyPhone = document.getElementById('detailProxyPhone').value.trim();
+            labor.proxyBank = document.getElementById('detailProxyBank').value.trim();
             labor.proxyAccount = document.getElementById('detailProxyAccount').value.trim();
             labor.proxyDate = document.getElementById('detailProxyDate').value;
             labor.isServiceWorker = document.getElementById('detailIsServiceWorker').checked;
@@ -4121,6 +4129,59 @@
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
             showToast("CSV 다운로드 완료");
+        }
+
+        // 공사근로자 노무비 청구 내역서 CSV 내보내기
+        // (계약상대자/해당월/공종/근로자성명/실지급액/세금공제액/합계금액/은행명/계좌번호/전화번호/비고 양식 - 원청 제출용)
+        function exportLaborChargeCSV() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors || proj.labors.length === 0) {
+                showToast("내보낼 대장 데이터가 비어 있습니다.");
+                return;
+            }
+
+            const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
+            const safeN = (v) => Number.isFinite(Number(v)) ? Number(v) : 0;
+
+            let csv = "\uFEFF";
+            csv += "계약상대자,해당 월,공종,근로자성명,실지급액,세금공제액,합계금액,은행명,계좌번호,전화번호,비고\n";
+
+            let sumNet = 0, sumTax = 0, sumTotal = 0;
+
+            proj.labors.forEach(l => {
+                let autoDays = 0;
+                for (let d = 1; d <= daysInMonth; d++) autoDays += Number(l.attendance[d] || 0);
+                const calc = calculateDeductions(l, autoDays);
+
+                // 대리인(위임장) 계좌가 등록되어 있으면 실제 입금계좌인 대리인 계좌/은행으로 표기하고 비고에 "위임장" 표시
+                const hasProxy = !!(l.proxyName && l.proxyAccount);
+                const bankOut = hasProxy ? (l.proxyBank || '') : (l.bank || '');
+                const accountOut = hasProxy ? (l.proxyAccount || '') : (l.account || '');
+                const phoneOut = l.phone || '';
+                const remark = hasProxy ? '위임장' : '';
+
+                sumNet += safeN(calc.netPay);
+                sumTax += safeN(calc.totalDeduction);
+                sumTotal += safeN(calc.totalWages);
+
+                csv += `${proj.company || ''},${proj.year}년 ${proj.month}월,${proj.workType || ''},${l.name},${safeN(calc.netPay)},${safeN(calc.totalDeduction)},${safeN(calc.totalWages)},${bankOut},'${accountOut},'${phoneOut},${remark}\n`;
+            });
+
+            csv += `,,,소 계,${sumNet},${sumTax},${sumTotal},,,,\n`;
+            const vat = Math.round(sumTotal * 0.1);
+            csv += `,,,부가세,,,${vat},,,,\n`;
+            csv += `,,,합 계,,,${sumTotal + vat},,,,\n`;
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', `노무비청구내역서_${proj.company}_${proj.year}년_${proj.month}월.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            showToast("노무비 청구 내역서 CSV 다운로드 완료");
         }
 
         // [실무 기능] 데이터 전체 영구 포맷
@@ -6793,7 +6854,7 @@
                             <tr><td class="lbl">성명</td><td>${labor.proxyName || ''}</td><td class="lbl">생년월일</td><td>${labor.proxyBirth || ''}</td></tr>
                             <tr><td class="lbl">주소</td><td colspan="3">${labor.proxyAddress || ''}</td></tr>
                             <tr><td class="lbl">연락처</td><td colspan="3">${labor.proxyPhone || ''}</td></tr>
-                            <tr><td class="lbl">입금계좌</td><td colspan="3">${labor.proxyAccount || ''}</td></tr>
+                            <tr><td class="lbl">입금계좌</td><td colspan="3">${labor.proxyBank ? labor.proxyBank + ' ' : ''}${labor.proxyAccount || ''}</td></tr>
                         </table>
                         </div>
 
@@ -7056,6 +7117,7 @@
                 if (dbMatch.proxyBirth) newLabor.proxyBirth = dbMatch.proxyBirth;
                 if (dbMatch.proxyAddress) newLabor.proxyAddress = dbMatch.proxyAddress;
                 if (dbMatch.proxyPhone) newLabor.proxyPhone = dbMatch.proxyPhone;
+                if (dbMatch.proxyBank) newLabor.proxyBank = dbMatch.proxyBank;
                 if (dbMatch.proxyAccount) newLabor.proxyAccount = dbMatch.proxyAccount;
             }
 
@@ -9400,7 +9462,7 @@ ${xlsRows}
                             bank: l.bank, account: l.account, address: l.address,
                             price: l.price, visa: l.visa, profilePhoto: l.profilePhoto, count: 1, projects: [projLabel],
                             proxyName: l.proxyName, proxyBirth: l.proxyBirth, proxyAddress: l.proxyAddress,
-                            proxyPhone: l.proxyPhone, proxyAccount: l.proxyAccount
+                            proxyPhone: l.proxyPhone, proxyBank: l.proxyBank, proxyAccount: l.proxyAccount
                         });
                     } else {
                         // 최근 등록 정보(연/월 기준 더 최신)로 갱신, 직종/단가/연락처 등 최신화
@@ -9416,6 +9478,7 @@ ${xlsRows}
                         existing.proxyBirth = l.proxyBirth || existing.proxyBirth;
                         existing.proxyAddress = l.proxyAddress || existing.proxyAddress;
                         existing.proxyPhone = l.proxyPhone || existing.proxyPhone;
+                        existing.proxyBank = l.proxyBank || existing.proxyBank;
                         existing.proxyAccount = l.proxyAccount || existing.proxyAccount;
                         existing.count += 1;
                         if (!existing.projects.includes(projLabel)) existing.projects.push(projLabel);
@@ -9507,7 +9570,7 @@ ${xlsRows}
                     birth = `${century}${yy}-${mm}-${dd}`;
                 }
                 map.set(w.name, {
-                    name: w.name, birth, address: w.address || '', phone: w.phone || '', account: w.account || '',
+                    name: w.name, birth, address: w.address || '', phone: w.phone || '', bank: w.bank || '', account: w.account || '',
                     source: '근로자DB'
                 });
             });
@@ -9520,6 +9583,7 @@ ${xlsRows}
                         birth: l.proxyBirth || '',
                         address: l.proxyAddress || '',
                         phone: l.proxyPhone || '',
+                        bank: l.proxyBank || '',
                         account: l.proxyAccount || '',
                         source: '이전 위임이력'
                     });
@@ -9546,6 +9610,7 @@ ${xlsRows}
                 document.getElementById('detailProxyBirth').value = exact.birth;
                 document.getElementById('detailProxyAddress').value = exact.address;
                 document.getElementById('detailProxyPhone').value = exact.phone;
+                document.getElementById('detailProxyBank').value = exact.bank;
                 document.getElementById('detailProxyAccount').value = exact.account;
             }
 
@@ -9577,6 +9642,7 @@ ${xlsRows}
             document.getElementById('detailProxyBirth').value = match.birth;
             document.getElementById('detailProxyAddress').value = match.address;
             document.getElementById('detailProxyPhone').value = match.phone;
+            document.getElementById('detailProxyBank').value = match.bank;
             document.getElementById('detailProxyAccount').value = match.account;
             hideProxyNameSuggestions();
         }
