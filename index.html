@@ -1972,8 +1972,8 @@
             insuranceMinDays: 8,      // 국민/건강/요양보험 취득 최소 근로일수
             pensionExemptAge: 60,     // 국민연금 면제 연령
             employmentExemptAge: 65,  // 고용보험 면제 연령
-            minTaxEnabled: true,      // 소액부징수 적용 여부 (끄면 금액 상관없이 항상 징수)
-            truncateToTen: false      // 공제액(소득세/지방세/4대보험) 10원 단위 절사 여부
+            minTaxEnabled: false,     // 소액부징수 적용 여부 (기본 꺼짐: 금액 상관없이 항상 징수)
+            truncateToTen: true       // 공제액(소득세/지방세/4대보험) 10원 단위 절사 여부 (기본 켜짐)
         };
         let taxRates = JSON.parse(JSON.stringify(DEFAULT_TAX_RATES));
 
@@ -2354,8 +2354,13 @@
             applyDensity('normal'); 
             setupKeyboardNavigation();
             setupDragRangeListeners(); // 드래그 범위 기입 이벤트 등록
-            // 대장 표는 기본적으로 한 화면에 맞추기를 켜둔 상태로 시작
-            setTimeout(() => { if (!_fitTableActive) toggleFitTableToScreen(); }, 150);
+            // 대장 표는 기본적으로 한 화면에 맞추기를 켠 상태로 시작
+            // (레이아웃/폰트 계산이 끝난 뒤 측정되도록 rAF 두 번 + 여유 지연으로 안정성 확보)
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    setTimeout(() => { if (!_fitTableActive) toggleFitTableToScreen(); }, 300);
+                });
+            });
         };
 
         function initApp() {
@@ -4804,7 +4809,6 @@
         #printTable .total-row { background: #dbeafe; font-weight: 900; }
         #printTable .empty-day { background: #f1f5f9; }
         @media print { @page { size: A4 landscape; margin: 5mm 4mm; } body { margin: 0; } }
-        .print-btn { margin-bottom: 10px; padding: 6px 14px; background:#2563eb; color:#fff; border:none; border-radius:6px; font-weight:700; cursor:pointer; }
             `;
 
             const html = `<!DOCTYPE html>
@@ -4816,7 +4820,6 @@
 </head>
 <body>
 <h1>${proj.company} — ${proj.projectName || ''} (${proj.year}년 ${proj.month}월 노무비명세서)</h1>
-<button class="print-btn" onclick="window.print()">🖨️ 인쇄 / PDF로 저장</button>
 ${printTableEl.outerHTML}
 </body>
 </html>`;
@@ -8182,11 +8185,11 @@ ${printTableEl.outerHTML}
         <div class="doc-section">
             <div class="doc-section-title">주 민 등 록 증</div>
             <div class="doc-section-body">
-                <div class="photo-slot" id="slot-id-front" onclick="triggerUpload('slot-id-front')">
+                <div class="photo-slot ${labor.rosterPhotos && labor.rosterPhotos['id-front'] ? 'has-image' : ''}" id="slot-id-front" onclick="triggerUpload('slot-id-front')">
                     <span class="slot-icon">🪪</span>
                     <span class="slot-label">앞면 사진 추가<br><small style="font-weight:400;color:#9ca3af">클릭하여 업로드</small></span>
                     <input type="file" accept="image/*" onchange="loadPhoto(this,'slot-id-front','img-id-front')" onclick="event.stopPropagation()">
-                    <img id="img-id-front" style="display:none">
+                    <img id="img-id-front" src="${(labor.rosterPhotos && labor.rosterPhotos['id-front']) || ''}" style="display:${labor.rosterPhotos && labor.rosterPhotos['id-front'] ? 'block' : 'none'}">
                     <button class="remove-btn" onclick="removePhoto(event,'slot-id-front','img-id-front')">✕</button>
                 </div>
             </div>
@@ -8196,11 +8199,11 @@ ${printTableEl.outerHTML}
         <div class="doc-section">
             <div class="doc-section-title">통 장 사 본</div>
             <div class="doc-section-body">
-                <div class="photo-slot" id="slot-bank" onclick="triggerUpload('slot-bank')">
+                <div class="photo-slot ${labor.rosterPhotos && labor.rosterPhotos['bank'] ? 'has-image' : ''}" id="slot-bank" onclick="triggerUpload('slot-bank')">
                     <span class="slot-icon">🏦</span>
                     <span class="slot-label">통장 사본 사진 추가<br><small style="font-weight:400;color:#9ca3af">클릭하여 업로드</small></span>
                     <input type="file" accept="image/*" onchange="loadPhoto(this,'slot-bank','img-bank')" onclick="event.stopPropagation()">
-                    <img id="img-bank" style="display:none">
+                    <img id="img-bank" src="${(labor.rosterPhotos && labor.rosterPhotos['bank']) || ''}" style="display:${labor.rosterPhotos && labor.rosterPhotos['bank'] ? 'block' : 'none'}">
                     <button class="remove-btn" onclick="removePhoto(event,'slot-bank','img-bank')">✕</button>
                 </div>
             </div>
@@ -8210,11 +8213,11 @@ ${printTableEl.outerHTML}
         <div class="doc-section">
             <div class="doc-section-title">기초안전보건교육 이수증</div>
             <div class="doc-section-body">
-                <div class="photo-slot" id="slot-safety" onclick="triggerUpload('slot-safety')">
+                <div class="photo-slot ${labor.rosterPhotos && labor.rosterPhotos['safety'] ? 'has-image' : ''}" id="slot-safety" onclick="triggerUpload('slot-safety')">
                     <span class="slot-icon">🦺</span>
                     <span class="slot-label">이수증 사진 추가<br><small style="font-weight:400;color:#9ca3af">클릭하여 업로드</small></span>
                     <input type="file" accept="image/*" onchange="loadPhoto(this,'slot-safety','img-safety')" onclick="event.stopPropagation()">
-                    <img id="img-safety" style="display:none">
+                    <img id="img-safety" src="${(labor.rosterPhotos && labor.rosterPhotos['safety']) || ''}" style="display:${labor.rosterPhotos && labor.rosterPhotos['safety'] ? 'block' : 'none'}">
                     <button class="remove-btn" onclick="removePhoto(event,'slot-safety','img-safety')">✕</button>
                 </div>
             </div>
