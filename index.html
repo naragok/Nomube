@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V5.4 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V5.9 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -181,7 +181,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V5.4</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V5.9</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
@@ -1765,7 +1765,7 @@
                         </span>
                     </div>
                     <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">소액부징수<span class="text-[8px]">(일별)</span></span>
+                        <span class="text-slate-400 shrink-0">소액부징수<span class="text-[8px]">(월합계)</span></span>
                         <span class="flex items-center gap-0.5">
                             <input type="number" step="100" id="rateInputMinTax" onchange="updateTaxRate('minTaxThreshold', this.value, false)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
                             <span class="text-slate-500 text-[9px]">원</span>
@@ -1972,7 +1972,7 @@
             insuranceMinDays: 8,      // 국민/건강/요양보험 취득 최소 근로일수
             pensionExemptAge: 60,     // 국민연금 면제 연령
             employmentExemptAge: 65,  // 고용보험 면제 연령
-            minTaxEnabled: false,     // 소액부징수 적용 여부 (기본 꺼짐: 금액 상관없이 항상 징수)
+            minTaxEnabled: true,      // 소액부징수 적용 여부 (기본 켜짐: 기준 미만 세액 미징수)
             truncateToTen: true       // 공제액(소득세/지방세/4대보험) 10원 단위 절사 여부 (기본 켜짐)
         };
         let taxRates = JSON.parse(JSON.stringify(DEFAULT_TAX_RATES));
@@ -2998,41 +2998,31 @@
             }
         }
 
-        // 2행: 요일/일자 헤더 (슬롯 기반, 월말 빈 칸 처리 포함)
+        // 2행: 요일/일자 헤더 (월말 빈 칸 처리 포함)
         function renderDaysOfWeekHeaderRow(proj, daysInMonth) {
             const weekDays = ["일", "월", "화", "수", "목", "금", "토"];
             const slots = getDaySlots();
             let html = '';
             slots.forEach(slot => {
-                if (slot.type === 'group') {
+                const d = slot.day;
+                if (d > daysInMonth) {
+                    html += `<th class="w-6 border-r border-slate-200 p-0.5 bg-slate-100/50 print:border-black"></th>`;
+                } else {
+                    const dayName = weekDays[new Date(proj.year, proj.month - 1, d).getDay()];
+                    const colorClass = getDayOfWeekColorClass(proj.year, proj.month, d);
+                    const holidayName = getHolidayName(proj.year, proj.month, d);
+                    const rainAmount = getRainAmount(proj, d);
+                    const holidayMark = holidayName ? `<span class="text-[7px] leading-none">🎌</span>` : '';
+                    const rainMark = (rainAmount !== null) ? `<span class="text-[7px] leading-none" title="강수량 약 ${rainAmount}mm">☔</span>` : '';
+                    const markRow = (holidayMark || rainMark) ? `<div class="flex items-center justify-center gap-0.5 leading-none">${holidayMark}${rainMark}</div>` : '';
+                    const tooltipParts = [holidayName, rainAmount !== null ? `강수량 약 ${rainAmount}mm` : null].filter(Boolean);
                     html += `
-                        <th class="w-10 border-r border-slate-200 p-0.5 print:border-black bg-slate-200/60 cursor-pointer hover:bg-slate-300/60"
-                            onclick="expandWeekRange([${slot.weekIndexes.join(',')}])" title="클릭하여 펼치기">
-                            <div class="text-[8px] opacity-75">${slot.start}~${slot.end}</div>
-                            <div class="text-[9px]">접힘</div>
+                        <th class="w-6 border-r border-slate-200 p-0.5 print:border-black ${colorClass}" ${tooltipParts.length ? `title="${tooltipParts.join(' / ')}"` : ''}>
+                            <div class="text-[8px] opacity-75">${dayName}</div>
+                            <div>${d}</div>
+                            ${markRow}
                         </th>
                     `;
-                } else {
-                    const d = slot.day;
-                    if (d > daysInMonth) {
-                        html += `<th class="w-6 border-r border-slate-200 p-0.5 bg-slate-100/50 print:border-black"></th>`;
-                    } else {
-                        const dayName = weekDays[new Date(proj.year, proj.month - 1, d).getDay()];
-                        const colorClass = getDayOfWeekColorClass(proj.year, proj.month, d);
-                        const holidayName = getHolidayName(proj.year, proj.month, d);
-                        const rainAmount = getRainAmount(proj, d);
-                        const holidayMark = holidayName ? `<span class="text-[7px] leading-none">🎌</span>` : '';
-                        const rainMark = (rainAmount !== null) ? `<span class="text-[7px] leading-none" title="강수량 약 ${rainAmount}mm">☔</span>` : '';
-                        const markRow = (holidayMark || rainMark) ? `<div class="flex items-center justify-center gap-0.5 leading-none">${holidayMark}${rainMark}</div>` : '';
-                        const tooltipParts = [holidayName, rainAmount !== null ? `강수량 약 ${rainAmount}mm` : null].filter(Boolean);
-                        html += `
-                            <th class="w-6 border-r border-slate-200 p-0.5 print:border-black ${colorClass}" ${tooltipParts.length ? `title="${tooltipParts.join(' / ')}"` : ''}>
-                                <div class="text-[8px] opacity-75">${dayName}</div>
-                                <div>${d}</div>
-                                ${markRow}
-                            </th>
-                        `;
-                    }
                 }
             });
             return html;
@@ -3337,19 +3327,9 @@
                     <td class="${pad} border-r border-slate-200 text-slate-600 print:border-black">${labor.job || '보통인부'}</td>
                 `;
 
-                // 출근일자 입력 필드 구성 (주차 그룹 접힘 상태 반영)
+                // 출근일자 입력 필드 구성
                 const daySlots = getDaySlots();
                 daySlots.forEach(slot => {
-                    if (slot.type === 'group') {
-                        const rangeSum = getRangeAttendanceSum(labor, slot.days, daysInMonth);
-                        html += `
-                            <td class="border-r border-slate-200 p-0.5 bg-slate-200/40 text-center font-bold text-slate-500 cursor-pointer hover:bg-slate-300/50 print:border-black"
-                                onclick="expandWeekRange([${slot.weekIndexes.join(',')}])" title="${slot.start}~${slot.end}일 소계: ${rangeSum}일 (클릭하여 펼치기)">
-                                ${rangeSum > 0 ? rangeSum : '-'}
-                            </td>
-                        `;
-                        return;
-                    }
                     const d = slot.day;
                     const isDayValid = d <= daysInMonth;
                     const val = isDayValid ? (labor.attendance[d] || 0) : "";
@@ -5735,17 +5715,6 @@ ${printTableEl.outerHTML}
 
             const daySlots = getDaySlots();
             daySlots.forEach(slot => {
-                if (slot.type === 'group') {
-                    let rangeSum = 0;
-                    slot.days.forEach(d => { if (d <= daysInMonth) rangeSum += dailyCounts[d] || 0; });
-                    html += `
-                        <td class="p-0.5 border-r border-slate-200 bg-slate-300/40 text-center font-black text-[10px] text-slate-600 cursor-pointer hover:bg-slate-300/70 print:border-black"
-                            onclick="expandWeekRange([${slot.weekIndexes.join(',')}])" title="${slot.start}~${slot.end}일 합계: ${rangeSum}명 (클릭하여 펼치기)">
-                            ${rangeSum > 0 ? rangeSum : ''}
-                        </td>
-                    `;
-                    return;
-                }
                 const d = slot.day;
                 const isDayValid = d <= daysInMonth;
                 const bgClass = !isDayValid ? 'bg-slate-200/50' : '';
@@ -7880,17 +7849,19 @@ ${printTableEl.outerHTML}
                     care = Math.floor(health * taxRates.careRate);
                 }
 
-                // 일용직 소득세 일별 소액부징수 법령 정밀 준수
-                // (일당 - 비과세 공제 후 원천세율 적용 시, 일별 소득세액이 소액부징수 기준 미만이면 전액 0원 징수 제외)
+                // 일용직 소득세 소액부징수 (월합계 기준)
+                // (일당 - 비과세 공제 후 원천세율 적용 → 근무일수를 곱한 월합계 소득세가 소액부징수 기준 미만이면 전액 0원 징수 제외)
                 // ※ "소액부징수 적용" 옵션을 끄면 기준 미만이어도 항상 징수함
                 if (labor.price > taxRates.taxFreeAmount) {
                     const dailyCalculatedTax = Math.floor((labor.price - taxRates.taxFreeAmount) * taxRates.incomeTaxRate);
+                    const dailyLocalTax = Math.floor(dailyCalculatedTax * taxRates.localTaxRate);
+                    const monthlyIncomeTax = dailyCalculatedTax * effectiveDays;
+                    const monthlyLocalTax = dailyLocalTax * effectiveDays;
                     const minTaxEnabled = taxRates.minTaxEnabled !== false;
 
-                    if (!minTaxEnabled || dailyCalculatedTax >= taxRates.minTaxThreshold) {
-                        const dailyLocalTax = Math.floor(dailyCalculatedTax * taxRates.localTaxRate);
-                        incomeTax = dailyCalculatedTax * effectiveDays;
-                        localTax = dailyLocalTax * effectiveDays;
+                    if (!minTaxEnabled || monthlyIncomeTax >= taxRates.minTaxThreshold) {
+                        incomeTax = monthlyIncomeTax;
+                        localTax = monthlyLocalTax;
                     }
                 }
 
@@ -8591,7 +8562,7 @@ ${printTableEl.outerHTML}
             let xlsRows = '';
 
             // 타이틀 행 (회사명/현장명)
-            const totalCols = 5 + 31 + 11; // NO+성명+주민번호+주소+직종 + 1~31 + 우측9개(공제내역) + 면제플래그2개
+            const totalCols = 5 + 31 + 13; // NO+성명+주민번호+주소+직종 + 1~31 + 우측11개(소득세/지방세 분리 등) + 면제플래그2개
             xlsRows += `<Row ss:Height="22">${C(`${proj.company} — ${proj.projectName} (${proj.year}년 ${proj.month}월 노무비 지급명세)`, 'title', totalCols - 1, 0, 'String')}</Row>`;
 
             // 헤더 행 1: 고정셀(rowspan=2용 MergeDown=1) + 1~16일 + 우측셀(MergeDown=1)
@@ -8607,9 +8578,11 @@ ${printTableEl.outerHTML}
             xlsRows += C('일수',     'hdr', 0, 1);
             xlsRows += C('단가',     'hdr', 0, 1);
             xlsRows += C('총액',     'hdr', 0, 1);
-            xlsRows += C('소득세\n지방세', 'hdr', 0, 1);
+            xlsRows += C('소득세',   'hdr', 0, 1);
+            xlsRows += C('지방세',   'hdr', 0, 1);
             xlsRows += C('고용보험', 'hdr', 0, 1);
-            xlsRows += C('건강\n장기요양', 'hdr', 0, 1);
+            xlsRows += C('건강보험', 'hdr', 0, 1);
+            xlsRows += C('장기요양', 'hdr', 0, 1);
             xlsRows += C('국민연금', 'hdr', 0, 1);
             xlsRows += C('공제합계', 'hdr', 0, 1);
             xlsRows += C('실지급액', 'hdr', 0, 1);
@@ -8646,34 +8619,34 @@ ${printTableEl.outerHTML}
                 }
                 // 일수/총액/공제합계/지급액은 실제 엑셀 수식으로 연결 (RC 상대참조)
                 // - 일수 = 이 행의 1~16일 합계 + 다음 행(같은 근로자)의 17~31일 합계
+                //   ※ 단, "수동 일수 보정"이 적용된 근로자는 실제 출역체크와 무관하게 고정된 일수를 쓰므로
+                //     SUM 수식이 아닌 고정값으로 출력한다 (그렇지 않으면 엑셀에서 출역 SUM과 달라져 앱과 금액이 어긋남)
                 // - 총액 = 일수 × 단가
                 // - 공제합계 = 소득세지방세+고용보험+건강장기요양+국민연금
                 // - 지급액 = 총액 - 공제합계
-                xlsRows += CF('=SUM(RC[-16]:RC[-1])+SUM(R[1]C[-16]:R[1]C[-2])', calc.effectiveDays, 'cell', 0, 1);
+                const hasManualDays = (l.manualDays !== null && l.manualDays !== undefined);
+                if (hasManualDays) {
+                    xlsRows += C(calc.effectiveDays, 'cell', 0, 1, 'Number');
+                } else {
+                    xlsRows += CF('=SUM(RC[-16]:RC[-1])+SUM(R[1]C[-16]:R[1]C[-2])', calc.effectiveDays, 'cell', 0, 1);
+                }
                 xlsRows += C(l.price,            'money',     0, 1, 'Number');
-                xlsRows += CF('=RC[-1]*RC[-2]', calc.totalWages, 'moneyBold', 0, 1);
-                // 소득세+지방세: 비과세 초과분에 세율 적용 → 소액부징수 기준/적용여부 확인 → 일수 곱
-                // → 소득세·지방세 "각각" 10원 절사 후 합산 (JS 로직과 동일: truncTen을 항목별로 적용)
-                {
-                    const dailyTax = `FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)`;
-                    const dailyLocal = `FLOOR(${dailyTax}*R${REF.localTax}C2,1)`;
-                    const skip = `OR(RC[-2]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,${dailyTax}<R${REF.minTax}C2))`;
-                    const incomeTotal = `IF(${skip},0,${dailyTax}*RC[-3])`;
-                    const localTotal = `IF(${skip},0,${dailyLocal}*RC[-3])`;
-                    xlsRows += CF(`=${wrapTrunc(incomeTotal)}+${wrapTrunc(localTotal)}`, calc.incomeTax + calc.localTax, 'money', 0, 1);
-                }
+                xlsRows += CF('=FLOOR(RC[-1]*RC[-2],1)', calc.totalWages, 'moneyBold', 0, 1);
+                // 소득세: 비과세 초과분에 세율 적용 → 일수 곱해 월합계 산출 → 월합계 기준 소액부징수 판정 → (옵션)10원 절사
+                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-2]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-3]<R${REF.minTax}C2)),0,FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-3])`)}`, calc.incomeTax, 'money', 0, 1);
+                // 지방세: 소득세와 동일 조건, 소득세율 대신 (비과세초과분×소득세율)×지방세율 적용 → (옵션)10원 절사
+                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-3]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,FLOOR((RC[-3]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-4]<R${REF.minTax}C2)),0,FLOOR(FLOOR((RC[-3]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*R${REF.localTax}C2,1)*RC[-4])`)}`, calc.localTax, 'money', 0, 1);
                 // 고용보험: 고용면제자면 0, 아니면 총액×고용보험율 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(RC[6]=1,0,FLOOR(RC[-2]*R${REF.employment}C2,1))`)}`, calc.employment, 'money', 0, 1);
-                // 건강+장기요양: 최소일수 미만이면 0, 아니면 건강보험료·장기요양료 "각각" 10원 절사 후 합산
-                {
-                    const healthRaw = `IF(RC[-5]<R${REF.insuranceMinDays}C2,0,FLOOR(RC[-3]*R${REF.health}C2,1))`;
-                    const careRaw = `IF(RC[-5]<R${REF.insuranceMinDays}C2,0,FLOOR(${healthRaw}*R${REF.care}C2,1))`;
-                    xlsRows += CF(`=${wrapTrunc(healthRaw)}+${wrapTrunc(careRaw)}`, calc.health + calc.care, 'money', 0, 1);
-                }
+                xlsRows += CF(`=${wrapTrunc(`IF(RC[7]=1,0,FLOOR(RC[-3]*R${REF.employment}C2,1))`)}`, calc.employment, 'money', 0, 1);
+                // 건강보험: 최소일수 미만이면 0, 아니면 총액×건강보험율 → (옵션)10원 절사
+                xlsRows += CF(`=${wrapTrunc(`IF(RC[-6]<R${REF.insuranceMinDays}C2,0,FLOOR(RC[-4]*R${REF.health}C2,1))`)}`, calc.health, 'money', 0, 1);
+                // 장기요양: 최소일수 미만이면 0, 아니면 (총액×건강보험율)×장기요양율 → (옵션)10원 절사
+                // ※ 건강보험 셀 값(절사 이후일 수 있음)을 참조하지 않고 독립적으로 재계산 — JS도 절사 전 건강보험액을 기준으로 장기요양을 계산하기 때문
+                xlsRows += CF(`=${wrapTrunc(`IF(RC[-7]<R${REF.insuranceMinDays}C2,0,FLOOR(FLOOR(RC[-5]*R${REF.health}C2,1)*R${REF.care}C2,1))`)}`, calc.care, 'money', 0, 1);
                 // 국민연금: 최소일수 미만이거나 연금면제자면 0, 아니면 총액×국민연금율 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-6]<R${REF.insuranceMinDays}C2,RC[3]=1),0,FLOOR(RC[-4]*R${REF.pension}C2,1))`)}`, calc.pension, 'money', 0, 1);
-                xlsRows += CF('=SUM(RC[-4]:RC[-1])', calc.totalDeduction, 'money', 0, 1);
-                xlsRows += CF('=RC[-6]-RC[-1]', calc.netPay, 'moneyBold', 0, 1);
+                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-8]<R${REF.insuranceMinDays}C2,RC[3]=1),0,FLOOR(RC[-6]*R${REF.pension}C2,1))`)}`, calc.pension, 'money', 0, 1);
+                xlsRows += CF('=SUM(RC[-6]:RC[-1])', calc.totalDeduction, 'money', 0, 1);
+                xlsRows += CF('=RC[-8]-RC[-1]', calc.netPay, 'moneyBold', 0, 1);
                 xlsRows += C(pensionExempt,    'cell', 0, 1, 'Number');
                 xlsRows += C(employmentExempt, 'cell', 0, 1, 'Number');
                 xlsRows += `</Row>`;
@@ -8704,12 +8677,14 @@ ${printTableEl.outerHTML}
             xlsRows += CF(`=SUM(R${firstDataRow}C22:R${lastDataRow}C22)`, sumDays,   'total',      0, 1);
             xlsRows += C('-',       'total',      0, 1);
             xlsRows += CF(`=SUM(R${firstDataRow}C24:R${lastDataRow}C24)`, sumWages,  'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C25:R${lastDataRow}C25)`, sumIncome + sumLocal, 'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C26:R${lastDataRow}C26)`, sumEmp,    'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C27:R${lastDataRow}C27)`, sumHealth + sumCare, 'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C28:R${lastDataRow}C28)`, sumPension,'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C29:R${lastDataRow}C29)`, sumDeduct, 'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C30:R${lastDataRow}C30)`, sumNet,    'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C25:R${lastDataRow}C25)`, sumIncome, 'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C26:R${lastDataRow}C26)`, sumLocal,  'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C27:R${lastDataRow}C27)`, sumEmp,    'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C28:R${lastDataRow}C28)`, sumHealth, 'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C29:R${lastDataRow}C29)`, sumCare,   'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C30:R${lastDataRow}C30)`, sumPension,'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C31:R${lastDataRow}C31)`, sumDeduct, 'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C32:R${lastDataRow}C32)`, sumNet,    'moneyTotal', 0, 1);
             xlsRows += `</Row>`;
 
             // 합계 행2: 17~31
