@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V6.2 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V6.3 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -181,7 +181,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V6.2</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V6.3</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
@@ -1680,6 +1680,10 @@
             </div>
             <div class="p-4 border-b border-slate-100 shrink-0 flex items-center gap-2">
                 <input type="text" id="workerDbSearch" oninput="renderWorkerDbList()" placeholder="이름 / 직종 / 연락처 검색" class="flex-1 bg-slate-50 border border-slate-200 rounded p-2 text-xs outline-none focus:ring-1 focus:ring-indigo-500">
+                <label class="flex items-center gap-1 text-[10.5px] font-bold text-rose-600 whitespace-nowrap cursor-pointer bg-rose-50 border border-rose-200 rounded px-2 py-1.5">
+                    <input type="checkbox" id="workerDbMissingAccountOnly" onchange="renderWorkerDbList()" class="accent-rose-500 w-3.5 h-3.5">
+                    계좌 누락만 보기
+                </label>
                 <span id="workerDbCount" class="text-[10px] text-slate-400 font-bold whitespace-nowrap"></span>
             </div>
             <div class="overflow-y-auto flex-1">
@@ -1689,6 +1693,7 @@
                             <th class="p-2 border-b border-slate-200">성명</th>
                             <th class="p-2 border-b border-slate-200">직종</th>
                             <th class="p-2 border-b border-slate-200">연락처</th>
+                            <th class="p-2 border-b border-slate-200">계좌번호</th>
                             <th class="p-2 border-b border-slate-200">최근 단가</th>
                             <th class="p-2 border-b border-slate-200">등록 이력(대장 수)</th>
                             <th class="p-2 border-b border-slate-200 no-print"></th>
@@ -9865,19 +9870,24 @@ ${xlsRows}
 
         function renderWorkerDbList() {
             const kw = document.getElementById('workerDbSearch').value.trim().toLowerCase();
-            const list = kw
+            const missingOnly = document.getElementById('workerDbMissingAccountOnly').checked;
+            let list = kw
                 ? _workerDbCache.filter(w =>
                     w.name.toLowerCase().includes(kw) ||
                     (w.job || '').toLowerCase().includes(kw) ||
                     (w.phone || '').toLowerCase().includes(kw))
                 : _workerDbCache;
 
+            const missingCount = _workerDbCache.filter(w => !w.account || !w.account.trim()).length;
+            if (missingOnly) list = list.filter(w => !w.account || !w.account.trim());
+
             const tbody = document.getElementById('workerDbTableBody');
             tbody.innerHTML = '';
-            document.getElementById('workerDbCount').textContent = `총 ${list.length}명`;
+            document.getElementById('workerDbCount').textContent =
+                `총 ${list.length}명` + (missingCount > 0 ? ` · 계좌누락 ${missingCount}명` : '');
 
             if (list.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-400 font-semibold">등록된 근로자 정보가 없습니다.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" class="p-6 text-center text-slate-400 font-semibold">등록된 근로자 정보가 없습니다.</td></tr>';
                 return;
             }
 
@@ -9912,6 +9922,20 @@ ${xlsRows}
                 tdPhone.className = 'p-2 text-slate-600 font-mono';
                 tdPhone.textContent = w.phone || '-';
 
+                const tdAccount = document.createElement('td');
+                if (w.account && w.account.trim()) {
+                    tdAccount.className = 'p-2 text-slate-600 font-mono';
+                    tdAccount.textContent = (w.bank ? w.bank + ' ' : '') + w.account;
+                } else {
+                    tdAccount.className = 'p-2';
+                    const warn = document.createElement('span');
+                    warn.className = 'text-[9.5px] bg-rose-100 text-rose-600 font-bold px-1.5 py-0.5 rounded cursor-pointer hover:bg-rose-200';
+                    warn.textContent = '⚠️ 계좌 누락';
+                    warn.title = '클릭하면 바로 계좌번호를 등록할 수 있습니다';
+                    warn.addEventListener('click', () => openWorkerDbEditModal(w));
+                    tdAccount.appendChild(warn);
+                }
+
                 const tdPrice = document.createElement('td');
                 tdPrice.className = 'p-2 text-slate-600 font-mono';
                 tdPrice.textContent = w.price ? commaFormatter(w.price) + '원' : '-';
@@ -9930,7 +9954,7 @@ ${xlsRows}
                 btn.addEventListener('click', () => _addWorkerFromDbToCurrentProject(idx, list));
                 tdBtn.appendChild(btn);
 
-                tr.append(tdName, tdJob, tdPhone, tdPrice, tdCount, tdBtn);
+                tr.append(tdName, tdJob, tdPhone, tdAccount, tdPrice, tdCount, tdBtn);
                 tbody.appendChild(tr);
             });
         }
