@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V6.29 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V6.38 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAKKUlEQVR4nO3dT2wcZxnH8d/sev2/XaK0MdA0bZ3YLVZIceLwL0hpJSiqqFCIRFWQWgQcuBHUAz2AkEAVJ4QULoBEEVKlnipSBJUQF9KqKgLsGNxgQZzYTRS3cUnjODZZ27ve4WCNvd59Z3Z2d2beZ579faQc4l2PJ/F3331mdtZ2IEB+YMS1vQ/UuqWFacf2PljZAQbcHmwEntgXZMTtLam4Y/0ijJhM4ow7lg0zZAojjrAzUW+QMVNYcbQS2SOEIVMrolqtI1mhGTO1KqqGWnpUMGSKQyurddMrNGOmuLTSVlNBM2aKW7ONNRw0Y6akNNNaQ0EzZkpao82FDpoxky2NtBcqaMZMtoVtsG7QjJmkCNNi5C99E9kUGDRXZ5KmXpO+r8i0e8xf+uk/bO9CoDPPfsz2Lljl92oigzaQHnOldg3bL2jjyMGY0yNt+xsVv0ZrgmbM6ZPW/W6VqVWe5SBVdgTdzqszpVN1sx22dqRZV2YnY9v2qVdi23Ts4vx/2Tc4Gtu2o5aaoOP8hlEw7/8+DWFvBS113GDIckgNOz8w4nqn8UQfFCYd8+kTIh/TdSW935IXGbFBS/5PI7nfnwwgd9ywIW2rdNr2Ny5ew07lX6SQ8Og/9Yr1H6QZSErIkubppYVpJzVnOZImJRhqjLgZWsLqTOFJ+35lpI0bRM3KD4y44lZoolYwaFKFQZMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUUfXjdF/87Z9t70IqPX3yUdu7EBmu0KQKgyZVVI0cmp46qTlcoUkVBk2qMGhShUGTKgyaVGHQpAqDJlUYNKnCoEkVBk2qMGhShUGTKgyaVGHQpAqDJlUYNKnCoEkVVe9Y4Ztkm6PpnT5coUkVBk2qqBo5ND11UnO4QpMqDJpUYdCkCoMmVRg0qcKgSRUGTaowaFKFQZMqDJpUYdCkCoMmVRg0qaLqajvaaezbt0Lfd/xnd8a4J8lh0Eo0Em/Yz09j5Aw6xVqNuJHtpyVuBp1CcYcc9DWlh60qaO1vkj199ojtXRAftqqgtZIQcjWpYfO0nXASY65kY/wJ4uQHRlzbO1Hpyuyk7V0QQ1osQd77w3HbuwCAI4dIaQrZs+eJ1wDYD5sjhzBpjLmSF7YtDFqQtMfssRk1gxZCS8weW1EzaAG0xeyxETWDtkxrzJ6ko2bQpAqDtkj76uxJcpVm0Ja0S8yepKJm0Ba0W8yeJKJm0KQKg05Yu67OnrhXaQZNqvDipAQ1ujo//0w/jn+003jbX/5dxHdfWK67jeG9HXjhlP81y6d/dxsvv7Fadztf/1wPvvFYj/G2uYUNPPOTpbrb8Ox54rXYLmJi0IK9/d4GntxlfhJ99FAnHAdw61z8+4kHcxjw2QYAHBvJhQr6Mwf9t/P6+fW6n58UjhwJaWZ2Hr9Q9L0t3+fgwIey9b/uUPCadWQoV3cbGQcYHfS/3/iM/376iWuWZtCCnb9cwuq6/xI8Nlw/xrE6wX5wVwb33BX8wHjo3g709zi+t0/MlOruR1I4cgh1354shu7J4tpiGfcPmIN77HAX/rtU9t3GB/oyuDtff8366iPdmLzkv8oeGzHP8QBQWHcxvDeLO3od/Ouy/bD5FqwENDNufPPzPXjuy30x7E08zry5hud+Xf8gtVrUB4ccOUgVjhxCzcxv4MybawCAL36yC1mfpWdqroRL724Yb3t8rBPdnTtn3+u3yrjrztqN/encOv63WvtkvavfwSOH/EcO7/OaOTCMA4MW6vXz61unw4Y+nMXB+83fqukrJfzgxZWaj+f7HJz41O6aj//i1QK+/5XaUeblN1Zxdqr29NvJY92+QRfWXXznl7dQMj+erODIIZTjANnM5p+Ji/6r39Hh3Nb9Kv8cHc7BqToxUXaB3/91zXggOTZk3s6RA/5r3tRcCa67eb+M/0mQRPGgMGbNXrvRLgeFQLQHhlyhSRXO0EIV1lxcv7U9GuR7M8j5fLfWii6WC9tPtNkMsKu/dq1auu2iWHLhOMDuO2pvXy64WCtub6en00Fft3mWKLvAjeXt/Vsu+J8PTxKDFuqls6t46ez2NRY/erofTx3vNt53Zn4DJ5+/ufX3T4/k8Jtn8zX3O/HDRcy/X4bjAH87vRv53p2x/uqPBfz81dtbf//eU3342mfNFyRNzZXw5I9vGm+ziSNHSgSdFvvIvg70dm3HeeRA7cvd1xbLmH9/cxV1XeCc4UBzbHjn+hb0svmEkNN01Rh0SgRdqJTNAKP7t2M0hVj9gDBtb3Qwt3W+u6/bwUP3+j+BM2hqyTs3ynjnhv+c6l2olM0ADw/WhlgdsGnF7+9x8ODezc89vD/n+2KO6wITF+1ft2HCoFMkaFX0VuXq8cMzXhXgW2+XUDBcyeddTlo9flSavbaBxRUZB4HVGHSKBM3RDz/QgVwHcNQwbizddjEzvzPo0gbwz9naVda7fjqN8zPAoFMlaI7u7nRw8L4O4wX7kxeLxne2mB4gY0M55DqAQw/4r9BSrtswYdApcvHdDdxcCbjgfyiHw4aXqv0CNH387nwGX/h4F7py/q9ljwu6oL8ag45ZlL9UZ/NgzH91PHms23gl3fgFc4CTl0rYMIzC33q81/drLCyWcfV6dFcj8XroNhf0dL/f8B7DtaKLty6bP6ew5mL6Sm3spu14gh5QEjDolGn0gGxqroRiwIQQNJcb7y94fgYYdOqcv2w+3ean3gPg7w0GKnl+Bhh06vidbvNTL8CJmVLdn+3hWS64uHBVeNBLC9NCLs3WK+rfthr2ab/sAucC3s0NAIsrZcxeC3eQN3mpiHKEV89HfUC4tDDtcIVOobBB/+dqCSuF+gWG3Z70cQMQOHLsGxy1vQvi+Z1uqxb2gC/s/SS/QugRF7RWUY4dfqfbqoW9gCjMCl0sbZ4xiUpcP6xxa37mewvj1+4/G7pSHPMzwBU6UVEfHKZVnL8PXGzQnKWpGVtBSzx9pzHqdl+l41idK9sVu0J79g2Oqgyb4iE+aI+msNt1lY5zdvbUjBnSznZoZuOXu9sSV8zVo3JqVmiNklixJEjy31kTtMSDQyITU6vGFZpRJ0f7Kp3UqOHhyCGA1qht/Lt8g+YqnSxtUcf57wlqM3CFZtTJ0hK1rZgBjhzipD1q2/sfagXmuWk70nSeOomQw0wMoVZojh522F7twpISM9DAyMGo7ZAetaSYgZAjRyWOH/ZIGkGSeqA1upA2teoyartshp3kM0YzU0HTYwSjti/JsJMefZodcVuaixm1HHHEbWt+b+V4LZIDPYYtUyORSzj4jOLEQ2RnLhg1tSKqs2iRn4pj2NSIqE8HR/7SN89XU1hxtBJrfFytySTORS+x1ZRxt7eknrmtjAeMuz3YGD9FzLsMXAcJx0//ByNZdeHFWJwrAAAAAElFTkSuQmCC">
@@ -235,8 +235,8 @@
             #printTable .pt-days  { width: 7mm; font-weight: 900; }
             #printTable .pt-price { width: 12mm; font-weight: 900; }
             #printTable .pt-total { width: 15mm; font-weight: 900; }
-            #printTable .pt-tax   { width: 13mm; }
-            #printTable .pt-ins   { width: 10mm; }
+            #printTable .pt-tax   { width: 9mm; }
+            #printTable .pt-ins   { width: 8mm; }
             #printTable .pt-deduct{ width: 13mm; font-weight: 900; }
             #printTable .pt-net   { width: 15mm; font-weight: 900; }
             #printTable .pt-no    { width: 6mm; }
@@ -262,7 +262,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V6.29</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V6.38</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -1016,11 +1016,11 @@
                         <span class="block text-[10.5px] text-slate-400 mt-0.5">칸을 클릭해 값을 직접 고칠 수 있습니다. (자동 재계산은 되지 않으며, 합계는 직접 고쳐야 합니다)</span>
                     </span>
                 </button>
-                <button onclick="_confirmExportFullProgramWithData()" class="w-full text-left p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:bg-purple-50 transition-all flex items-start gap-2.5">
-                    <i data-lucide="package" class="w-4 h-4 text-purple-600 mt-0.5 shrink-0"></i>
+                <button onclick="_confirmExportLedgerWithFormulas()" class="w-full text-left p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:bg-purple-50 transition-all flex items-start gap-2.5">
+                    <i data-lucide="sigma" class="w-4 h-4 text-purple-600 mt-0.5 shrink-0"></i>
                     <span>
-                        <span class="block font-bold text-slate-800 text-xs">프로그램 전체와 함께 내보내기</span>
-                        <span class="block text-[10.5px] text-slate-400 mt-0.5">이 시스템 자체를 통째로 복사해, 지금 현장 데이터가 이미 들어간 상태로 저장합니다. 받는 분이 원본 프로그램 없이도 이 파일 하나로 바로 근태를 입력·계산할 수 있습니다. (인터넷 연결은 필요, 파일 용량이 큽니다)</span>
+                        <span class="block font-bold text-slate-800 text-xs">명세서 + 자동계산</span>
+                        <span class="block text-[10.5px] text-slate-400 mt-0.5">출역값이나 단가를 고치면 일수·세금·보험·실지급액이 자동으로 다시 계산됩니다. 전체 프로그램 없이 명세서 표 하나만 가볍게 담깁니다.</span>
                     </span>
                 </button>
             </div>
@@ -5515,8 +5515,8 @@
         #printTable .pt-days  { width: 7mm; font-weight: 900; }
         #printTable .pt-price { width: 12mm; font-weight: 900; }
         #printTable .pt-total { width: 15mm; font-weight: 900; }
-        #printTable .pt-tax   { width: 13mm; }
-        #printTable .pt-ins   { width: 10mm; }
+        #printTable .pt-tax   { width: 9mm; }
+        #printTable .pt-ins   { width: 8mm; }
         #printTable .pt-deduct{ width: 13mm; font-weight: 900; }
         #printTable .pt-net   { width: 15mm; font-weight: 900; }
         #printTable .pt-no    { width: 6mm; }
@@ -5566,59 +5566,289 @@ ${tableClone.outerHTML}
         }
 
         // ============================================================
-        // "프로그램 전체와 함께 내보내기" — 이 시스템(전체 HTML 앱) 자체를 통째로 복사해,
-        // 지금 보고 있는 현장 데이터가 이미 들어간 상태의 완전히 새로운 독립 실행 파일로 저장한다.
-        // 받는 사람은 인터넷 연결이나 원본 프로그램 없이도 이 파일 하나로 시스템 전체(근태 입력,
-        // 계산, 서류 발급 등)를 그대로 사용할 수 있다.
+        // "명세서 + 자동계산" — 프로그램 전체가 아니라 명세서 표 + 자동 재계산 수식만 담아
+        // 가볍게 내보낸다. 출역값/단가를 고치면 소득세·4대보험·실지급액이 그 자리에서 다시 계산된다.
         // ============================================================
-        function _confirmExportFullProgramWithData() {
+        function _confirmExportLedgerWithFormulas() {
             const proj = appState.projects[appState.currentProjectId];
-            if (!proj) { showToast('내보낼 현장 데이터가 없습니다.'); return; }
+            if (!proj || !proj.labors || proj.labors.length === 0) {
+                showToast('내보낼 대장 데이터가 없습니다.');
+                return;
+            }
             showCustomConfirm(
-                `현재 프로그램 전체(모든 화면·기능)를 복사해서, "${proj.company} ${proj.year}년 ${proj.month}월" 현재 데이터가 이미 들어간 새 파일로 저장합니다.<br><br>` +
-                `⚠️ 이 파일은 원본과 <b>완전히 분리된 별도의 시스템</b>이 됩니다. 이후 원본에서 수정한 내용은 이 파일에 반영되지 않고, 반대로 이 파일에서 수정한 내용도 원본에 반영되지 않습니다.<br>` +
-                `※ 화면 디자인·PDF 생성 등에 쓰이는 일부 구성요소는 온라인에서 불러오므로, 여는 컴퓨터에 인터넷 연결이 필요합니다.<br><br>` +
-                `파일 용량이 크니(1MB 이상) 잠시 기다려 주세요. 계속하시겠습니까?`,
-                _generateAndDownloadFullProgramWithData
+                `"${proj.company} ${proj.year}년 ${proj.month}월" 명세서를 자동계산 기능과 함께 내보냅니다.<br><br>` +
+                `출역값이나 단가를 고치면 그 줄의 일수·세금·4대보험·실지급액과 하단 합계가 자동으로 다시 계산됩니다. ` +
+                `(현재 적용 중인 세율·요율 기준이 그대로 담기며, 이후 원본 대장에서 세율을 바꿔도 이 파일에는 반영되지 않습니다)<br><br>` +
+                `계속하시겠습니까?`,
+                _generateAndDownloadLedgerWithFormulas
             );
         }
 
-        function _generateAndDownloadFullProgramWithData() {
+        function _generateAndDownloadLedgerWithFormulas() {
             closeLedgerHtmlExportModal();
             const proj = appState.projects[appState.currentProjectId];
             if (!proj) return;
 
-            showToast('프로그램 전체를 데이터와 함께 묶는 중입니다...');
+            const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
+            const weekDays = ['일','월','화','수','목','금','토'];
+            const dowName = (d) => weekDays[new Date(proj.year, proj.month - 1, d).getDay()];
+            const dowClass = (d) => { const w = new Date(proj.year, proj.month - 1, d).getDay(); return w === 0 ? 'sun' : w === 6 ? 'sat' : ''; };
 
-            // setTimeout으로 한 틱 미뤄, 위 토스트가 화면에 그려질 시간을 준 뒤(대용량 문자열 생성은
-            // 동기 작업이라 그 사이 화면이 멈춘 것처럼 보일 수 있음) 실제 생성 작업을 진행한다.
-            setTimeout(() => {
-                try {
-                    // 현재 실행 중인 페이지 전체(모든 화면·모달·스크립트)를 그대로 복제
-                    const docClone = document.documentElement.cloneNode(true);
+            // 근로자별 현재 데이터를 그대로 스냅샷으로 담는다 (이 파일은 원본과 분리된 사본)
+            const workersData = proj.labors.map(l => ({
+                name: l.name, ssn: l.ssn || '', job: l.job || '보통인부', address: l.address || '',
+                price: Number(l.price) || 0,
+                attendance: Object.fromEntries(Object.entries(l.attendance || {}).filter(([d, v]) => Number(v) > 0))
+            }));
 
-                    // 복제본에는 현재 열려 있던(혹은 열려 있었을 수 있는) 팝업들이 그대로 남아있을 수 있으므로
-                    // 전부 강제로 숨김 처리해, 받는 사람이 파일을 열었을 때 깨끗한 초기 화면으로 시작하게 한다.
-                    docClone.querySelectorAll('.fixed.inset-0').forEach(modal => modal.classList.add('hidden'));
+            const css = `
+        * { box-sizing: border-box; }
+        body { margin: 16px; background: #fff; color: #111; font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; }
+        h1 { font-size: 16px; margin: 0 0 4px; }
+        .info-banner { display: inline-flex; align-items: center; gap: 6px; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
+        .tbl-wrap { overflow-x: auto; }
+        table { border-collapse: collapse; font-size: 10.5px; white-space: nowrap; }
+        th, td { border: 1px solid #94a3b8; text-align: center; padding: 3px 4px; }
+        th { background: #1e293b; color: #fff; position: sticky; top: 0; }
+        td.name-cell { font-weight: 700; text-align: left; padding-left: 6px; }
+        td.sun { color: #dc2626; background: #fff1f2; }
+        td.sat { color: #1d4ed8; background: #eff6ff; }
+        .empty-day { background: #f1f5f9; }
+        input.att-input { width: 34px; text-align: center; border: 1px solid #cbd5e1; border-radius: 3px; padding: 2px 0; font-size: 10px; }
+        input.price-input { width: 76px; text-align: right; border: 1px solid #cbd5e1; border-radius: 3px; padding: 2px 4px; font-size: 10.5px; font-weight: 700; }
+        input.att-input:focus, input.price-input:focus { outline: 2px solid #7c3aed; background: #f5f3ff; }
+        td.computed { font-family: monospace; font-weight: 700; }
+        td.net-cell { color: #047857; }
+        tr.total-row td { background: #ede9fe; font-weight: 900; }
+        tr.total-row input { display: none; }
+        @media print { .no-print { display: none !important; } }
+            `;
 
-                    let htmlStr = '<!DOCTYPE html>\n' + docClone.outerHTML;
+            // calculateDeductions/getExactInsuranceAge를 이 파일 안에서 그대로 동작하도록
+            // 현재 세율·요율(taxRates)을 스냅샷으로 담아 내장한다.
+            const script = `
+        const PROJ = ${JSON.stringify({ year: proj.year, month: proj.month })};
+        const TAX_RATES = ${JSON.stringify(taxRates)};
+        const DAYS_IN_MONTH = ${daysInMonth};
+        let WORKERS = ${JSON.stringify(workersData)};
+        const _ageCache = new Map();
 
-                    // appState 전체를 JSON으로 직렬화한 뒤, 페이지가 열리자마자(메인 스크립트가
-                    // localStorage를 읽기 전에) 그 값을 미리 심어두는 시드 스크립트를 <body> 시작 부분에 삽입
-                    const seedJson = JSON.stringify(JSON.stringify(appState));
-                    const seedScript = `<script>try{localStorage.setItem('labor_payment_system_data_v4', ${seedJson});}catch(e){}<\/script>`;
-                    htmlStr = htmlStr.replace(/<body([^>]*)>/, `<body$1>${seedScript}`);
+        function getExactInsuranceAge(ssn, projectYear, projectMonth, projectDay) {
+            const refDay = projectDay || 1;
+            const cacheKey = ssn + '|' + projectYear + '|' + projectMonth + '|' + refDay;
+            if (_ageCache.has(cacheKey)) return _ageCache.get(cacheKey);
+            if (!ssn) return { age: 30, isPensionExempt: false, isEmploymentExempt: false };
+            const clean = ssn.replace(/[^0-9]/g, '');
+            if (clean.length < 7) return { age: 30, isPensionExempt: false, isEmploymentExempt: false };
+            const yy = parseInt(clean.substring(0,2),10), mm = parseInt(clean.substring(2,4),10), dd = parseInt(clean.substring(4,6),10), g = parseInt(clean.substring(6,7),10);
+            let birthYear = 1900 + yy;
+            if (g===3||g===4||g===7||g===8) birthYear = 2000+yy;
+            else if (g===0||g===9) birthYear = 1800+yy;
+            else if (g===1||g===2||g===5||g===6) birthYear = 1900+yy;
+            else birthYear = (yy<=30) ? 2000+yy : 1900+yy;
+            let age = projectYear - birthYear;
+            const birthMonth = mm, birthDay = dd || 1;
+            if (projectMonth < birthMonth || (projectMonth === birthMonth && refDay < birthDay)) age -= 1;
+            const result = { age, isPensionExempt: age >= 60, isEmploymentExempt: age >= 65 };
+            _ageCache.set(cacheKey, result);
+            return result;
+        }
 
-                    const now = new Date();
-                    const stamp = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}`;
-                    const filename = `노무비시스템_${proj.company}_${proj.year}년${String(proj.month).padStart(2,'0')}월_전체프로그램_${stamp}.html`;
-
-                    _downloadHtmlFile(htmlStr, filename);
-                    showCustomAlert('프로그램 전체(데이터 포함) 파일이 저장되었습니다. 받는 분은 이 파일을 열기만 하면 바로 시스템을 사용할 수 있습니다. (단, 인터넷 연결은 필요합니다)');
-                } catch (err) {
-                    showCustomAlert('내보내기 중 오류가 발생했습니다: ' + err.message);
+        function calculateDeductions(price, effectiveDays, ssn) {
+            const totalWages = Math.floor(price * effectiveDays);
+            const lastDay = DAYS_IN_MONTH;
+            const { isPensionExempt, isEmploymentExempt } = getExactInsuranceAge(ssn, PROJ.year, PROJ.month, lastDay);
+            let pension=0, health=0, care=0, employment=0, incomeTax=0, localTax=0;
+            if (totalWages > 0) {
+                if (!isEmploymentExempt) employment = Math.floor(totalWages * TAX_RATES.employmentRate);
+                if (effectiveDays >= TAX_RATES.insuranceMinDays) {
+                    if (!isPensionExempt) pension = Math.floor(totalWages * TAX_RATES.pensionRate);
+                    health = Math.floor(totalWages * TAX_RATES.healthRate);
+                    care = Math.floor(health * TAX_RATES.careRate);
                 }
-            }, 50);
+                if (price > TAX_RATES.taxFreeAmount) {
+                    const dTax = Math.floor((price - TAX_RATES.taxFreeAmount) * TAX_RATES.incomeTaxRate);
+                    const dLocal = Math.floor(dTax * TAX_RATES.localTaxRate);
+                    const mTax = dTax * effectiveDays, mLocal = dLocal * effectiveDays;
+                    const minEnabled = TAX_RATES.minTaxEnabled !== false;
+                    if (!minEnabled || mTax >= TAX_RATES.minTaxThreshold) { incomeTax = mTax; localTax = mLocal; }
+                }
+                if (TAX_RATES.truncateToTen) {
+                    const t = v => Math.floor(v/10)*10;
+                    pension=t(pension); health=t(health); care=t(care); employment=t(employment); incomeTax=t(incomeTax); localTax=t(localTax);
+                }
+            }
+            const totalDeduction = pension+health+care+employment+incomeTax+localTax;
+            return { totalWages, pension, health, care, employment, incomeTax, localTax, totalDeduction, netPay: totalWages - totalDeduction };
+        }
+
+        function recomputeRow(idx) {
+            const w = WORKERS[idx];
+            let days = 0;
+            for (let d = 1; d <= DAYS_IN_MONTH; d++) {
+                const input = document.getElementById('att_' + idx + '_' + d);
+                const v = input ? Number(input.value || 0) : 0;
+                if (v > 0) days = Math.round((days + v) * 10) / 10;
+            }
+            const priceInput = document.getElementById('price_' + idx);
+            w.price = Number(priceInput.value.replace(/[^0-9.]/g, '')) || 0;
+
+            const calc = calculateDeductions(w.price, days, w.ssn);
+            document.getElementById('days_' + idx).textContent = days.toFixed(1);
+            document.getElementById('wage_' + idx).textContent = calc.totalWages.toLocaleString();
+            document.getElementById('tax_' + idx).textContent = calc.incomeTax.toLocaleString();
+            document.getElementById('local_' + idx).textContent = calc.localTax.toLocaleString();
+            document.getElementById('emp_' + idx).textContent = calc.employment.toLocaleString();
+            document.getElementById('ins_' + idx).textContent = calc.health.toLocaleString();
+            document.getElementById('care_' + idx).textContent = calc.care.toLocaleString();
+            document.getElementById('pen_' + idx).textContent = calc.pension.toLocaleString();
+            document.getElementById('ded_' + idx).textContent = calc.totalDeduction.toLocaleString();
+            document.getElementById('net_' + idx).textContent = calc.netPay.toLocaleString();
+        }
+
+        function recomputeAll() {
+            WORKERS.forEach((w, idx) => recomputeRow(idx));
+            // 하단 합계 행 + 날짜별 합계
+            let sumDays=0, sumWage=0, sumTax=0, sumLocal=0, sumEmp=0, sumHealth=0, sumCare=0, sumPen=0, sumDed=0, sumNet=0;
+            const dailyTotal = Array(DAYS_IN_MONTH + 1).fill(0);
+            WORKERS.forEach((w, idx) => {
+                let days = 0;
+                for (let d = 1; d <= DAYS_IN_MONTH; d++) {
+                    const input = document.getElementById('att_' + idx + '_' + d);
+                    const v = input ? Number(input.value || 0) : 0;
+                    if (v > 0) { days = Math.round((days + v) * 10) / 10; dailyTotal[d] = Math.round((dailyTotal[d] + v) * 10) / 10; }
+                }
+                const calc = calculateDeductions(w.price, days, w.ssn);
+                sumDays += days; sumWage += calc.totalWages; sumTax += calc.incomeTax; sumLocal += calc.localTax;
+                sumEmp += calc.employment; sumHealth += calc.health; sumCare += calc.care; sumPen += calc.pension;
+                sumDed += calc.totalDeduction; sumNet += calc.netPay;
+            });
+            for (let d = 1; d <= DAYS_IN_MONTH; d++) {
+                const el = document.getElementById('dtotal_' + d);
+                if (el) el.textContent = dailyTotal[d] > 0 ? dailyTotal[d] : '';
+            }
+            document.getElementById('total_days').textContent = sumDays.toFixed(1);
+            document.getElementById('total_wage').textContent = sumWage.toLocaleString();
+            document.getElementById('total_tax').textContent = sumTax.toLocaleString();
+            document.getElementById('total_local').textContent = sumLocal.toLocaleString();
+            document.getElementById('total_emp').textContent = sumEmp.toLocaleString();
+            document.getElementById('total_ins').textContent = sumHealth.toLocaleString();
+            document.getElementById('total_care').textContent = sumCare.toLocaleString();
+            document.getElementById('total_pen').textContent = sumPen.toLocaleString();
+            document.getElementById('total_ded').textContent = sumDed.toLocaleString();
+            document.getElementById('total_net').textContent = sumNet.toLocaleString();
+        }
+
+        window.addEventListener('DOMContentLoaded', recomputeAll);
+            `;
+
+            const FIRST_HALF_END = 16; // 1~16일 / 17~31일 두 줄로 분리하는 기준
+
+            const tableRows = workersData.map((w, idx) => {
+                let dayCells1 = '', dayCells2 = '';
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const v = w.attendance[d] || '';
+                    const cell = `<td class="${dowClass(d)}"><input type="number" step="0.1" min="0" class="att-input" id="att_${idx}_${d}" value="${v}" onchange="recomputeRow(${idx});recomputeAll()"></td>`;
+                    if (d <= FIRST_HALF_END) dayCells1 += cell; else dayCells2 += cell;
+                }
+                return `
+                    <tr>
+                        <td rowspan="2">${idx + 1}</td>
+                        <td rowspan="2">${w.job}</td>
+                        <td rowspan="2" class="name-cell">${w.name}</td>
+                        <td rowspan="2" style="font-family:monospace;font-size:9.5px">${w.ssn}</td>
+                        <td rowspan="2" style="text-align:left;padding-left:6px;max-width:120px;overflow:hidden;text-overflow:ellipsis" title="${w.address}">${w.address}</td>
+                        ${dayCells1}
+                        <td rowspan="2" class="computed" id="days_${idx}">-</td>
+                        <td rowspan="2"><input type="text" class="price-input" id="price_${idx}" value="${w.price.toLocaleString()}" onchange="this.value=Number(this.value.replace(/[^0-9]/g,'')).toLocaleString();recomputeRow(${idx});recomputeAll()"></td>
+                        <td rowspan="2" class="computed" id="wage_${idx}">-</td>
+                        <td class="computed" id="tax_${idx}">-</td>
+                        <td rowspan="2" class="computed" id="emp_${idx}">-</td>
+                        <td class="computed" id="ins_${idx}">-</td>
+                        <td rowspan="2" class="computed" id="pen_${idx}">-</td>
+                        <td rowspan="2" class="computed" id="ded_${idx}">-</td>
+                        <td rowspan="2" class="computed net-cell" id="net_${idx}">-</td>
+                    </tr>
+                    <tr>
+                        ${dayCells2}
+                        <td class="empty-day"></td>
+                        <td class="computed" id="local_${idx}">-</td>
+                        <td class="computed" id="care_${idx}">-</td>
+                    </tr>
+                `;
+            }).join('');
+
+            let dayHeaderCells1 = '', dayHeaderCells2 = '';
+            let dayTotalCells1 = '', dayTotalCells2 = '';
+            // 합계 행은 표의 맨 마지막 행이라, rowspan 셀의 아래쪽 테두리가 border-collapse
+            // 렌더링 특성상 누락될 수 있어 border-bottom을 모든 합계 칸에 명시적으로 지정한다.
+            const totalBorder = 'border-bottom:2px solid #374151';
+            for (let d = 1; d <= daysInMonth; d++) {
+                const hdr = `<th class="${dowClass(d)}">${String(d).padStart(2,'0')}<br><span style="font-size:8px;font-weight:400">${dowName(d)}</span></th>`;
+                const tot = `<td class="${dowClass(d)}" id="dtotal_${d}" style="${totalBorder}"></td>`;
+                if (d <= FIRST_HALF_END) { dayHeaderCells1 += hdr; dayTotalCells1 += tot; }
+                else { dayHeaderCells2 += hdr; dayTotalCells2 += tot; }
+            }
+
+            const now = new Date();
+            const stamp = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+            const html = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>${proj.company} ${proj.year}년 ${proj.month}월 노무비명세서 (자동계산)</title>
+<style>${css}</style>
+</head>
+<body>
+<h1>${proj.company} — ${proj.projectName || ''} (${proj.year}년 ${proj.month}월 노무비명세서)</h1>
+<div class="info-banner">🧮 자동계산 버전 · ${stamp} 기준 · 출역값·단가를 고치면 세금·보험·실지급액이 자동으로 다시 계산됩니다</div>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th rowspan="2">NO</th><th rowspan="2">직종</th><th rowspan="2">성명</th><th rowspan="2">주민번호</th><th rowspan="2">주소</th>
+${dayHeaderCells1}
+<th rowspan="2">일수</th><th rowspan="2">단가</th><th rowspan="2">총액</th><th>소득세</th><th rowspan="2">고용<br>보험</th><th>건강<br>보험</th><th rowspan="2">국민<br>연금</th><th rowspan="2">공제<br>합계</th><th rowspan="2">실지급액</th>
+</tr>
+<tr>
+${dayHeaderCells2}
+<th class="empty-day"></th>
+<th>지방세</th>
+<th>요양<br>보험</th>
+</tr>
+</thead>
+<tbody>
+${tableRows}
+<tr class="total-row">
+<td rowspan="2" colspan="5" style="text-align:right;padding-right:6px;${totalBorder}">합계</td>
+${dayTotalCells1}
+<td rowspan="2" id="total_days" style="${totalBorder}">-</td>
+<td rowspan="2" style="${totalBorder}">-</td>
+<td rowspan="2" id="total_wage" style="${totalBorder}">-</td>
+<td id="total_tax">-</td>
+<td rowspan="2" id="total_emp" style="${totalBorder}">-</td>
+<td id="total_ins">-</td>
+<td rowspan="2" id="total_pen" style="${totalBorder}">-</td>
+<td rowspan="2" id="total_ded" style="${totalBorder}">-</td>
+<td rowspan="2" id="total_net" style="${totalBorder}">-</td>
+</tr>
+<tr class="total-row">
+${dayTotalCells2}
+<td class="empty-day" style="${totalBorder}"></td>
+<td id="total_local" style="${totalBorder}">-</td>
+<td id="total_care" style="${totalBorder}">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<script>${script}<\/script>
+</body>
+</html>`;
+
+            _downloadHtmlFile(html, `노무비명세서_${proj.company}_${proj.year}년${String(proj.month).padStart(2,'0')}월_자동계산.html`);
+            showCustomAlert('자동계산 기능이 포함된 노무비명세서 HTML 파일이 저장되었습니다.');
         }
 
 
@@ -6363,9 +6593,9 @@ ${tableClone.outerHTML}
                 <th rowspan="2" class="pt-days hdr">일수</th>
                 <th rowspan="2" class="pt-price hdr">단가</th>
                 <th rowspan="2" class="pt-total hdr">총액</th>
-                <th rowspan="2" class="pt-tax hdr">소득세<br><span style="color:#64748b;font-weight:400">지방세</span></th>
+                <th class="pt-tax hdr">소득세</th>
                 <th rowspan="2" class="pt-ins hdr">고용<br>보험</th>
-                <th rowspan="2" class="pt-ins hdr">건강<br><span style="color:#64748b;font-weight:400">장기요양</span></th>
+                <th class="pt-ins hdr">건강보험</th>
                 <th rowspan="2" class="pt-ins hdr">국민<br>연금</th>
                 <th rowspan="2" class="pt-deduct hdr">공제<br>합계</th>
                 <th rowspan="2" class="pt-net hdr">실지급액</th>
@@ -6382,10 +6612,10 @@ ${tableClone.outerHTML}
             for (let d = 1; d <= 16; d++) row1 += dayCell(d, null, true);
             row1 += rightHdr + `</tr>`;
 
-            // 행2: 17~31
+            // 행2: 17~31 + 소득세/건강보험 칸의 아래쪽 절반(지방세/장기요양)
             let row2 = `<tr class="hdr">`;
             for (let d = 17; d <= 31; d++) row2 += dayCell(d, null, true);
-            row2 += `</tr>`;
+            row2 += `<th class="pt-day hdr empty-day"></th><th class="pt-tax hdr">지방세</th><th class="pt-ins hdr">장기요양</th></tr>`;
 
             thead.innerHTML = row1 + row2;
             tbl.appendChild(thead);
@@ -6426,9 +6656,9 @@ ${tableClone.outerHTML}
                     <td rowspan="2" class="pt-days">${calc.effectiveDays}</td>
                     <td rowspan="2" class="pt-price">${calc.effectiveDays > 0 ? labor.price.toLocaleString() : ''}</td>
                     <td rowspan="2" class="pt-total">${calc.totalWages > 0 ? calc.totalWages.toLocaleString() : ''}</td>
-                    <td rowspan="2" class="pt-tax" style="font-size:6.5px">${calc.incomeTax.toLocaleString()}<br><span style="color:#64748b">${calc.localTax.toLocaleString()}</span></td>
+                    <td class="pt-tax">${calc.incomeTax.toLocaleString()}</td>
                     <td rowspan="2" class="pt-ins">${calc.employment.toLocaleString()}</td>
-                    <td rowspan="2" class="pt-ins" style="font-size:6.5px">${calc.health.toLocaleString()}<br><span style="color:#64748b">${calc.care.toLocaleString()}</span></td>
+                    <td class="pt-ins">${calc.health.toLocaleString()}</td>
                     <td rowspan="2" class="pt-ins">${calc.pension.toLocaleString()}</td>
                     <td rowspan="2" class="pt-deduct">${calc.totalDeduction.toLocaleString()}</td>
                     <td rowspan="2" class="pt-net" style="font-weight:900">${calc.netPay.toLocaleString()}</td>
@@ -6436,10 +6666,11 @@ ${tableClone.outerHTML}
                 tr1.innerHTML = r1;
                 tbody.appendChild(tr1);
 
-                // 하단행 (17~31일)
+                // 하단행 (17~31일) + 소득세/건강보험 칸의 아래쪽 절반(지방세/장기요양)
                 const tr2 = document.createElement('tr');
                 let r2 = '';
                 for (let d = 17; d <= 31; d++) r2 += dayCell(d, labor.attendance, false);
+                r2 += `<td class="pt-day empty-day"></td><td class="pt-tax" style="color:#64748b">${calc.localTax.toLocaleString()}</td><td class="pt-ins" style="color:#64748b">${calc.care.toLocaleString()}</td>`;
                 tr2.innerHTML = r2;
                 // 근로자 구분선 강조
                 tr2.style.borderBottom = '1px solid #374151';
@@ -6461,9 +6692,9 @@ ${tableClone.outerHTML}
                 <td rowspan="2" class="pt-days" style="${totalBorder}">${sumDays.toFixed(1)}</td>
                 <td rowspan="2" class="pt-price" style="${totalBorder}">-</td>
                 <td rowspan="2" class="pt-total" style="${totalBorder}">${sumWages.toLocaleString()}</td>
-                <td rowspan="2" class="pt-tax" style="font-size:6.5px;${totalBorder}">${sumIncome.toLocaleString()}<br><span style="color:#64748b">${sumLocal.toLocaleString()}</span></td>
+                <td class="pt-tax">${sumIncome.toLocaleString()}</td>
                 <td rowspan="2" class="pt-ins" style="${totalBorder}">${sumEmp.toLocaleString()}</td>
-                <td rowspan="2" class="pt-ins" style="font-size:6.5px;${totalBorder}">${sumHealth.toLocaleString()}<br><span style="color:#64748b">${sumCare.toLocaleString()}</span></td>
+                <td class="pt-ins">${sumHealth.toLocaleString()}</td>
                 <td rowspan="2" class="pt-ins" style="${totalBorder}">${sumPension.toLocaleString()}</td>
                 <td rowspan="2" class="pt-deduct" style="${totalBorder}">${sumDeduct.toLocaleString()}</td>
                 <td rowspan="2" class="pt-net" style="${totalBorder}">${sumNet.toLocaleString()}</td>
@@ -6479,6 +6710,7 @@ ${tableClone.outerHTML}
                 const v = d <= daysInMonth && dailyCounts[d] > 0 ? dailyCounts[d] : '';
                 t2 += `<td class="pt-day ${d <= daysInMonth ? dowClass(d) : 'empty-day'}" style="${totalBorder}">${v}</td>`;
             }
+            t2 += `<td class="pt-day empty-day" style="${totalBorder}"></td><td class="pt-tax" style="color:#64748b;${totalBorder}">${sumLocal.toLocaleString()}</td><td class="pt-ins" style="color:#64748b;${totalBorder}">${sumCare.toLocaleString()}</td>`;
             totalTr2.innerHTML = t2;
             tbody.appendChild(totalTr2);
 
