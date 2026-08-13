@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V6.50 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V6.55 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -48,6 +48,20 @@
         /* 클릭 가능한 요소에는 항상 pointer 커서 표시 */
         button, [onclick], summary, label[for] { cursor: pointer; }
         button:disabled, [disabled] { cursor: not-allowed; }
+
+        /* ============================================================
+           글씨 크게 보기 — 근로자분께 화면을 보여드리며 확인받을 때(이름·서명란 등)
+           전체 화면을 확대해서 더 잘 보이게 한다. zoom은 레이아웃까지 함께
+           확대되어 "한 화면에 맞추기" 재계산과도 자연스럽게 맞물린다.
+           ============================================================ */
+        html.large-text-mode { zoom: 1.35; }
+        @supports not (zoom: 1) {
+            /* zoom 미지원 브라우저(Firefox 등) 대비 폴백 */
+            html.large-text-mode body { transform: scale(1.35); transform-origin: top left; width: 74.07%; }
+        }
+        @media print {
+            html.large-text-mode { zoom: 1 !important; }
+        }
 
         /* ============================================================
            다크모드 — Tailwind 유틸리티 클래스를 그대로 유지한 채(빌드 과정이
@@ -262,7 +276,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V6.50</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V6.55</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -270,6 +284,12 @@
             </button>
             <button id="darkModeToggleBtn" onclick="toggleDarkMode()" class="bg-slate-700 hover:bg-slate-600 text-white w-7 h-7 rounded flex items-center justify-center transition-all shrink-0" title="다크모드 켜기/끄기" aria-label="다크모드 켜기/끄기">
                 <i id="darkModeToggleIcon" data-lucide="moon" class="w-3.5 h-3.5"></i>
+            </button>
+            <button onclick="openGlobalSearchModal()" class="bg-slate-700 hover:bg-slate-600 text-white w-7 h-7 rounded flex items-center justify-center transition-all shrink-0" title="전체 현장에서 근로자 통합검색" aria-label="전체 현장 통합검색">
+                <i data-lucide="search" class="w-3.5 h-3.5"></i>
+            </button>
+            <button id="largeTextToggleBtn" onclick="toggleLargeTextMode()" class="bg-slate-700 hover:bg-slate-600 text-white w-7 h-7 rounded flex items-center justify-center transition-all shrink-0" title="글씨 크게 보기 (근로자분께 화면 보여드릴 때 유용)" aria-label="글씨 크게 보기">
+                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
             </button>
             <button onclick="runPreSubmitCheck()" class="bg-rose-600 hover:bg-rose-700 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all" title="제출/인쇄 전 필수정보 누락 및 오류를 한 번에 점검">
                 <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> 제출 전 점검
@@ -387,12 +407,13 @@
                 </div>
             </div>
 
-            <!-- 출력/내보내기 드롭다운: 보험신고 / 계약서 일괄인쇄 / 엑셀용 복사 / CSV / XLS / 대장인쇄 -->
+            <!-- 출력/내보내기 드롭다운: 인쇄 / 엑셀·스프레드시트 / HTML로 저장 / 청구서(발주처 제출용) -->
             <div class="header-dropdown relative">
                 <button onclick="toggleHeaderMenu('menuExport', this)" class="bg-teal-700 hover:bg-teal-800 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all">
                     <i data-lucide="printer" class="w-3.5 h-3.5"></i> 출력·내보내기 <i data-lucide="chevron-down" class="w-3 h-3"></i>
                 </button>
-                <div id="menuExport" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-slate-200 w-52 py-1 z-50 text-slate-700">
+                <div id="menuExport" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-slate-200 w-64 py-1 z-50 text-slate-700">
+                    <div class="px-3 pt-1.5 pb-1 text-[10px] font-black text-slate-400 uppercase tracking-wider">인쇄</div>
                     <button onclick="closeHeaderMenus(); window.print()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2">
                         <i data-lucide="printer" class="w-3.5 h-3.5 text-slate-500"></i> 대장 인쇄
                     </button>
@@ -405,7 +426,9 @@
                     <button onclick="closeHeaderMenus(); openInsuranceReportModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="8일 이상 근무자 4대보험 취득신고서 출력">
                         <i data-lucide="file-text" class="w-3.5 h-3.5 text-teal-600"></i> 4대보험 취득신고서
                     </button>
+
                     <div class="h-px bg-slate-100 my-1"></div>
+                    <div class="px-3 pt-1 pb-1 text-[10px] font-black text-slate-400 uppercase tracking-wider">엑셀 · 스프레드시트</div>
                     <button onclick="closeHeaderMenus(); copyToClipboardForExcel()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="엑셀에 바로 붙여넣기 가능한 규격으로 복사합니다.">
                         <i data-lucide="clipboard-copy" class="w-3.5 h-3.5 text-slate-500"></i> 엑셀용 복사
                     </button>
@@ -415,15 +438,20 @@
                     <button onclick="closeHeaderMenus(); exportToXLS()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2">
                         <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 text-emerald-600"></i> XLS 저장
                     </button>
-                    <button onclick="closeHeaderMenus(); exportLedgerAsHtmlFile()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="대장표 전체를 다른 곳에서도 바로 열어볼 수 있는 독립 HTML 파일로 저장">
+
+                    <div class="h-px bg-slate-100 my-1"></div>
+                    <div class="px-3 pt-1 pb-1 text-[10px] font-black text-slate-400 uppercase tracking-wider">HTML로 저장</div>
+                    <button onclick="closeHeaderMenus(); exportLedgerAsHtmlFile()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="대장표 전체를 다른 곳에서도 바로 열어볼 수 있는 독립 HTML 파일로 저장 (읽기전용/수정가능/자동계산 중 선택)">
                         <i data-lucide="file-code" class="w-3.5 h-3.5 text-amber-600"></i> 대장표 HTML 저장
                     </button>
+
                     <div class="h-px bg-slate-100 my-1"></div>
+                    <div class="px-3 pt-1 pb-1 text-[10px] font-black text-slate-400 uppercase tracking-wider">청구서 (발주처 제출용)</div>
                     <button onclick="closeHeaderMenus(); exportLaborChargeCSV()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="계약상대자/공종/은행/계좌/전화번호/비고 포함 - 노무비 청구용 별도 양식">
                         <i data-lucide="receipt" class="w-3.5 h-3.5 text-amber-600"></i> 노무비 청구 내역서 CSV
                     </button>
                     <button onclick="closeHeaderMenus(); openClientSubmissionModal()" class="w-full text-left px-3 py-2 text-xs font-bold hover:bg-slate-100 flex items-center gap-2" title="같은 현장의 여러 업체(계약상대자)를 하나로 묶어 소계·부가세·합계까지 포함한 발주처 제출용 청구서를 만듭니다">
-                        <i data-lucide="landmark" class="w-3.5 h-3.5 text-amber-600"></i> 발주처 제출용 청구서(여러 현장 통합)
+                        <i data-lucide="send" class="w-3.5 h-3.5 text-amber-600"></i> 여러 업체 통합청구서
                     </button>
                 </div>
             </div>
@@ -626,7 +654,12 @@
             <!-- 대시보드 화면 (탭 전환 시 표시) -->
             <div id="dashboardView" class="hidden flex-1 min-h-0 overflow-y-auto bg-slate-50 no-print">
                 <div class="p-5 max-w-[2000px] mx-auto">
-                <div class="grid grid-cols-1 xl:grid-cols-[1fr_1.4fr] gap-4 items-start">
+                <div class="flex justify-end mb-2">
+                    <button onclick="exportDashboardAsHtml()" class="text-[10.5px] bg-white border border-slate-200 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1 text-slate-600" title="지금 보이는 대시보드 전체를 독립 HTML 파일로 저장">
+                        <i data-lucide="file-code" class="w-3.5 h-3.5"></i> 대시보드 HTML 저장
+                    </button>
+                </div>
+                <div id="dashboardCaptureArea" class="grid grid-cols-1 xl:grid-cols-[1fr_1.4fr] gap-4 items-start">
 
                 <!-- 좌측: 기존 대시보드 항목 -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
@@ -877,6 +910,9 @@
                         <button onclick="exportCalendarAsImage()" class="w-full text-xs bg-white border border-slate-200 hover:bg-slate-50 px-2 py-2 rounded-lg font-bold flex items-center justify-center gap-1 text-slate-600" title="지금 보이는 달력을 이미지 파일로 저장합니다">
                             <i data-lucide="image-down" class="w-3.5 h-3.5"></i> 달력 이미지로 저장
                         </button>
+                        <button onclick="exportCalendarAsHtml()" class="w-full text-xs bg-white border border-slate-200 hover:bg-slate-50 px-2 py-2 rounded-lg font-bold flex items-center justify-center gap-1 text-slate-600" title="지금 보이는 달력을 독립 HTML 파일로 저장합니다">
+                            <i data-lucide="file-code" class="w-3.5 h-3.5"></i> 달력 HTML로 저장
+                        </button>
 
                         <div class="bg-white border border-slate-200 rounded-lg p-3">
                             <h3 class="text-[10.5px] font-black text-slate-500 uppercase tracking-wider mb-2">범례</h3>
@@ -959,11 +995,32 @@
         </div>
     </div>
 
+    <!-- 팝업 모달: 전체 현장 통합검색 -->
+    <div id="globalSearchModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[80vh] flex flex-col">
+            <div class="p-4 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="font-black text-slate-800 flex items-center gap-1.5"><i data-lucide="search" class="w-4 h-4"></i> 전체 현장 통합검색</h3>
+                <button onclick="closeGlobalSearchModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div class="p-4 border-b border-slate-100">
+                <div class="relative w-full">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 pointer-events-none text-slate-400">
+                        <i data-lucide="search" class="w-3.5 h-3.5"></i>
+                    </span>
+                    <input type="text" id="globalSearchInput" oninput="runGlobalSearch()" placeholder="근로자 성명으로 전체 현장에서 검색" class="w-full text-sm bg-slate-50 border border-slate-200 rounded pl-8 pr-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500" autocomplete="off">
+                </div>
+            </div>
+            <div id="globalSearchResults" class="p-4 overflow-y-auto divide-y divide-slate-100 text-xs flex-1">
+                <div class="text-center text-slate-400 py-6">이름을 입력하면 모든 현장에서 찾아드립니다.</div>
+            </div>
+        </div>
+    </div>
+
     <!-- 팝업 모달: 발주처 제출용 청구서 (여러 현장/업체 통합) -->
     <div id="clientSubmissionModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center z-50 no-print">
         <div class="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[80vh] flex flex-col">
             <div class="p-4 border-b border-slate-100 flex items-center justify-between">
-                <h3 class="font-black text-slate-800 flex items-center gap-1.5"><i data-lucide="landmark" class="w-4 h-4"></i> 발주처 제출용 청구서</h3>
+                <h3 class="font-black text-slate-800 flex items-center gap-1.5"><i data-lucide="send" class="w-4 h-4"></i> 발주처 제출용 청구서</h3>
                 <button onclick="closeClientSubmissionModal()" class="text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
             <div class="p-4 space-y-3 overflow-y-auto">
@@ -2744,6 +2801,7 @@
             setupKeyboardNavigation();
             setupDragRangeListeners(); // 드래그 범위 기입 이벤트 등록
             _initDarkMode();
+            _initLargeTextMode();
             // 대장 표는 기본적으로 한 화면에 맞추기를 켠 상태로 시작
             // (레이아웃/폰트 계산이 끝난 뒤 측정되도록 rAF 두 번 + 여유 지연으로 안정성 확보)
             requestAnimationFrame(() => {
@@ -3254,6 +3312,28 @@
                 icon.setAttribute('data-lucide', on ? 'sun' : 'moon');
                 if (window.lucide) lucide.createIcons();
             }
+        }
+
+        // ===== 글씨 크게 보기 (근로자분께 화면 확인받을 때) =====
+        const LARGE_TEXT_KEY = 'labor_payment_large_text_mode';
+        function _initLargeTextMode() {
+            const saved = localStorage.getItem(LARGE_TEXT_KEY);
+            if (saved === '1') _setLargeTextMode(true);
+        }
+
+        function toggleLargeTextMode() {
+            _setLargeTextMode(!document.documentElement.classList.contains('large-text-mode'));
+        }
+
+        function _setLargeTextMode(on) {
+            document.documentElement.classList.toggle('large-text-mode', on);
+            try { localStorage.setItem(LARGE_TEXT_KEY, on ? '1' : '0'); } catch (e) {}
+            const btn = document.getElementById('largeTextToggleBtn');
+            if (btn) btn.className = on
+                ? 'bg-indigo-600 hover:bg-indigo-700 text-white w-7 h-7 rounded flex items-center justify-center transition-all shrink-0'
+                : 'bg-slate-700 hover:bg-slate-600 text-white w-7 h-7 rounded flex items-center justify-center transition-all shrink-0';
+            // 화면 확대로 표의 실제 렌더링 크기가 바뀌므로, 한 화면에 맞추기가 켜져 있다면 다시 계산한다
+            setTimeout(() => { if (typeof _reapplyFitTableIfActive === 'function') _reapplyFitTableIfActive(); }, 50);
         }
 
         function applyDensity(density) {
@@ -4620,7 +4700,72 @@
         // 선택한 여러 현장(project)을 업체별로 묶어 소계 → 공급가액 → 부가세 → 합계까지
         // 포함한 하나의 청구서 CSV로 만든다. (실제 발주처 제출 서식과 동일한 구조)
         // ============================================================
+        // ============================================================
+        // 전체 현장 통합검색 — 모든 현장(프로젝트)을 대상으로 근로자 이름을 한 번에 검색
+        // ============================================================
+        function openGlobalSearchModal() {
+            document.getElementById('globalSearchInput').value = '';
+            document.getElementById('globalSearchResults').innerHTML = '<div class="text-center text-slate-400 py-6">이름을 입력하면 모든 현장에서 찾아드립니다.</div>';
+            document.getElementById('globalSearchModal').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+            setTimeout(() => document.getElementById('globalSearchInput').focus(), 50);
+        }
+
+        function closeGlobalSearchModal() {
+            document.getElementById('globalSearchModal').classList.add('hidden');
+        }
+
+        function runGlobalSearch() {
+            const kw = document.getElementById('globalSearchInput').value.trim();
+            const resultsEl = document.getElementById('globalSearchResults');
+            if (!kw) {
+                resultsEl.innerHTML = '<div class="text-center text-slate-400 py-6">이름을 입력하면 모든 현장에서 찾아드립니다.</div>';
+                return;
+            }
+
+            const matches = [];
+            Object.entries(appState.projects).forEach(([pid, p]) => {
+                (p.labors || []).forEach(l => {
+                    if (l.name.includes(kw)) {
+                        matches.push({ pid, proj: p, labor: l });
+                    }
+                });
+            });
+            // 최신 현장(연/월 기준)이 위로 오도록 정렬
+            matches.sort((a, b) => (b.proj.year * 100 + b.proj.month) - (a.proj.year * 100 + a.proj.month));
+
+            if (matches.length === 0) {
+                resultsEl.innerHTML = `<div class="text-center text-slate-400 py-6">"${kw}"(으)로 등록된 근로자를 찾지 못했습니다.</div>`;
+                return;
+            }
+
+            resultsEl.innerHTML = matches.map(({ pid, proj, labor }) => `
+                <div class="py-2.5 flex items-center justify-between gap-2 hover:bg-slate-50 -mx-1 px-1 rounded cursor-pointer" onclick="_jumpToGlobalSearchResult('${pid}','${labor.id}')">
+                    <span>
+                        <span class="font-bold text-slate-800">${labor.name}</span>
+                        <span class="text-slate-400 ml-1.5">${labor.job || '보통인부'}</span>
+                        <span class="block text-[10.5px] text-slate-400 mt-0.5">${proj.company} · ${proj.year}년 ${proj.month}월 · ${proj.projectName || ''}</span>
+                    </span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 shrink-0"></i>
+                </div>
+            `).join('');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // 전체 현장에서 근로자를 찾아 해당 현장으로 이동한 뒤 상세정보 모달을 연다
+        function _jumpToGlobalSearchResult(projectId, laborId) {
+            appState.currentProjectId = projectId;
+            saveToLocalStorage();
+            populateDropdowns();
+            onProjectChange();
+            closeGlobalSearchModal();
+            setTimeout(() => {
+                if (typeof openDetailModal === 'function') openDetailModal(laborId);
+            }, 150);
+        }
+
         function openClientSubmissionModal() {
+
             const proj = appState.projects[appState.currentProjectId];
             document.getElementById('clientSubmissionProjectName').value = proj ? (proj.projectName || '') : '';
 
@@ -4917,6 +5062,7 @@
             ['workerDbEditModal', closeWorkerDbEditModal],
             ['zipExportModal', closeZipExportModal],
             ['clientSubmissionModal', closeClientSubmissionModal],
+            ['globalSearchModal', closeGlobalSearchModal],
             ['ledgerHtmlExportModal', closeLedgerHtmlExportModal],
             ['attendancePasteModal', closeAttendancePasteModal],
             ['laborMoveHistoryModal', closeLaborMoveHistoryModal]
@@ -5647,6 +5793,77 @@
         }
 
         // 달력 화면을 이미지(PNG) 파일로 저장
+        // ============================================================
+        // 화면(대시보드/달력)을 독립 실행 HTML 파일로 저장하는 공용 헬퍼.
+        // 화면에 보이는 그대로 DOM을 복제한 뒤, 캔버스 차트는 정적 이미지로 바꿔서
+        // Tailwind CDN을 포함한 완전한 단일 HTML 파일로 감싼다.
+        // ============================================================
+        function _buildStandaloneHtmlSnapshot(containerEl, title, bannerText) {
+            const clone = containerEl.cloneNode(true);
+
+            // 캔버스는 innerHTML 복제 시 그림이 사라지므로, 원본 캔버스의 현재 그림을
+            // 그대로 정적 <img>로 바꿔치기한다 (복제본과 원본은 id가 같아 순서로 매칭)
+            const origCanvases = containerEl.querySelectorAll('canvas');
+            const cloneCanvases = clone.querySelectorAll('canvas');
+            origCanvases.forEach((origCanvas, i) => {
+                const cloneCanvas = cloneCanvases[i];
+                if (!cloneCanvas) return;
+                const img = document.createElement('img');
+                img.src = origCanvas.toDataURL('image/png');
+                img.style.maxWidth = '100%';
+                img.width = origCanvas.width;
+                img.height = origCanvas.height;
+                cloneCanvas.replaceWith(img);
+            });
+
+            // 입력 가능한 요소는 스냅샷에서는 값을 고정된 텍스트처럼 보이게 disabled 처리
+            clone.querySelectorAll('input, select, textarea, button').forEach(el => { el.disabled = true; });
+
+            const now = new Date();
+            const stamp = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+            return `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<script src="https://cdn.tailwindcss.com"><\/script>
+<script src="https://unpkg.com/lucide@latest"><\/script>
+<style>
+  body { margin: 0; padding: 20px; background: #f8fafc; font-family: 'Noto Sans KR', sans-serif; }
+  .snapshot-banner { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 700; margin-bottom: 14px; }
+  input:disabled, select:disabled, textarea:disabled { opacity: 1; -webkit-text-fill-color: inherit; cursor: default; }
+</style>
+</head>
+<body>
+<div class="snapshot-banner">🔒 읽기 전용 스냅샷 · ${stamp} 기준 · ${bannerText}</div>
+${clone.outerHTML}
+<script>if (window.lucide) lucide.createIcons();<\/script>
+</body>
+</html>`;
+        }
+
+        function exportCalendarAsHtml() {
+            const area = document.getElementById('calendarView');
+            if (!area) return;
+            const proj = appState.projects[appState.currentProjectId];
+            const title = proj ? `${proj.company} ${proj.year}년 ${proj.month}월 달력` : '달력';
+            const html = _buildStandaloneHtmlSnapshot(area, title, '이후 원본에서 바뀐 내용은 반영되지 않습니다');
+            _downloadHtmlFile(html, `달력_${proj ? proj.company + '_' + proj.year + '년' + String(proj.month).padStart(2,'0') + '월' : 'export'}.html`);
+            showToast('달력 HTML 파일이 저장되었습니다.');
+        }
+
+        function exportDashboardAsHtml() {
+            const area = document.getElementById('dashboardCaptureArea');
+            if (!area) return;
+            const proj = appState.projects[appState.currentProjectId];
+            const title = proj ? `${proj.company} ${proj.year}년 ${proj.month}월 대시보드` : '대시보드';
+            const html = _buildStandaloneHtmlSnapshot(area, title, '이후 원본에서 바뀐 내용은 반영되지 않습니다');
+            _downloadHtmlFile(html, `대시보드_${proj ? proj.company + '_' + proj.year + '년' + String(proj.month).padStart(2,'0') + '월' : 'export'}.html`);
+            showToast('대시보드 HTML 파일이 저장되었습니다.');
+        }
+
         async function exportCalendarAsImage() {
             const area = document.getElementById('calendarCaptureArea');
             if (!area || !window.html2canvas) {
