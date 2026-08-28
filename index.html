@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.16 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.18 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.16</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.18</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -1091,6 +1091,28 @@
                     <button onclick="clearChargeHistory()" class="text-[10.5px] text-rose-500 hover:underline">전체 삭제</button>
                 </div>
                 <div id="chargeHistoryList" class="divide-y divide-slate-100 text-xs"></div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-indigo-200 p-4">
+                <h2 class="text-sm font-black text-slate-800 flex items-center gap-1.5 mb-1">
+                    <i data-lucide="building" class="w-4 h-4 text-indigo-600"></i> 본사 보고용 월간 리포트
+                </h2>
+                <p class="text-[11px] text-slate-500 mb-3">보고할 연/월을 하나 이상 선택하면, 해당 달들에 등록된 모든 현장(회사 구분 없이 전체)의 인건비 현황을 요약한 HTML 리포트를 만듭니다. 여러 달을 함께 선택하면 월별 소계와 전체 합계가 함께 표시됩니다.</p>
+                <div class="mb-3">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="text-[10.5px] font-bold text-slate-500">보고할 연/월 선택 (여러 개 가능)</span>
+                        <span class="text-[10px] text-slate-400">
+                            <button onclick="_monthlyReportSelectAll(true)" class="text-indigo-600 hover:underline">전체선택</button> ·
+                            <button onclick="_monthlyReportSelectAll(false)" class="text-slate-500 hover:underline">전체해제</button>
+                        </span>
+                    </div>
+                    <div id="monthlyReportPeriodList" class="border border-slate-200 rounded max-h-40 overflow-y-auto divide-y divide-slate-100"></div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="generateMonthlyReportHtml()" class="px-4 py-2 rounded text-sm font-bold bg-indigo-600 text-white hover:bg-indigo-700 flex items-center gap-1.5">
+                        <i data-lucide="file-code" class="w-3.5 h-3.5"></i> 리포트 생성 (HTML)
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -4975,7 +4997,40 @@
                 list.appendChild(row);
             });
             renderChargeHistoryList();
+            _populateMonthlyReportPeriods();
             if (window.lucide) lucide.createIcons();
+        }
+
+        // 등록된 모든 현장(회사 구분 없이)에서 실제 존재하는 연/월 조합만 뽑아 최신순으로 채운다
+        function _populateMonthlyReportPeriods() {
+            const list = document.getElementById('monthlyReportPeriodList');
+            if (!list) return;
+            const periods = new Map(); // key: "year-month" -> {year, month}
+            Object.values(appState.projects).forEach(p => {
+                const key = `${p.year}-${p.month}`;
+                if (!periods.has(key)) periods.set(key, { year: p.year, month: p.month });
+            });
+            const sorted = Array.from(periods.values()).sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+
+            // 이미 체크되어 있던 항목은 목록을 새로 그려도 체크 상태가 유지되도록 기억해둔다
+            const prevChecked = new Set(Array.from(document.querySelectorAll('.monthlyReportPeriodCheck:checked')).map(el => el.value));
+            const proj = appState.projects[appState.currentProjectId];
+            const defaultKey = proj ? `${proj.year}-${proj.month}` : null;
+
+            list.innerHTML = sorted.map(p => {
+                const key = `${p.year}-${p.month}`;
+                const checked = prevChecked.size > 0 ? prevChecked.has(key) : key === defaultKey;
+                return `
+                    <label class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-indigo-50 text-xs">
+                        <input type="checkbox" class="monthlyReportPeriodCheck accent-indigo-600 w-3.5 h-3.5 shrink-0" value="${key}" ${checked ? 'checked' : ''}>
+                        <span class="font-bold text-slate-700">${p.year}년 ${p.month}월</span>
+                    </label>
+                `;
+            }).join('');
+        }
+
+        function _monthlyReportSelectAll(checked) {
+            document.querySelectorAll('.monthlyReportPeriodCheck').forEach(cb => { cb.checked = checked; });
         }
 
         function _clientSubSelectAll(checked) {
@@ -5089,6 +5144,187 @@
             renderChargeHistoryList();
 
             showToast(`발주처 제출용 청구서(현장 ${projectIds.length}개 통합)가 다운로드되었습니다.`);
+        }
+
+        // ============================================================
+        // 본사 보고용 월간 리포트 — 선택한 연/월에 등록된 모든 현장(회사 구분 없이 전체)의
+        // 인건비 현황을 회사·현장별로 정리해 독립 실행 HTML 파일로 만든다.
+        // ============================================================
+        function generateMonthlyReportHtml() {
+            const checkedPeriods = Array.from(document.querySelectorAll('.monthlyReportPeriodCheck:checked')).map(el => el.value);
+            if (checkedPeriods.length === 0) {
+                showCustomAlert('보고할 연/월을 1개 이상 선택해 주세요.');
+                return;
+            }
+            // "year-month" 문자열들을 최신순으로 정렬
+            const periods = checkedPeriods
+                .map(k => { const [y, m] = k.split('-').map(Number); return { year: y, month: m }; })
+                .sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+
+            const fmt = n => n.toLocaleString();
+            const monthBlocks = []; // { year, month, rows, subtotal }
+            periods.forEach(({ year, month }) => {
+                const targetProjects = Object.values(appState.projects).filter(p => p.year === year && p.month === month);
+                if (targetProjects.length === 0) return;
+
+                const rows = targetProjects.map(p => {
+                    const daysInMonth = new Date(p.year, p.month, 0).getDate();
+                    let wages = 0, deduction = 0, net = 0, workerCount = 0;
+                    (p.labors || []).forEach(l => {
+                        let days = 0;
+                        for (let d = 1; d <= daysInMonth; d++) days = Math.round((days + Number(l.attendance[d] || 0)) * 10) / 10;
+                        if (days <= 0) return;
+                        const calc = calculateDeductions(l, days);
+                        wages += calc.totalWages;
+                        deduction += calc.totalDeduction;
+                        net += calc.netPay;
+                        workerCount++;
+                    });
+                    return { company: p.company, projectName: p.projectName || '', workType: p.workType || '', workerCount, wages, deduction, net };
+                }).sort((a, b) => a.company.localeCompare(b.company, 'ko'));
+
+                const subtotal = rows.reduce((acc, r) => ({
+                    workerCount: acc.workerCount + r.workerCount,
+                    wages: acc.wages + r.wages,
+                    deduction: acc.deduction + r.deduction,
+                    net: acc.net + r.net
+                }), { workerCount: 0, wages: 0, deduction: 0, net: 0 });
+
+                monthBlocks.push({ year, month, rows, subtotal });
+            });
+
+            if (monthBlocks.length === 0) {
+                showCustomAlert('선택한 연/월에 등록된 현장이 없습니다.');
+                return;
+            }
+
+            const grand = monthBlocks.reduce((acc, b) => ({
+                workerCount: acc.workerCount + b.subtotal.workerCount,
+                wages: acc.wages + b.subtotal.wages,
+                deduction: acc.deduction + b.subtotal.deduction,
+                net: acc.net + b.subtotal.net
+            }), { workerCount: 0, wages: 0, deduction: 0, net: 0 });
+            const totalProjectCount = monthBlocks.reduce((s, b) => s + b.rows.length, 0);
+            const isMultiMonth = monthBlocks.length > 1;
+
+            const now = new Date();
+            const stamp = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+            // 여러 달을 선택한 경우 달마다 표를 나누고, 그 아래 달별 소계 행을 붙인다
+            const tableBlocksHtml = monthBlocks.map(b => {
+                const rowsHtml = b.rows.map(r => `
+                    <tr>
+                        <td class="font-bold">${r.company}</td>
+                        <td>${r.projectName}</td>
+                        <td>${r.workType}</td>
+                        <td class="text-right">${r.workerCount}명</td>
+                        <td class="text-right text-blue-700 font-bold">${fmt(r.wages)}</td>
+                        <td class="text-right text-red-600">${fmt(r.deduction)}</td>
+                        <td class="text-right text-emerald-700 font-bold">${fmt(r.net)}</td>
+                    </tr>
+                `).join('');
+                const subtotalRow = isMultiMonth ? `
+                    <tr class="subtotal">
+                        <td colspan="3">${b.year}년 ${b.month}월 소계</td>
+                        <td class="text-right">${b.subtotal.workerCount}명</td>
+                        <td class="text-right" style="color:#1d4ed8">${fmt(b.subtotal.wages)}</td>
+                        <td class="text-right" style="color:#dc2626">${fmt(b.subtotal.deduction)}</td>
+                        <td class="text-right" style="color:#047857">${fmt(b.subtotal.net)}</td>
+                    </tr>
+                ` : '';
+                return `
+                    ${isMultiMonth ? `<h2 class="month-title">${b.year}년 ${b.month}월</h2>` : ''}
+                    <table>
+                    <thead>
+                    <tr><th>회사명</th><th>현장명</th><th>공종</th><th style="text-align:right">인원</th><th style="text-align:right">총액</th><th style="text-align:right">공제액</th><th style="text-align:right">실지급액</th></tr>
+                    </thead>
+                    <tbody>
+                    ${rowsHtml}
+                    ${subtotalRow}
+                    </tbody>
+                    </table>
+                `;
+            }).join('');
+
+            const periodLabel = isMultiMonth
+                ? `${monthBlocks[monthBlocks.length - 1].year}년 ${monthBlocks[monthBlocks.length - 1].month}월 ~ ${monthBlocks[0].year}년 ${monthBlocks[0].month}월`
+                : `${monthBlocks[0].year}년 ${monthBlocks[0].month}월`;
+
+            const grandTotalHtml = isMultiMonth ? `
+                <table style="margin-top:16px">
+                <tbody>
+                <tr class="grand-total">
+                    <td style="width:200px">전체 합계 (${monthBlocks.length}개월)</td>
+                    <td class="text-right">${grand.workerCount}명</td>
+                    <td class="text-right" style="color:#1d4ed8">${fmt(grand.wages)}</td>
+                    <td class="text-right" style="color:#dc2626">${fmt(grand.deduction)}</td>
+                    <td class="text-right" style="color:#047857">${fmt(grand.net)}</td>
+                </tr>
+                </tbody>
+                </table>
+            ` : '';
+
+            const html = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${periodLabel} 노무비 현황 보고</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: #f8fafc; font-family: 'Malgun Gothic', 'Noto Sans KR', sans-serif; color: #1e293b; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .month-title { font-size: 14px; font-weight: 900; margin: 20px 0 6px; color: #4338ca; }
+  .month-title:first-of-type { margin-top: 0; }
+  .sub { color: #64748b; font-size: 12px; margin-bottom: 16px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .kpi-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; }
+  .kpi-label { font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 4px; }
+  .kpi-value { font-size: 20px; font-weight: 900; }
+  table { width: 100%; border-collapse: collapse; background: #fff; font-size: 13px; }
+  th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: left; }
+  th { background: #1e293b; color: #fff; font-size: 11.5px; }
+  tr.subtotal td { background: #f1f5f9; font-weight: 700; border-top: 1.5px solid #94a3b8; }
+  tr.grand-total td { background: #eef2ff; font-weight: 900; border-top: 2px solid #4338ca; font-size: 14px; }
+  .text-right { text-align: right; }
+  .font-bold { font-weight: 700; }
+  .text-blue-700 { color: #1d4ed8; }
+  .text-red-600 { color: #dc2626; }
+  .text-emerald-700 { color: #047857; }
+  .print-btn { display: inline-flex; align-items: center; gap: 5px; background: #fff; border: 1px solid #cbd5e1; color: #334155; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 6px; cursor: pointer; }
+  .print-btn:hover { background: #f1f5f9; }
+  @media print {
+    .no-print { display: none !important; }
+    @page { size: A4 landscape; margin: 10mm; }
+    body { padding: 0; background: #fff; }
+    table, tr { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="no-print" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+  <div>
+    <h1>${periodLabel} 노무비 현황 보고</h1>
+    <div class="sub">생성 시각: ${stamp} · ${monthBlocks.length}개월 · 현장 ${totalProjectCount}개 통합</div>
+  </div>
+  <button class="print-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+</div>
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="kpi-label">보고 대상 개월 수</div><div class="kpi-value">${monthBlocks.length}개월</div></div>
+  <div class="kpi-card"><div class="kpi-label">전체 출역 인원</div><div class="kpi-value">${grand.workerCount}명</div></div>
+  <div class="kpi-card"><div class="kpi-label">총 노무비</div><div class="kpi-value" style="color:#1d4ed8">${fmt(grand.wages)}원</div></div>
+  <div class="kpi-card"><div class="kpi-label">총 실지급액</div><div class="kpi-value" style="color:#047857">${fmt(grand.net)}원</div></div>
+</div>
+${tableBlocksHtml}
+${grandTotalHtml}
+</body>
+</html>`;
+
+            const filenamePeriod = isMultiMonth
+                ? `${monthBlocks[monthBlocks.length - 1].year}년${String(monthBlocks[monthBlocks.length - 1].month).padStart(2,'0')}월-${monthBlocks[0].year}년${String(monthBlocks[0].month).padStart(2,'0')}월`
+                : `${monthBlocks[0].year}년${String(monthBlocks[0].month).padStart(2,'0')}월`;
+            _downloadHtmlFile(html, `본사보고_${filenamePeriod}_노무비현황.html`);
+            showToast(`${periodLabel} 월간 리포트(현장 ${totalProjectCount}개 통합)가 생성되었습니다.`);
         }
 
         // [실무 기능] 데이터 전체 영구 포맷
