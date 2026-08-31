@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.18 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.20 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.18</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.20</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -1097,16 +1097,30 @@
                 <h2 class="text-sm font-black text-slate-800 flex items-center gap-1.5 mb-1">
                     <i data-lucide="building" class="w-4 h-4 text-indigo-600"></i> 본사 보고용 월간 리포트
                 </h2>
-                <p class="text-[11px] text-slate-500 mb-3">보고할 연/월을 하나 이상 선택하면, 해당 달들에 등록된 모든 현장(회사 구분 없이 전체)의 인건비 현황을 요약한 HTML 리포트를 만듭니다. 여러 달을 함께 선택하면 월별 소계와 전체 합계가 함께 표시됩니다.</p>
+                <p class="text-[11px] text-slate-500 mb-3">회사·현장명·연월로 좁혀서 원하는 현장만 골라 인건비 현황 HTML 리포트를 만듭니다. 여러 달을 함께 선택하면 월별 소계와 전체 합계가 함께 표시됩니다.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-2">
+                    <div>
+                        <label class="text-[10px] font-bold text-slate-500 block mb-1">회사</label>
+                        <select id="monthlyReportFilterCompany" onchange="_populateMonthlyReportPeriods()" class="w-full border border-slate-200 rounded p-1.5 text-xs outline-none focus:ring-1 focus:ring-indigo-500"></select>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold text-slate-500 block mb-1">현장명</label>
+                        <select id="monthlyReportFilterSite" onchange="_populateMonthlyReportPeriods()" class="w-full border border-slate-200 rounded p-1.5 text-xs outline-none focus:ring-1 focus:ring-indigo-500"></select>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold text-slate-500 block mb-1">연/월</label>
+                        <select id="monthlyReportFilterPeriod" onchange="_populateMonthlyReportPeriods()" class="w-full border border-slate-200 rounded p-1.5 text-xs outline-none focus:ring-1 focus:ring-indigo-500"></select>
+                    </div>
+                </div>
                 <div class="mb-3">
                     <div class="flex items-center justify-between mb-1.5">
-                        <span class="text-[10.5px] font-bold text-slate-500">보고할 연/월 선택 (여러 개 가능)</span>
+                        <span class="text-[10.5px] font-bold text-slate-500">포함할 현장 선택 (여러 개 가능)</span>
                         <span class="text-[10px] text-slate-400">
                             <button onclick="_monthlyReportSelectAll(true)" class="text-indigo-600 hover:underline">전체선택</button> ·
                             <button onclick="_monthlyReportSelectAll(false)" class="text-slate-500 hover:underline">전체해제</button>
                         </span>
                     </div>
-                    <div id="monthlyReportPeriodList" class="border border-slate-200 rounded max-h-40 overflow-y-auto divide-y divide-slate-100"></div>
+                    <div id="monthlyReportPeriodList" class="border border-slate-200 rounded max-h-52 overflow-y-auto divide-y divide-slate-100"></div>
                 </div>
                 <div class="flex justify-end">
                     <button onclick="generateMonthlyReportHtml()" class="px-4 py-2 rounded text-sm font-bold bg-indigo-600 text-white hover:bg-indigo-700 flex items-center gap-1.5">
@@ -1144,6 +1158,7 @@
                     <button onclick="closeTaxRateModal()" class="text-slate-500 hover:text-white ml-1"><i data-lucide="x" class="w-4 h-4"></i></button>
                 </div>
             </div>
+            <div id="taxRateSnapshotBanner" class="px-3.5 pt-3 text-[10px]"></div>
             <div class="p-3.5 overflow-y-auto">
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-1.5 text-[10px] border-b border-slate-800 pb-2 mb-2">
                     <div class="flex items-center justify-between gap-1">
@@ -2446,6 +2461,38 @@
         </div>
     </div>
 
+    <!-- 팝업 모달: 근로자 전체 근무이력 (모든 현장 통합) -->
+    <div id="workerHistoryModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-[60] no-print">
+        <div class="bg-white rounded-xl shadow-xl border border-slate-200 w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden">
+            <div class="bg-gradient-to-r from-indigo-700 to-blue-700 text-white p-4 flex justify-between items-center shrink-0">
+                <h3 class="font-bold flex items-center gap-2">
+                    <i data-lucide="history" class="w-4 h-4"></i> 전체 근무이력 — <span id="workerHistoryName"></span>
+                </h3>
+                <button onclick="closeWorkerHistoryModal()" class="text-indigo-200 hover:text-white" aria-label="닫기">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-4 overflow-y-auto flex-1">
+                <div id="workerHistorySummary" class="grid grid-cols-3 gap-2 mb-4"></div>
+                <table class="w-full text-xs">
+                    <thead class="bg-slate-50 sticky top-0">
+                        <tr class="text-slate-500 font-bold text-left">
+                            <th class="p-2 border-b border-slate-200">현장 (회사 · 현장명)</th>
+                            <th class="p-2 border-b border-slate-200">연/월</th>
+                            <th class="p-2 border-b border-slate-200 text-right">일수</th>
+                            <th class="p-2 border-b border-slate-200 text-right">총액</th>
+                            <th class="p-2 border-b border-slate-200 text-right">실지급액</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workerHistoryTableBody"></tbody>
+                </table>
+            </div>
+            <div class="p-3 bg-slate-50 border-t border-slate-100 flex justify-end shrink-0">
+                <button onclick="closeWorkerHistoryModal()" class="px-4 py-1.5 rounded text-sm font-bold text-slate-500 hover:bg-slate-100">닫기</button>
+            </div>
+        </div>
+    </div>
+
     <!-- 드래그 범위 기입 — 화면 우하단 플로팅 패널 (테이블 조작을 막지 않음) -->
     <div id="dragRangePanel" class="fixed bottom-16 right-5 hidden z-40 no-print">
         <div class="bg-white rounded-xl shadow-2xl border-2 border-orange-400 w-64 overflow-hidden">
@@ -2549,23 +2596,63 @@
         }
 
         // 사이드바 입력값을 taxRates에 반영 후 저장 + 전체 재계산
+        // 현재 현장에서 "실제로 적용 중인" 요율 객체를 반환한다.
+        // 스냅샷이 없으면(이 기능 도입 이전 현장) 이 시점에 전역 기본값을 복사해 스냅샷으로 만들어 붙여준다
+        // (모달에서 값을 고치면 그 즉시 이 현장의 스냅샷을 직접 수정하는 방식이라, 반드시 스냅샷이 있어야 함).
+        function _getCurrentProjectRates() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return taxRates;
+            if (!proj.taxRatesSnapshot) {
+                proj.taxRatesSnapshot = JSON.parse(JSON.stringify(taxRates));
+                proj.taxRatesSnapshotAt = Date.now();
+            }
+            return proj.taxRatesSnapshot;
+        }
+
         function updateTaxRate(field, value, isPercent) {
             let num = parseFloat(value);
             if (isNaN(num) || num < 0) num = 0;
-            taxRates[field] = isPercent ? (num / 100) : num;
+            const finalValue = isPercent ? (num / 100) : num;
+            // 이 현장의 스냅샷을 직접 수정 → 지금 화면에 바로 반영됨
+            _getCurrentProjectRates()[field] = finalValue;
+            // 전역 기본값도 함께 갱신 → 이후 새로 만드는 현장은 이 값을 기본으로 물려받음
+            taxRates[field] = finalValue;
             saveTaxRates();
+            saveToLocalStorage();
             _insuranceAgeCache.clear();
             updateHeaderAndTable();
-            showToast('공제 요율이 적용되었습니다.');
+            showToast('공제 요율이 이 현장에 적용되었습니다.');
         }
 
         // 체크박스형 옵션(소액부징수 적용 여부, 10원단위 절사 여부) 저장
         function updateTaxRateBool(field, checked) {
+            _getCurrentProjectRates()[field] = !!checked;
             taxRates[field] = !!checked;
             saveTaxRates();
+            saveToLocalStorage();
             _insuranceAgeCache.clear();
             updateHeaderAndTable();
-            showToast('공제 옵션이 적용되었습니다.');
+            showToast('공제 옵션이 이 현장에 적용되었습니다.');
+        }
+
+        // 지금 편집한 요율을 이 현장뿐 아니라 등록된 모든 현장에 동일하게 반영하고 싶을 때 사용
+        // (요율 입력 실수를 바로잡거나, 의도적으로 전체를 최신 요율로 맞추고 싶은 경우)
+        function applyCurrentRatesToAllProjects() {
+            const rates = JSON.parse(JSON.stringify(_getCurrentProjectRates()));
+            showCustomConfirm(
+                `지금 이 요율을 등록된 모든 현장(${Object.keys(appState.projects).length}개)에 동일하게 적용하시겠습니까?<br>각 현장이 개별적으로 가지고 있던 요율(등록 시점 스냅샷)은 모두 지금 값으로 덮어써집니다.`,
+                () => {
+                    Object.values(appState.projects).forEach(p => {
+                        p.taxRatesSnapshot = JSON.parse(JSON.stringify(rates));
+                        p.taxRatesSnapshotAt = Date.now();
+                    });
+                    saveToLocalStorage();
+                    _insuranceAgeCache.clear();
+                    updateHeaderAndTable();
+                    renderTaxRateInputs();
+                    showToast('모든 현장에 현재 요율이 적용되었습니다.');
+                }
+            );
         }
 
         function openTaxRateModal() {
@@ -2586,29 +2673,34 @@
         }
 
         function resetTaxRates() {
-            if (!confirm('공제 요율을 2026년 법정 기본값으로 되돌리시겠습니까?')) return;
-            taxRates = JSON.parse(JSON.stringify(DEFAULT_TAX_RATES));
+            if (!confirm('공제 요율을 2026년 법정 기본값으로 되돌리시겠습니까? (현재 보고 있는 현장에 적용됩니다)')) return;
+            const defaults = JSON.parse(JSON.stringify(DEFAULT_TAX_RATES));
+            const proj = appState.projects[appState.currentProjectId];
+            if (proj) { proj.taxRatesSnapshot = JSON.parse(JSON.stringify(defaults)); proj.taxRatesSnapshotAt = Date.now(); }
+            taxRates = defaults;
             saveTaxRates();
+            saveToLocalStorage();
             _insuranceAgeCache.clear();
             renderTaxRateInputs();
             updateHeaderAndTable();
             showToast('기본 요율로 복원되었습니다.');
         }
 
-        // 사이드바 공제요율 입력 필드에 현재 taxRates 값 반영
+        // 사이드바 공제요율 입력 필드에 "현재 현장에서 실제 적용 중인" 요율 값을 반영
         function renderTaxRateInputs() {
+            const rates = _getCurrentProjectRates();
             const map = {
-                rateInputPension: (taxRates.pensionRate * 100),
-                rateInputHealth: (taxRates.healthRate * 100),
-                rateInputCare: (taxRates.careRate * 100),
-                rateInputEmployment: (taxRates.employmentRate * 100),
-                rateInputIncomeTax: (taxRates.incomeTaxRate * 100),
-                rateInputLocalTax: (taxRates.localTaxRate * 100),
-                rateInputTaxFree: taxRates.taxFreeAmount,
-                rateInputMinTax: taxRates.minTaxThreshold,
-                rateInputInsuranceDays: taxRates.insuranceMinDays,
-                rateInputPensionAge: taxRates.pensionExemptAge,
-                rateInputEmploymentAge: taxRates.employmentExemptAge
+                rateInputPension: (rates.pensionRate * 100),
+                rateInputHealth: (rates.healthRate * 100),
+                rateInputCare: (rates.careRate * 100),
+                rateInputEmployment: (rates.employmentRate * 100),
+                rateInputIncomeTax: (rates.incomeTaxRate * 100),
+                rateInputLocalTax: (rates.localTaxRate * 100),
+                rateInputTaxFree: rates.taxFreeAmount,
+                rateInputMinTax: rates.minTaxThreshold,
+                rateInputInsuranceDays: rates.insuranceMinDays,
+                rateInputPensionAge: rates.pensionExemptAge,
+                rateInputEmploymentAge: rates.employmentExemptAge
             };
             Object.keys(map).forEach(id => {
                 const el = document.getElementById(id);
@@ -2618,9 +2710,22 @@
                 }
             });
             const chkMinTax = document.getElementById('rateInputMinTaxEnabled');
-            if (chkMinTax) chkMinTax.checked = taxRates.minTaxEnabled !== false;
+            if (chkMinTax) chkMinTax.checked = rates.minTaxEnabled !== false;
             const chkTruncate = document.getElementById('rateInputTruncateToTen');
-            if (chkTruncate) chkTruncate.checked = !!taxRates.truncateToTen;
+            if (chkTruncate) chkTruncate.checked = !!rates.truncateToTen;
+
+            // 이 현장이 언제 기준 요율을 쓰고 있는지 안내 배너 갱신
+            const banner = document.getElementById('taxRateSnapshotBanner');
+            const proj = appState.projects[appState.currentProjectId];
+            if (banner && proj) {
+                const dateStr = proj.taxRatesSnapshotAt ? new Date(proj.taxRatesSnapshotAt).toLocaleDateString('ko-KR') : '알 수 없음';
+                banner.innerHTML = `
+                    <div class="bg-slate-800 border border-slate-700 rounded px-2.5 py-1.5 flex items-center justify-between gap-2">
+                        <span class="text-slate-400">📌 이 현장은 <b class="text-white">${dateStr}</b> 기준 요율을 사용 중입니다. 수정하면 <b class="text-white">이 현장에만</b> 적용됩니다.</span>
+                        <button onclick="applyCurrentRatesToAllProjects()" class="shrink-0 text-[9px] bg-slate-700 hover:bg-slate-600 text-amber-300 font-bold px-1.5 py-0.5 rounded transition-all whitespace-nowrap">전체 현장에 적용</button>
+                    </div>
+                `;
+            }
         }
 
 
@@ -5002,35 +5107,67 @@
         }
 
         // 등록된 모든 현장(회사 구분 없이)에서 실제 존재하는 연/월 조합만 뽑아 최신순으로 채운다
+        // 회사/현장명/연월 필터 드롭다운을 채우고, 그 필터 조건에 맞는 현장들을
+        // 체크박스 목록(현장 단위)으로 렌더링한다. 필터를 바꿀 때마다 다시 호출된다.
         function _populateMonthlyReportPeriods() {
             const list = document.getElementById('monthlyReportPeriodList');
-            if (!list) return;
-            const periods = new Map(); // key: "year-month" -> {year, month}
-            Object.values(appState.projects).forEach(p => {
-                const key = `${p.year}-${p.month}`;
-                if (!periods.has(key)) periods.set(key, { year: p.year, month: p.month });
-            });
-            const sorted = Array.from(periods.values()).sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+            const companySel = document.getElementById('monthlyReportFilterCompany');
+            const siteSel = document.getElementById('monthlyReportFilterSite');
+            const periodSel = document.getElementById('monthlyReportFilterPeriod');
+            if (!list || !companySel || !siteSel || !periodSel) return;
 
-            // 이미 체크되어 있던 항목은 목록을 새로 그려도 체크 상태가 유지되도록 기억해둔다
-            const prevChecked = new Set(Array.from(document.querySelectorAll('.monthlyReportPeriodCheck:checked')).map(el => el.value));
-            const proj = appState.projects[appState.currentProjectId];
-            const defaultKey = proj ? `${proj.year}-${proj.month}` : null;
+            const allProjects = Object.entries(appState.projects).map(([id, p]) => ({ id, ...p }));
 
-            list.innerHTML = sorted.map(p => {
-                const key = `${p.year}-${p.month}`;
-                const checked = prevChecked.size > 0 ? prevChecked.has(key) : key === defaultKey;
+            // 드롭다운 옵션은 최초 진입 시에만 채운다 (필터 변경 때마다 다시 채우면
+            // 방금 선택한 값이 사라지므로, 이미 옵션이 있으면 목록만 다시 그린다)
+            if (companySel.options.length === 0) {
+                const companies = Array.from(new Set(allProjects.map(p => p.company))).sort((a, b) => a.localeCompare(b, 'ko'));
+                companySel.innerHTML = '<option value="">전체</option>' + companies.map(c => `<option value="${c}">${c}</option>`).join('');
+            }
+            if (siteSel.options.length === 0) {
+                const sites = Array.from(new Set(allProjects.map(p => p.projectName).filter(Boolean))).sort((a, b) => a.localeCompare(b, 'ko'));
+                siteSel.innerHTML = '<option value="">전체</option>' + sites.map(s => `<option value="${s}">${s}</option>`).join('');
+            }
+            if (periodSel.options.length === 0) {
+                const periods = new Map();
+                allProjects.forEach(p => { const key = `${p.year}-${p.month}`; if (!periods.has(key)) periods.set(key, { year: p.year, month: p.month }); });
+                const sorted = Array.from(periods.values()).sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+                periodSel.innerHTML = '<option value="">전체</option>' + sorted.map(p => `<option value="${p.year}-${p.month}">${p.year}년 ${p.month}월</option>`).join('');
+            }
+
+            // 현재 필터 조건에 맞는 현장만 골라낸다
+            const fCompany = companySel.value;
+            const fSite = siteSel.value;
+            const fPeriod = periodSel.value;
+            const filtered = allProjects.filter(p =>
+                (!fCompany || p.company === fCompany) &&
+                (!fSite || p.projectName === fSite) &&
+                (!fPeriod || `${p.year}-${p.month}` === fPeriod)
+            ).sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month) || a.company.localeCompare(b.company, 'ko'));
+
+            // 이미 체크되어 있던 현장은 필터를 바꿔도(다시 보일 때) 체크 상태를 유지한다
+            const prevChecked = new Set(Array.from(document.querySelectorAll('.monthlyReportProjectCheck:checked')).map(el => el.value));
+            const curProj = appState.projects[appState.currentProjectId];
+
+            if (filtered.length === 0) {
+                list.innerHTML = '<div class="py-6 text-center text-slate-400 text-xs">조건에 맞는 현장이 없습니다.</div>';
+                return;
+            }
+
+            list.innerHTML = filtered.map(p => {
+                const checked = prevChecked.size > 0 ? prevChecked.has(p.id) : p.id === appState.currentProjectId;
                 return `
                     <label class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-indigo-50 text-xs">
-                        <input type="checkbox" class="monthlyReportPeriodCheck accent-indigo-600 w-3.5 h-3.5 shrink-0" value="${key}" ${checked ? 'checked' : ''}>
-                        <span class="font-bold text-slate-700">${p.year}년 ${p.month}월</span>
+                        <input type="checkbox" class="monthlyReportProjectCheck accent-indigo-600 w-3.5 h-3.5 shrink-0" value="${p.id}" ${checked ? 'checked' : ''}>
+                        <span class="font-bold text-slate-700 truncate">${p.company} · ${p.projectName || ''} · ${p.year}년 ${p.month}월</span>
+                        <span class="text-slate-400 ml-auto shrink-0">${(p.labors || []).length}명</span>
                     </label>
                 `;
             }).join('');
         }
 
         function _monthlyReportSelectAll(checked) {
-            document.querySelectorAll('.monthlyReportPeriodCheck').forEach(cb => { cb.checked = checked; });
+            document.querySelectorAll('.monthlyReportProjectCheck').forEach(cb => { cb.checked = checked; });
         }
 
         function _clientSubSelectAll(checked) {
@@ -5101,9 +5238,7 @@
                 proj.labors.forEach(l => {
                     let autoDays = 0;
                     for (let d = 1; d <= daysInMonth; d++) autoDays = Math.round((autoDays + Number(l.attendance[d] || 0)) * 10) / 10;
-                    const calc = calculateDeductions(l, autoDays);
-
-                    const hasProxy = !!(l.proxyName && l.proxyAccount);
+                    const calc = calculateDeductions(l, autoDays, proj);
                     const bankOut = hasProxy ? (l.proxyBank || '') : (l.bank || '');
                     const accountOut = hasProxy ? (l.proxyAccount || '') : (l.account || '');
                     const phoneOut = l.phone || '';
@@ -5151,31 +5286,36 @@
         // 인건비 현황을 회사·현장별로 정리해 독립 실행 HTML 파일로 만든다.
         // ============================================================
         function generateMonthlyReportHtml() {
-            const checkedPeriods = Array.from(document.querySelectorAll('.monthlyReportPeriodCheck:checked')).map(el => el.value);
-            if (checkedPeriods.length === 0) {
-                showCustomAlert('보고할 연/월을 1개 이상 선택해 주세요.');
+            const checkedProjectIds = Array.from(document.querySelectorAll('.monthlyReportProjectCheck:checked')).map(el => el.value);
+            if (checkedProjectIds.length === 0) {
+                showCustomAlert('보고에 포함할 현장을 1개 이상 선택해 주세요.');
                 return;
             }
-            // "year-month" 문자열들을 최신순으로 정렬
-            const periods = checkedPeriods
-                .map(k => { const [y, m] = k.split('-').map(Number); return { year: y, month: m }; })
-                .sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+            const selectedProjects = checkedProjectIds.map(id => appState.projects[id]).filter(Boolean);
 
             const fmt = n => n.toLocaleString();
-            const monthBlocks = []; // { year, month, rows, subtotal }
-            periods.forEach(({ year, month }) => {
-                const targetProjects = Object.values(appState.projects).filter(p => p.year === year && p.month === month);
-                if (targetProjects.length === 0) return;
 
-                const rows = targetProjects.map(p => {
+            // 선택된 현장들을 연/월 단위로 묶는다 (여러 달이 섞여 있으면 달별로 표를 나눔)
+            const byPeriod = new Map(); // key "year-month" -> projects[]
+            selectedProjects.forEach(p => {
+                const key = `${p.year}-${p.month}`;
+                if (!byPeriod.has(key)) byPeriod.set(key, []);
+                byPeriod.get(key).push(p);
+            });
+            const periods = Array.from(byPeriod.entries())
+                .map(([key, projects]) => { const [y, m] = key.split('-').map(Number); return { year: y, month: m, projects }; })
+                .sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+
+            const monthBlocks = []; // { year, month, rows, subtotal }
+            periods.forEach(({ year, month, projects }) => {
+                const rows = projects.map(p => {
                     const daysInMonth = new Date(p.year, p.month, 0).getDate();
                     let wages = 0, deduction = 0, net = 0, workerCount = 0;
                     (p.labors || []).forEach(l => {
                         let days = 0;
                         for (let d = 1; d <= daysInMonth; d++) days = Math.round((days + Number(l.attendance[d] || 0)) * 10) / 10;
                         if (days <= 0) return;
-                        const calc = calculateDeductions(l, days);
-                        wages += calc.totalWages;
+                        const calc = calculateDeductions(l, days, p);
                         deduction += calc.totalDeduction;
                         net += calc.netPay;
                         workerCount++;
@@ -5194,7 +5334,7 @@
             });
 
             if (monthBlocks.length === 0) {
-                showCustomAlert('선택한 연/월에 등록된 현장이 없습니다.');
+                showCustomAlert('선택한 현장에 표시할 데이터가 없습니다.');
                 return;
             }
 
@@ -5523,6 +5663,7 @@ ${grandTotalHtml}
             ['taxRateModal', closeTaxRateModal],
             ['docIssueHistoryModal', () => document.getElementById('docIssueHistoryModal').classList.add('hidden')],
             ['workerDbEditModal', closeWorkerDbEditModal],
+            ['workerHistoryModal', closeWorkerHistoryModal],
             ['zipExportModal', closeZipExportModal],
             ['globalSearchModal', closeGlobalSearchModal],
             ['ledgerHtmlExportModal', closeLedgerHtmlExportModal],
@@ -7462,7 +7603,7 @@ ${dayTotalCells2}
                 (p.labors || []).forEach(l => {
                     let autoDays = 0;
                     for (let d = 1; d <= daysInMonth; d++) { if (l.attendance && l.attendance[d]) autoDays = Math.round((autoDays + Number(l.attendance[d])) * 10) / 10; }
-                    wages += calculateDeductions(l, autoDays).totalWages;
+                    wages += calculateDeductions(l, autoDays, p).totalWages;
                 });
                 return wages;
             });
@@ -10111,10 +10252,18 @@ ${dayTotalCells2}
             return Math.floor(v + 1e-9);
         }
 
-        function calculateDeductions(labor, daysCount) {
-            const proj = appState.projects[appState.currentProjectId];
+        // projectOverride: 생략하면 현재 화면에 열려있는 현장 기준으로 계산한다(기존 동작 그대로).
+        // 다른 현장의 근로자를 계산해야 하는 경우(발주처 청구서 통합, 본사 월간 리포트처럼 여러
+        // 현장을 순회하는 기능)에는 반드시 그 근로자가 실제로 속한 현장을 명시적으로 넘겨야 한다.
+        // 그렇지 않으면 나이 판정(귀속월)과 세율 스냅샷이 "현재 화면의 현장" 것으로 잘못 계산된다.
+        function calculateDeductions(labor, daysCount, projectOverride) {
+            const proj = projectOverride || appState.projects[appState.currentProjectId];
             const effectiveDays = (labor.manualDays !== null && labor.manualDays !== undefined) ? labor.manualDays : daysCount;
             const totalWages = _safeFloor(labor.price * effectiveDays);
+
+            // 이 현장에 등록 당시 저장해둔 세율 스냅샷이 있으면 그것을 쓰고(과거 신고 시점 기준 유지),
+            // 스냅샷이 없는 기존(이 기능 도입 이전) 현장은 지금까지처럼 전역 요율을 그대로 사용한다.
+            const rates = (proj && proj.taxRatesSnapshot) ? proj.taxRatesSnapshot : taxRates;
             
             // 귀속 연도 및 귀속월 기준 정확한 '만 나이' 기반 세제 혜택 판정
             // [수정] 귀속월 말일 기준으로 나이 계산 — 해당 월 중 생일이 지났으면 면제 혜택 반영
@@ -10131,37 +10280,37 @@ ${dayTotalCells2}
             if (totalWages > 0) {
                 // 고용보험 (실업급여): 근로자부 요율 적용 (고용보험 면제 연령 이상 취득자는 실업급여부 면제)
                 if (!isEmploymentExempt) {
-                    employment = _safeFloor(totalWages * taxRates.employmentRate);
+                    employment = _safeFloor(totalWages * rates.employmentRate);
                 }
 
                 // 국민, 건강, 장기요양 (설정된 최소 근로일수 이상 근로 시 정규 취득 대상이 됨)
-                if (effectiveDays >= taxRates.insuranceMinDays) {
+                if (effectiveDays >= rates.insuranceMinDays) {
                     // 국민연금: 근로자 요율 적용 (국민연금 면제 연령 이상은 납부 예외)
                     if (!isPensionExempt) {
-                        pension = _safeFloor(totalWages * taxRates.pensionRate);
+                        pension = _safeFloor(totalWages * rates.pensionRate);
                     }
-                    health = _safeFloor(totalWages * taxRates.healthRate);
-                    care = _safeFloor(health * taxRates.careRate);
+                    health = _safeFloor(totalWages * rates.healthRate);
+                    care = _safeFloor(health * rates.careRate);
                 }
 
                 // 일용직 소득세 소액부징수 (월합계 기준)
                 // (일당 - 비과세 공제 후 원천세율 적용 → 근무일수를 곱한 월합계 소득세가 소액부징수 기준 미만이면 전액 0원 징수 제외)
                 // ※ "소액부징수 적용" 옵션을 끄면 기준 미만이어도 항상 징수함
-                if (labor.price > taxRates.taxFreeAmount) {
-                    const dailyCalculatedTax = _safeFloor((labor.price - taxRates.taxFreeAmount) * taxRates.incomeTaxRate);
-                    const dailyLocalTax = _safeFloor(dailyCalculatedTax * taxRates.localTaxRate);
+                if (labor.price > rates.taxFreeAmount) {
+                    const dailyCalculatedTax = _safeFloor((labor.price - rates.taxFreeAmount) * rates.incomeTaxRate);
+                    const dailyLocalTax = _safeFloor(dailyCalculatedTax * rates.localTaxRate);
                     const monthlyIncomeTax = dailyCalculatedTax * effectiveDays;
                     const monthlyLocalTax = dailyLocalTax * effectiveDays;
-                    const minTaxEnabled = taxRates.minTaxEnabled !== false;
+                    const minTaxEnabled = rates.minTaxEnabled !== false;
 
-                    if (!minTaxEnabled || monthlyIncomeTax >= taxRates.minTaxThreshold) {
+                    if (!minTaxEnabled || monthlyIncomeTax >= rates.minTaxThreshold) {
                         incomeTax = monthlyIncomeTax;
                         localTax = monthlyLocalTax;
                     }
                 }
 
                 // 옵션: 소득세/지방세/4대보험료 10원 단위 절사 (끝자리 0으로 내림)
-                if (taxRates.truncateToTen) {
+                if (rates.truncateToTen) {
                     const truncTen = (v) => _safeFloor(v / 10) * 10;
                     pension = truncTen(pension);
                     health = truncTen(health);
@@ -10808,7 +10957,12 @@ ${dayTotalCells2}
                 projectName,
                 workType,
                 officeAddress,
-                labors: []
+                labors: [],
+                // 이 현장을 등록한 시점의 세율(국민연금/건강보험/소득세 등)을 그대로 저장해둔다.
+                // 나중에 "요율 설정"에서 세율을 바꾸더라도, 이미 만든 현장의 계산 결과가
+                // 당시 신고 기준과 달라지지 않도록(과거 서류 재확인 시 숫자가 안 바뀌도록) 하기 위함.
+                taxRatesSnapshot: JSON.parse(JSON.stringify(taxRates)),
+                taxRatesSnapshotAt: Date.now()
             };
 
             appState.currentProjectId = newId;
@@ -12277,8 +12431,8 @@ ${xlsRows}
                 const tdCount = document.createElement('td');
                 tdCount.className = 'p-2 text-indigo-600 font-bold underline cursor-pointer whitespace-nowrap';
                 tdCount.textContent = `${w.count}개 대장`;
-                tdCount.title = '클릭하면 등록된 대장 목록을 볼 수 있습니다';
-                tdCount.addEventListener('click', () => _showWorkerProjectList(w));
+                tdCount.title = '클릭하면 전체 현장 근무이력(일수·총액·실지급액)을 볼 수 있습니다';
+                tdCount.addEventListener('click', () => openWorkerHistoryModal(w));
 
                 const tdBtn = document.createElement('td');
                 tdBtn.className = 'p-2 no-print text-right whitespace-nowrap';
@@ -12369,9 +12523,63 @@ ${xlsRows}
         let _workerDbEditTarget = null;
 
 
-        function _showWorkerProjectList(w) {
-            const lines = (w.projects || []).map((p, i) => `${i + 1}. ${p}`).join('\n');
-            showCustomAlert(`${w.name} 님이 등록된 대장 (${w.projects.length}개)\n\n${lines}`);
+        // 근로자DB — "N개 대장" 클릭 시, 동일인이 등록된 모든 현장을 재무 정보(일수/총액/실지급액)와
+        // 함께 모아 보여준다. 식별은 주민번호(13자리 정상 입력된 경우) 우선, 아니면 이름으로 매칭.
+        function openWorkerHistoryModal(w) {
+            const identityKey = _workerDbIdentityKey(w);
+            const rows = [];
+            Object.values(appState.projects).forEach(p => {
+                (p.labors || []).forEach(l => {
+                    if (_workerDbIdentityKey(l) !== identityKey) return;
+                    const daysInMonth = new Date(p.year, p.month, 0).getDate();
+                    let days = 0;
+                    for (let d = 1; d <= daysInMonth; d++) days = Math.round((days + Number(l.attendance[d] || 0)) * 10) / 10;
+                    if (days <= 0) return;
+                    const calc = calculateDeductions(l, days, p);
+                    rows.push({ company: p.company, projectName: p.projectName || '', year: p.year, month: p.month, days, wages: calc.totalWages, net: calc.netPay });
+                });
+            });
+            rows.sort((a, b) => (b.year * 100 + b.month) - (a.year * 100 + a.month));
+
+            document.getElementById('workerHistoryName').textContent = w.name;
+
+            const grand = rows.reduce((acc, r) => ({ days: acc.days + r.days, wages: acc.wages + r.wages, net: acc.net + r.net }), { days: 0, wages: 0, net: 0 });
+            document.getElementById('workerHistorySummary').innerHTML = `
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-center">
+                    <div class="text-[10px] font-bold text-slate-400">참여 현장</div>
+                    <div class="text-base font-black text-slate-800">${rows.length}곳</div>
+                </div>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-2.5 text-center">
+                    <div class="text-[10px] font-bold text-slate-400">누적 총액</div>
+                    <div class="text-base font-black text-blue-700">${grand.wages.toLocaleString()}원</div>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-2.5 text-center">
+                    <div class="text-[10px] font-bold text-slate-400">누적 실지급액</div>
+                    <div class="text-base font-black text-emerald-700">${grand.net.toLocaleString()}원</div>
+                </div>
+            `;
+
+            const tbody = document.getElementById('workerHistoryTableBody');
+            if (rows.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="p-6 text-center text-slate-400">출역 이력이 없습니다.</td></tr>';
+            } else {
+                tbody.innerHTML = rows.map(r => `
+                    <tr class="border-b border-slate-100">
+                        <td class="p-2 font-bold text-slate-700">${r.company} · ${r.projectName}</td>
+                        <td class="p-2 text-slate-500">${r.year}년 ${r.month}월</td>
+                        <td class="p-2 text-right font-mono">${r.days}일</td>
+                        <td class="p-2 text-right font-mono text-blue-700 font-bold">${r.wages.toLocaleString()}</td>
+                        <td class="p-2 text-right font-mono text-emerald-700 font-bold">${r.net.toLocaleString()}</td>
+                    </tr>
+                `).join('');
+            }
+
+            document.getElementById('workerHistoryModal').classList.remove('hidden');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function closeWorkerHistoryModal() {
+            document.getElementById('workerHistoryModal').classList.add('hidden');
         }
 
         // 근로자DB — CSV(엑셀 호환) 내보내기
