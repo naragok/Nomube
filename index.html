@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.22 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.24 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.22</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.24</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -405,6 +405,14 @@
                             <button onclick="applyDensity('normal')" id="btn-normal" class="py-1 rounded text-center border font-bold transition-all bg-blue-50 border-blue-400 text-blue-700 text-xs">보통</button>
                             <button onclick="applyDensity('wide')" id="btn-wide" class="py-1 rounded text-center border font-bold transition-all bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 text-xs">넓게</button>
                         </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-slate-500 font-bold text-xs">인쇄 여백</span>
+                            <span id="printMarginVal" class="text-blue-600 font-bold text-xs">5mm</span>
+                        </div>
+                        <input type="range" id="printMarginSlider" min="0" max="20" step="1" value="5" oninput="applyPrintMargin(this.value)" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                        <div class="flex justify-between text-[9px] text-slate-400 mt-0.5"><span>여백 없음</span><span>넓게</span></div>
                     </div>
                     <div class="border-t border-slate-100 pt-2 space-y-2">
                         <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
@@ -3038,6 +3046,7 @@
             setupDragRangeListeners(); // 드래그 범위 기입 이벤트 등록
             _initDarkMode();
             _initLargeTextMode();
+            _initPrintMargin();
             // 대장 표는 기본적으로 한 화면에 맞추기를 켠 상태로 시작
             // (레이아웃/폰트 계산이 끝난 뒤 측정되도록 rAF 두 번 + 여유 지연으로 안정성 확보)
             requestAnimationFrame(() => {
@@ -3526,6 +3535,38 @@
             if (currentDensity === 'narrow') return 'p-0.5';
             if (currentDensity === 'wide') return 'p-2.5';
             return 'p-1';
+        }
+
+        // ===== 인쇄 여백 조절 (대장 표 직접 인쇄용) =====
+        // @page 규칙은 클래스로 토글할 수 없어서, 값이 바뀔 때마다 <style> 태그를
+        // 새로 만들어 head 맨 뒤에 넣는 방식으로 기존 @page 여백을 덮어쓴다.
+        const PRINT_MARGIN_KEY = 'labor_payment_print_margin_mm';
+
+        function applyPrintMargin(mm) {
+            mm = Number(mm);
+            const valEl = document.getElementById('printMarginVal');
+            if (valEl) valEl.textContent = mm + 'mm';
+
+            let styleEl = document.getElementById('dynamicPrintMarginStyle');
+            if (!styleEl) {
+                styleEl = document.createElement('style');
+                styleEl.id = 'dynamicPrintMarginStyle';
+                document.head.appendChild(styleEl);
+            }
+            styleEl.innerHTML = `@media print { @page { margin: ${mm}mm !important; } }`;
+
+            try { localStorage.setItem(PRINT_MARGIN_KEY, String(mm)); } catch (e) {}
+        }
+
+        function _initPrintMargin() {
+            let saved = 5;
+            try {
+                const v = localStorage.getItem(PRINT_MARGIN_KEY);
+                if (v !== null) saved = Number(v);
+            } catch (e) {}
+            const slider = document.getElementById('printMarginSlider');
+            if (slider) slider.value = saved;
+            applyPrintMargin(saved);
         }
 
         // 상단 드롭다운 채우기
@@ -5323,6 +5364,7 @@
   .text-emerald-700 { color: #047857; }
   .print-btn { display: inline-flex; align-items: center; gap: 5px; background: #fff; border: 1px solid #cbd5e1; color: #334155; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 6px; cursor: pointer; }
   .print-btn:hover { background: #f1f5f9; }
+  .margin-ctrl { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #64748b; font-weight: 700; }
   @media print {
     .no-print { display: none !important; }
     @page { size: A4 landscape; margin: 10mm; }
@@ -5337,8 +5379,14 @@
     <h1>${periodLabel} 노무비 현황 보고</h1>
     <div class="sub">생성 시각: ${stamp} · ${monthBlocks.length}개월 · 현장 ${totalProjectCount}개 통합</div>
   </div>
-  <button class="print-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="margin-ctrl">
+      여백 <input type="range" id="pmSlider" min="0" max="20" value="10" oninput="document.getElementById('pmVal').textContent=this.value+'mm';document.getElementById('pmStyle').innerHTML='@page{margin:'+this.value+'mm !important}'"> <span id="pmVal">10mm</span>
+    </div>
+    <button class="print-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+  </div>
 </div>
+<style id="pmStyle" media="print"></style>
 <div class="kpi-grid">
   <div class="kpi-card"><div class="kpi-label">보고 대상 개월 수</div><div class="kpi-value">${monthBlocks.length}개월</div></div>
   <div class="kpi-card"><div class="kpi-label">전체 출역 인원</div><div class="kpi-value">${grand.workerCount}명</div></div>
@@ -6340,6 +6388,7 @@ ${grandTotalHtml}
   .snapshot-banner { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 700; margin-bottom: 14px; }
   .print-btn { display: inline-flex; align-items: center; gap: 5px; background: #fff; border: 1px solid #cbd5e1; color: #334155; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 6px; cursor: pointer; margin-left: 8px; }
   .print-btn:hover { background: #f1f5f9; }
+  .margin-ctrl { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #64748b; font-weight: 700; }
   input:disabled, select:disabled, textarea:disabled { opacity: 1; -webkit-text-fill-color: inherit; cursor: default; }
   /* 인쇄 시 카드·표·차트 등이 페이지 경계에서 잘리지 않도록 각 블록 내부에서는 페이지가
      넘어가지 않게 하고, A4 용지 크기와 넉넉한 여백을 지정한다 */
@@ -6357,8 +6406,14 @@ ${grandTotalHtml}
 <body>
 <div class="no-print" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px">
   <div class="snapshot-banner" style="margin-bottom:0">🔒 읽기 전용 스냅샷 · ${stamp} 기준 · ${bannerText}</div>
-  <button class="print-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="margin-ctrl">
+      여백 <input type="range" id="pmSlider" min="0" max="20" value="10" oninput="document.getElementById('pmVal').textContent=this.value+'mm';document.getElementById('pmStyle').innerHTML='@page{margin:'+this.value+'mm !important}'"> <span id="pmVal">10mm</span>
+    </div>
+    <button class="print-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+  </div>
 </div>
+<style id="pmStyle" media="print"></style>
 ${clone.outerHTML}
 <script>if (window.lucide) lucide.createIcons();<\/script>
 </body>
@@ -6599,9 +6654,12 @@ ${clone.outerHTML}
         #printTable .empty-day { background: #f1f5f9; }
         #printTable td[contenteditable="true"]:hover { background: #fffbeb; cursor: text; }
         #printTable td[contenteditable="true"]:focus { background: #fef3c7; outline: 1px solid #f59e0b; }
-        .snapshot-banner { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
-        .edit-banner { display: inline-flex; align-items: center; gap: 6px; background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
-        @media print { .snapshot-banner, .edit-banner { display: none; } @page { size: A4 landscape; margin: 5mm 4mm; } body { margin: 0; } }
+        .snapshot-banner { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; }
+        .edit-banner { display: inline-flex; align-items: center; gap: 6px; background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; }
+        .print-btn { display: inline-flex; align-items: center; gap: 5px; background: #fff; border: 1px solid #cbd5e1; color: #334155; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 6px; cursor: pointer; }
+        .print-btn:hover { background: #f1f5f9; }
+        .margin-ctrl { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #64748b; font-weight: 700; }
+        @media print { .no-print { display: none !important; } @page { size: A4 landscape; margin: 5mm 4mm; } body { margin: 0; } }
             `;
 
             const now = new Date();
@@ -6627,7 +6685,16 @@ ${clone.outerHTML}
 </head>
 <body>
 <h1>${proj.company} — ${proj.projectName || ''} (${proj.year}년 ${proj.month}월 노무비명세서)</h1>
-${banner}
+<div class="no-print" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+  ${banner}
+  <div style="display:flex;align-items:center;gap:10px">
+    <div class="margin-ctrl">
+      여백 <input type="range" id="pmSlider" min="0" max="20" value="5" oninput="document.getElementById('pmVal').textContent=this.value+'mm';document.getElementById('pmStyle').innerHTML='@page{margin:'+this.value+'mm !important}'"> <span id="pmVal">5mm</span>
+    </div>
+    <button class="print-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+  </div>
+</div>
+<style id="pmStyle" media="print"></style>
 ${tableClone.outerHTML}
 </body>
 </html>`;
@@ -6680,6 +6747,7 @@ ${tableClone.outerHTML}
         .info-banner { display: inline-flex; align-items: center; gap: 6px; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
         .toolbar-btn { display: inline-flex; align-items: center; gap: 5px; background: #fff; border: 1px solid #cbd5e1; color: #334155; font-weight: 700; font-size: 11.5px; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
         .toolbar-btn:hover { background: #f1f5f9; }
+        .margin-ctrl { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #64748b; font-weight: 700; }
         .tbl-wrap { overflow-x: auto; }
         table { border-collapse: collapse; font-size: 10.5px; white-space: nowrap; }
         th, td { border: 1px solid #94a3b8; text-align: center; padding: 3px 4px; }
@@ -6902,8 +6970,14 @@ ${tableClone.outerHTML}
 <h1>${proj.company} — ${proj.projectName || ''} (${proj.year}년 ${proj.month}월 노무비명세서)</h1>
 <div class="no-print" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px">
     <div class="info-banner" style="margin-bottom:0">🧮 자동계산 버전 · ${stamp} 기준 · 출역값·단가를 고치면 세금·보험·실지급액이 자동으로 다시 계산됩니다</div>
-    <button class="toolbar-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+    <div style="display:flex;align-items:center;gap:10px">
+        <div class="margin-ctrl">
+            여백 <input type="range" id="pmSlider" min="0" max="20" value="8" oninput="document.getElementById('pmVal').textContent=this.value+'mm';document.getElementById('pmStyle').innerHTML='@page{margin:'+this.value+'mm !important}'"> <span id="pmVal">8mm</span>
+        </div>
+        <button class="toolbar-btn" onclick="window.print()">🖨 인쇄 / PDF로 저장</button>
+    </div>
 </div>
+<style id="pmStyle" media="print"></style>
 <div class="tbl-wrap">
 <table>
 ${colgroup}
