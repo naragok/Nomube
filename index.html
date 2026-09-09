@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.27 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.28 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.27</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.28</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -11097,7 +11097,7 @@ ${dayTotalCells2}
             let xlsRows = '';
 
             // 타이틀 행 (회사명/현장명)
-            const totalCols = 5 + 31 + 13; // NO+성명+주민번호+주소+직종 + 1~31 + 우측11개(소득세/지방세 분리 등) + 면제플래그2개
+            const totalCols = 5 + 31 + 11; // NO+성명+주민번호+주소+직종 + 1~31 + 우측9개(일수~고용면제, 소득세/지방세와 건강보험/장기요양은 각각 한 열을 위아래로 공유)
             xlsRows += `<Row ss:Height="22">${C(`${proj.company} — ${proj.projectName} (${proj.year}년 ${proj.month}월 노무비 지급명세)`, 'title', totalCols - 1, 0, 'String')}</Row>`;
 
             // 헤더 행 1: 고정셀(rowspan=2용 MergeDown=1) + 1~16일 + 우측셀(MergeDown=1)
@@ -11113,11 +11113,9 @@ ${dayTotalCells2}
             xlsRows += C('일수',     'hdr', 0, 1);
             xlsRows += C('단가',     'hdr', 0, 1);
             xlsRows += C('총액',     'hdr', 0, 1);
-            xlsRows += C('소득세',   'hdr', 0, 1);
-            xlsRows += C('지방세',   'hdr', 0, 1);
+            xlsRows += C('소득세',   'hdr', 0, 0);
             xlsRows += C('고용보험', 'hdr', 0, 1);
-            xlsRows += C('건강보험', 'hdr', 0, 1);
-            xlsRows += C('장기요양', 'hdr', 0, 1);
+            xlsRows += C('건강보험', 'hdr', 0, 0);
             xlsRows += C('국민연금', 'hdr', 0, 1);
             xlsRows += C('공제합계', 'hdr', 0, 1);
             xlsRows += C('실지급액', 'hdr', 0, 1);
@@ -11137,6 +11135,10 @@ ${dayTotalCells2}
                     xlsRows += C(d <= daysInMonth ? `${String(d).padStart(2,'0')}\n${dowName(d)}` : '', dayStyle(d, true, false));
                 }
             }
+            // 소득세/건강보험과 같은 열 위치(25번째, 27번째 칸)에 지방세/장기요양을 명시적으로 배치
+            // → PDF 실물 서식처럼 한 칸 안에 위(소득세)/아래(지방세)로 보이게 됨
+            xlsRows += `<Cell ss:Index="25" ss:StyleID="hdr"><Data ss:Type="String">지방세</Data></Cell>`;
+            xlsRows += `<Cell ss:Index="27" ss:StyleID="hdr"><Data ss:Type="String">장기요양</Data></Cell>`;
             xlsRows += `</Row>`;
 
             // 근로자 행 (1명 = 2행)
@@ -11168,25 +11170,25 @@ ${dayTotalCells2}
                 xlsRows += C(l.price,            'money',     0, 1, 'Number');
                 xlsRows += CF('=FLOOR(RC[-1]*RC[-2],1)', calc.totalWages, 'moneyBold', 0, 1);
                 // 소득세: 비과세 초과분에 세율 적용 → 일수 곱해 월합계 산출 → 월합계 기준 소액부징수 판정 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-2]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-3]<R${REF.minTax}C2)),0,FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-3])`)}`, calc.incomeTax, 'money', 0, 1);
-                // 지방세: 소득세와 동일 조건, 소득세율 대신 (비과세초과분×소득세율)×지방세율 적용 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-3]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,FLOOR((RC[-3]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-4]<R${REF.minTax}C2)),0,FLOOR(FLOOR((RC[-3]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*R${REF.localTax}C2,1)*RC[-4])`)}`, calc.localTax, 'money', 0, 1);
+                // (이 칸은 mergeDown 없이 row1에만 있고, 바로 아래 물리적 행(row2)의 같은 열 위치에는
+                //  지방세가 들어간다 — PDF 실물 서식처럼 한 칸을 위/아래로 나눠 쓰는 구조)
+                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-2]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-3]<R${REF.minTax}C2)),0,FLOOR((RC[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*RC[-3])`)}`, calc.incomeTax, 'money', 0, 0);
                 // 고용보험: 고용면제자면 0, 아니면 총액×고용보험율 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(RC[7]=1,0,FLOOR(RC[-3]*R${REF.employment}C2,1))`)}`, calc.employment, 'money', 0, 1);
+                // (RC[6] = 새 열 배치 기준 6칸 뒤의 "고용면제" 플래그 칸)
+                xlsRows += CF(`=${wrapTrunc(`IF(RC[6]=1,0,FLOOR(RC[-2]*R${REF.employment}C2,1))`)}`, calc.employment, 'money', 0, 1);
                 // 건강보험: 최소일수 미만이면 0, 아니면 총액×건강보험율 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(RC[-6]<R${REF.insuranceMinDays}C2,0,FLOOR(RC[-4]*R${REF.health}C2,1))`)}`, calc.health, 'money', 0, 1);
-                // 장기요양: 최소일수 미만이면 0, 아니면 (총액×건강보험율)×장기요양율 → (옵션)10원 절사
-                // ※ 건강보험 셀 값(절사 이후일 수 있음)을 참조하지 않고 독립적으로 재계산 — JS도 절사 전 건강보험액을 기준으로 장기요양을 계산하기 때문
-                xlsRows += CF(`=${wrapTrunc(`IF(RC[-7]<R${REF.insuranceMinDays}C2,0,FLOOR(FLOOR(RC[-5]*R${REF.health}C2,1)*R${REF.care}C2,1))`)}`, calc.care, 'money', 0, 1);
+                // (이 칸도 mergeDown 없음 — 바로 아래 row2의 같은 열 위치에 장기요양이 들어간다)
+                xlsRows += CF(`=${wrapTrunc(`IF(RC[-5]<R${REF.insuranceMinDays}C2,0,FLOOR(RC[-3]*R${REF.health}C2,1))`)}`, calc.health, 'money', 0, 0);
                 // 국민연금: 최소일수 미만이거나 연금면제자면 0, 아니면 총액×국민연금율 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-8]<R${REF.insuranceMinDays}C2,RC[3]=1),0,FLOOR(RC[-6]*R${REF.pension}C2,1))`)}`, calc.pension, 'money', 0, 1);
-                xlsRows += CF('=SUM(RC[-6]:RC[-1])', calc.totalDeduction, 'money', 0, 1);
-                xlsRows += CF('=RC[-8]-RC[-1]', calc.netPay, 'moneyBold', 0, 1);
+                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-6]<R${REF.insuranceMinDays}C2,RC[3]=1),0,FLOOR(RC[-4]*R${REF.pension}C2,1))`)}`, calc.pension, 'money', 0, 1);
+                // 공제합계 = 소득세(이 행) + 지방세(바로 아래 행, 같은 열) + 고용보험(이 행) + 건강보험(이 행) + 장기요양(바로 아래 행, 같은 열) + 국민연금(이 행)
+                xlsRows += CF('=RC[-4]+R[1]C[-4]+RC[-3]+RC[-2]+R[1]C[-2]+RC[-1]', calc.totalDeduction, 'money', 0, 1);
+                xlsRows += CF('=RC[-6]-RC[-1]', calc.netPay, 'moneyBold', 0, 1);
                 xlsRows += C(pensionExempt,    'cell', 0, 1, 'Number');
                 xlsRows += C(employmentExempt, 'cell', 0, 1, 'Number');
                 xlsRows += `</Row>`;
 
-                // 행2: 17~31일
+                // 행2: 17~31일 + 지방세/장기요양(위 행의 소득세/건강보험과 같은 열 위치)
                 xlsRows += `<Row ss:Height="16"><Cell ss:Index="6" `;
                 for (let d = 17; d <= 31; d++) {
                     const v = d <= daysInMonth && l.attendance[d] && Number(l.attendance[d]) > 0 ? Number(l.attendance[d]) : '';
@@ -11197,10 +11199,17 @@ ${dayTotalCells2}
                         xlsRows += v !== '' ? C(v, s, 0, 0, 'Number') : EMPTY(s);
                     }
                 }
+                // 지방세: 소득세와 동일 조건, 소득세율 대신 (비과세초과분×소득세율)×지방세율 적용 → (옵션)10원 절사
+                // (바로 위 행(row1)의 단가=R[-1]C[-2], 일수=R[-1]C[-3]를 참조)
+                xlsRows += `<Cell ss:Index="25" ss:StyleID="money" ss:Formula="${xmlEscapeFormula(`=${wrapTrunc(`IF(OR(R[-1]C[-2]<=R${REF.taxFree}C2,AND(R${REF.minTaxEnabled}C2=1,FLOOR((R[-1]C[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*R[-1]C[-3]<R${REF.minTax}C2)),0,FLOOR(FLOOR((R[-1]C[-2]-R${REF.taxFree}C2)*R${REF.incomeTax}C2,1)*R${REF.localTax}C2,1)*R[-1]C[-3])`)}`)}"><Data ss:Type="Number">${N(calc.localTax)}</Data></Cell>`;
+                // 장기요양: 최소일수 미만이면 0, 아니면 (총액×건강보험율)×장기요양율 → (옵션)10원 절사
+                // (바로 위 행(row1)의 일수=R[-1]C[-5], 총액=R[-1]C[-3]를 참조. 건강보험 셀 값을 그대로 참조하지
+                //  않고 독립적으로 재계산 — JS도 절사 전 건강보험액을 기준으로 장기요양을 계산하기 때문)
+                xlsRows += `<Cell ss:Index="27" ss:StyleID="money" ss:Formula="${xmlEscapeFormula(`=${wrapTrunc(`IF(R[-1]C[-5]<R${REF.insuranceMinDays}C2,0,FLOOR(FLOOR(R[-1]C[-3]*R${REF.health}C2,1)*R${REF.care}C2,1))`)}`)}"><Data ss:Type="Number">${N(calc.care)}</Data></Cell>`;
                 xlsRows += `</Row>`;
             });
 
-            // 합계 행1: 1~16
+            // 합계 행1: 1~16 + 소득세/건강보험 합계(각각 그 열의 "홀수 번째" 근로자 행만 = row1 인스턴스만 합산)
             xlsRows += `<Row ss:Height="18">`;
             xlsRows += C('합   계', 'total', 4, 1);  // colspan 5 → MergeAcross=4
             for (let d = 1; d <= 16; d++) {
@@ -11209,20 +11218,20 @@ ${dayTotalCells2}
             }
             // 일수/총액/공제항목/지급액 합계는 각 열의 근로자 행 범위를 SUM하는 수식으로 연결
             // (근로자 2행 중 데이터가 있는 행에만 값이 있고 나머지는 빈칸이라 SUM 범위에 포함해도 0으로 처리되어 안전함)
+            // ※ 단, 소득세/건강보험(C25,C27)은 바로 아래 행에 지방세/장기요양이 같은 열에 들어가 있으므로
+            //   단순 SUM이 아니라 "근로자의 1번째 행(row1)만" 골라 더하는 SUMPRODUCT+MOD 수식을 쓴다.
             xlsRows += CF(`=SUM(R${firstDataRow}C22:R${lastDataRow}C22)`, sumDays,   'total',      0, 1);
             xlsRows += C('-',       'total',      0, 1);
             xlsRows += CF(`=SUM(R${firstDataRow}C24:R${lastDataRow}C24)`, sumWages,  'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C25:R${lastDataRow}C25)`, sumIncome, 'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C26:R${lastDataRow}C26)`, sumLocal,  'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C27:R${lastDataRow}C27)`, sumEmp,    'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C28:R${lastDataRow}C28)`, sumHealth, 'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C29:R${lastDataRow}C29)`, sumCare,   'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C30:R${lastDataRow}C30)`, sumPension,'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C31:R${lastDataRow}C31)`, sumDeduct, 'moneyTotal', 0, 1);
-            xlsRows += CF(`=SUM(R${firstDataRow}C32:R${lastDataRow}C32)`, sumNet,    'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUMPRODUCT((MOD(ROW(R${firstDataRow}C25:R${lastDataRow}C25)-${firstDataRow},2)=0)*R${firstDataRow}C25:R${lastDataRow}C25)`, sumIncome, 'moneyTotal', 0, 0);
+            xlsRows += CF(`=SUM(R${firstDataRow}C26:R${lastDataRow}C26)`, sumEmp,    'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUMPRODUCT((MOD(ROW(R${firstDataRow}C27:R${lastDataRow}C27)-${firstDataRow},2)=0)*R${firstDataRow}C27:R${lastDataRow}C27)`, sumHealth, 'moneyTotal', 0, 0);
+            xlsRows += CF(`=SUM(R${firstDataRow}C28:R${lastDataRow}C28)`, sumPension,'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C29:R${lastDataRow}C29)`, sumDeduct, 'moneyTotal', 0, 1);
+            xlsRows += CF(`=SUM(R${firstDataRow}C30:R${lastDataRow}C30)`, sumNet,    'moneyTotal', 0, 1);
             xlsRows += `</Row>`;
 
-            // 합계 행2: 17~31
+            // 합계 행2: 17~31 + 지방세/장기요양 합계("짝수 번째" 근로자 행 = row2 인스턴스만 합산)
             xlsRows += `<Row ss:Height="18"><Cell ss:Index="6" `;
             for (let d = 17; d <= 31; d++) {
                 const v = d <= daysInMonth && dailyCounts[d] > 0 ? dailyCounts[d] : '';
@@ -11233,6 +11242,8 @@ ${dayTotalCells2}
                     xlsRows += v !== '' ? C(v, s, 0, 0, 'Number') : EMPTY(s);
                 }
             }
+            xlsRows += `<Cell ss:Index="25" ss:StyleID="moneyTotal" ss:Formula="${xmlEscapeFormula(`=SUMPRODUCT((MOD(ROW(R${firstDataRow}C25:R${lastDataRow}C25)-${firstDataRow},2)=1)*R${firstDataRow}C25:R${lastDataRow}C25)`)}"><Data ss:Type="Number">${N(sumLocal)}</Data></Cell>`;
+            xlsRows += `<Cell ss:Index="27" ss:StyleID="moneyTotal" ss:Formula="${xmlEscapeFormula(`=SUMPRODUCT((MOD(ROW(R${firstDataRow}C27:R${lastDataRow}C27)-${firstDataRow},2)=1)*R${firstDataRow}C27:R${lastDataRow}C27)`)}"><Data ss:Type="Number">${N(sumCare)}</Data></Cell>`;
             xlsRows += `</Row>`;
 
             // 빈 줄 1개
@@ -11266,7 +11277,10 @@ ${dayTotalCells2}
   <Column ss:Width="60"/>
   <Column ss:Width="70"/>
   <Column ss:Width="30"/>`;
-            for (let d = 1; d <= 31; d++) {
+            // 실제 날짜 칸은 16개뿐이다(17~31일은 별도 열이 아니라 1~16일과 같은 6~20번 칸을
+            // 재사용함 — 위 데이터/헤더 행 생성부와 동일한 구조). 여기서 31개를 만들면 그만큼
+            // 뒤쪽(일수/단가/총액 등) 칸의 너비 정의가 전부 밀려서 엉뚱한 칸에 적용되는 버그가 있었다.
+            for (let d = 1; d <= 16; d++) {
                 colDefs += `\n  <Column ss:Width="${d <= daysInMonth ? 18 : 14}"/>`;
             }
             colDefs += `
