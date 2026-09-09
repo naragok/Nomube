@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.29 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.31 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.29</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.31</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -4046,7 +4046,7 @@
                     } else if (insuranceFilterVal === "employmentExempt") {
                         return isEmploymentExempt;
                     } else if (insuranceFilterVal === "insuranceTarget") {
-                        return finalDays >= taxRates.insuranceMinDays;
+                        return getCombinedInsuranceDays(l, proj) >= taxRates.insuranceMinDays;
                     }
                     return true;
                 });
@@ -4191,6 +4191,7 @@
                         ${duplicateBadge}
                         ${dummySsnBadge}
                         ${sameNameBadge}
+                        ${calc.isCrossSiteInsured ? `<span class="block text-[8px] bg-teal-600 text-white font-bold px-1 rounded mt-0.5 print:hidden" title="이 현장 근무일수(${calc.effectiveDays}일)만으로는 4대보험 취득 최소일수 미만이지만, 같은 회사 다른 현장 근무일수까지 합산하면 ${calc.combinedInsuranceDays}일로 취득 기준을 넘겨 국민연금/건강보험이 부과됩니다.">🔗합산${calc.combinedInsuranceDays}일 가입</span>` : ''}
                         ${labor.proxyName ? `<span class="block text-[8px] bg-indigo-100 text-indigo-700 font-bold px-1 rounded mt-0.5 print:hidden" title="위임자: ${labor.proxyName}">👤 위임: ${labor.proxyName}</span>` : ''}
                         <div class="hidden group-hover:flex flex-col gap-1 absolute left-0 top-full mt-1 w-[150px] bg-slate-800 text-white text-[10px] font-normal rounded-lg shadow-xl p-2 z-50 normal-case cursor-default" onclick="event.stopPropagation()">
                             <div class="flex items-center justify-between gap-2">
@@ -5559,7 +5560,7 @@ ${grandTotalHtml}
                     const finalDays = (l.manualDays !== null && l.manualDays !== undefined) ? l.manualDays : autoDays;
                     if (insuranceFilterVal === "pensionExempt") return isPensionExempt;
                     if (insuranceFilterVal === "employmentExempt") return isEmploymentExempt;
-                    if (insuranceFilterVal === "insuranceTarget") return finalDays >= taxRates.insuranceMinDays;
+                    if (insuranceFilterVal === "insuranceTarget") return getCombinedInsuranceDays(l, proj) >= taxRates.insuranceMinDays;
                     return true;
                 });
             }
@@ -6735,10 +6736,14 @@ ${tableClone.outerHTML}
             const dowClass = (d) => { const w = new Date(proj.year, proj.month - 1, d).getDay(); return w === 0 ? 'sun' : w === 6 ? 'sat' : ''; };
 
             // 근로자별 현재 데이터를 그대로 스냅샷으로 담는다 (이 파일은 원본과 분리된 사본)
+            // otherSitesInsuranceDays: 같은 회사(동일 법인)의 다른 현장에서 이번 달 이미 일한 일수(내보내기 시점 기준 스냅샷).
+            // 이 값 + 이 표에서 입력하는 일수를 더해 4대보험 취득 최소일수 충족 여부를 판정한다.
+            // (다른 현장 데이터는 이 파일에 실시간으로 반영될 수 없으므로, 내보내는 순간의 값을 고정해 담는다)
             const workersData = proj.labors.map(l => ({
                 name: l.name, ssn: l.ssn || '', job: l.job || '보통인부', address: l.address || '',
                 price: Number(l.price) || 0,
-                attendance: Object.fromEntries(Object.entries(l.attendance || {}).filter(([d, v]) => Number(v) > 0))
+                attendance: Object.fromEntries(Object.entries(l.attendance || {}).filter(([d, v]) => Number(v) > 0)),
+                otherSitesInsuranceDays: Math.max(0, getCombinedInsuranceDays(l, proj) - getLaborEffectiveDays(l, proj))
             }));
 
             const css = `
@@ -6812,14 +6817,16 @@ ${tableClone.outerHTML}
         }
 
         function _safeFloor(v) { return Math.floor(v + 1e-9); }
-        function calculateDeductions(price, effectiveDays, ssn) {
+        function calculateDeductions(price, effectiveDays, ssn, otherSitesInsuranceDays) {
             const totalWages = _safeFloor(price * effectiveDays);
             const lastDay = DAYS_IN_MONTH;
             const { isPensionExempt, isEmploymentExempt } = getExactInsuranceAge(ssn, PROJ.year, PROJ.month, lastDay);
+            // 같은 회사 다른 현장 근무일수(내보내기 시점 스냅샷) + 이 표의 근무일수를 합산해 취득 기준을 판정한다.
+            const combinedInsuranceDays = (otherSitesInsuranceDays || 0) + effectiveDays;
             let pension=0, health=0, care=0, employment=0, incomeTax=0, localTax=0;
             if (totalWages > 0) {
                 if (!isEmploymentExempt) employment = _safeFloor(totalWages * TAX_RATES.employmentRate);
-                if (effectiveDays >= TAX_RATES.insuranceMinDays) {
+                if (combinedInsuranceDays >= TAX_RATES.insuranceMinDays) {
                     if (!isPensionExempt) pension = _safeFloor(totalWages * TAX_RATES.pensionRate);
                     health = _safeFloor(totalWages * TAX_RATES.healthRate);
                     care = _safeFloor(health * TAX_RATES.careRate);
@@ -6851,7 +6858,7 @@ ${tableClone.outerHTML}
             const priceInput = document.getElementById('price_' + idx);
             w.price = Number(priceInput.value.replace(/[^0-9.]/g, '')) || 0;
 
-            const calc = calculateDeductions(w.price, days, w.ssn);
+            const calc = calculateDeductions(w.price, days, w.ssn, w.otherSitesInsuranceDays);
             document.getElementById('days_' + idx).textContent = days.toFixed(1);
             document.getElementById('wage_' + idx).textContent = calc.totalWages.toLocaleString();
             document.getElementById('tax_' + idx).textContent = calc.incomeTax.toLocaleString();
@@ -6876,7 +6883,7 @@ ${tableClone.outerHTML}
                     const v = input ? Number(input.value || 0) : 0;
                     if (v > 0) { days = Math.round((days + v) * 10) / 10; dailyTotal[d] = Math.round((dailyTotal[d] + v) * 10) / 10; }
                 }
-                const calc = calculateDeductions(w.price, days, w.ssn);
+                const calc = calculateDeductions(w.price, days, w.ssn, w.otherSitesInsuranceDays);
                 sumDays += days; sumWage += calc.totalWages; sumTax += calc.incomeTax; sumLocal += calc.localTax;
                 sumEmp += calc.employment; sumHealth += calc.health; sumCare += calc.care; sumPen += calc.pension;
                 sumDed += calc.totalDeduction; sumNet += calc.netPay;
@@ -10249,6 +10256,38 @@ ${dayTotalCells2}
             return Math.floor(v + 1e-9);
         }
 
+        // 근로자 한 명의 특정 현장(proj) 내 근무일수(수동 입력이 있으면 그 값, 없으면 출역표 합계).
+        // 4대보험 합산 판정을 위해, 화면 렌더링용 autoDays 계산 로직과 동일한 방식을 재사용한다.
+        function getLaborEffectiveDays(labor, proj) {
+            if (labor.manualDays !== null && labor.manualDays !== undefined) return labor.manualDays;
+            const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
+            let autoDays = 0;
+            for (let d = 1; d <= daysInMonth; d++) {
+                if (labor.attendance && labor.attendance[d]) autoDays = Math.round((autoDays + Number(labor.attendance[d])) * 10) / 10;
+            }
+            return autoDays;
+        }
+
+        // 동일 회사(company) + 동일 주민등록번호 + 동일 귀속년월(year/month)로 등록된 모든 현장 대장을 뒤져,
+        // 그 근로자가 이번 달 '전체 현장'에서 일한 근무일수를 합산한다.
+        // → 같은 법인이 여러 현장을 운영 중이고, 한 사람이 이번 달에 A현장 7일 + B현장 7일처럼
+        //   현장별로는 4대보험 취득 최소일수(기본 8일) 미만이지만 합산하면 넘는 경우를 정확히 잡아내기 위함.
+        // 주민등록번호가 없거나 불완전(13자리 아님, 일괄등록 임시번호 등)하면 안전하게 매칭을 포기하고
+        // 이 현장 단독 일수만 반환한다(잘못된 사람과 합산되는 사고를 막기 위함).
+        function getCombinedInsuranceDays(labor, proj) {
+            const cleanSsn = (labor.ssn || '').replace(/[^0-9]/g, '');
+            if (!cleanSsn || cleanSsn.length !== 13) return getLaborEffectiveDays(labor, proj);
+            let total = 0;
+            Object.values(appState.projects).forEach(p => {
+                if (!p || !p.labors || p.company !== proj.company || p.year !== proj.year || p.month !== proj.month) return;
+                p.labors.forEach(l => {
+                    if ((l.ssn || '').replace(/[^0-9]/g, '') !== cleanSsn) return;
+                    total += getLaborEffectiveDays(l, p);
+                });
+            });
+            return total;
+        }
+
         // projectOverride: 생략하면 현재 화면에 열려있는 현장 기준으로 계산한다(기존 동작 그대로).
         // 다른 현장의 근로자를 계산해야 하는 경우(발주처 청구서 통합, 본사 월간 리포트처럼 여러
         // 현장을 순회하는 기능)에는 반드시 그 근로자가 실제로 속한 현장을 명시적으로 넘겨야 한다.
@@ -10267,6 +10306,11 @@ ${dayTotalCells2}
             const lastDayOfMonth = new Date(proj.year, proj.month, 0).getDate();
             const { age, isPensionExempt, isEmploymentExempt } = getExactInsuranceAge(labor.ssn, proj.year, proj.month, lastDayOfMonth);
 
+            // 이 현장 단독 일수 대신, 같은 회사·같은 귀속월의 다른 현장 근무일수까지 합산한 값으로
+            // 4대보험(국민연금/건강보험/장기요양) 취득 여부를 판정한다.
+            const combinedInsuranceDays = getCombinedInsuranceDays(labor, proj);
+            const isCrossSiteInsured = combinedInsuranceDays >= rates.insuranceMinDays && effectiveDays < rates.insuranceMinDays;
+
             let pension = 0;
             let health = 0;
             let care = 0;
@@ -10281,7 +10325,11 @@ ${dayTotalCells2}
                 }
 
                 // 국민, 건강, 장기요양 (설정된 최소 근로일수 이상 근로 시 정규 취득 대상이 됨)
-                if (effectiveDays >= rates.insuranceMinDays) {
+                // ※ 이 현장 단독 일수가 기준 미만이어도, 같은 회사(동일 법인) 소속으로 다른 현장에서
+                //   함께 일한 일수까지 합산했을 때 기준을 넘으면 4대보험 취득 대상으로 본다.
+                //   보험료는 이 현장에서 지급한 임금(totalWages) 기준으로만 계산하므로,
+                //   여러 현장에 걸쳐 자동으로 근무일수(임금) 비율만큼 안분되는 효과가 있다.
+                if (combinedInsuranceDays >= rates.insuranceMinDays) {
                     // 국민연금: 근로자 요율 적용 (국민연금 면제 연령 이상은 납부 예외)
                     if (!isPensionExempt) {
                         pension = _safeFloor(totalWages * rates.pensionRate);
@@ -10323,6 +10371,8 @@ ${dayTotalCells2}
 
             return {
                 effectiveDays,
+                combinedInsuranceDays,
+                isCrossSiteInsured,
                 totalWages,
                 pension,
                 health,
@@ -11144,6 +11194,10 @@ ${dayTotalCells2}
 
             // 근로자 행 (1명 = 2행)
             rows.forEach(({ l, calc, idx, pensionExempt, employmentExempt }) => {
+                // 이 현장 단독 일수는 최소일수 미만이지만, 같은 회사 다른 현장 근무일수까지 합산하면
+                // 4대보험 취득 기준을 넘기는 경우 → 엑셀에서 재계산되어도 0으로 꺼지지 않도록
+                // 일수 미달 조건 자체를 무력화(FALSE)한 수식을 사용한다.
+                const insuranceDayGate = (rowDaysExpr) => calc.isCrossSiteInsured ? 'FALSE' : `${rowDaysExpr}<R${REF.insuranceMinDays}C2`;
                 // 행1: 1~16일
                 xlsRows += `<Row ss:Height="16">`;
                 xlsRows += C(idx + 1,           'cell',     0, 1);
@@ -11179,9 +11233,9 @@ ${dayTotalCells2}
                 xlsRows += CF(`=${wrapTrunc(`IF(RC[6]=1,0,FLOOR(RC[-2]*R${REF.employment}C2,1))`)}`, calc.employment, 'money', 0, 1);
                 // 건강보험: 최소일수 미만이면 0, 아니면 총액×건강보험율 → (옵션)10원 절사
                 // (이 칸도 mergeDown 없음 — 바로 아래 row2의 같은 열 위치에 장기요양이 들어간다)
-                xlsRows += CF(`=${wrapTrunc(`IF(RC[-5]<R${REF.insuranceMinDays}C2,0,FLOOR(RC[-3]*R${REF.health}C2,1))`)}`, calc.health, 'money', 0, 0);
+                xlsRows += CF(`=${wrapTrunc(`IF(${insuranceDayGate('RC[-5]')},0,FLOOR(RC[-3]*R${REF.health}C2,1))`)}`, calc.health, 'money', 0, 0);
                 // 국민연금: 최소일수 미만이거나 연금면제자면 0, 아니면 총액×국민연금율 → (옵션)10원 절사
-                xlsRows += CF(`=${wrapTrunc(`IF(OR(RC[-6]<R${REF.insuranceMinDays}C2,RC[3]=1),0,FLOOR(RC[-4]*R${REF.pension}C2,1))`)}`, calc.pension, 'money', 0, 1);
+                xlsRows += CF(`=${wrapTrunc(`IF(OR(${insuranceDayGate('RC[-6]')},RC[3]=1),0,FLOOR(RC[-4]*R${REF.pension}C2,1))`)}`, calc.pension, 'money', 0, 1);
                 // 공제합계 = 소득세(이 행) + 지방세(바로 아래 행, 같은 열) + 고용보험(이 행) + 건강보험(이 행) + 장기요양(바로 아래 행, 같은 열) + 국민연금(이 행)
                 xlsRows += CF('=RC[-4]+R[1]C[-4]+RC[-3]+RC[-2]+R[1]C[-2]+RC[-1]', calc.totalDeduction, 'money', 0, 1);
                 xlsRows += CF('=RC[-6]-RC[-1]', calc.netPay, 'moneyBold', 0, 1);
@@ -11206,7 +11260,7 @@ ${dayTotalCells2}
                 // 장기요양: 최소일수 미만이면 0, 아니면 (총액×건강보험율)×장기요양율 → (옵션)10원 절사
                 // (바로 위 행(row1)의 일수=R[-1]C[-5], 총액=R[-1]C[-3]를 참조. 건강보험 셀 값을 그대로 참조하지
                 //  않고 독립적으로 재계산 — JS도 절사 전 건강보험액을 기준으로 장기요양을 계산하기 때문)
-                xlsRows += `<Cell ss:Index="27" ss:StyleID="money" ss:Formula="${xmlEscapeFormula(`=${wrapTrunc(`IF(R[-1]C[-5]<R${REF.insuranceMinDays}C2,0,FLOOR(FLOOR(R[-1]C[-3]*R${REF.health}C2,1)*R${REF.care}C2,1))`)}`)}"><Data ss:Type="Number">${N(calc.care)}</Data></Cell>`;
+                xlsRows += `<Cell ss:Index="27" ss:StyleID="money" ss:Formula="${xmlEscapeFormula(`=${wrapTrunc(`IF(${insuranceDayGate('R[-1]C[-5]')},0,FLOOR(FLOOR(R[-1]C[-3]*R${REF.health}C2,1)*R${REF.care}C2,1))`)}`)}"><Data ss:Type="Number">${N(calc.care)}</Data></Cell>`;
                 xlsRows += `</Row>`;
             });
 
@@ -11754,12 +11808,10 @@ ${xlsRows}
             }
 
             const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
-            // 8일 이상 근무자만 추출
+            // 8일 이상 근무자만 추출 (이 현장 단독으로는 미달이어도, 같은 회사 다른 현장 근무일수까지
+            // 합산하면 기준을 넘기는 근로자도 취득신고 대상에 포함시킨다)
             const targets = proj.labors.filter(l => {
-                let days = 0;
-                for (let d = 1; d <= daysInMonth; d++) days += Number(l.attendance[d] || 0);
-                const effective = (l.manualDays !== null && l.manualDays !== undefined) ? l.manualDays : days;
-                return effective >= taxRates.insuranceMinDays;
+                return getCombinedInsuranceDays(l, proj) >= taxRates.insuranceMinDays;
             });
 
             document.getElementById('insuranceReportCount').textContent = `총 ${targets.length}명 (8일 이상 근무자)`;
@@ -11796,7 +11848,7 @@ ${xlsRows}
                         <td class="p-2 border-r border-slate-200 font-bold text-blue-700 text-left">${l.name} ${visaInfo}</td>
                         <td class="p-2 border-r border-slate-200 font-mono">${l.ssn}</td>
                         <td class="p-2 border-r border-slate-200">${l.job || '보통인부'}</td>
-                        <td class="p-2 border-r border-slate-200 font-bold">${effective}일</td>
+                        <td class="p-2 border-r border-slate-200 font-bold">${effective}일${calc.isCrossSiteInsured ? `<span class="block text-[9px] font-normal text-teal-600" title="같은 회사 다른 현장 근무일수까지 합산">(합산 ${calc.combinedInsuranceDays}일)</span>` : ''}</td>
                         <td class="p-2 border-r border-slate-200 font-mono">${commaFormatter(calc.totalWages)}</td>
                         <td class="p-2 border-r border-slate-200 text-teal-700 font-bold text-[10px]">${insTypes.join(', ')}</td>
                         <td class="p-2 font-mono text-red-600">${commaFormatter(calc.totalDeduction)}</td>
