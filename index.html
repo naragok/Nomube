@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.33 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.40 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.33</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.40</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -551,7 +551,8 @@
         <main class="flex-1 min-h-0 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col print-container h-full">
             
             <!-- 테이블 제어 및 검색 헤더 바 (no-print) -->
-            <div class="p-3 border-b border-slate-200 bg-slate-50 flex flex-col xl:flex-row justify-between items-stretch xl:items-center gap-2 shrink-0 no-print">
+            <div class="p-3 border-b border-slate-200 bg-slate-50 flex flex-col gap-2 shrink-0 no-print">
+                <!-- 1행: 제목 + 화면 전환 탭 -->
                 <div class="flex flex-wrap items-center gap-2">
                     <h1 class="text-xs font-bold text-slate-800 flex items-center gap-1 shrink-0">
                         <i data-lucide="clipboard-list" class="text-blue-600 w-4 h-4"></i>
@@ -579,66 +580,81 @@
                             <i data-lucide="receipt" class="w-3.5 h-3.5"></i> 청구서
                         </button>
                     </div>
-                    
-                    <!-- 대장 편집 도구 패널 (기능 대폭 추가) -->
-                    <div class="flex flex-wrap items-center gap-1.5 bg-white border border-slate-200 rounded p-1">
-                        <span class="text-[10px] text-slate-400 font-semibold px-1">⚡ 실무 도구:</span>
-                        <button onclick="bulkSetAttendance(1, false)" class="text-[10px] text-blue-600 hover:bg-blue-50 px-1.5 py-0.5 rounded font-bold transition-all" title="한 달 전체를 1.0으로 기입합니다.">전원출근(전체)</button>
-                        <button onclick="bulkSetAttendance(1, true)" class="text-[10px] text-indigo-600 hover:bg-indigo-50 px-1.5 py-0.5 rounded font-bold transition-all" title="토/일 주말을 제외하고 평일만 1.0 출역을 일괄 기입합니다.">전원출근(평일만)</button>
-                        <button onclick="bulkAvoidInsurance()" class="text-[10px] text-emerald-600 hover:bg-emerald-50 px-1.5 py-0.5 rounded font-bold transition-all" title="8대사회보험 가입 의무 기준 미만인 7일까지만 무작위 평일 출역을 채워 넣어 공제를 예방합니다.">국민/건강보험 회피 세팅 (7일)</button>
-                        <button onclick="clearWeekendsAttendance()" class="text-[10px] text-rose-600 hover:bg-rose-50 px-1.5 py-0.5 rounded font-bold transition-all" title="입력된 출역 중 토요일과 일요일 출역 기록을 모두 지웁니다.">주말 출역 일괄제거</button>
-                        <button onclick="bulkSetAttendance(0, false)" class="text-[10px] text-slate-500 hover:bg-slate-50 px-1.5 py-0.5 rounded font-bold transition-all">출근포맷</button>
-                        <button onclick="bulkSetPrice()" class="text-[10px] text-amber-600 hover:bg-amber-50 px-1.5 py-0.5 rounded font-bold transition-all" title="왼쪽 NO칸 체크박스로 근로자를 선택해두면 선택한 사람만, 아무도 선택 안 했으면 현재 검색된 대상 전체에 적용됩니다">단가일괄변경</button>
-                        <button onclick="bulkDeleteSelectedLabors()" class="text-[10px] text-red-600 hover:bg-red-50 px-1.5 py-0.5 rounded font-bold transition-all" title="왼쪽 NO칸 체크박스로 선택한 근로자를 한 번에 삭제합니다">선택 삭제</button>
-                        <button onclick="openSpecificDateModal()" class="text-[10px] text-purple-600 hover:bg-purple-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all">
-                            <i data-lucide="calendar" class="w-3 h-3"></i> 날짜 일괄기입
-                        </button>
-                        <button onclick="toggleDragRangeMode()" id="dragRangeBtn" class="text-[10px] text-orange-600 hover:bg-orange-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all border border-transparent" title="드래그로 여러 날짜를 한 번에 선택하여 출역값을 일괄 기입합니다.">
-                            <i data-lucide="hand" class="w-3 h-3"></i> 드래그 범위 기입
-                        </button>
-                        <span class="h-3 border-r border-slate-200"></span>
-                    </div>
 
-                    <!-- 근로자 등록 도구 패널 (실무 도구에서 분리) -->
-                    <div class="flex flex-wrap items-center gap-1.5 bg-white border border-slate-200 rounded p-1">
-                        <span class="text-[10px] text-slate-400 font-semibold px-1">👤 근로자 등록:</span>
-                        <button onclick="openQuickAddLaborModal()" class="text-[10px] text-blue-600 hover:bg-blue-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all" title="좌측 메뉴로 이동하지 않고 팝업으로 바로 근로자를 등록합니다.">
-                            <i data-lucide="user-plus" class="w-3 h-3"></i> 근로자 등록
-                        </button>
-                        <button onclick="openBulkUserModal()" class="text-[10px] text-purple-600 hover:bg-purple-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all" title="여러 명의 근로자 정보를 한 번에 붙여넣기/입력하여 일괄 등록합니다.">
-                            <i data-lucide="users" class="w-3 h-3"></i> 복수 일괄 추가
-                        </button>
-                        <button onclick="openAttendancePasteModal()" class="text-[10px] text-teal-700 hover:bg-teal-50 px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5 transition-all" title="엑셀에서 성명 + 날짜별 출역값을 복사해 그대로 붙여넣어 일괄 반영합니다.">
-                            <i data-lucide="clipboard-paste" class="w-3 h-3"></i> 출근 붙여넣기
-                        </button>
-                    </div>
-                </div>
-                <!-- 실시간 검색 및 스마트 공제유형별 필터 -->
-                <div class="flex items-center gap-2 max-w-2xl w-full">
-                    <select id="sortFilter" onchange="updateHeaderAndTable()" class="text-[10px] bg-white border border-slate-200 rounded px-2 py-1 focus:outline-none font-bold shrink-0" title="정렬 기준">
-                        <option value="none">등록순</option>
-                        <option value="name">이름순</option>
-                        <option value="job">직종순</option>
-                        <option value="priceDesc">단가 높은순</option>
-                        <option value="priceAsc">단가 낮은순</option>
-                        <option value="daysDesc">일수 많은순</option>
-                        <option value="netDesc">지급액 높은순</option>
-                    </select>
-                    <select id="insuranceFilter" onchange="updateHeaderAndTable()" class="text-[10px] bg-white border border-slate-200 rounded px-2 py-1 focus:outline-none font-bold shrink-0">
-                        <option value="all">공제 유형별 필터 (전체)</option>
-                        <option value="pensionExempt">만 60세 이상 국민연금 면제자</option>
-                        <option value="employmentExempt">만 65세 이상 고용보험 면제자</option>
-                        <option value="insuranceTarget">8일 이상 4대보험 취득 대상자</option>
-                    </select>
-                    <div class="relative w-full flex-grow">
+                    <!-- 성명 검색창 (탭 옆에 배치) -->
+                    <div class="relative w-full max-w-xs">
                         <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 pointer-events-none text-slate-400">
                             <i data-lucide="search" class="w-3.5 h-3.5"></i>
                         </span>
                         <input type="text" id="searchFilter" oninput="updateHeaderAndTable()" placeholder="성명, 직종, 주민번호 검색" class="w-full text-xs bg-white border border-slate-200 rounded pl-7 pr-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-blue-500">
                     </div>
-                    <span id="saveIndicator" class="text-[10px] text-slate-400 whitespace-nowrap shrink-0 flex items-center gap-1 opacity-0 transition-opacity duration-300">
-                        <i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> 저장됨
-                    </span>
+                </div>
+
+                <!-- 2행: 실무 도구(근로자 등록 포함) + 검색/필터 -->
+                <div class="flex flex-col xl:flex-row justify-between items-stretch xl:items-center gap-2">
+                    <!-- 대장 편집 도구 패널 (기능 대폭 추가, 근로자 등록 도구 포함) -->
+                    <div class="flex flex-wrap items-center gap-1.5 bg-white border border-slate-200 rounded p-1 max-w-full">
+                        <span class="text-[10px] text-slate-400 font-semibold px-1 shrink-0">⚡ 실무 도구:</span>
+                        <button onclick="bulkSetAttendance(1, false)" class="text-[10px] shrink-0 whitespace-nowrap text-blue-600 hover:bg-blue-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-blue-100" title="한 달 전체를 1.0으로 기입합니다.">
+                            <i data-lucide="calendar-check-2" class="w-3 h-3"></i> 전원출근(전체)
+                        </button>
+                        <button onclick="bulkSetAttendance(1, true)" class="text-[10px] shrink-0 whitespace-nowrap text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-indigo-100" title="토/일 주말을 제외하고 평일만 1.0 출역을 일괄 기입합니다.">
+                            <i data-lucide="calendar-range" class="w-3 h-3"></i> 전원출근(평일만)
+                        </button>
+                        <button onclick="bulkAvoidInsurance()" class="text-[10px] shrink-0 whitespace-nowrap text-emerald-600 hover:bg-emerald-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-emerald-100" title="8대사회보험 가입 의무 기준 미만인 7일까지만 무작위 평일 출역을 채워 넣어 공제를 예방합니다.">
+                            <i data-lucide="shield-alert" class="w-3 h-3"></i> 국민/건강보험 회피 세팅 (7일)
+                        </button>
+                        <button onclick="clearWeekendsAttendance()" class="text-[10px] shrink-0 whitespace-nowrap text-rose-600 hover:bg-rose-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-rose-100" title="입력된 출역 중 토요일과 일요일 출역 기록을 모두 지웁니다.">
+                            <i data-lucide="eraser" class="w-3 h-3"></i> 주말 출역 일괄제거
+                        </button>
+                        <button onclick="bulkSetAttendance(0, false)" class="text-[10px] shrink-0 whitespace-nowrap text-slate-500 hover:bg-slate-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-slate-200">
+                            <i data-lucide="rotate-ccw" class="w-3 h-3"></i> 출근포맷
+                        </button>
+                        <button onclick="bulkSetPrice()" class="text-[10px] shrink-0 whitespace-nowrap text-amber-600 hover:bg-amber-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-amber-100" title="왼쪽 NO칸 체크박스로 근로자를 선택해두면 선택한 사람만, 아무도 선택 안 했으면 현재 검색된 대상 전체에 적용됩니다">
+                            <i data-lucide="coins" class="w-3 h-3"></i> 단가일괄변경
+                        </button>
+                        <button onclick="bulkDeleteSelectedLabors()" class="text-[10px] shrink-0 whitespace-nowrap text-red-600 hover:bg-red-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-red-100" title="왼쪽 NO칸 체크박스로 선택한 근로자를 한 번에 삭제합니다">
+                            <i data-lucide="trash-2" class="w-3 h-3"></i> 선택 삭제
+                        </button>
+                        <button onclick="openSpecificDateModal()" class="text-[10px] shrink-0 whitespace-nowrap text-purple-600 hover:bg-purple-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-purple-100">
+                            <i data-lucide="calendar" class="w-3 h-3"></i> 날짜 일괄기입
+                        </button>
+                        <button onclick="toggleDragRangeMode()" id="dragRangeBtn" class="text-[10px] shrink-0 whitespace-nowrap text-orange-600 hover:bg-orange-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-orange-100" title="드래그로 여러 날짜를 한 번에 선택하여 출역값을 일괄 기입합니다.">
+                            <i data-lucide="hand" class="w-3 h-3"></i> 드래그 범위 기입
+                        </button>
+                        <span class="h-4 shrink-0 border-r border-slate-200 mx-0.5"></span>
+                        <span class="text-[10px] shrink-0 text-slate-400 font-semibold px-1">👤 근로자 등록:</span>
+                        <button onclick="openQuickAddLaborModal()" class="text-[10px] shrink-0 whitespace-nowrap text-blue-600 hover:bg-blue-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-blue-100" title="좌측 메뉴로 이동하지 않고 팝업으로 바로 근로자를 등록합니다.">
+                            <i data-lucide="user-plus" class="w-3 h-3"></i> 근로자 등록
+                        </button>
+                        <button onclick="openBulkUserModal()" class="text-[10px] shrink-0 whitespace-nowrap text-purple-600 hover:bg-purple-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-purple-100" title="여러 명의 근로자 정보를 한 번에 붙여넣기/입력하여 일괄 등록합니다.">
+                            <i data-lucide="users" class="w-3 h-3"></i> 복수 일괄 추가
+                        </button>
+                        <button onclick="openAttendancePasteModal()" class="text-[10px] shrink-0 whitespace-nowrap text-teal-700 hover:bg-teal-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-teal-100" title="엑셀에서 성명 + 날짜별 출역값을 복사해 그대로 붙여넣어 일괄 반영합니다.">
+                            <i data-lucide="clipboard-paste" class="w-3 h-3"></i> 출근 붙여넣기
+                        </button>
+                    </div>
+                    <!-- 실시간 검색 및 스마트 공제유형별 필터 -->
+                    <div class="flex items-center gap-2 max-w-2xl w-full">
+                        <select id="sortFilter" onchange="updateHeaderAndTable()" class="text-[10px] bg-white border border-slate-200 rounded px-2 py-1 focus:outline-none font-bold shrink-0" title="정렬 기준">
+                            <option value="none">등록순</option>
+                            <option value="name">이름순</option>
+                            <option value="job">직종순</option>
+                            <option value="priceDesc">단가 높은순</option>
+                            <option value="priceAsc">단가 낮은순</option>
+                            <option value="daysDesc">일수 많은순</option>
+                            <option value="netDesc">지급액 높은순</option>
+                        </select>
+                        <select id="insuranceFilter" onchange="updateHeaderAndTable()" class="text-[10px] bg-white border border-slate-200 rounded px-2 py-1 focus:outline-none font-bold shrink-0">
+                            <option value="all">공제 유형별 필터 (전체)</option>
+                            <option value="pensionExempt">만 60세 이상 국민연금 면제자</option>
+                            <option value="employmentExempt">만 65세 이상 고용보험 면제자</option>
+                            <option value="insuranceTarget">8일 이상 4대보험 취득 대상자</option>
+                        </select>
+                        <span id="saveIndicator" class="text-[10px] text-slate-400 whitespace-nowrap shrink-0 flex items-center gap-1 opacity-0 transition-opacity duration-300">
+                            <i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> 저장됨
+                        </span>
+                    </div>
                 </div>
             </div>
 
