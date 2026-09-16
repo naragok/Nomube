@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.45 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.48 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -311,7 +311,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.45</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.48</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -359,7 +359,17 @@
                         </div>
                     </div>
                     <div id="recentProjectChips" class="flex flex-wrap gap-1 mb-2"></div>
-                    <div class="space-y-1.5">
+
+                    <!-- 현장 빠른 검색: 회사→기간→현장 3단계를 거치지 않고 바로 검색해서 클릭 이동 -->
+                    <div class="relative mb-2">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none text-slate-400">
+                            <i data-lucide="search" class="w-3.5 h-3.5"></i>
+                        </span>
+                        <input type="text" id="projectQuickSearch" oninput="filterProjectQuickSearch(this.value)" placeholder="현장명·회사명·연월로 검색 (예: 캠프롱, 8월)" class="w-full text-xs bg-slate-50 border border-slate-200 rounded pl-7 pr-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                    </div>
+                    <div id="projectQuickSearchResults" class="hidden max-h-64 overflow-y-auto space-y-0.5 mb-2"></div>
+
+                    <div id="projectStepSelectors" class="space-y-1.5">
                         <select id="selectCompany" onchange="onCompanyOrPeriodChange('company')" class="w-full bg-slate-50 border border-slate-200 rounded p-1.5 font-bold focus:ring-1 focus:ring-blue-500 outline-none"></select>
                         <div class="flex items-center gap-1">
                             <button onclick="stepProjectMonth(-1)" class="shrink-0 w-7 h-7 flex items-center justify-center bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-600 rounded transition-all" title="같은 회사의 이전 달 현장으로 이동">
@@ -1040,9 +1050,14 @@
                     <i data-lucide="users" class="w-4 h-4 text-indigo-600"></i> 인력현황
                     <span class="text-[10px] bg-indigo-100 text-indigo-600 px-2 py-0.5 rounded-full font-bold">전체 현장 통합</span>
                 </h2>
-                <button onclick="exportWorkerDbToCSV()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
-                    <i data-lucide="file-down" class="w-3.5 h-3.5"></i> CSV로 내보내기
-                </button>
+                <div class="flex items-center gap-1.5">
+                    <button onclick="exportWorkerDbToXLS()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
+                        <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i> Excel로 내보내기
+                    </button>
+                    <button onclick="exportWorkerDbToCSV()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded shadow-sm flex items-center gap-1">
+                        <i data-lucide="file-down" class="w-3.5 h-3.5"></i> CSV로 내보내기
+                    </button>
+                </div>
             </div>
             <div class="bg-white rounded-xl shadow-sm border border-slate-200 flex-1 min-h-0 flex flex-col overflow-hidden">
                 <div class="p-3 border-b border-slate-100 shrink-0 flex items-center gap-2">
@@ -1066,12 +1081,12 @@
                         </colgroup>
                         <thead class="bg-slate-50 sticky top-0">
                             <tr class="text-slate-500 font-bold text-left">
-                                <th class="p-2 border-b border-slate-200 whitespace-nowrap">성명</th>
-                                <th class="p-2 border-b border-slate-200 whitespace-nowrap">직종</th>
+                                <th class="p-2 border-b border-slate-200 whitespace-nowrap cursor-pointer select-none hover:text-indigo-600" onclick="sortWorkerDb('name')">성명<span id="wdbSortIcon-name" class="ml-0.5"></span></th>
+                                <th class="p-2 border-b border-slate-200 whitespace-nowrap cursor-pointer select-none hover:text-indigo-600" onclick="sortWorkerDb('job')">직종<span id="wdbSortIcon-job" class="ml-0.5"></span></th>
                                 <th class="p-2 border-b border-slate-200 whitespace-nowrap">연락처</th>
                                 <th class="p-2 border-b border-slate-200 whitespace-nowrap">계좌번호</th>
-                                <th class="p-2 border-b border-slate-200 whitespace-nowrap">최근 단가</th>
-                                <th class="p-2 border-b border-slate-200 whitespace-nowrap">등록 이력</th>
+                                <th class="p-2 border-b border-slate-200 whitespace-nowrap cursor-pointer select-none hover:text-indigo-600" onclick="sortWorkerDb('price')">최근 단가<span id="wdbSortIcon-price" class="ml-0.5"></span></th>
+                                <th class="p-2 border-b border-slate-200 whitespace-nowrap cursor-pointer select-none hover:text-indigo-600" onclick="sortWorkerDb('count')">등록 이력<span id="wdbSortIcon-count" class="ml-0.5"></span></th>
                                 <th class="p-2 border-b border-slate-200 no-print"></th>
                             </tr>
                         </thead>
@@ -3126,6 +3141,10 @@
             closeHeaderMenus();
             if (wasHidden) {
                 menu.classList.remove('hidden');
+                if (menuId === 'menuProject') {
+                    const searchInput = document.getElementById('projectQuickSearch');
+                    if (searchInput) { searchInput.value = ''; filterProjectQuickSearch(''); }
+                }
                 // 헤더 버튼 줄에 가로 스크롤(overflow-x-auto)이 생기면서, 드롭다운을 기존처럼
                 // absolute로 두면 그 스크롤 영역에 잘려 안 보이게(클릭은 되지만 화면에 없음) 된다.
                 // position:fixed로 바꾸고 버튼 위치를 기준으로 좌표를 직접 계산해 화면 기준으로
@@ -3765,6 +3784,48 @@
             populateDropdowns();
             onProjectChange();
             closeHeaderMenus();
+        }
+
+        // 현장 빠른 검색: 회사명/현장명/공종/연월 중 아무거나 입력하면 즉시 매칭되는 현장을 보여주고,
+        // 클릭 한 번으로 바로 그 현장으로 이동한다 (회사→기간→현장 3단계 선택을 건너뜀).
+        function filterProjectQuickSearch(query) {
+            const resultsEl = document.getElementById('projectQuickSearchResults');
+            const stepsEl = document.getElementById('projectStepSelectors');
+            const q = (query || '').trim().toLowerCase();
+
+            if (!q) {
+                resultsEl.classList.add('hidden');
+                resultsEl.innerHTML = '';
+                stepsEl.classList.remove('hidden');
+                return;
+            }
+            stepsEl.classList.add('hidden');
+            resultsEl.classList.remove('hidden');
+
+            const matches = Object.entries(appState.projects).filter(([id, p]) => {
+                const haystack = `${p.company || ''} ${p.projectName || ''} ${p.workType || ''} ${p.year}년 ${p.month}월`.toLowerCase();
+                return haystack.includes(q);
+            }).sort((a, b) => (b[1].year - a[1].year) || (b[1].month - a[1].month));
+
+            if (matches.length === 0) {
+                resultsEl.innerHTML = '<div class="text-[11px] text-slate-400 text-center py-3">일치하는 현장이 없습니다</div>';
+                return;
+            }
+
+            resultsEl.innerHTML = matches.map(([id, p]) => {
+                const isActive = id === appState.currentProjectId;
+                return `<button onclick="jumpToProjectFromSearch('${id}')" class="w-full text-left px-2 py-1.5 rounded text-[11px] font-bold transition-all flex items-center justify-between gap-2 ${isActive ? 'bg-blue-50 text-blue-700' : 'hover:bg-slate-100 text-slate-700'}">
+                    <span class="truncate">${p.company} · ${p.projectName || ''}</span>
+                    <span class="shrink-0 text-[10px] text-slate-400 font-normal">${p.year}년 ${p.month}월</span>
+                </button>`;
+            }).join('');
+        }
+
+        function jumpToProjectFromSearch(projectId) {
+            const input = document.getElementById('projectQuickSearch');
+            if (input) input.value = '';
+            filterProjectQuickSearch('');
+            jumpToProject(projectId);
         }
 
         // 같은 회사의 현장 중, 지금보다 한 달 전/후로 실제 등록되어 있는 현장으로 바로 이동.
@@ -8104,6 +8165,13 @@ ${dayTotalCells2}
                                 if (!window.html2canvas) throw new Error('html2canvas 라이브러리를 불러오지 못했습니다.');
                                 const canvas = await html2canvas(iframe.contentWindow.document.body, {
                                     scale: 2, useCORS: true, backgroundColor: '#ffffff',
+                                    // 콘텐츠가 실제로는 A4 한 페이지보다 길어도(스크롤되는 웹페이지처럼) html2canvas는
+                                    // 기본적으로 "실제 콘텐츠 전체 높이"를 기준으로 캔버스 크기를 잡는다.
+                                    // 그러면 그 캔버스를 PDF의 정해진 210×297mm 한 칸에 억지로 눌러 넣게 되어
+                                    // 사진이 찌그러지는 원인이 된다. width/height/windowWidth/windowHeight를
+                                    // iframe과 동일한 A4 크기(794×1123)로 명시해 캔버스 자체를 그 크기로 고정(초과분은 잘림)한다.
+                                    width: 794, height: 1123, windowWidth: 794, windowHeight: 1123,
+                                    scrollX: 0, scrollY: 0,
                                     onclone: (clonedDoc) => {
                                         // 명단 등 일부 문서는 화면 전용 상단 조작바(top-bar)가 있어 PDF에는 보이면 안 됨
                                         const bar = clonedDoc.querySelector('.top-bar');
@@ -12572,6 +12640,40 @@ ${xlsRows}
             if (window.lucide) lucide.createIcons();
         }
 
+        // 인력현황 목록 정렬 상태 (성명/직종/최근단가/등록이력 헤더 클릭으로 토글)
+        let _workerDbSortKey = null;
+        let _workerDbSortDir = 1; // 1=오름차순, -1=내림차순
+
+        function sortWorkerDb(key) {
+            if (_workerDbSortKey === key) {
+                _workerDbSortDir *= -1;
+            } else {
+                _workerDbSortKey = key;
+                _workerDbSortDir = 1;
+            }
+            renderWorkerDbList();
+        }
+
+        function _applyWorkerDbSort(list) {
+            ['name', 'job', 'price', 'count'].forEach(k => {
+                const el = document.getElementById('wdbSortIcon-' + k);
+                if (el) el.textContent = '';
+            });
+            if (!_workerDbSortKey) return list;
+            const key = _workerDbSortKey;
+            const dir = _workerDbSortDir;
+            const iconEl = document.getElementById('wdbSortIcon-' + key);
+            if (iconEl) iconEl.textContent = dir === 1 ? '▲' : '▼';
+
+            const sorted = [...list].sort((a, b) => {
+                if (key === 'name' || key === 'job') {
+                    return dir * String(a[key] || '').localeCompare(String(b[key] || ''), 'ko');
+                }
+                return dir * ((Number(a[key]) || 0) - (Number(b[key]) || 0));
+            });
+            return sorted;
+        }
+
         function renderWorkerDbList() {
             const kw = document.getElementById('workerDbSearch').value.trim().toLowerCase();
             const missingOnly = document.getElementById('workerDbMissingAccountOnly').checked;
@@ -12584,6 +12686,7 @@ ${xlsRows}
 
             const missingCount = _workerDbCache.filter(w => !w.account || !w.account.trim()).length;
             if (missingOnly) list = list.filter(w => !w.account || !w.account.trim());
+            list = _applyWorkerDbSort(list);
 
             const tbody = document.getElementById('workerDbTableBody');
             tbody.innerHTML = '';
@@ -12807,6 +12910,81 @@ ${xlsRows}
         }
 
         // 근로자DB — CSV(엑셀 호환) 내보내기
+        function _xmlEscText(v) {
+            return String(v == null ? '' : v)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+        }
+
+        function exportWorkerDbToXLS() {
+            if (!_workerDbCache || _workerDbCache.length === 0) {
+                showToast('내보낼 근로자DB 데이터가 없습니다.');
+                return;
+            }
+            const styles = `
+  <Style ss:ID="hdr"><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="10" ss:Color="#ffffff"/><Interior ss:Color="#4338ca" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="cell"><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Font ss:Size="9"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="cellL"><Alignment ss:Horizontal="Left" ss:Vertical="Center"/><Font ss:Size="9"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="money"><Alignment ss:Horizontal="Right" ss:Vertical="Center"/><Font ss:Size="9"/><NumberFormat ss:Format="#,##0"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="warn"><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Font ss:Size="9" ss:Bold="1" ss:Color="#dc2626"/><Interior ss:Color="#fef2f2" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>`;
+
+            function C(val, styleId, type) {
+                const t = type || 'String';
+                const data = t === 'Number' ? N(val) : _xmlEscText(val);
+                return `<Cell ss:StyleID="${styleId}"><Data ss:Type="${t}">${data}</Data></Cell>`;
+            }
+            function N(v) { const n = Number(v); return Number.isFinite(n) ? n : 0; }
+
+            const headers = ['성명','직종','주민번호','연락처','은행명','계좌번호','주소','최근단가','등록대장수','비고'];
+            let rowsXml = `<Row ss:Height="20">` + headers.map(h => `<Cell ss:StyleID="hdr"><Data ss:Type="String">${_xmlEscText(h)}</Data></Cell>`).join('') + `</Row>\n`;
+
+            _workerDbCache.forEach(w => {
+                const note = w.suspect ? ('⚠ ' + w.suspectReason) : (!w.account || !w.account.trim() ? '⚠ 계좌 누락' : '');
+                const noteStyle = note ? 'warn' : 'cell';
+                rowsXml += `<Row>` +
+                    C(w.name, 'cellL') +
+                    C(w.job || '보통인부', 'cell') +
+                    C(w.ssn || '', 'cell') +
+                    C(w.phone || '', 'cell') +
+                    C(w.bank || '', 'cell') +
+                    C(w.account || '', 'cell') +
+                    C(w.address || '', 'cellL') +
+                    C(w.price || 0, 'money', 'Number') +
+                    C(w.count || 0, 'money', 'Number') +
+                    C(note, noteStyle) +
+                    `</Row>\n`;
+            });
+
+            const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+ <Styles>${styles}
+ </Styles>
+ <Worksheet ss:Name="근로자DB">
+  <Table>
+   <Column ss:Width="60"/><Column ss:Width="55"/><Column ss:Width="90"/><Column ss:Width="80"/><Column ss:Width="60"/><Column ss:Width="90"/><Column ss:Width="180"/><Column ss:Width="65"/><Column ss:Width="55"/><Column ss:Width="90"/>
+${rowsXml}  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <FreezePanes/><FrozenNoSplit/><SplitHorizontal>1</SplitHorizontal><TopRowBottomPane>1</TopRowBottomPane><ActivePane>2</ActivePane>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>`;
+
+            const blob = new Blob([xml], { type: 'application/vnd.ms-excel' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', `근로자DB_${new Date().toISOString().slice(0,10)}.xls`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            showToast('근로자DB 엑셀 다운로드 완료');
+        }
+
         function exportWorkerDbToCSV() {
             if (!_workerDbCache || _workerDbCache.length === 0) {
                 showToast('내보낼 근로자DB 데이터가 없습니다.');
