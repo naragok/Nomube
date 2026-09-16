@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.48 (2026)</title>
+    <title>일용노무비 지급명세서 및 근로계약서 시스템 V1.56 (2026)</title>
     <!-- 홈 화면 아이콘 / PWA 설정 -->
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABx0lEQVR4nGNkwAL4xbX+YxOnFHx8eY0RXQxFgFYW43MIE70tR7eLkRzLA/su4JRbX2RAtDkfX15jxOuAR/fOY4jlb8CIRgwwMQDTODklQ+wOIMVyYhyBzXJ8jmDBqRoPwGcJqYCJsBLaglEHDLgDiEqEi9ftJ8vw2CBHgmqGRggQ4xNywdAIgWGdBsiqC/ABk7xPKPwzk/jgbLLrAmKiYOIBY7wOQnYIMqBKFOCyHJtD0AHFUYDLYFzg1RZ7FD7VEqEQLxMDNwcjnM3DyYghjg1Q5ABk30/N4mWYmM7L4GHMzrCtSYBhciYfg4cxO8PmBgGGGEcOuDoxn4MoZpDVIMEGvv78z6CvzMrw8dt/Bg42RgZdBRaG1x/YGET5mRh+/Matj2pRMHnTNwZ+LkaGF+//Maw8+IPhxft/DK8//WN4/u4fw+rDP2jvgEv3/zB8/PqfIcianeHY9d8Mp2/9ZgiyZmc4e+c3w7efuJtwFDkAOW///8/AcPbObwZBHiaG83chDhDmZWI4exs1/NFzAc5mOT2y4ceX1xhxhgC2YhMbwFXCEbIcBuAZlNKuGXr2ImQ5rH9I9c4pukOw+Rq5c4q1iKJn9xwAPROtPSpty+0AAAAASUVORK5CYII=">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
@@ -165,9 +165,7 @@
             html.dark-mode .bg-slate-50,
             html.dark-mode .bg-slate-100 { background-color: #ffffff !important; color: #000000 !important; }
         }
-        /* 공제 금액 내역 열 표시/숨김 */
-        #paymentTable.hide-deduct-cols .deduct-col { display: none; }
-        #paymentTable.hide-deduct-cols #deductGroupHeader { width: 130px; max-width: 130px; white-space: nowrap; }
+
 
         /* 읽기 전용 모드: 입력/체크박스/버튼을 잠그고 시각적으로 알림 (실수 방지용) */
         body.read-only-mode #paymentTable input,
@@ -311,7 +309,7 @@
         <div class="flex items-center gap-2 shrink-0">
             <i data-lucide="layout-dashboard" class="text-blue-400 w-5 h-5"></i>
             <span class="text-sm font-black tracking-tight whitespace-nowrap">일용노무비 & 필수 서류 시스템</span>
-            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.48</span>
+            <span class="text-[9px] bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded whitespace-nowrap">V1.56</span>
         </div>
         <div id="headerActions" class="flex items-center gap-2 flex-nowrap overflow-x-auto overflow-y-hidden header-actions-scroll min-w-0">
             <button id="readOnlyToggleBtn" onclick="toggleReadOnlyMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-2.5 py-1.5 rounded font-bold flex items-center gap-1 transition-all shrink-0" title="화면을 잠가서 실수로 값이 바뀌지 않도록 합니다 (소장님·감독관에게 화면 보여줄 때 유용)">
@@ -623,6 +621,9 @@
                         <button onclick="bulkSetPrice()" class="text-[10px] shrink-0 whitespace-nowrap text-amber-600 hover:bg-amber-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-amber-100" title="왼쪽 NO칸 체크박스로 근로자를 선택해두면 선택한 사람만, 아무도 선택 안 했으면 현재 검색된 대상 전체에 적용됩니다">
                             <i data-lucide="coins" class="w-3 h-3"></i> 단가일괄변경
                         </button>
+                        <button onclick="bulkSetJob()" class="text-[10px] shrink-0 whitespace-nowrap text-cyan-600 hover:bg-cyan-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-cyan-100" title="왼쪽 NO칸 체크박스로 근로자를 선택해두면 선택한 사람만, 아무도 선택 안 했으면 현재 검색된 대상 전체에 적용됩니다">
+                            <i data-lucide="hard-hat" class="w-3 h-3"></i> 직종일괄변경
+                        </button>
                         <button onclick="bulkDeleteSelectedLabors()" class="text-[10px] shrink-0 whitespace-nowrap text-red-600 hover:bg-red-50 px-2 py-1 rounded-md font-bold flex items-center gap-0.5 transition-all border border-transparent hover:border-red-100" title="왼쪽 NO칸 체크박스로 선택한 근로자를 한 번에 삭제합니다">
                             <i data-lucide="trash-2" class="w-3 h-3"></i> 선택 삭제
                         </button>
@@ -721,8 +722,8 @@
                             <th rowspan="2" class="p-1 border-r border-slate-300 whitespace-nowrap print:border-black">일수</th>
                             <th rowspan="2" class="p-1 border-r border-slate-300 whitespace-nowrap print:border-black">단가</th>
                             <th rowspan="2" class="p-1 border-r border-slate-300 whitespace-nowrap print:border-black">총액</th>
-                            <th colspan="5" id="deductGroupHeader" onclick="toggleDeductionColumns()" class="p-0.5 border-r border-slate-300 print:border-black cursor-pointer hover:bg-slate-300 no-print-cursor" title="클릭하여 공제 금액 내역 열 표시/숨김">
-                                공제 금액 내역 (2026년 나이/세법 요율 기준) <i data-lucide="eye-off" class="w-2.5 h-2.5 inline no-print"></i>
+                            <th colspan="5" id="deductGroupHeader" class="p-0.5 border-r border-slate-300 print:border-black">
+                                공제 금액 내역 (2026년 나이/세법 요율 기준)
                             </th>
                             <th rowspan="2" class="p-1 border-r border-slate-300 whitespace-nowrap print:border-black w-28">지급액<br><span class="text-[9px] font-normal">(실수령액)</span></th>
                             <th rowspan="2" class="p-1 w-20 no-print">관리</th>
@@ -1121,9 +1122,12 @@
                     </div>
                     <div id="clientSubmissionProjectList" class="border border-slate-200 rounded max-h-52 overflow-y-auto divide-y divide-slate-100"></div>
                 </div>
-                <div class="flex justify-end">
+                <div class="flex justify-end gap-2">
+                    <button onclick="generateClientSubmissionXLS()" class="px-4 py-2 rounded text-sm font-bold bg-amber-700 text-white hover:bg-amber-800 flex items-center gap-1.5">
+                        <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i> 청구서 생성 (Excel)
+                    </button>
                     <button onclick="generateClientSubmissionCSV()" class="px-4 py-2 rounded text-sm font-bold bg-amber-600 text-white hover:bg-amber-700 flex items-center gap-1.5">
-                        <i data-lucide="file-down" class="w-3.5 h-3.5"></i> 청구서 생성
+                        <i data-lucide="file-down" class="w-3.5 h-3.5"></i> 청구서 생성 (CSV)
                     </button>
                 </div>
             </div>
@@ -1187,7 +1191,7 @@
     </div>
     <!-- 팝업 모달: 사회보험·세금 공제 요율 설정 -->
     <div id="taxRateModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-[60] no-print">
-        <div class="bg-slate-900 text-slate-300 rounded-xl shadow-xl border border-slate-800 w-full max-w-md overflow-hidden max-h-[85vh] flex flex-col">
+        <div class="bg-slate-900 text-slate-300 rounded-xl shadow-xl border border-slate-800 w-full max-w-lg overflow-hidden max-h-[85vh] flex flex-col">
             <div class="p-3.5 border-b border-slate-800 flex items-center justify-between shrink-0">
                 <h2 class="text-xs font-black text-white flex items-center gap-1.5 uppercase tracking-wider">
                     <i data-lucide="shield-check" class="text-amber-400 w-4 h-4"></i>
@@ -1205,96 +1209,125 @@
             </div>
             <div id="taxRateSnapshotBanner" class="px-3.5 pt-3 text-[10px]"></div>
             <div class="p-3.5 overflow-y-auto">
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-1.5 text-[10px] border-b border-slate-800 pb-2 mb-2">
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">국민연금</span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="0.001" id="rateInputPension" onchange="updateTaxRate('pensionRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500">%</span>
-                        </span>
+                <div class="space-y-2.5 border-b border-slate-800 pb-3 mb-2">
+
+                    <div class="bg-slate-800/40 rounded-lg p-2.5">
+                        <div class="text-[9.5px] font-black text-amber-400/90 uppercase tracking-wider mb-2 flex items-center gap-1">
+                            <i data-lucide="shield-check" class="w-3 h-3"></i> 4대보험 요율
+                        </div>
+                        <div class="grid grid-cols-2 gap-x-3 gap-y-2">
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">국민연금</span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="0.001" id="rateInputPension" onchange="updateTaxRate('pensionRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[11px]">%</span>
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">건강보험</span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="0.001" id="rateInputHealth" onchange="updateTaxRate('healthRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[11px]">%</span>
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">장기요양<span class="block text-[9px] text-slate-500 font-normal">건보료 대비</span></span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="0.01" id="rateInputCare" onchange="updateTaxRate('careRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[11px]">%</span>
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">고용보험</span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="0.001" id="rateInputEmployment" onchange="updateTaxRate('employmentRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[11px]">%</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">건강보험</span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="0.001" id="rateInputHealth" onchange="updateTaxRate('healthRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500">%</span>
-                        </span>
+
+                    <div class="bg-slate-800/40 rounded-lg p-2.5">
+                        <div class="text-[9.5px] font-black text-amber-400/90 uppercase tracking-wider mb-2 flex items-center gap-1">
+                            <i data-lucide="receipt" class="w-3 h-3"></i> 세금 요율 · 비과세 기준
+                        </div>
+                        <div class="grid grid-cols-2 gap-x-3 gap-y-2">
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">소득세율</span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="0.001" id="rateInputIncomeTax" onchange="updateTaxRate('incomeTaxRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[11px]">%</span>
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">지방세<span class="block text-[9px] text-slate-500 font-normal">소득세 대비</span></span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="1" id="rateInputLocalTax" onchange="updateTaxRate('localTaxRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[11px]">%</span>
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">비과세 일당</span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="10000" id="rateInputTaxFree" onchange="updateTaxRate('taxFreeAmount', this.value, false)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[10px]">원</span>
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="text-slate-300 text-[11px] shrink-0">소액부징수<span class="block text-[9px] text-slate-500 font-normal">월합계 기준</span></span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="100" id="rateInputMinTax" onchange="updateTaxRate('minTaxThreshold', this.value, false)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1.5 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[10px]">원</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">장기요양<span class="text-[8px]">(건보대비)</span></span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="0.01" id="rateInputCare" onchange="updateTaxRate('careRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500">%</span>
-                        </span>
+
+                    <div class="bg-slate-800/40 rounded-lg p-2.5">
+                        <div class="text-[9.5px] font-black text-amber-400/90 uppercase tracking-wider mb-2 flex items-center gap-1">
+                            <i data-lucide="calendar-check-2" class="w-3 h-3"></i> 취득 · 면제 기준
+                        </div>
+                        <div class="grid grid-cols-3 gap-x-2 gap-y-2">
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="text-slate-300 text-[10.5px] text-center leading-tight">4대보험 취득<span class="block text-[9px] text-slate-500 font-normal">최소일수</span></span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="1" id="rateInputInsuranceDays" onchange="updateTaxRate('insuranceMinDays', this.value, false)" class="w-12 bg-slate-800 border border-slate-700 rounded px-1 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[10px]">일</span>
+                                </span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="text-slate-300 text-[10.5px] text-center leading-tight">연금면제<span class="block text-[9px] text-slate-500 font-normal">연령</span></span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="1" id="rateInputPensionAge" onchange="updateTaxRate('pensionExemptAge', this.value, false)" class="w-12 bg-slate-800 border border-slate-700 rounded px-1 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[10px]">세</span>
+                                </span>
+                            </div>
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="text-slate-300 text-[10.5px] text-center leading-tight">고용면제<span class="block text-[9px] text-slate-500 font-normal">연령</span></span>
+                                <span class="flex items-center gap-1">
+                                    <input type="number" step="1" id="rateInputEmploymentAge" onchange="updateTaxRate('employmentExemptAge', this.value, false)" class="w-12 bg-slate-800 border border-slate-700 rounded px-1 py-1 text-right text-sm text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
+                                    <span class="text-slate-500 text-[10px]">세</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">고용보험</span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="0.001" id="rateInputEmployment" onchange="updateTaxRate('employmentRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500">%</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">소득세율</span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="0.001" id="rateInputIncomeTax" onchange="updateTaxRate('incomeTaxRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500">%</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">지방세<span class="text-[8px]">(소득세대비)</span></span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="1" id="rateInputLocalTax" onchange="updateTaxRate('localTaxRate', this.value, true)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500">%</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">비과세 일당</span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="10000" id="rateInputTaxFree" onchange="updateTaxRate('taxFreeAmount', this.value, false)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500 text-[9px]">원</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">소액부징수<span class="text-[8px]">(월합계)</span></span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="100" id="rateInputMinTax" onchange="updateTaxRate('minTaxThreshold', this.value, false)" class="w-16 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500 text-[9px]">원</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">4대보험 취득<span class="text-[8px]">(최소일수)</span></span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="1" id="rateInputInsuranceDays" onchange="updateTaxRate('insuranceMinDays', this.value, false)" class="w-12 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500 text-[9px]">일</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">연금면제<span class="text-[8px]">(연령)</span></span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="1" id="rateInputPensionAge" onchange="updateTaxRate('pensionExemptAge', this.value, false)" class="w-12 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500 text-[9px]">세</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between gap-1">
-                        <span class="text-slate-400 shrink-0">고용면제<span class="text-[8px]">(연령)</span></span>
-                        <span class="flex items-center gap-0.5">
-                            <input type="number" step="1" id="rateInputEmploymentAge" onchange="updateTaxRate('employmentExemptAge', this.value, false)" class="w-12 bg-slate-800 border border-slate-700 rounded px-1 py-0.5 text-right text-white font-bold focus:ring-1 focus:ring-amber-400 outline-none">
-                            <span class="text-slate-500 text-[9px]">세</span>
-                        </span>
-                    </div>
+
                 </div>
 
-                <div class="text-[9.5px] font-black text-slate-500 uppercase tracking-wider mb-1.5 mt-1">계산 옵션</div>
-                <div class="space-y-1 border-b border-slate-800 pb-2 mb-2">
-                    <label class="flex items-center justify-between gap-1 cursor-pointer">
-                        <span class="text-slate-400 shrink-0 text-[10px]">소액부징수 적용<span class="text-[8px] block text-slate-500">(기준 미만이면 세액 0원 처리)</span></span>
-                        <input type="checkbox" id="rateInputMinTaxEnabled" onchange="updateTaxRateBool('minTaxEnabled', this.checked)" class="accent-amber-500 w-3.5 h-3.5 shrink-0">
-                    </label>
-                    <label class="flex items-center justify-between gap-1 cursor-pointer">
-                        <span class="text-slate-400 shrink-0 text-[10px]">공제액 10원단위 절사<span class="text-[8px] block text-slate-500">(소득세·지방세·4대보험료 전항목)</span></span>
-                        <input type="checkbox" id="rateInputTruncateToTen" onchange="updateTaxRateBool('truncateToTen', this.checked)" class="accent-amber-500 w-3.5 h-3.5 shrink-0">
-                    </label>
+                <div class="bg-slate-800/40 rounded-lg p-2.5 mb-2">
+                    <div class="text-[9.5px] font-black text-amber-400/90 uppercase tracking-wider mb-2 flex items-center gap-1">
+                        <i data-lucide="sliders-horizontal" class="w-3 h-3"></i> 계산 옵션
+                    </div>
+                    <div class="space-y-2">
+                        <label class="flex items-center justify-between gap-2 cursor-pointer">
+                            <span class="text-slate-300 shrink-0 text-[11px]">소액부징수 적용<span class="text-[9px] block text-slate-500 font-normal">기준 미만이면 세액 0원 처리</span></span>
+                            <input type="checkbox" id="rateInputMinTaxEnabled" onchange="updateTaxRateBool('minTaxEnabled', this.checked)" class="accent-amber-500 w-4 h-4 shrink-0">
+                        </label>
+                        <label class="flex items-center justify-between gap-2 cursor-pointer">
+                            <span class="text-slate-300 shrink-0 text-[11px]">공제액 10원단위 절사<span class="text-[9px] block text-slate-500 font-normal">소득세·지방세·4대보험료 전항목</span></span>
+                            <input type="checkbox" id="rateInputTruncateToTen" onchange="updateTaxRateBool('truncateToTen', this.checked)" class="accent-amber-500 w-4 h-4 shrink-0">
+                        </label>
+                    </div>
                 </div>
 
                 <div class="text-[9.5px] text-slate-500 leading-tight">
@@ -1542,9 +1575,20 @@
                     <span>근로자 상세 신상 정보</span>
                     <span id="detailModalTitle" class="text-sm font-black text-blue-300 ml-1"></span>
                 </h3>
-                <button onclick="closeDetailModal()" class="text-slate-400 hover:text-white transition-all" aria-label="닫기">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
+                <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-0.5 bg-slate-800 rounded-lg p-0.5">
+                        <button id="detailPrevBtn" onclick="navigateDetailModal(-1)" class="p-1.5 rounded hover:bg-slate-700 text-slate-300 hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent" title="이전 사람 (변경사항 자동 저장 후 이동)">
+                            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                        </button>
+                        <span id="detailNavPosition" class="text-[10px] text-slate-400 font-bold px-1 whitespace-nowrap min-w-[36px] text-center"></span>
+                        <button id="detailNextBtn" onclick="navigateDetailModal(1)" class="p-1.5 rounded hover:bg-slate-700 text-slate-300 hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent" title="다음 사람 (변경사항 자동 저장 후 이동)">
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <button onclick="closeDetailModal()" class="text-slate-400 hover:text-white transition-all" aria-label="닫기">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
             </div>
             <div class="p-5 overflow-y-auto max-h-[75vh]">
                 <input type="hidden" id="detailLaborId">
@@ -3125,10 +3169,6 @@
             renderTaxRateInputs();
             lucide.createIcons();
 
-            let deductHidden = false;
-            try { deductHidden = localStorage.getItem(DEDUCT_COLS_HIDDEN_KEY) === '1'; } catch (e) {}
-            if (deductHidden) _applyDeductColumnsState(true);
-
             // "대장 한 화면에 맞추기"를 기본값으로 항상 켠 상태로 시작
             setTimeout(() => { toggleFitTableToScreen(); }, 50);
         }
@@ -3401,28 +3441,6 @@
             // 축소된 만큼 표 아래에 빈 여백이 남지 않도록 높이를 보정
             table.style.marginBottom = `-${table.offsetHeight * (1 - scale)}px`;
             if (!silent) showToast(`한 화면에 맞춰 ${Math.round(scale * 100)}%로 축소했습니다.`);
-        }
-
-        // 공제 금액 내역(소득세·지방세·고용보험·건강/장기요양·국민연금·공제합계) 열 표시/숨김
-        const DEDUCT_COLS_HIDDEN_KEY = 'labor_payment_deduct_cols_hidden';
-
-        function _applyDeductColumnsState(hidden) {
-            document.getElementById('paymentTable').classList.toggle('hide-deduct-cols', hidden);
-            const hdr = document.getElementById('deductGroupHeader');
-            if (hdr) {
-                hdr.innerHTML = hidden
-                    ? '공제내역 <i data-lucide="eye" class="w-2.5 h-2.5 inline no-print"></i> (숨김·클릭시 표시)'
-                    : '공제 금액 내역 (2026년 나이/세법 요율 기준) <i data-lucide="eye-off" class="w-2.5 h-2.5 inline no-print"></i>';
-                if (window.lucide) lucide.createIcons();
-            }
-            // 열을 숨기면 표가 좁아지므로, "한 화면에 맞추기"가 켜져 있으면 다시 계산
-            setTimeout(() => { if (typeof _reapplyFitTableIfActive === 'function') _reapplyFitTableIfActive(); }, 50);
-        }
-
-        function toggleDeductionColumns() {
-            const nowHidden = !document.getElementById('paymentTable').classList.contains('hide-deduct-cols');
-            try { localStorage.setItem(DEDUCT_COLS_HIDDEN_KEY, nowHidden ? '1' : '0'); } catch (e) {}
-            _applyDeductColumnsState(nowHidden);
         }
 
         function toggleFitTableToScreen() {
@@ -3914,9 +3932,9 @@
 
             // 공제 금액 내역(colspan=5) 하위 라벨 — 1행의 병합 헤더 아래 실제 항목명을 표시
             html += `
-                <th class="deduct-col w-16 border-r border-slate-200 p-0.5 print:border-black leading-tight">소득세<br><span class="text-[8px] font-normal text-slate-400">지방세</span></th>
+                <th class="deduct-col w-16 border-r border-slate-200 p-0.5 print:border-black leading-tight">소득세<br>지방세</th>
                 <th class="deduct-col w-14 border-r border-slate-200 p-0.5 print:border-black leading-tight">고용<br>보험</th>
-                <th class="deduct-col w-16 border-r border-slate-200 p-0.5 print:border-black leading-tight">건강보험<br><span class="text-[8px] font-normal text-slate-400">장기요양</span></th>
+                <th class="deduct-col w-16 border-r border-slate-200 p-0.5 print:border-black leading-tight">건강보험<br>장기요양</th>
                 <th class="deduct-col w-14 border-r border-slate-200 p-0.5 print:border-black leading-tight">국민<br>연금</th>
                 <th class="deduct-col w-16 border-r border-slate-200 p-0.5 print:border-black leading-tight font-black">공제<br>합계</th>
             `;
@@ -4350,7 +4368,7 @@
                     
                     <td class="deduct-col ${pad} border-r border-slate-200 text-right font-mono print:border-black text-slate-600 whitespace-nowrap">
                         <span class="block font-semibold" data-result-labor="${labor.id}" data-result-field="incomeTax">${commaFormatter(calc.incomeTax)}</span>
-                        <span class="text-[8px] text-slate-400 block" data-result-labor="${labor.id}" data-result-field="localTax">${commaFormatter(calc.localTax)}</span>
+                        <span class="block font-semibold" data-result-labor="${labor.id}" data-result-field="localTax">${commaFormatter(calc.localTax)}</span>
                         ${incomeTaxBadge}
                     </td>
                     <td class="deduct-col ${pad} border-r border-slate-200 text-right font-mono print:border-black text-slate-600 whitespace-nowrap">
@@ -4359,7 +4377,7 @@
                     </td>
                     <td class="deduct-col ${pad} border-r border-slate-200 text-right font-mono print:border-black text-slate-600 whitespace-nowrap">
                         <span class="block font-semibold" data-result-labor="${labor.id}" data-result-field="health">${commaFormatter(calc.health)}</span>
-                        <span class="text-[8px] text-slate-400 block" data-result-labor="${labor.id}" data-result-field="care">${commaFormatter(calc.care)}</span>
+                        <span class="block font-semibold" data-result-labor="${labor.id}" data-result-field="care">${commaFormatter(calc.care)}</span>
                     </td>
                     <td class="deduct-col ${pad} border-r border-slate-200 text-right font-mono print:border-black text-slate-600 whitespace-nowrap">
                         <span class="block" data-result-labor="${labor.id}" data-result-field="pension">${commaFormatter(calc.pension)}</span>
@@ -4471,7 +4489,24 @@
             window._detailDbCandidate = null;
 
             document.getElementById('laborDetailModal').classList.remove('hidden');
+            _updateDetailNavControls(labor.id);
             lucide.createIcons();
+        }
+
+        // 상세정보 모달 헤더의 "◀ n/전체 ▶" 표시 및 맨 앞/뒤에서 버튼 비활성화
+        function _updateDetailNavControls(laborId) {
+            const rows = Array.from(document.querySelectorAll('#paymentTableBody tr[data-labor-id]'));
+            const proj = appState.projects[appState.currentProjectId];
+            const orderedIds = rows.length > 0
+                ? rows.map(r => r.getAttribute('data-labor-id'))
+                : (proj ? proj.labors.map(l => l.id) : []);
+            const idx = orderedIds.indexOf(laborId);
+            const posEl = document.getElementById('detailNavPosition');
+            const prevBtn = document.getElementById('detailPrevBtn');
+            const nextBtn = document.getElementById('detailNextBtn');
+            if (posEl) posEl.textContent = idx === -1 ? '' : `${idx + 1}/${orderedIds.length}`;
+            if (prevBtn) prevBtn.disabled = (idx <= 0);
+            if (nextBtn) nextBtn.disabled = (idx === -1 || idx >= orderedIds.length - 1);
         }
 
         // ── 근로자 얼굴 사진: 명단 식별용 (localStorage 절약을 위해 리사이즈+압축 저장) ──
@@ -4673,20 +4708,22 @@
 
         // ─────────────────────────────────────────────────────────────────
 
-        function saveDetailInfo() {
+        // 저장 로직 본체: 검증 + 근로자 객체에 반영 + 로컬 저장.
+        // 성공 시 true, 검증 실패 시 false를 반환한다 (얼럿은 호출부 선택에 따라 표시).
+        function _persistDetailFields(showAlertOnFail) {
             const proj = appState.projects[appState.currentProjectId];
-            if (!proj) return;
+            if (!proj) return false;
 
             const laborId = document.getElementById('detailLaborId').value;
             const labor = proj.labors.find(l => l.id === laborId);
-            if (!labor) return;
+            if (!labor) return false;
 
             const name = document.getElementById('detailName').value.trim();
             const ssn = document.getElementById('detailSsn').value.trim();
 
             if (!name || ssn.replace(/[^0-9]/g, '').length !== 13) {
-                showCustomAlert("성명 기입 및 13자리 주민번호를 정확히 기입해주세요.");
-                return;
+                if (showAlertOnFail !== false) showCustomAlert("성명 기입 및 13자리 주민번호를 정확히 기입해주세요.");
+                return false;
             }
 
             labor.name = name;
@@ -4714,8 +4751,38 @@
 
             saveToLocalStorage();
             updateHeaderAndTable();
+            return { name };
+        }
+
+        function saveDetailInfo() {
+            const result = _persistDetailFields(true);
+            if (!result) return;
             closeDetailModal();
-            showToast(`${name} 근로자의 상세정보 변경사항이 반영되었습니다.`);
+            showToast(`${result.name} 근로자의 상세정보 변경사항이 반영되었습니다.`);
+        }
+
+        // 상세정보 모달에서 "이전 사람 / 다음 사람"으로 이동.
+        // 화면에 지금 보이는(검색/정렬/필터 적용된) 순서를 그대로 따라가며,
+        // 이동 직전에 현재 입력 내용을 자동 저장한다(변경사항을 잃지 않도록).
+        function navigateDetailModal(delta) {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj) return;
+
+            const currentId = document.getElementById('detailLaborId').value;
+            const rows = Array.from(document.querySelectorAll('#paymentTableBody tr[data-labor-id]'));
+            const orderedIds = rows.length > 0
+                ? rows.map(r => r.getAttribute('data-labor-id'))
+                : proj.labors.map(l => l.id);
+
+            const currentIndex = orderedIds.indexOf(currentId);
+            if (currentIndex === -1) return;
+            const targetIndex = currentIndex + delta;
+            if (targetIndex < 0 || targetIndex >= orderedIds.length) return;
+
+            const saved = _persistDetailFields(true);
+            if (!saved) return; // 검증 실패 시 이동하지 않고 현재 사람에 머무른다
+
+            openDetailModal(orderedIds[targetIndex]);
         }
 
         // [실무 기능] 결재란 On/Off 기능 제어
@@ -5223,6 +5290,140 @@
             });
         }
 
+        // 발주처 제출용 청구서 — Excel(.xls) 서식 버전.
+        // CSV와 계산 로직은 완전히 동일하게 맞추고(같은 회사/현장 합산 로직 포함), 출력 형식만 서식 있는 시트로 만든다.
+        function generateClientSubmissionXLS() {
+            const projectIds = Array.from(document.querySelectorAll('.clientSubProjectCheck:checked')).map(el => el.value);
+            if (projectIds.length === 0) {
+                showCustomAlert('포함할 현장을 1개 이상 선택해 주세요.');
+                return;
+            }
+            const siteName = document.getElementById('clientSubmissionProjectName').value.trim() || '공사명 미입력';
+            const safeN = (v) => Number.isFinite(Number(v)) ? Number(v) : 0;
+
+            const styles = `
+  <Style ss:ID="title"><Alignment ss:Horizontal="Left" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="13"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/></Borders></Style>
+  <Style ss:ID="sectionHdr"><Alignment ss:Horizontal="Left" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="11" ss:Color="#92400e"/><Interior ss:Color="#fffbeb" ss:Pattern="Solid"/></Style>
+  <Style ss:ID="colHdr"><Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/><Font ss:Bold="1" ss:Size="9" ss:Color="#ffffff"/><Interior ss:Color="#b45309" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="cell"><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Font ss:Size="9"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="cellL"><Alignment ss:Horizontal="Left" ss:Vertical="Center"/><Font ss:Size="9"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="money"><Alignment ss:Horizontal="Right" ss:Vertical="Center"/><Font ss:Size="9"/><NumberFormat ss:Format="#,##0"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/></Borders></Style>
+  <Style ss:ID="subtotal"><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="9"/><Interior ss:Color="#fef3c7" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/></Borders></Style>
+  <Style ss:ID="subtotalMoney"><Alignment ss:Horizontal="Right" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="9"/><NumberFormat ss:Format="#,##0"/><Interior ss:Color="#fef3c7" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/></Borders></Style>
+  <Style ss:ID="grand"><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="10" ss:Color="#ffffff"/><Interior ss:Color="#b45309" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/></Borders></Style>
+  <Style ss:ID="grandMoney"><Alignment ss:Horizontal="Right" ss:Vertical="Center"/><Font ss:Bold="1" ss:Size="10" ss:Color="#ffffff"/><NumberFormat ss:Format="#,##0"/><Interior ss:Color="#b45309" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/></Borders></Style>`;
+
+            function N(v) { const n = Number(v); return Number.isFinite(n) ? n : 0; }
+            function C(val, styleId, type) {
+                const t = type || 'String';
+                const data = t === 'Number' ? N(val) : _xmlEscText(val);
+                return `<Cell ss:StyleID="${styleId}"><Data ss:Type="${t}">${data}</Data></Cell>`;
+            }
+            function mergedRow(text, styleId, height) {
+                return `<Row${height ? ` ss:Height="${height}"` : ''}><Cell ss:StyleID="${styleId}" ss:MergeAcross="10"><Data ss:Type="String">${_xmlEscText(text)}</Data></Cell></Row>\n`;
+            }
+            function emptyRow() { return `<Row></Row>\n`; }
+
+            let rowsXml = mergedRow(`공 사 명 : ${siteName}`, 'title', 26);
+            rowsXml += emptyRow();
+
+            let firstMonth = null, allMonths = new Set();
+            let grandNet = 0, grandTax = 0, grandTotal = 0;
+
+            projectIds.forEach(pid => {
+                const proj = appState.projects[pid];
+                if (!proj || !proj.labors || proj.labors.length === 0) return;
+                if (firstMonth === null) firstMonth = proj.month;
+                allMonths.add(proj.month);
+
+                const daysInMonth = new Date(proj.year, proj.month, 0).getDate();
+                rowsXml += mergedRow(`공사근로자 노무비 청구 내역서 (${String(proj.month).padStart(2,'0')}월)`, 'sectionHdr', 20);
+
+                const headers = ['계약상대자','해당 월','공종','근로자성명','실지급액','세금공제액','합계금액','은행명','계좌번호','전화번호','비고'];
+                rowsXml += `<Row ss:Height="20">` + headers.map(h => `<Cell ss:StyleID="colHdr"><Data ss:Type="String">${_xmlEscText(h)}</Data></Cell>`).join('') + `</Row>\n`;
+
+                let sumNet = 0, sumTax = 0, sumTotal = 0;
+                proj.labors.forEach(l => {
+                    let autoDays = 0;
+                    for (let d = 1; d <= daysInMonth; d++) autoDays = Math.round((autoDays + Number(l.attendance[d] || 0)) * 10) / 10;
+                    const calc = calculateDeductions(l, autoDays, proj);
+                    const hasProxy = !!(l.proxyName && l.proxyAccount);
+                    const bankOut = hasProxy ? (l.proxyBank || '') : (l.bank || '');
+                    const accountOut = hasProxy ? (l.proxyAccount || '') : (l.account || '');
+                    const phoneOut = l.phone || '';
+                    const remark = hasProxy ? `위임장(${l.proxyName})` : '';
+
+                    sumNet += safeN(calc.netPay);
+                    sumTax += safeN(calc.totalDeduction);
+                    sumTotal += safeN(calc.totalWages);
+
+                    rowsXml += `<Row>` +
+                        C(proj.company || '', 'cellL') +
+                        C(`${proj.year}년 ${proj.month}월`, 'cell') +
+                        C(proj.workType || '', 'cell') +
+                        C(l.name, 'cellL') +
+                        C(safeN(calc.netPay), 'money', 'Number') +
+                        C(safeN(calc.totalDeduction), 'money', 'Number') +
+                        C(safeN(calc.totalWages), 'money', 'Number') +
+                        C(bankOut, 'cell') +
+                        C(accountOut, 'cell') +
+                        C(phoneOut, 'cell') +
+                        C(remark, 'cellL') +
+                        `</Row>\n`;
+                });
+
+                rowsXml += `<Row>` + C('', 'cell') + C('', 'cell') + C('', 'cell') + C('소 계', 'subtotal') +
+                    C(sumNet, 'subtotalMoney', 'Number') + C(sumTax, 'subtotalMoney', 'Number') + C(sumTotal, 'subtotalMoney', 'Number') +
+                    C('', 'cell') + C('', 'cell') + C('', 'cell') + C('', 'cell') + `</Row>\n`;
+                rowsXml += emptyRow();
+                grandNet += sumNet; grandTax += sumTax; grandTotal += sumTotal;
+            });
+
+            const vat = Math.round(grandTotal * 0.1);
+            const totalRow = (label, net, tax, total, styleLabel, styleMoney) =>
+                `<Row>` + C('', 'cell') + C('', 'cell') + C('', 'cell') + C(label, styleLabel) +
+                C(net, styleMoney, 'Number') + C(tax, styleMoney, 'Number') + C(total, styleMoney, 'Number') +
+                C('', 'cell') + C('', 'cell') + C('', 'cell') + C('', 'cell') + `</Row>\n`;
+
+            rowsXml += totalRow('소 계', grandNet, grandTax, grandTotal, 'subtotal', 'subtotalMoney');
+            rowsXml += totalRow('공급가액', '', '', grandTotal, 'subtotal', 'subtotalMoney');
+            rowsXml += totalRow('부 가 세', '', '', vat, 'subtotal', 'subtotalMoney');
+            rowsXml += totalRow('합 계', '', '', grandTotal + vat, 'grand', 'grandMoney');
+
+            const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+ <Styles>${styles}
+ </Styles>
+ <Worksheet ss:Name="청구서">
+  <Table>
+   <Column ss:Width="80"/><Column ss:Width="65"/><Column ss:Width="60"/><Column ss:Width="60"/><Column ss:Width="80"/><Column ss:Width="80"/><Column ss:Width="80"/><Column ss:Width="65"/><Column ss:Width="100"/><Column ss:Width="90"/><Column ss:Width="90"/>
+${rowsXml}  </Table>
+ </Worksheet>
+</Workbook>`;
+
+            const blob = new Blob([xml], { type: 'application/vnd.ms-excel' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            const monthLabel = allMonths.size > 1 ? `${allMonths.size}개월통합` : (firstMonth ? `${String(firstMonth).padStart(2,'0')}월` : '');
+            link.setAttribute('download', `노무비청구_${siteName}_${monthLabel}_최종.xls`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            const history = _loadChargeHistory();
+            history.push({ siteName, monthLabel, projectCount: projectIds.length, at: Date.now(), totalAmount: grandTotal + vat, format: 'xls' });
+            _saveChargeHistory(history);
+            renderChargeHistoryList();
+
+            showToast(`발주처 제출용 청구서 엑셀(현장 ${projectIds.length}개 통합)이 다운로드되었습니다.`);
+        }
+
         function generateClientSubmissionCSV() {
             const projectIds = Array.from(document.querySelectorAll('.clientSubProjectCheck:checked')).map(el => el.value);
             if (projectIds.length === 0) {
@@ -5700,6 +5901,22 @@ ${grandTotalHtml}
                 if (el && !el.classList.contains('hidden')) {
                     closeFn();
                     return; // 한 번에 하나만 닫음 (겹쳐있는 경우 위쪽부터)
+                }
+            }
+        });
+
+        // ── 엔터 키로 열려있는 모달 닫기 ──────────────────────────────────
+        // ESC와 동일한 목록/순서를 재사용한다. 단, textarea에 포커스가 있을 때는
+        // 줄바꿈 입력이 우선이므로 모달을 닫지 않는다.
+        document.addEventListener('keydown', function(e) {
+            if (e.key !== 'Enter') return;
+            if (e.target && e.target.tagName === 'TEXTAREA') return;
+            for (const [id, closeFn] of ESC_MODAL_CLOSE_MAP) {
+                const el = document.getElementById(id);
+                if (el && !el.classList.contains('hidden')) {
+                    e.preventDefault();
+                    closeFn();
+                    return;
                 }
             }
         });
@@ -8071,12 +8288,12 @@ ${dayTotalCells2}
                 
                 <td class="deduct-col ${pad} border-r border-slate-300 text-right print:border-black text-[9px] font-mono whitespace-nowrap">
                     <span class="block">${commaFormatter(sumIncomeTax)}</span>
-                    <span class="text-[8px] text-slate-400 block">${commaFormatter(sumLocalTax)}</span>
+                    <span class="block">${commaFormatter(sumLocalTax)}</span>
                 </td>
                 <td class="deduct-col ${pad} border-r border-slate-300 text-right print:border-black font-mono text-slate-700 whitespace-nowrap">${commaFormatter(sumEmployment)}</td>
                 <td class="deduct-col ${pad} border-r border-slate-300 text-right print:border-black text-[9px] font-mono whitespace-nowrap">
                     <span class="block">${commaFormatter(sumHealth)}</span>
-                    <span class="text-[8px] text-slate-400 block">${commaFormatter(sumCare)}</span>
+                    <span class="block">${commaFormatter(sumCare)}</span>
                 </td>
                 <td class="deduct-col ${pad} border-r border-slate-300 text-right print:border-black font-mono text-slate-700 whitespace-nowrap">${commaFormatter(sumPension)}</td>
                 
@@ -10003,6 +10220,73 @@ ${dayTotalCells2}
                     saveToLocalStorage();
                     updateHeaderAndTable();
                     showToast(useSelection ? `선택한 ${laborMoveSelection.size}명의 단가가 일괄 적용되었습니다.` : "대상자 단가가 일괄 적용 완료되었습니다.");
+                });
+            };
+            const handleCancel = () => { cleanup(); };
+            const cleanup = () => {
+                confirmBtn.removeEventListener('click', handleConfirm);
+                cancelBtn.removeEventListener('click', handleCancel);
+                modal.classList.add('hidden');
+            };
+            confirmBtn.addEventListener('click', handleConfirm);
+            cancelBtn.addEventListener('click', handleCancel);
+        }
+
+        // 직종(공종) 일괄 변경 도구 — 단가일괄변경과 동일한 UX/선택 규칙을 따른다.
+        // 왼쪽 NO칸 체크박스로 근로자를 선택해두면 그 인원만, 선택이 없으면 검색/표시된 대상 전체에 적용된다.
+        function bulkSetJob() {
+            const proj = appState.projects[appState.currentProjectId];
+            if (!proj || !proj.labors || proj.labors.length === 0) {
+                showCustomAlert("직종을 변동할 대상 근로자가 없습니다.");
+                return;
+            }
+
+            const modal = document.getElementById('customAlertModal');
+            const msgEl = document.getElementById('alertMessage');
+            const confirmBtn = document.getElementById('alertConfirmBtn');
+            const cancelBtn = document.getElementById('alertCancelBtn');
+
+            const useSelectionForMsg = laborMoveSelection.size > 0;
+            msgEl.innerHTML = `${useSelectionForMsg ? `왼쪽 NO칸에서 선택한 <b>${laborMoveSelection.size}명</b>` : '현재 검색/표시된 모든 대상'}에게 일괄 적용할 새 직종(공종)을 입력해 주세요.<br>
+                <input type="text" id="bulkJobInput" value="보통인부"
+                    class="mt-2 w-full border border-slate-300 rounded p-2 text-sm focus:ring-1 focus:ring-blue-500 outline-none"
+                    placeholder="예: 보통인부, 형틀목공, 철근공">`;
+            cancelBtn.classList.remove('hidden');
+            modal.classList.remove('hidden');
+
+            setTimeout(() => {
+                const inp = document.getElementById('bulkJobInput');
+                if (inp) { inp.focus(); inp.select(); }
+            }, 50);
+
+            const handleConfirm = () => {
+                cleanup();
+                const inp = document.getElementById('bulkJobInput');
+                const newJob = (inp ? inp.value : '').trim();
+                if (!newJob) {
+                    showCustomAlert("직종(공종)을 입력해 주세요.");
+                    return;
+                }
+                const useSelectionForMsg2 = laborMoveSelection.size > 0;
+                const confirmMsg = useSelectionForMsg2
+                    ? `왼쪽 NO칸에서 선택한 <b>${laborMoveSelection.size}명</b>의 직종을 [${newJob}](으)로 변경하시겠습니까?`
+                    : `현재 검색/표시된 모든 대상의 직종을 [${newJob}](으)로 강제 변동시키겠습니까?`;
+                showCustomConfirm(confirmMsg, () => {
+                    const searchKeyword = document.getElementById('searchFilter').value.trim().toLowerCase();
+                    const useSelection = laborMoveSelection.size > 0;
+                    let count = 0;
+                    proj.labors.forEach(l => {
+                        if (useSelection) {
+                            if (laborMoveSelection.has(l.id)) { l.job = newJob; count++; }
+                            return;
+                        }
+                        const nameMatch = l.name.toLowerCase().includes(searchKeyword);
+                        const jobMatch = (l.job || '').toLowerCase().includes(searchKeyword);
+                        if (nameMatch || jobMatch) { l.job = newJob; count++; }
+                    });
+                    saveToLocalStorage();
+                    updateHeaderAndTable();
+                    showToast(`${count}명의 직종이 [${newJob}](으)로 일괄 변경되었습니다.`);
                 });
             };
             const handleCancel = () => { cleanup(); };
